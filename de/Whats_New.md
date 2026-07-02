@@ -1,9 +1,9 @@
 # <%= @title %>
 
-Weitere Einzelheiten finden Sie unter [full changelog](changelog.html).
+Weitere Details finden Sie im [vollständigen Änderungsprotokoll](changelog.html).
 
-- Komplett neu geschriebener DOCX-Export mit gültiger Struktur, benutzerdefinierten Stilen, Kopf- und Fußzeilen, MathJax-Konvertierung, Änderungsverfolgung <-> CriticMarkup
-- Öffnen Sie DOCX-Dateien, exportieren Sie saubere Markdown oder bereinigte DOCX
-- Komplett neu geschriebenes CriticMarkup-Handling, keine Skriptabhängigkeiten
-- Komplett neu geschriebenes Scrivener-Handling, blitzschnell, keine Skriptabhängigkeiten
-– Neuer Custom-Regelgenerator zum Ausführen von Dokumenttransformationen und benutzerdefinierten Skripts basierend auf der Übereinstimmung von Kriterien
+- Komplett neu geschriebener DOCX-Export mit gültiger Struktur, eigenen Stilen, Kopf- und Fußzeilen, MathJax-Konvertierung, Änderungsverfolgung <-> CriticMarkup
+- Öffnen von DOCX-Dateien, Export von sauberem Markdown oder bereinigtem DOCX
+- Komplett neu geschriebene CriticMarkup-Verarbeitung, keine Skriptabhängigkeiten
+- Komplett neu geschriebene Scrivener-Verarbeitung, blitzschnell, keine Skriptabhängigkeiten
+- Neuer Editor für Eigene Regeln zur Ausführung von Dokumenttransformationen und benutzerdefinierten Skripten basierend auf Kriterienabgleich
