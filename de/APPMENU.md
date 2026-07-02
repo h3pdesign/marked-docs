@@ -26,8 +26,8 @@ Entries marked ⚠ could not be confirmed 1:1 in the string tables — check the
 | `File, Open Dingus in Marked` | `Ablage, Dingus in Marked öffnen` |
 | `File, Open in Dingus...` | `Ablage, In Dingus öffnen…` |
 | `File, Export` | `Ablage, Exportieren…` |
-| `File, Export, Paginated PDF` | ⚠ `Ablage, Exportieren als, Seitenweises PDF` (Submenü prüfen) |
-| `File, Open Dictionary...` | ⚠ nicht in den App-Strings — in der App prüfen (evtl. AppleScript-Wörterbuch) |
+| `File, Export, Paginated PDF` | `Ablage, Exportieren als, PDF speichern (paginiert)` (EN-Tag „Export" = Menü „Exportieren als") |
+| `File, Open Dictionary...` | — Menüpunkt existiert nicht (in der App bestätigt); EN-Tag veraltet, an Maintainer melden |
 
 ## Preview → Vorschau
 
@@ -62,7 +62,7 @@ Entries marked ⚠ could not be confirmed 1:1 in the string tables — check the
 |---|---|
 | `{{gear}}, Highlight Keywords` | `{{gear}}, Schlüsselwörter hervorheben` |
 | `{{gear}}, Proofing, Show Comments` | `{{gear}}, Korrekturlesen, Kommentare anzeigen` |
-| `{{gear}}, Proofing, Highlight All Spelling Errors` | ⚠ `{{gear}}, Korrekturlesen, Rechtschreibfehler anzeigen` (exakter Menüpunkt prüfen) |
+| `{{gear}}, Proofing, Highlight All Spelling Errors` | `{{gear}}, Korrekturlesen, Rechtschreibfehler anzeigen` (EN-Tag „Highlight All…" = Menü „Rechtschreibfehler anzeigen") |
 
 ## Notes
 
