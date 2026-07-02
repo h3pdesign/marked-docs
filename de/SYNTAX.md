@@ -2,6 +2,19 @@
 
 Practical conventions for the German docs. Read this and `GLOSSARY.md` before translating. Terms and style are aligned with the localized Marked app (`de.lproj`) so the docs match the UI.
 
+## Common pitfalls (quick checklist)
+
+Recurring things to watch when post-editing the machine-translated drafts:
+
+1. **Reference-link definitions** (`[label]: url`) each on their own line — never collapse several onto one line, or all but the first break.
+2. **Translate the link text, keep the target:** in `[text](Target.html)` and `[text][label]`, translate only the visible text; the filename and the `[label]` stay English.
+3. **Dash:** the German parenthetical dash is `–` (en dash with spaces), not `---` or `—`.
+4. **Block tags** (`{% apponly div %}`, `{% endapponly %}`, …) on their own line, no trailing spaces.
+5. **Localize syntax example words, consistently:** `*kursiv*`, `**fett**` (not `*italics*` / `**bold**`).
+6. **UI and technical terms → match the app and Apple:** e.g. „AppleScript-Wörterbuch" (not „-Verzeichnis"); menu paths exactly from the German app.
+7. **Keep verb forms parallel:** „… ausgeben oder … kopieren", not „ausgegeben … kopieren".
+8. **Basics:** Sie throughout; product names stay English (Marked, Markdown, MultiMarkdown, CommonMark …); German quotes „…"; ellipsis `…`.
+
 ## Tone and audience
 
 - **Formality: Sie.** The German app UI uses formal address throughout; keep the docs consistent with it. Never switch to „du".
