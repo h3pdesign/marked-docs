@@ -1,0 +1,8 @@
+# <%= @title %>
+
+De algehele weergavesnelheid en prestaties van Marked kunnen sterk variëren, afhankelijk van uw instellingen en het type inhoud dat u in uw document heeft. Er zijn verschillende factoren die kunnen leiden tot trage weergave of lange vertragingen:
+
+* **Time Machine.** Als Time Machine actief is en uw systeem veel schijfactiviteit ervaart, kan het zijn dat Marked langzamer reageert op wijzigingen in uw document. De verwerkingssnelheid wordt niet beïnvloed, alleen de reactietijd.
+* **Een Markdown document weergeven dat veel HTML bevat.** Dit duurt altijd langer om te verwerken. Discount verwerkt dit iets beter dan MultiMarkdown, dus als dit nodig is, kunt u overwegen de standaardprocessor te wijzigen (**Waarschuwing:** u raakt voetnoten en enkele andere MultiMarkdown-functies kwijt).
+* **Veel include-bestanden gebruiken.** Of het nu gaat om code-includes of een index-samenvoegbestand, het oppakken van alle stukjes duurt Marked een seconde. Hetzelfde geldt voor grote Scrivener documenten. U kunt niet veel doen om dit probleem op te lossen. Marked zal alleen zijn best doen om gelijke tred te houden met de manier waarop u uw document structureert.
+* **Conditie van de harde schijf.** Als uw harde schijf bijna vol is, uw Spotlight-index beschadigd is of uw machtigingen al een tijdje niet zijn hersteld, kan het voor Marked moeilijker zijn om de wijzigingen op te pikken in het bestand dat wordt bekeken. Het optimaliseren van uw schijf door machtigingen te herstellen helpt vaak, en het opnieuw opbouwen van de Spotlight-index is vaak een oplossing voor Marked problemen.
