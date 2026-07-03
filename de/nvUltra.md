@@ -12,7 +12,7 @@ Marked öffnet normale dateigestützte Vorschauen, sodass Ihr MultiMarkdown mit 
 
 ## Alternative: Ordnerüberwachung
 
-Soll Marked in einem ganzen Ordner **jeder zuletzt bearbeiteten Notiz** folgen? Legen Sie stattdessen den Notizbuchordner auf Marked ab. Siehe **[Folder Watching](Folder_Watching.html)** für die Überwachung im nvALT-Stil, das Scrollen zu Bearbeitungen und die Unterschiede dieses Arbeitsablaufs zum Öffnen einzelner Dateien.
+Soll Marked in einem ganzen Ordner **jeder zuletzt bearbeiteten Notiz** folgen? Legen Sie stattdessen den Notizbuchordner auf Marked ab. Siehe **[Ordnerüberwachung](Folder_Watching.html)** für die Überwachung im nvALT-Stil, das Scrollen zu Bearbeitungen und die Unterschiede dieses Arbeitsablaufs zum Öffnen einzelner Dateien.
 
 
 [nvultramenu]: images/nvUltra_preview_in_marked_menu.png width=854px height=264px class=center

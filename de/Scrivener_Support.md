@@ -82,5 +82,5 @@ Relative Pfade, die auf dem übergeordneten Ordner des Dokuments basieren, funkt
 
 Ein Cache-Ordner wird in `~/Library/Application Support/Marked` erstellt, wenn Sie Ihre `.scriv`-Datei in Marked öffnen. Dies ist kein geschützter Ordner. Wenn sich Ihr Originaldokument also auf einem verschlüsselten Datenträger befindet oder anderweitig geschützt ist, beachten Sie, dass sein Inhalt unverschlüsselt im Cache liegt. Für eingeschränkten Schutz können Sie sicherstellen, dass dieser Cache nicht in Spotlight angezeigt wird, indem Sie `~/Library/Application Support/Marked` zu Ihren Datenschutzeinstellungen in Spotlight hinzufügen.
 
-Unter [Additional app integrations](Additional_Application_Support.html) finden Sie Informationen zur Zwischenablage-Vorschau, zu Wiki-Links, Skripten und zur vollständigen Liste der App-spezifischen Anleitungen.
+Unter [Zusätzliche Anwendungsunterstützung](Additional_Application_Support.html) finden Sie Informationen zur Zwischenablage-Vorschau, zu Wiki-Links, Skripten und zur vollständigen Liste der App-spezifischen Anleitungen.
 

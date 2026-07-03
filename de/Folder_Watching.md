@@ -10,4 +10,4 @@ Notebook-Apps, die einzelne Dateien auf der Festplatte belassen (klassische Bibl
 
 **nvUltra** bietet in seinem Kontextmenü außerdem **[Preview File(s) in Marked](nvUltra.html)** an, wenn Sie bestimmte Notizen direkt in Marked öffnen möchten, statt Marked an den oben beschriebenen Überwachungsablauf für den gesamten Ordner zu koppeln.
 
-Marked verwendet dasselbe Überwachungsverhalten auch unter anderen Menünamen, wenn Sie viele kleine Kapitel zu einem Leseerlebnis zusammenfassen. Siehe auch [Multi-File Documents](Multi-File_Documents.html) für Manuskripte, die bewusst mehrere Markdown-Quellen zusammenführen.
+Marked verwendet dasselbe Überwachungsverhalten auch unter anderen Menünamen, wenn Sie viele kleine Kapitel zu einem Leseerlebnis zusammenfassen. Siehe auch [Mehrteilige Dokumente](Multi-File_Documents.html) für Manuskripte, die bewusst mehrere Markdown-Quellen zusammenführen.

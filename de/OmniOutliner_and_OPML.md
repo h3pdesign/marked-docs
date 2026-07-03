@@ -6,6 +6,6 @@ In {% prefspane Preview %} steuern separate Schalter, ob **OPML-Gliederungen** u
 
 Unabhängig von OmniOutliner verhalten sich generische `.opml`-Dateien von Tools wie Fargo, OutlineEdit, iThoughts (OPML-Export) oder Mind-Map-Apps auf die gleiche Weise.
 
-Verwandte Themen: [Embedding Mind Maps and Outlines](Embedding_Mind_Maps_and_Outlines.html).
+Verwandte Themen: [Mindmaps und Gliederungen einbetten](Embedding_Mind_Maps_and_Outlines.html).
 
 [oo]: https://www.omnigroup.com/omnioutliner/

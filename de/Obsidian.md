@@ -2,13 +2,13 @@
 
 Marked funktioniert mit [Obsidian][obsidian-app]-Notizen auf zwei Arten: Öffnen Sie einen **Vault-Ordner** für automatische Nachverfolgung oder verwenden Sie das **Community-Plugin** für eine engere Synchronisierung.
 
-Die integrierte Vorschau von Obsidian ist ideal, wenn Sie die App nie verlassen. Wählen Sie Marked, wenn Sie einen Export in Veröffentlichungsqualität, erweitertes Korrekturlesen, benutzerdefinierte CSS-Designs oder denselben Live-Vorschau-Workflow für mehrere Editoren wünschen. Einen vollständigen Vergleich finden Sie unter [Marked vs Obsidian Preview](Marked_vs_Obsidian_Preview.html).
+Die integrierte Vorschau von Obsidian ist ideal, wenn Sie die App nie verlassen. Wählen Sie Marked, wenn Sie einen Export in Veröffentlichungsqualität, erweitertes Korrekturlesen, benutzerdefinierte CSS-Designs oder denselben Live-Vorschau-Workflow für mehrere Editoren wünschen. Einen vollständigen Vergleich finden Sie unter [Marked im Vergleich zur Obsidian-Vorschau](Marked_vs_Obsidian_Preview.html).
 
 ## Einen gesamten Vault öffnen
 
 Ziehen Sie den **Vault-Ordner** (das Verzeichnis, das den versteckten Konfigurationsordner von Obsidian im Vault-Stammverzeichnis enthält) auf Marked im Dock. Marked überwacht diesen Baum, behält die **zuletzt bearbeitete** Notiz in der Vorschau und aktualisiert sie, wenn Sie in Obsidian speichern.
 
-Fügen Sie für Vault-spezifische Standardeinstellungen (Stil, Prozessor, Basis-URL für Bilder usw.) eine [Custom Rule](http://support.markedapp.com) hinzu, die den Pfaden unter diesem Vault entspricht.
+Fügen Sie für Vault-spezifische Standardeinstellungen (Stil, Prozessor, Basis-URL für Bilder usw.) eine [Eigene Regel](http://support.markedapp.com) hinzu, die den Pfaden unter diesem Vault entspricht.
 
 ## Obsidian-Callout-Syntax
 
@@ -26,8 +26,8 @@ Das [Marked 3 Obsidian plugin][plugin] kann die aktuelle Notiz oder den gesamten
 
 Wenn Sie lieber von GitHub installieren möchten:
 
-1. Laden Sie `main.js` und `manifest.json` vom [latest release][plugin-releases] auf GitHub herunter (oder erstellen Sie sie aus dem [Marked3-obsidian][plugin]-Repository).
-2. Erstellen Sie in Ihrem Vault den Plugin-Ordner unter `plugins/` im Konfigurationsverzeichnis von Obsidian im Stammverzeichnis des Vaults. Der Ordnername muss mit der Plugin-`id` in `manifest.json` übereinstimmen (den vollständigen Pfad finden Sie in der [plugin README][plugin]).
+1. Laden Sie `main.js` und `manifest.json` vom [neuesten Release][plugin-releases] auf GitHub herunter (oder erstellen Sie sie aus dem [Marked3-obsidian][plugin]-Repository).
+2. Erstellen Sie in Ihrem Vault den Plugin-Ordner unter `plugins/` im Konfigurationsverzeichnis von Obsidian im Stammverzeichnis des Vaults. Der Ordnername muss mit der Plugin-`id` in `manifest.json` übereinstimmen (den vollständigen Pfad finden Sie in der [Plugin-README][plugin]).
 3. Kopieren Sie `main.js` und `manifest.json` in diesen Ordner.
 4. Öffnen Sie in Obsidian **Einstellungen → Community-Plugins**, deaktivieren Sie bei Bedarf den **Eingeschränkten Modus** und aktivieren Sie **Open in Marked**.
 

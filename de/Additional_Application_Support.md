@@ -4,7 +4,7 @@ Marked funktioniert mit vielen Editoren und Schreib-Apps. Auf dieser Seite werde
 
 ## Pro-App-Anleitungen
 
-Beginnen Sie mit [Live Markdown Preview on Mac](Live_Markdown_Preview_on_Mac.html) für den gesamten Workflow. Wenn Sie Obsidian verwenden, lesen Sie [Marked vs Obsidian Preview](Marked_vs_Obsidian_Preview.html), um zu entscheiden, wann Marked neben der integrierten Vorschau von Obsidian einen Mehrwert bietet.
+Beginnen Sie mit [Live-Markdown-Vorschau auf dem Mac](Live_Markdown_Preview_on_Mac.html) für den gesamten Workflow. Wenn Sie Obsidian verwenden, lesen Sie [Marked im Vergleich zur Obsidian-Vorschau](Marked_vs_Obsidian_Preview.html), um zu entscheiden, wann Marked neben der integrierten Vorschau von Obsidian einen Mehrwert bietet.
 
 | Thema | Hilfeseite |
 | :-- | :-- |
@@ -12,7 +12,7 @@ Beginnen Sie mit [Live Markdown Preview on Mac](Live_Markdown_Preview_on_Mac.htm
 | **Curio** (Streaming-Vorschau) | [Curio](Curio.html) |
 | **Drafts** (Streaming-Vorschau + Aktionen) | [Drafts](Drafts.html) |
 | **DEVONthink** (Integration des Skriptmenüs) | [DEVONthink](DEVONthink.html) |
-| **Folder Watching** (nvALT, nvUltra usw.) | [Folder Watching](Folder_Watching.html) |
+| **Ordnerüberwachung** (nvALT, nvUltra usw.) | [Ordnerüberwachung](Folder_Watching.html) |
 | **Highland** | [Highland](Highland.html) |
 | **Hookmark**-URL-Auflösung | [Hookmark](Hookmark.html) |
 | **iA Writer** | [iA Writer](iA_Writer.html) |
@@ -22,16 +22,16 @@ Beginnen Sie mit [Live Markdown Preview on Mac](Live_Markdown_Preview_on_Mac.htm
 | **MultiMarkdown Composer** | [MultiMarkdown Composer](MultiMarkdown_Composer.html) |
 | **nvUltra** | [nvUltra](nvUltra.html) |
 | **Obsidian**-Tresore und Beschriftungen | [Obsidian](Obsidian.html) |
-| **OmniOutliner / OPML** | [OmniOutliner and OPML](OmniOutliner_and_OPML.html) |
-| **RTF / RTFD** (Pages, TextEdit usw.) | [RTF and RTFD Support](RTF_Support.html) |
-| **PDF** | [PDF Support](PDF_Support.html) |
-| **Scrivener 3** | [Scrivener 3 Support](Scrivener_Support.html) |
+| **OmniOutliner / OPML** | [OmniOutliner und OPML](OmniOutliner_and_OPML.html) |
+| **RTF / RTFD** (Pages, TextEdit usw.) | [RTF- und RTFD-Unterstützung](RTF_Support.html) |
+| **PDF** | [PDF-Unterstützung](PDF_Support.html) |
+| **Scrivener 3** | [Scrivener-3-Unterstützung](Scrivener_Support.html) |
 | **The Archive**-Streaming-Vorschau | [The Archive](The_Archive.html) |
 | **Ulysses**-Export-Workflow | [Ulysses](Ulysses.html) |
 | **Vim** (vim-marked-Plugin) | [Vim](Vim.html) |
 | **VS Code** (Öffnen in der Erweiterung Marked) | [VS Code](VS_Code.html) |
 | **VoodooPad** | [VoodooPad](VoodooPad.html) |
-| **Xcode Playgrounds** | [Xcode Playgrounds](Xcode_Playgrounds.html) |
+| **Xcode-Playgrounds** | [Xcode-Playgrounds](Xcode_Playgrounds.html) |
 
 ## Anwendungseinstellungen
 
@@ -45,11 +45,11 @@ Verwenden Sie diese Bereiche für Wiki-Link-Standardeinstellungen, die Scrivener
 
 ![][ClipboardPreviewMenu]
 
-Markdown (oder kompatibler Klartext) in der Zwischenablage wird mit {% appmenu File, New, Clipboard Preview %} ({% kbd shift cmd V %}) geöffnet. Wenn die Zwischenablage **HTML oder RTF** enthält, konvertiert Marked den Inhalt vor der Vorschau in eine Markdown-ähnliche Quelle – einschließlich grober Überschriftenerkennung, wenn RTF-Absätze große Stylesheet-Schriftgrößen verwenden.
+Markdown (oder kompatibler Klartext) in der Zwischenablage wird mit {% appmenu Ablage, Neu, Zwischenablage-Vorschau %} ({% kbd shift cmd V %}) geöffnet. Wenn die Zwischenablage **HTML oder RTF** enthält, konvertiert Marked den Inhalt vor der Vorschau in eine Markdown-ähnliche Quelle – einschließlich grober Überschriftenerkennung, wenn RTF-Absätze große Stylesheet-Schriftgrößen verwenden.
 
 ## Streaming-Vorschau
 
-Bear, Curio, Drafts, The Archive, nvALT, nvUltra und mehrere andere Editoren können Markdown während der Eingabe über **Streaming Preview** an Marked senden. Informationen zur Einrichtung und Fehlerbehebung finden Sie unter [Streaming Preview](Streaming_Preview.html).
+Bear, Curio, Drafts, The Archive, nvALT, nvUltra und mehrere andere Editoren können Markdown während der Eingabe über die **Streaming-Vorschau** an Marked senden. Informationen zur Einrichtung und Fehlerbehebung finden Sie unter [Streaming-Vorschau](Streaming_Preview.html).
 
 ## Skripte und Bonuspaket
 

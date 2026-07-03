@@ -4,7 +4,7 @@
 
 ## MarsEdit-Vorschaufenster
 
-Wählen Sie {% appmenu File, New, MarsEdit Preview %}. Marked verwendet AppleScript, um den **vordersten Beitrag in MarsEdit** zu lesen (die Bundle-IDs von Red Sweater für Direkt-Download, Mac App Store, Setapp und MarsEdit 4/5 werden erkannt). Lassen Sie MarsEdit während der Arbeit mit geöffnetem Dokument laufen.
+Wählen Sie {% appmenu Ablage, Neu, MarsEdit-Vorschau %}. Marked verwendet AppleScript, um den **vordersten Beitrag in MarsEdit** zu lesen (die Bundle-IDs von Red Sweater für Direkt-Download, Mac App Store, Setapp und MarsEdit 4/5 werden erkannt). Lassen Sie MarsEdit während der Arbeit mit geöffnetem Dokument laufen.
 
 - **Manuelle Aktualisierung:** Speichern Sie aus der Vorschau von Marked, wenn Sie eine Aktualisierung erzwingen möchten.
 - **Automatische Updates:** Aktivieren Sie die Wiedergabe, damit jede automatische Speicherung von MarsEdit Marked aktualisiert wird.

@@ -24,6 +24,6 @@ Wenn Sie **Erstes H1 als Fallback-Titel verwenden** in {% prefspane Export %} ak
 
 I> Ein Vorschaustil, der Bears eigenem Aussehen nahekommt, ist [auf markedapp.com/styles verfügbar](https://markedapp.com/styles/preview?style=bear).
 
-Die Streaming-Vorschau von Bear ist auf der Seite [Streaming Preview](Streaming_Preview.html) und unter [Additional app integrations](Additional_Application_Support.html) zusammengefasst.
+Die Streaming-Vorschau von Bear ist auf der Seite [Streaming-Vorschau](Streaming_Preview.html) und unter [Zusätzliche Anwendungsunterstützung](Additional_Application_Support.html) zusammengefasst.
 
 [bear]: https://bear.app/
