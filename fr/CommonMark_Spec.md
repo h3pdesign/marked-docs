@@ -1,34 +1,32 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Consultez le [Markdown Dingus](x-marked-3://dingus?processor=commonmark) pour expérimenter le processeur CommonMark (GFM).
 
 
-## What is CommonMark?
+## Qu'est-ce que CommonMark ?
 
-CommonMark is a strongly specified, highly compatible implementation of Markdown. Il a été créé pour résoudre les ambiguïtés et les incohérences de la spécification Markdown originale de John Gruber, qui ont conduit à des implémentations divergentes sur différentes plates-formes et outils.
+CommonMark est une implémentation de Markdown fortement spécifiée et hautement compatible. Il a été créé pour résoudre les ambiguïtés et les incohérences de la spécification Markdown originale de John Gruber, qui ont conduit à des implémentations divergentes sur différentes plates-formes et outils.
 
-## Why CommonMark Exists
+## Pourquoi CommonMark existe
 
-La spécification Markdown originale de John Gruber était intentionnellement ambiguë dans de nombreux domaines, conduisant à des interprétations différentes selon diverses implémentations. This created problems where the same Markdown document would render differently on different platforms (GitHub, StackOverflow, Reddit, etc.).
+La spécification Markdown originale de John Gruber était intentionnellement ambiguë dans de nombreux domaines, conduisant à des interprétations différentes selon diverses implémentations. Cela a créé des problèmes : le même document Markdown pouvait s'afficher différemment selon les plateformes (GitHub, StackOverflow, Reddit, etc.).
 
-CommonMark provides:
+CommonMark fournit :
 
-- **Unambiguous specifications** for all Markdown syntax
+- **Spécifications non ambiguës** pour toute la syntaxe Markdown
 - **Suite de tests complète** pour garantir un comportement cohérent
 - **Règles de priorité claires** en cas de syntaxe conflictuelle
 - **Algorithme d'analyse détaillé** qui peut être implémenté de manière cohérente
 
-## Différences clés par rapport à la démarque standard
+## Différences clés par rapport au Markdown standard
 
 ### 1. **Règles d'analyse plus strictes**
 
-CommonMark applique un comportement d'analyse plus cohérent :
+CommonMark applique un comportement d'analyse plus cohérent :
 
-**Blank Lines Before Block Elements**
+**Lignes vides avant les éléments de bloc**
 
-- CommonMark requires blank lines before headings, blockquotes, and lists
+- CommonMark exige des lignes vides avant les titres, citations et listes
 - Standard Markdown les autorise souvent sans lignes vides
 
 ```markdown
@@ -36,17 +34,17 @@ Text
 # Heading
 ```
 
-*CommonMark : nécessite une ligne vierge avant le titre*
+*CommonMark : nécessite une ligne vide avant le titre*
 
-*Standard Markdown : permet souvent sans ligne vierge*
+*Standard Markdown : l'autorise souvent sans ligne vide*
 
 ### 2. **Analyse des éléments de liste**
 
-**Indentation Requirements**
+**Exigences d'indentation**
 
-- CommonMark has specific rules for list item indentation
+- CommonMark a des règles précises pour l'indentation des éléments de liste
 - Les sous-listes doivent être indentées de manière cohérente (généralement 4 espaces)
-- Standard Markdown implementations vary on this
+- Les implémentations Markdown standard varient sur ce point
 
 ```markdown
 1. First item
@@ -54,17 +52,17 @@ Text
 2. Second item
 ```
 
-**List Continuation**
+**Continuation de liste**
 
 - CommonMark a des règles claires pour savoir quand les éléments de la liste sont « lâches » ou « serrés ».
-- Loose lists wrap items in `<p>` tags, tight lists don't
+- Les listes « lâches » enveloppent les éléments dans des balises `<p>`, les listes « serrées » non
 
 ### 3. **Gestion des blocs de code**
 
-**Fenced Code Blocks**
+**Blocs de code clôturés**
 
 - CommonMark standardise la syntaxe des blocs de code clôturés avec des backticks ou des tildes
-- Requires consistent indentation and closing markers
+- Nécessite une indentation cohérente et des marqueurs de fermeture cohérents
 
 
     ```language
@@ -72,14 +70,14 @@ Text
     ```
 
 
-**Indented Code Blocks**
+**Blocs de code indentés**
 
-- CommonMark requires blank lines before indented code blocks
+- CommonMark exige des lignes vides avant les blocs de code indentés
 - Standard Markdown les autorise souvent sans lignes vides
 
 ### 4. **Traitement des liens et des images**
 
-**Reference Link Precedence**
+**Priorité des liens de référence**
 
 - CommonMark a des règles claires pour lesquelles la définition de référence est prioritaire
 - Plusieurs définitions pour la même référence sont traitées de manière cohérente
@@ -90,9 +88,9 @@ Text
 [link1]  <!-- Uses /url2 in CommonMark -->
 ```
 
-**Link Parsing Order**
+**Ordre d'analyse des liens**
 
-- CommonMark processes links before emphasis
+- CommonMark traite les liens avant l'emphase
 - Cela affecte la façon dont la syntaxe imbriquée est interprétée
 
 ### 5. **Emphase et forte emphase**
@@ -100,20 +98,20 @@ Text
 **Règles d'accentuation imbriquées**
 
 - CommonMark dispose d'algorithmes spécifiques pour gérer les marqueurs imbriqués `*` et `_`
-- Prevents ambiguous parsing of complex emphasis patterns
+- Empêche une analyse ambiguë des motifs d'emphase complexes
 
 ```markdown
 *foo *bar* baz*  <!-- Clear precedence rules in CommonMark -->
 ```
 
-**Delimiter Processing**
+**Traitement des délimiteurs**
 
-- CommonMark uses a "delimiter stack" algorithm for consistent emphasis parsing
+- CommonMark utilise un algorithme de « pile de délimiteurs » pour une analyse cohérente de l'emphase
 - Les implémentations standard de Markdown varient dans leur approche
 
 ### 6. **Traitement des blocs HTML**
 
-**HTML Block Detection**
+**Détection des blocs HTML**
 
 - CommonMark dispose de 7 types différents de blocs HTML avec des règles spécifiques
 - Chaque type a des exigences différentes pour les conditions de début/fin
@@ -126,22 +124,22 @@ This is an HTML block in CommonMark
 
 ### 7. **Gestion des sauts de ligne**
 
-**Hard Line Breaks**
+**Sauts de ligne forcés**
 
-- CommonMark nécessite deux espaces en fin de ligne pour les coupures brutales
-- Single line breaks become soft breaks (ignored in HTML)
+- CommonMark nécessite deux espaces en fin de ligne pour les sauts de ligne forcés
+- Un simple retour à la ligne devient un saut doux (ignoré en HTML)
 
 ```markdown
 Line one
 Line two  <!-- Two spaces before line break -->
 ```
 
-### 8. **Références d'entités et de personnages**
+### 8. **Références d'entités et de caractères**
 
 **Références de caractères numériques**
 
 - CommonMark prend en charge les références numériques décimales et hexadécimales
-- Standard Markdown support varies
+- Le support varie selon les implémentations Markdown standard
 
 ```html
 &#8212;  <!-- Decimal -->
@@ -150,43 +148,43 @@ Line two  <!-- Two spaces before line break -->
 
 ## Algorithme d'analyse CommonMark
 
-CommonMark utilise une approche d'analyse en deux phases :
+CommonMark utilise une approche d'analyse en deux phases :
 
-### Phase 1: Block Structure
+### Phase 1 : structure de bloc
 
-1. **Traitement des lignes** : chaque ligne est analysée pour les marqueurs au niveau du bloc
-2. **Blocs de conteneurs** : les blockquotes, les listes et autres conteneurs sont identifiés
-3. **Leaf Blocks**: Headings, code blocks, paragraphs are processed
-4. **Reference Links**: Link definitions are collected for later use
+1. **Traitement des lignes** : chaque ligne est analysée pour les marqueurs au niveau du bloc
+2. **Blocs de conteneurs** : les blockquotes, les listes et autres conteneurs sont identifiés
+3. **Blocs feuilles** : les titres, blocs de code et paragraphes sont traités
+4. **Liens de référence** : les définitions de liens sont collectées pour un usage ultérieur
 
-### Phase 2 : Structure en ligne
+### Phase 2 : Structure en ligne
 
-1. **Traitement en ligne** : le texte dans les blocs est analysé pour les éléments en ligne
-2. **Emphasis Parsing**: Uses delimiter stack algorithm for consistent emphasis
-3. **Link Resolution**: Reference links are resolved using collected definitions
-4. **Traitement d'entité** : les références de caractères sont converties en caractères réels
+1. **Traitement en ligne** : le texte dans les blocs est analysé pour les éléments en ligne
+2. **Analyse de l'emphase** : utilise l'algorithme de pile de délimiteurs pour une emphase cohérente
+3. **Résolution des liens** : les liens de référence sont résolus à partir des définitions collectées
+4. **Traitement d'entité** : les références de caractères sont converties en caractères réels
 
 ## Avantages de CommonMark
 
-1. **Comportement prévisible** : la même entrée produit toujours la même sortie
-2. **Compatibilité multiplateforme** : fonctionne de manière cohérente sur différents outils
-3. **Tests complets** : une suite de tests complète garantit la fiabilité
-4. **Documentation claire** : les spécifications détaillées éliminent les conjectures
-5. **À l'épreuve du temps** : points d'extension bien définis pour les nouvelles fonctionnalités
+1. **Comportement prévisible** : la même entrée produit toujours la même sortie
+2. **Compatibilité multiplateforme** : fonctionne de manière cohérente sur différents outils
+3. **Tests complets** : une suite de tests complète garantit la fiabilité
+4. **Documentation claire** : les spécifications détaillées éliminent les conjectures
+5. **À l'épreuve du temps** : points d'extension bien définis pour les nouvelles fonctionnalités
 
-## Implementation Notes
+## Notes d'implémentation
 
-CommonMark est conçu pour être :
+CommonMark est conçu pour être :
 
-- **Specification-compliant**: Follows the official CommonMark spec exactly
-- **Test-driven** : réussit la suite de tests officielle CommonMark
-- **Extensible** : peut être étendu avec des fonctionnalités supplémentaires tout en conservant la compatibilité
-- **Rapide** : algorithmes d'analyse optimisés pour les performances
+- **Conforme aux spécifications** : suit exactement la spécification CommonMark officielle
+- **Test-driven** : réussit la suite de tests officielle CommonMark
+- **Extensible** : peut être étendu avec des fonctionnalités supplémentaires tout en conservant la compatibilité
+- **Rapide** : algorithmes d'analyse optimisés pour les performances
 
-## Resources
+## Ressources
 
 - [Spécification CommonMark](https://spec.commonmark.org/0.31.2/)
-- [CommonMark Test Suite](https://github.com/commonmark/commonmark-spec)
+- [Suite de tests CommonMark](https://github.com/commonmark/commonmark-spec)
 - [CommonMark Dingus](https://spec.commonmark.org/dingus/) - Outil de test en ligne
 - [Forum de discussion CommonMark](https://talk.commonmark.org/)
 
