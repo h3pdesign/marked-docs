@@ -8,7 +8,7 @@ Who is working on which section, so contributors don't translate the same files 
 | Settings | Thomas (@fucx, lead) | in progress |
 | Supported_Apps | Hilthart (@h3pdesign) | done |
 | Reading_Features | Andreas Lattka | offered |
-| Just_for_Writers | Hilthart (@h3pdesign) | offered |
+| Just_for_Writers | Hilthart (@h3pdesign) | assigned |
 | Special_Features | — | open |
 | Comparisons_FAQ | — | open |
 | Troubleshooting | — | open |
