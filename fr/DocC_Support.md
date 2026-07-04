@@ -1,0 +1,57 @@
+<!-- MT-DRAFT: machine translation; human review required -->
+
+# <%= @title %>
+
+Marked comprend les catalogues de documentation [Apple DocC](https://www.swift.org/documentation/docc/) (`.docc` bundles). Lorsque vous prévisualisez Markdown qui se trouve à l'intérieur ou à côté d'un catalogue, Marked peut résoudre les références d'image **sans extension** aux fichiers du dossier `Resources` du catalogue, y compris les variantes `~dark` et `@2x`.
+
+Pour les documents Markdown normaux qui utilisent des **chemins avec des extensions de fichier** (`images/icon.png`), voir [Variantes d'images](Image_Variants.html). Cette fonctionnalité fonctionne partout ; La résolution DocC est spécifique au catalogue.
+
+## Activation de la résolution DocC
+
+Dans {% prefspane Apps %}, activez **Résoudre les références d'image DocC** (activé par défaut).
+
+La détection DocC s'exécute lorsque Marked trouve un ancêtre de catalogue `.docc` du document ouvert. Aucun schéma d'URL spécial ni intégration Xcode n'est requis : ouvrez le Markdown du catalogue de la même manière que n'importe quel autre fichier.
+
+## Références sans extension
+
+Dans un catalogue DocC, les auteurs référencent généralement des images **sans** de chemin ou d'extension :
+
+```markdown
+![Order flow](OrderStateTransitions)
+```
+
+Marqué résout `OrderStateTransitions` en `Resources/OrderStateTransitions.png` (ou un autre type pris en charge) lorsque ce fichier existe dans le catalogue.
+
+Les références qui incluent déjà un chemin et une extension — `images/chart.png` — sont laissées à [Variantes d'image](Image_Variants.html) et ne sont pas réécrites par la résolution DocC.
+
+## Mode sombre et variantes Retina
+
+Les catalogues DocC contiennent souvent plusieurs fichiers par image :
+
+| Rôle | Exemple dans `Resources/` |
+|------|------------------------------|
+| Lumière (1x) | `diagram.png` |
+| Sombre (1x) | `diagram~dark.png` |
+| Lumière (2x) | `diagram@2x.png` |
+| Sombre (2x) | `diagram~dark@2x.png` |
+
+Lorsqu'il existe plusieurs variantes, Marked émet le même balisage réactif `<picture>` décrit dans [Variantes d'image](Image_Variants.html). Une référence à un seul fichier se résout toujours en un chemin normal `<img>` ou `![](Resources/...)`.
+
+## HTML et Markdown
+
+La résolution DocC s'applique lors de la passe d'inclusion de Marked :
+
+- **Sources Markdown** — `![alt](ImageName)` références
+- **Sources HTML** — `<img src="ImageName">` sans extension
+
+Les deux sont mis à jour avant le rendu de l’aperçu.
+
+## Surveillance de fichiers
+
+Les images résolues dans le dossier du catalogue `Resources` sont ajoutées à la liste de surveillance de Marked. La modification d'un fichier de variantes en externe met à jour l'aperçu sans actualisation manuelle.
+
+## Sujets connexes
+
+-[Variantes d'image](Image_Variants.html) — `~dark` et `@2x` détection des chemins basés sur les extensions dans n'importe quel projet
+- [Xcode Playgrounds](Xcode_Playgrounds.html) — aperçu du commentaire du terrain de jeu Swift
+- [Paramètres : Applications](Settings_Apps.html) — Préférences DocC et variantes d'image
