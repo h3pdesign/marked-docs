@@ -2,7 +2,7 @@
 
 Agreed translations for recurring terms. The lead translator maintains this file; contributors should follow it consistently.
 
-**Status:** Filled in from the official app localization (`fr-ui-review.marked-l10n`) where a match exists.
+**Status:** Filled in from the official app localization (`fr-ui-review.marked-l10n`) where a match exists. Updated with terms confirmed while reviewing AI_Ask_About_Document.md.
 
 | English | Translation | Notes |
 |---------|-------------|-------|
@@ -32,6 +32,14 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | Scrivener | Scrivener | App name — unchanged |
 | Obsidian | Obsidian | App name — unchanged |
 | tag | balise | Confirmed: "#Text is tag" = "#Le texte est une balise", "Style tags" = "Balises de style". Do not use "tag" in prose, including section headings. |
+| Ask About Document | Poser des questions sur le document | Confirmed: app string "Ask About Document" = "Poser des questions sur le document"; menu form "Ask About Document…" = "Poser des questions sur le document…" |
+| Summarize Document | Résumer le document | Confirmed |
+| Summarize Selection | Résumer la sélection | Confirmed |
+| Outline (AI panel action) | Plan | Confirmed — not "Plan hiérarchique" despite the descriptive prose using that phrase |
+| Key Points | Points clés | Confirmed |
+| Ask (button) | Demander | Confirmed |
+| Cancel (button) | Annuler | Confirmed |
+| System Settings (macOS app, not Marked's own Settings) | Réglages Système | Apple's current French name for the macOS System Settings app — distinct from the "Settings"/"Paramètres" entry above, which refers to Marked's own preferences window |
 
 ## Do not translate (keep English)
 
