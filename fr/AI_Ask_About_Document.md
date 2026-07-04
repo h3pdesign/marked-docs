@@ -1,114 +1,112 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
-Ask About Document utilise **Apple Intelligence** et le modèle linguistique intégré aux versions récentes de macOS pour résumer votre aperçu Markdown et répondre aux questions sur son contenu. All processing happens on your Mac; le texte du document n'est pas envoyé aux serveurs de Marked ou aux services d'IA tiers pour cette fonctionnalité.
+**Poser des questions sur le document** utilise Apple Intelligence et le modèle linguistique intégré aux versions récentes de macOS pour résumer votre aperçu Markdown et répondre aux questions sur son contenu. Tout le traitement s'effectue sur votre Mac ; le texte du document n'est pas envoyé aux serveurs de Marked ou aux services d'IA tiers pour cette fonctionnalité.
 
-## What Apple Intelligence provides
+## Ce que fournit Apple Intelligence
 
 Apple Intelligence est le système d'Apple pour les fonctionnalités génératives sur l'appareil. Marked utilise le framework **Foundation Models** d'Apple pour accéder au même modèle sur l'appareil qui alimente les outils d'écriture système, exposé directement dans Marked pour les tâches axées sur les documents.
 
-Marked sends your document's plain text (Markdown syntax stripped for clarity) to this local model. The model generates summaries, outlines, and answers in a floating panel beside your preview window. Étant donné que le modèle s’exécute localement, il fonctionne hors ligne une fois qu’Apple Intelligence est configuré et que le téléchargement du modèle système est terminé.
+Marked envoie le texte brut de votre document (la syntaxe Markdown est retirée pour plus de clarté) à ce modèle local. Le modèle génère des résumés, des plans et des réponses dans un panneau flottant à côté de votre fenêtre d'aperçu. Étant donné que le modèle s'exécute localement, il fonctionne hors ligne une fois qu'Apple Intelligence est configuré et que le téléchargement du modèle système est terminé.
 
-Apple Intelligence is best at language tasks such as summarization, outlining, extracting key points, and answering questions about provided text. It is not a general coding assistant or calculator, and very long documents are handled in sections so results stay within the model's context limits.
+Apple Intelligence excelle dans les tâches langagières telles que le résumé, la création de plans, l'extraction des points clés et la réponse à des questions sur un texte donné. Ce n'est pas un assistant de codage généraliste ni une calculatrice, et les documents très longs sont traités par sections afin que les résultats restent dans les limites de contexte du modèle.
 
-## System compatibility
+## Compatibilité système
 
-Demander à propos du document apparaît uniquement lorsque votre Mac peut exécuter la fonctionnalité.
+Poser des questions sur le document apparaît uniquement lorsque votre Mac peut exécuter la fonctionnalité.
 
-**Required:**
+**Requis :**
 
-- **macOS 26 (Tahoe)** or later
-- Un **Mac avec prise en charge Apple Intelligence** (Mac Apple Silicon qui répondent aux exigences des appareils Apple)
+- **macOS 26 (Tahoe)** ou version ultérieure
+- Un **Mac avec prise en charge Apple Intelligence** (Mac Apple Silicon répondant aux exigences des appareils Apple)
 - **Apple Intelligence activée** dans les paramètres système
 
-**Not supported:**
+**Non pris en charge :**
 
-- Intel Macs and other Macs marked as ineligible for Apple Intelligence
-- macOS versions earlier than Tahoe 26
-- Raw **HTML previews** (the feature is for Markdown and text-based document workflows)
+- Les Mac Intel et les autres Mac marqués comme non éligibles à Apple Intelligence
+- Les versions de macOS antérieures à Tahoe 26
+- Les aperçus **HTML** bruts (la fonctionnalité s'adresse aux flux de travail Markdown et texte)
 
-If your Mac qualifies but the menu item is missing, confirm that Apple Intelligence is enabled and that you are running a current build of Marked that includes this feature. Le menu est entièrement masqué sur les systèmes non pris en charge plutôt que affiché dans un état désactivé.
+Si votre Mac est éligible mais que l'élément de menu est absent, vérifiez qu'Apple Intelligence est activée et que vous utilisez une version récente de Marked qui inclut cette fonctionnalité. Le menu est entièrement masqué sur les systèmes non pris en charge plutôt qu'affiché dans un état désactivé.
 
-## Enabling Apple Intelligence
+## Activer Apple Intelligence
 
-1. Open **System Settings**.
+1. Ouvrez **Réglages Système**.
 2. Accédez à **Apple Intelligence & Siri** (ou **Apple Intelligence**, selon votre version de macOS).
 3. Activez **Apple Intelligence** et effectuez toutes les étapes de configuration demandées par Apple.
-4. Attendez que le modèle sur l'appareil termine le téléchargement si vous y êtes invité. Jusqu'à ce que le modèle soit prêt, Marked peut afficher l'élément de menu mais afficher un message indiquant qu'Apple Intelligence est toujours en train de préparer.
+4. Attendez que le modèle sur l'appareil termine le téléchargement si vous y êtes invité. Jusqu'à ce que le modèle soit prêt, Marked peut afficher l'élément de menu mais indiquer qu'Apple Intelligence est toujours en train de se préparer.
 
-Marked does not include a separate preference for this feature. Availability follows the system model status reported by macOS.
+Marked n'inclut pas de préférence distincte pour cette fonctionnalité. La disponibilité suit l'état du modèle système signalé par macOS.
 
-## Opening Ask About Document
+## Ouvrir le panneau Poser des questions sur le document
 
-Open the panel using any of these methods:
+Ouvrez le panneau à l'aide de l'une de ces méthodes :
 
-- **Preview > Ask About Document…**
+- **Aperçu > Poser des questions sur le document…**
 - Raccourci clavier {% kbd shift ctrl cmd I %} (tandis qu'un document d'aperçu Markdown est la fenêtre active)
 
-The panel docks to the left side of the document window. You need an open document with readable text; un document vide ou un aperçu HTML uniquement ne proposera pas la commande.
+Le panneau s'ancre sur le côté gauche de la fenêtre du document. Vous avez besoin d'un document ouvert avec du texte lisible ; un document vide ou un aperçu HTML uniquement ne proposera pas la commande.
 
-## The Ask About Document panel
+## Le panneau Poser des questions sur le document
 
-The panel is organized like a simple chat view:
+Le panneau est organisé comme une simple vue de discussion :
 
-- **Preset actions** at the top for common tasks
+- **Actions prédéfinies** en haut pour les tâches courantes
 - Une **zone de réponse** au milieu où apparaissent les résumés et les réponses (en streaming au fur et à mesure de leur génération)
 - Un **champ de question** en bas où vous saisissez des questions personnalisées, avec les boutons **Demander** et **Annuler**.
 
-After a response completes, focus returns to the question field so you can ask a follow-up without clicking.
+Une fois la réponse terminée, le focus revient au champ de question afin que vous puissiez poser une question de suivi sans avoir à cliquer.
 
-### Preset actions
+### Actions prédéfinies
 
-| Action | What it does |
+| Action | Ce qu'elle fait |
 | :-- | :-- |
-| **Summarize Document** | Produit un bref résumé cohérent du document complet. Long documents are summarized in sections and combined. |
-| **Summarize Selection** | Summarizes only the text currently selected in the preview. Select text first; otherwise Marked prompts you to make a selection or use Summarize Document. |
-| **Outline** | Builds a hierarchical outline of the document structure using headings and bullet points. |
-| **Key Points** | Lists the most important points from the document as a bullet list. |
+| **Résumer le document** | Produit un bref résumé cohérent du document complet. Les documents longs sont résumés par sections, puis combinés. |
+| **Résumer la sélection** | Résume uniquement le texte actuellement sélectionné dans l'aperçu. Sélectionnez d'abord du texte ; sinon, Marked vous invite à faire une sélection ou à utiliser Résumer le document. |
+| **Plan** | Construit un plan hiérarchique de la structure du document à partir des titres et des puces. |
+| **Points clés** | Répertorie les points les plus importants du document sous forme de liste à puces. |
 
-Preset actions do not require text in the question field. Click a button and wait for the response in the panel above.
+Les actions prédéfinies ne nécessitent pas de texte dans le champ de question. Cliquez sur un bouton et attendez la réponse dans le panneau ci-dessus.
 
 ### Poser vos propres questions
 
-1. Type a question in the field at the bottom of the panel, for example "What problem does this document solve?" ou "Quel est le public visé ?"
+1. Tapez une question dans le champ situé en bas du panneau, par exemple « Quel problème ce document résout-il ? » ou « Quel est le public visé ? »
 2. Appuyez sur **Retour** ou cliquez sur **Demander**.
-3. Read the answer as it streams into the response area.
+3. Lisez la réponse au fur et à mesure qu'elle s'affiche dans la zone de réponse.
 
-Pour des questions sur un passage spécifique, **sélectionnez ce texte dans l'aperçu** avant de poser la question. Marked sends the selection as context instead of the whole document when a selection is active.
+Pour des questions sur un passage spécifique, **sélectionnez ce texte dans l'aperçu** avant de poser la question. Marked envoie la sélection comme contexte au lieu du document entier lorsqu'une sélection est active.
 
 Cliquez sur **Annuler** pour arrêter une demande en cours.
 
-## Examples
+## Exemples
 
 ### Aperçu rapide d'un long article
 
-Ouvrez un long article de blog ou un rapport dans Marqué, choisissez **Aperçu > Demander à propos du document…**, puis cliquez sur **Résumer le document**. Use the summary to decide whether to read the full piece or to refresh your memory after time away from the draft.
+Ouvrez un long article de blog ou un rapport dans Marked, choisissez **Aperçu > Poser des questions sur le document…**, puis cliquez sur **Résumer le document**. Utilisez le résumé pour décider si vous devez lire l'article en entier ou simplement vous rafraîchir la mémoire après une pause dans la rédaction.
 
-### Notes on a selected paragraph
+### Notes sur un paragraphe sélectionné
 
-Highlight a dense paragraph in the preview, open Ask About Document, and click **Summarize Selection**. Useful when you only need a shorter version of one section.
+Sélectionnez un paragraphe dense dans l'aperçu, ouvrez Poser des questions sur le document, puis cliquez sur **Résumer la sélection**. Utile lorsque vous avez seulement besoin d'une version plus courte d'une section.
 
-### Structural review
+### Revue structurelle
 
-Click **Outline** on a draft with many headings to see whether the argument flows logically, or use **Key Points** before sending a document to someone else to check that the main ideas are clear.
+Cliquez sur **Plan** sur un brouillon comportant de nombreux titres pour voir si l'argumentation suit une logique cohérente, ou utilisez **Points clés** avant d'envoyer un document à quelqu'un d'autre pour vérifier que les idées principales sont claires.
 
-### Targeted questions
+### Questions ciblées
 
-With no selection active, type questions such as:
+Sans sélection active, tapez des questions telles que :
 
-- "Quelles sont les trois principales recommandations ?"
-- "Does this document mention licensing?"
-- "List any dates or deadlines mentioned."
+- « Quelles sont les trois principales recommandations ? »
+- « Ce document mentionne-t-il des questions de licence ? »
+- « Liste toutes les dates ou échéances mentionnées. »
 
-With a selection active, ask narrower questions such as "What does this paragraph assume about the reader?" or "Rewrite this idea in one sentence" (the model answers about the selection; it does not edit your source file).
+Avec une sélection active, posez des questions plus précises comme « Que ce paragraphe suppose-t-il sur le lecteur ? » ou « Reformule cette idée en une phrase » (le modèle répond à propos de la sélection ; il ne modifie pas votre fichier source).
 
-## Tips and limitations
+## Conseils et limites
 
-- **Privacy:** Processing uses Apple's on-device model. Marked still reads your document text locally to provide content to that model; traiter les matériaux sensibles en conséquence.
-- **Accuracy:** Verify important facts against your source. AI summaries can omit details or misread ambiguous passages.
-- **Length:** Extremely long documents are processed in chunks. Summaries and answers reflect the full text indirectly; for precision on one section, select that section first.
-- **Language:** Results follow the language capabilities of the system Apple Intelligence model on your Mac.
-- **Refusals:** The system may decline some requests based on Apple's safety policies.
+- **Confidentialité :** le traitement utilise le modèle sur l'appareil d'Apple. Marked lit quand même le texte de votre document localement pour le fournir à ce modèle ; traitez les contenus sensibles en conséquence.
+- **Précision :** vérifiez les faits importants par rapport à votre source. Les résumés générés par IA peuvent omettre des détails ou mal interpréter des passages ambigus.
+- **Longueur :** les documents extrêmement longs sont traités par blocs. Les résumés et réponses reflètent indirectement le texte complet ; pour plus de précision sur une section, sélectionnez-la d'abord.
+- **Langue :** les résultats suivent les capacités linguistiques du modèle Apple Intelligence installé sur votre Mac.
+- **Refus :** le système peut refuser certaines demandes en fonction des politiques de sécurité d'Apple.
 
-Si Demander à propos du document n'est pas disponible, vérifiez l'état des paramètres système pour Apple Intelligence et assurez-vous de prévisualiser un document Markdown sur un Mac pris en charge exécutant macOS 26 ou version ultérieure.
+Si Poser des questions sur le document n'est pas disponible, vérifiez l'état de Réglages Système pour Apple Intelligence et assurez-vous de prévisualiser un document Markdown sur un Mac pris en charge exécutant macOS 26 ou version ultérieure.
