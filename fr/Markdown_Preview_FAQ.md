@@ -1,5 +1,3 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 <%= @faq_intro %>
