@@ -1,30 +1,28 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Il existe plusieurs façons d'intégrer des JavaScript supplémentaires dans Marked.
 
-## Y compris JavaScript par document
+## Inclure du JavaScript par document
 
-Vous pouvez inclure des scripts dans un seul document en utilisant les balises `<script>` dans le contenu lui-même. Cela peut être utile pour les bibliothèques comme [D3](https://d3js.org/) pour les visualisations de données dont vous n'avez besoin que dans des documents spécifiques :
+Vous pouvez inclure des scripts dans un seul document en utilisant les balises `<script>` dans le contenu lui-même. Cela peut être utile pour les bibliothèques comme [D3](https://d3js.org/) pour les visualisations de données dont vous n'avez besoin que dans des documents spécifiques :
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 ```
 
-Si vous utilisez MultiMarkdown comme processeur, vous pouvez inclure des scripts dans les métadonnées et ils seront insérés dans le document. Étant donné que Marked produit uniquement un "extrait", la clé `XHTML Header` n'est pas idéale. Utilisez plutôt `CSS Header` et les scripts seront insérés au bas du document.
+Si vous utilisez MultiMarkdown comme processeur, vous pouvez inclure des scripts dans les métadonnées et ils seront insérés dans le document. Étant donné que Marked produit uniquement un « extrait », la clé `XHTML Header` n'est pas idéale. Utilisez plutôt `CSS Header` et les scripts seront insérés au bas du document.
 
-	En-tête CSS : <script src="file.js"></script>
+	CSS Header: <script src="file.js"></script>
 
 Pour actualiser les scripts inclus lorsque le contenu change, voir [Hooks](#hooks).
 
-## Y compris JavaScript
+## Inclure du JavaScript
 
 Vous pouvez inclure votre propre JavaScript à partir de fichiers locaux, de CDN ou en collant du code brut. Pour y accéder, ouvrez {% prefspane Style %} et cliquez sur le bouton *Règles personnalisées*.
 
-Configurez une nouvelle règle personnalisée ou ajoutez des scripts à une règle existante. Pour ajouter des scripts à chaque fichier, définissez le prédicat sur "le nom du fichier contient *".
+Configurez une nouvelle règle personnalisée ou ajoutez des scripts à une règle existante. Pour ajouter des scripts à chaque fichier, définissez le prédicat sur « le nom du fichier contient * ».
 
-L'éditeur d'actions pour une règle personnalisée propose trois options pour inclure des scripts :
+L'éditeur d'actions pour une règle personnalisée propose trois options pour inclure des scripts :
 
 Insérer un fichier JavaScript
 : Permet de sélectionner un fichier local à insérer à la fin du document
@@ -35,21 +33,21 @@ Insérer du JavaScript à partir de l'URL
 Insérer du JavaScript
 : Ouvre un éditeur de code dans lequel vous pouvez écrire/coller votre propre code JavaScript
 
-Ces scripts seront insérés à la fin de l'aperçu, avant la balise du document. Si vous devez appeler une fonction init ou mettre à jour à chaque fois que l'aperçu est mis à jour, consultez [Inclure le JavaScript brut] (#rawjs) et familiarisez-vous avec les [hooks] de Marked (#hooks).
+Ces scripts seront insérés à la fin de l'aperçu, avant la balise du document. Si vous devez appeler une fonction init ou mettre à jour à chaque fois que l'aperçu est mis à jour, consultez [Inclure le JavaScript brut](#rawjs) et familiarisez-vous avec les [hooks](#hooks) de Marked.
 
-## Sirène et autres scripts {#sirène}
+## Mermaid et autres scripts {#mermaid}
 
 jQuery est inclus par défaut et vous pouvez l'utiliser dans tous les scripts que vous ajoutez à Marked en utilisant l'une des méthodes ci-dessous.
 
-[Sirène](https://mermaid.js.org/intro/) pour les diagrammes de type Markdown est désormais inclus par défaut dans chaque document. Tout bloc de code clôturé avec le langage `mermaid` sera automatiquement rendu sous forme de diagramme.
+[Mermaid](https://mermaid.js.org/intro/) pour les diagrammes de type Markdown est désormais inclus par défaut dans chaque document. Tout bloc de code clôturé avec le langage `mermaid` sera automatiquement rendu sous forme de diagramme.
 
-Au bas du {% prefspane Style %}, une case à cocher pour « Diagrammes de panoramique et de zoom » est disponible lorsque le contenu Mermaid est présent. Cocher cette case entraînera le zoom des diagrammes avec un défilement {% kbd cmd %} et un panoramique en cliquant et en faisant glisser. Le script de cette fonctionnalité est inclus à partir d'un CDN et nécessite une connexion Internet.
+Au bas du {% prefspane Style %}, une case à cocher pour « Diagrammes de panoramique et de zoom » est disponible lorsque le contenu Mermaid est présent. Cocher cette case entraînera le zoom des diagrammes avec un défilement {% kbd cmd %} et un panoramique en cliquant et en faisant glisser. Le script de cette fonctionnalité est inclus à partir d'un CDN et nécessite une connexion Internet.
 
 S'il y a une bibliothèque particulière que vous souhaiteriez voir incluse par défaut, veuillez me le faire savoir sur le [forum BrettTerpstra.com](https://forum.brettterpstra.com/) ou via [le site d'assistance](https://support.markedapp.com/questions/add).
 
-## Crochets [crochets]
+## Hooks [hooks]
 
-Depuis les versions récentes, Marked n'effectue plus une actualisation complète de la page lors de la mise à jour du contenu, mais injecte plutôt le nouveau contenu dans le DOM sans nécessiter de chargement de page. Cela signifie que les scripts inclus qui se déclenchent lors du chargement de la page ne seront pas redéclenchés lorsque le contenu est mis à jour. Marked fournit une fonctionnalité de « crochets » pour s'adapter à cela. Pour enregistrer un hook, vous devez inclure un deuxième bloc de script appelant la [`Marked.hooks.register()` function](https://markedapp.com/jsapi/Marked.hooks.html#.register__anchor), qui accepte un déclencheur, dans ce cas 'update', et une fonction à exécuter.
+Depuis les versions récentes, Marked n'effectue plus une actualisation complète de la page lors de la mise à jour du contenu, mais injecte plutôt le nouveau contenu dans le DOM sans nécessiter de chargement de page. Cela signifie que les scripts inclus qui se déclenchent lors du chargement de la page ne seront pas redéclenchés lorsque le contenu est mis à jour. Marked fournit une fonctionnalité de hooks pour s'adapter à cela. Pour enregistrer un hook, vous devez inclure un deuxième bloc de script appelant la [fonction `Marked.hooks.register()`](https://markedapp.com/jsapi/Marked.hooks.html#.register__anchor), qui accepte un déclencheur, dans ce cas 'update', et une fonction à exécuter.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
@@ -69,4 +67,4 @@ Désormais, chaque fois qu'une mise à jour est effectuée (chaque fois que le f
 
 
 
-*[CDN] : réseau de distribution de contenu
+*[CDN]: réseau de distribution de contenu
