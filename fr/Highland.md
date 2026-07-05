@@ -1,5 +1,3 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Les utilisateurs de [Highland 2][highland] peuvent prévisualiser les brouillons Fountain ou Markdown dans Marked en **faisant glisser le document Highland** depuis le Finder (ou depuis l'icône proxy dans la barre de titre de la fenêtre) sur l'icône de Marked ou dans une fenêtre Marked ouverte.
