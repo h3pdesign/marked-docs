@@ -1,5 +1,3 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Consultez le [Markdown Dingus](x-marked-3://dingus?processor=discount) pour expérimenter le processeur Discount.
@@ -10,15 +8,15 @@ Discount GFM (GitHub Flavored Markdown) est un processeur Markdown basé sur C q
 
 ## Caractéristiques clés
 
-- **Performances basées sur C** : implémentation C rapide et native pour des performances optimales
-- **Compatibilité GitHub** : implémente les extensions Markdown de GitHub pour une compatibilité maximale
-- **Léger** : dépendances minimales et faible encombrement
-- **Extensible** : prend en charge diverses extensions Markdown et options personnalisées
-- **Prise en charge HTML5** : génère une sortie HTML5 moderne avec un balisage sémantique approprié
+- **Performances basées sur C** : implémentation C rapide et native pour des performances optimales
+- **Compatibilité GitHub** : implémente les extensions Markdown de GitHub pour une compatibilité maximale
+- **Léger** : dépendances minimales et faible encombrement
+- **Extensible** : prend en charge diverses extensions Markdown et options personnalisées
+- **Prise en charge HTML5** : génère une sortie HTML5 moderne avec un balisage sémantique approprié
 
-## Différences majeures par rapport à la démarque standard
+## Différences majeures par rapport au Markdown standard
 
-### 1. **Extensions Markdown aromatisées à GitHub**
+### 1. **Extensions Markdown façon GitHub**
 
 **Tableaux**
 
@@ -72,19 +70,19 @@ function hello() {
 ```
 ```
 
-**Automatic Language Detection**
+**Détection automatique du langage**
 
-- Support for many programming languages
-- Proper syntax highlighting when supported
-- Fallback to plain text for unsupported languages
+- Prise en charge de nombreux langages de programmation
+- Coloration syntaxique appropriée si prise en charge
+- Repli sur texte brut pour les langages non pris en charge
 
-### 3. **Automatic URL Linking**
+### 3. **Liaison automatique des URL**
 
-**URL Autolinking**
+**Liens automatiques d'URL**
 
-- Automatic conversion of URLs to clickable links
-- Support for http, https, and ftp protocols
-- Email addresses automatically converted to mailto links
+- Conversion automatique des URL en liens cliquables
+- Prise en charge des protocoles http, https et ftp
+- Les adresses e-mail sont automatiquement converties en liens mailto
 
 ```markdown
 Visit http://example.com for more information.
@@ -148,7 +146,7 @@ This is a sentence with a footnote[^1].
 **Blocs HTML bruts**
 
 - Prise en charge du HTML dans Markdown
-- Évasion et désinfection appropriées
+- Échappement et nettoyage appropriés
 - Intégration avec la syntaxe Markdown
 
 ### 7. **Règles d'accentuation améliorées**
@@ -184,9 +182,9 @@ This is _emphasized text_ that will be styled.
 - Liens d'ancrage pour une navigation facile
 - Formatage d'identification cohérent
 
-## Remise sur GFM par rapport aux autres saveurs Markdown
+## Discount GFM par rapport aux autres saveurs Markdown
 
-| Fonctionnalité | Remise | Marque commune (GFM) | Kramdown | MultiMarkdown | Norme |
+| Fonctionnalité | Discount | CommonMark (GFM) | Kramdown | MultiMarkdown | Standard |
 | ---------------- | ------------ | ---------- | -------- | ------------- | -------- |
 | Tableaux | Oui | Non | Oui | Oui | Non |
 | Barré | Oui | Non | Non | Oui | Non |
@@ -204,12 +202,12 @@ This is _emphasized text_ that will be styled.
 
 ## Avantages clés de Discount GFM
 
-1. **Compatibilité GitHub** : parfait pour le contenu qui doit fonctionner sur GitHub
-2. **Performances** : implémentation rapide basée sur C
-3. **Simplicité** : axé sur les fonctionnalités de base de GitHub sans complexité
-4. **Fiabilité** : mise en œuvre stable et bien testée
-5. **Conformité aux normes** : suit la spécification Markdown de GitHub
-6. **Léger** : utilisation minimale des ressources et dépendances
+1. **Compatibilité GitHub** : parfait pour le contenu qui doit fonctionner sur GitHub
+2. **Performances** : implémentation rapide basée sur C
+3. **Simplicité** : axé sur les fonctionnalités de base de GitHub sans complexité
+4. **Fiabilité** : mise en œuvre stable et bien testée
+5. **Conformité aux normes** : suit la spécification Markdown de GitHub
+6. **Léger** : utilisation minimale des ressources et dépendances
 
 ## Cas d'utilisation courants
 
@@ -239,24 +237,24 @@ This is _emphasized text_ that will be styled.
 
 ## Options de configuration
 
-Discount GFM prend en charge diverses options de configuration :
+Discount GFM prend en charge diverses options de configuration :
 
-- **Auto-linking** : activer/désactiver la détection automatique d'URL
-- **Notes de bas de page** : Contrôler le traitement des notes de bas de page
-- **Table des matières** : paramètres de génération de la table des matières
-- **Sécurité HTML** : validation et nettoyage des liens
-- **Mode strict** : règles d'analyse améliorées
-- **Smart Quotes** : conversion automatique des devis
+- **Auto-linking** : activer/désactiver la détection automatique d'URL
+- **Notes de bas de page** : Contrôler le traitement des notes de bas de page
+- **Table des matières** : paramètres de génération de la table des matières
+- **Sécurité HTML** : validation et nettoyage des liens
+- **Mode strict** : règles d'analyse améliorées
+- **Smart Quotes** : conversion automatique des guillemets droits en guillemets typographiques
 
 ## Détails de mise en œuvre
 
 **Options de l'analyseur**
 
-- `kGHMarkdownAutoLink` : Activer la liaison automatique d'URL
-- `kGHMarkdownFootnotes` : Activer le traitement des notes de bas de page
-- `kGHMarkdownTOC` : Activer la génération de la table des matières
-- `kGHMarkdownSafeLinks` : Restreindre les liens vers des protocoles sécurisés
-- `kGHMarkdownNoHTMLTags` : Désactiver le traitement des balises HTML
+- `kGHMarkdownAutoLink` : Activer la liaison automatique d'URL
+- `kGHMarkdownFootnotes` : Activer le traitement des notes de bas de page
+- `kGHMarkdownTOC` : Activer la génération de la table des matières
+- `kGHMarkdownSafeLinks` : Restreindre les liens vers des protocoles sécurisés
+- `kGHMarkdownNoHTMLTags` : Désactiver le traitement des balises HTML
 
 **Fonctionnalités de sortie**
 
@@ -265,29 +263,29 @@ Discount GFM prend en charge diverses options de configuration :
 - Structures de tables accessibles
 - Sortie HTML propre et valide
 
-## meilleures pratiques
+## Meilleures pratiques
 
-1. **Utilisez les tables avec parcimonie** : les tables sont puissantes mais peuvent être complexes à gérer
-2. **Tirer parti des listes de tâches** : idéal pour la gestion de projet et la documentation
-3. **Utiliser les liens automatiques** : laissez le processeur gérer automatiquement la conversion d'URL
-4. **Structure avec titres** : utilisez la hiérarchie de titres appropriée pour une meilleure génération de table des matières
-5. **Test sur GitHub** : Vérifier la compatibilité avec le rendu de GitHub
+1. **Utilisez les tables avec parcimonie** : les tables sont puissantes mais peuvent être complexes à gérer
+2. **Tirer parti des listes de tâches** : idéal pour la gestion de projet et la documentation
+3. **Utiliser les liens automatiques** : laissez le processeur gérer automatiquement la conversion d'URL
+4. **Structure avec titres** : utilisez la hiérarchie de titres appropriée pour une meilleure génération de table des matières
+5. **Test sur GitHub** : Vérifier la compatibilité avec le rendu de GitHub
 
-## Migration depuis la démarque standard
+## Migration depuis le Markdown standard
 
-La plupart des Markdown standard fonctionnent avec Discount GFM sans modifications. Pour profiter des fonctionnalités de GFM :
+La plupart des Markdown standard fonctionnent avec Discount GFM sans modifications. Pour profiter des fonctionnalités de GFM :
 
-1. **Ajouter des tables** : convertissez les données au format de table de style GitHub
-2. **Utilisez les listes de tâches** : remplacez les puces par des cases à cocher, le cas échéant
-3. **Activer le barré** : utilisez `~~text~~` pour le contenu barré
-4. **Tirer parti des liens automatiques** : supprimez le balisage manuel des liens pour les URL simples
-5. **En-têtes de structure** : garantir une hiérarchie de titres appropriée pour la génération de la table des matières
+1. **Ajouter des tables** : convertissez les données au format de table de style GitHub
+2. **Utilisez les listes de tâches** : remplacez les puces par des cases à cocher, le cas échéant
+3. **Activer le barré** : utilisez `~~text~~` pour le contenu barré
+4. **Tirer parti des liens automatiques** : supprimez le balisage manuel des liens pour les URL simples
+5. **En-têtes de structure** : garantir une hiérarchie de titres appropriée pour la génération de la table des matières
 
 ## Ressources
 
-- [Spécifications de démarques aromatisées GitHub](https://github.github.com/gfm/)
-- [Documentation de la bibliothèque à prix réduit](https://www.pell.portland.or.us/~orc/Code/discount/)
-- [Guide de démarque GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Spécification GitHub Flavored Markdown](https://github.github.com/gfm/)
+- [Documentation de la bibliothèque Discount](https://www.pell.portland.or.us/~orc/Code/discount/)
+- [Guide Markdown de GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [Aide-mémoire Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 ---
