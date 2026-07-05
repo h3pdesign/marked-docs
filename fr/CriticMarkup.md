@@ -1,14 +1,12 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 ![][1]
 
 [1]: images/criticmarkup.jpg @2x width=826px height=399px class=center
 
-[CriticMarkup](http://criticmarkup.com/) permet aux éditeurs de fournir des commentaires dans les documents Markdown. Lorsqu'il est activé sous le {% prefspane  Proofing %}, l'aperçu marqué fournira trois onglets chaque fois que la syntaxe CriticMarkup est détectée : la version de balisage affichant les insertions, les suppressions et les commentaires en ligne, la version originale avant les modifications et la version modifiée telle qu'elle apparaîtrait si toutes les modifications étaient acceptées.
+[CriticMarkup](http://criticmarkup.com/) permet aux éditeurs de fournir des commentaires dans les documents Markdown. Lorsqu'il est activé sous le {% prefspane  Proofing %}, l'aperçu Marked fournira trois onglets chaque fois que la syntaxe CriticMarkup est détectée : la version de balisage affichant les insertions, les suppressions et les commentaires en ligne, la version originale avant les modifications et la version modifiée telle qu'elle apparaîtrait si toutes les modifications étaient acceptées.
 
-Vous pouvez activer/désactiver la prise en charge de CriticMarkup pour n'importe quel document à partir du menu d'engrenage ou en utilisant {% kbd ctrl shift C %}.
+Vous pouvez activer/désactiver la prise en charge de CriticMarkup pour n'importe quel document à partir du menu Action ou en utilisant {% kbd ctrl shift C %}.
 
 Changez rapidement de vue dans un aperçu CriticMarkup avec {% kbd shift cmd [ %} et {% kbd shift cmd ] %}
 
