@@ -1,10 +1,8 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Les liens [Hookmark](https://hookproductivity.com/) peuvent pointer vers des fichiers et des ressources auxquels votre Markdown fait référence, y compris des images.
 
-## Résolution de l'URL du crochet
+## Résolution des URL Hookmark
 
 Marked peut résoudre les liens `hook://` pour les images et autres éléments d'un fichier lorsque l'intégration Hookmark est activée.
 
