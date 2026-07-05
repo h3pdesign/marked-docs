@@ -1,5 +1,3 @@
-<!-- MT-DRAFT: machine translation; human review required -->
-
 # <%= @title %>
 
 Marked peut créer automatiquement des éléments `<picture>` réactifs pour les images locales lorsque les fichiers compagnons **mode sombre** et **Retina** se trouvent à côté de l'image que vous référencez. Cela utilise les mêmes conventions de dénomination que les catalogues de documentation DocC d'Apple, mais fonctionne pour **n'importe quel document Markdown ou HTML** avec des chemins d'image normaux qui incluent une extension de fichier.
@@ -10,11 +8,11 @@ Voir également [Support DocC](DocC_Support.html) pour les références de catal
 
 Dans {% prefspane Apps %}, activez **Résoudre les variantes d'image sombres et @2x** (activé par défaut) dans les paramètres DocC.
 
-Cette préférence est distincte des **références d'images Resolve DocC**, qui s'appliquent uniquement à l'intérieur des catalogues `.docc`. Vous pouvez en utiliser un, les deux ou aucun selon votre projet.
+Cette préférence est distincte de **Résoudre les références d'image DocC**, qui s'applique uniquement à l'intérieur des catalogues `.docc`. Vous pouvez en utiliser une, les deux ou aucune selon votre projet.
 
 ## Convention de dénomination
 
-Placez les fichiers de variantes dans le **même dossier** que l'image principale. Marqué recherche quatre combinaisons basées sur le nom de base :
+Placez les fichiers de variantes dans le **même dossier** que l'image principale. Marked recherche quatre combinaisons basées sur le nom de base :
 
 | Rôle | Exemple de nom de fichier |
 |------|------------------|
@@ -25,18 +23,18 @@ Placez les fichiers de variantes dans le **même dossier** que l'image principal
 
 L'ordre des suffixes est flexible : `icon@2x~dark.png` et `icon~dark@2x.png` sont traités de la même manière.
 
-Extensions prises en charge : `png`, `jpg`, `jpeg`, `gif`, `svg`, `webp` et `pdf`.
+Extensions prises en charge : `png`, `jpg`, `jpeg`, `gif`, `svg`, `webp` et `pdf`.
 
 ## Ce qui est réécrit
 
-Marked scanne votre document **avant** le rendu de l'aperçu final :
+Marked scanne votre document **avant** le rendu de l'aperçu final :
 
-- **Marquage :** `![Alt text](images/icon.png)`
-- **HTML :** `<img src="images/icon.png" alt="Alt text">`
+- **Marquage :** `![Alt text](images/icon.png)`
+- **HTML :** `<img src="images/icon.png" alt="Alt text">`
 
-Si au moins **deux** fichiers de variantes correspondants existent sur le disque, la référence est remplacée par un bloc `<picture>`. Un seul fichier supplémentaire suffit : vous n’avez pas besoin des quatre variantes.
+Si au moins **deux** fichiers de variantes correspondants existent sur le disque, la référence est remplacée par un bloc `<picture>`. Un seul fichier supplémentaire suffit : vous n'avez pas besoin des quatre variantes.
 
-Exemple de sortie lorsque des fichiers clairs, sombres et @2x sont présents :
+Exemple de sortie lorsque des fichiers clairs, sombres et @2x sont présents :
 
 ```html
 <picture>
@@ -50,12 +48,12 @@ L'aperçu (et l'exportation HTML) suit ensuite l'apparence du système de l'util
 
 ## Ce qui est ignoré
 
-Marqué ne réécrit **pas** :
+Marked ne réécrit **pas** :
 
 - URL distantes (`http://`, `https://`, `data:`)
 - Références qui pointent déjà vers un fichier `~dark`
 - `<img>` balises déjà à l'intérieur d'un élément `<picture>` existant
-- Noms sans extension comme `![Diagram](diagram)` — utilisez [DocC Support](DocC_Support.html) pour les références de style catalogue
+- Noms sans extension comme `![Diagram](diagram)` : utilisez [DocC Support](DocC_Support.html) pour les références de style catalogue
 
 ## Aperçu en direct et surveillance des fichiers
 
@@ -63,12 +61,12 @@ Lorsque des variantes sont détectées, Marked ajoute **chaque fichier de varian
 
 ## Conseils
 
-- Référencez l'image **light 1x** dans votre source lorsque cela est possible (`icon.png`, pas `icon~dark.png`). Marked découvre des frères et sœurs issus de ce chemin.
-- Si vous n'avez que `@2x` actifs, incluez au moins une autre variante (généralement `~dark`) ou Marqué laissera la référence inchangée.
+- Référencez l'image **light 1x** dans votre source lorsque cela est possible (`icon.png`, pas `icon~dark.png`). Marked découvre des fichiers associés à partir de ce chemin.
+- Si vous n'avez que `@2x` actifs, incluez au moins une autre variante (généralement `~dark`) ou Marked laissera la référence inchangée.
 - La résolution de variantes utilise des chemins **relatifs au document** (ou au dossier du fichier inclus pour les inclusions imbriquées), les mêmes règles de chemin de base que [Documents multi-fichiers](Multi-File_Documents.html).
 
 ## Sujets connexes
 
-- [Support DocC](DocC_Support.html) — noms d'images sans extension dans les catalogues `.docc`
-- [Paramètres : Applications](Settings_Apps.html) — bascule les préférences pour les variantes DocC et d'image
-- [Aperçu](Previewing.html) — aperçu en direct et mises à jour des fichiers
+- [Support DocC](DocC_Support.html) : noms d'images sans extension dans les catalogues `.docc`
+- [Paramètres : Applications](Settings_Apps.html) : bascule les préférences pour les variantes DocC et d'image
+- [Aperçu](Previewing.html) : aperçu en direct et mises à jour des fichiers
