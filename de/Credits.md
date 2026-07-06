@@ -1,4 +1,4 @@
-markdown# <%= @title %>
+# <%= @title %>
 
 Marked wurde mit viel Hilfe der Open-Source-Community erstellt. Auf dieser Seite wird der Code von Drittanbietern aufgeführt, der in Marked enthalten ist. Der vollständige Lizenztext für die Markdown-Prozessoren ist auf den verlinkten Seiten in [About Markdown](MultiMarkdown_Information.html) verfügbar.
 
