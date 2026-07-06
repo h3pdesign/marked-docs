@@ -64,31 +64,112 @@ adott fájl. A bal oldali legördülő menüből válassza ki a
 feltételt, majd használja a komparátor és az érték mezőket az összeállításhoz
 az állítmány.
 
-- A _fájlnév_ csak a fájl fájlnevének felel meg
-- A _extension_ csak a fájl kiterjesztésének felel meg
-- A _path_ megegyezik a fájl teljes POSIX (Unix) elérési útjával
-- A _tree_ megkeresi a fájlnév egyezéseit bárhol a
+- A _Fájlnév_ csak a fájl fájlnevének felel meg
+- A _Extension_ csak a fájl kiterjesztésének felel meg
+- A _Path_ megegyezik a fájl teljes POSIX (Unix) elérési útjával
+- A _Tree_ megkeresi a fájlnév egyezéseit bárhol a fájlban
   a fájl könyvtárfája
-- A _text_ megegyezik a fájl szöveges tartalmával. Használja előre
+- A _Szöveg_ megegyezik a fájl szöveges tartalmával. Használja előre
   perjel a szövegérték körül, hogy szabályos legyen
-  kifejezés keresése.
-- A _fileIncludes_ azt teszteli, hogy a fájl tartalmazza-e az include-ot
+  kifejezés keresés.
+- A _Fájl tartalmazza_ azt teszteli, hogy a fájl tartalmazza-e a benne foglaltakat
   fájlok (a [Marked's include
   szintaxisok](Multi-File_Documents.html)).
-- A _metaType_ teszteli, hogy a fájl tartalmaz-e YAML-t,
+- A _Metadata type_ teszteli, hogy a fájl tartalmaz-e YAML-t,
   MultiMarkdown vagy Pandoc metaadatok
-- _metadata.X_ tesztel bizonyos metaadatkulcsokat, például szerzőt,
-  dátum, cím stb.
+- _Metadata:_ mezők (például _Metaadatok: Szerző_,
+  _Metaadatok: Dátum_, _Metaadatok: Cím_) teszt az adott
+  metaadat kulcsok. Bármely metaadat-kulcs a legördülő listában, mint
+  _Metadata:_, majd a mező neve.
+- A _Manuálisan engedélyezett_ akkor egyezik, ha a szabályt megfordították
+  be az aktuális előnézeti ablakhoz (lásd: [Kézi engedélyezés
+  szabályok](#manuallyenabled) lent). Kombináld mással
+  feltételek egy Mind (ÉS) csoportban, így a szabály csak akkor fut le, ha
+  feliratkozik, és a fájl megfelel az egyéb feltételeknek.
 
 Az összes fájl illeszkedéséhez (azaz egy egyéni processzorhoz, amely mindig
-fut), állítsa a `filename` értéket `contains` `*` értékre. A csillag lesz
+fut), állítsa a _Fájlnév_ értéket `contains` `*` értékre. A csillag lesz
 helyettesítő karakterként működik, és minden fájlnak megfelel.
 
-[Add meg a predikátumot][add predicate]
+[Add a predikátum [add predicate]
 
 [addpredicate]: images/custom-rules-add-predicate-800.jpg @2x width=800
 
 Új predikátum hozzáadásához kattintson a pluszjelre (+) az állítmánysorban. Tartsa lenyomva az Option gombot, miközben a + jelre kattint, hogy hozzáadjon egy logikai csoportot, amely beállítható Mind (ÉS) vagy Bármely (VAGY) értékre.
+
+### Manuálisan engedélyezett szabályok [manuallyenabled]
+
+Egyes szabályok nem futhatnak minden fájlon, amely megfelel a sajátjuknak
+kritériumok. Ha akarja, adjon hozzá egy **Manuálisan engedélyezett** feltételt
+egy szabály, amely csak azután fut, hogy bekapcsolta az áramot
+előnézet.
+
+Használja a **Kézi engedélyezése hozzáadása** gombot az állítmány alatt
+szerkesztőt, hogy beillessze ezt a feltételt. Mindegyik szabály tartalmazhatja
+csak egyszer. Ha jelen van, a szabály megjelenik az előnézet {% appmenu
+Preview, Enable Custom Rule %} almenüjében
+ablakot.
+
+**Példa felhasználási eset:** Ön fenntart egy szabályt, amely beadja
+nyomtat CSS-t, eltávolítja a megjegyzéseket, és eltolja a fejlécszinteket
+PDF exportálás. Nem akarod ezt az átalakulást mindenkinél
+mentse a rajzolás közben, de igény szerint szeretné. Adja meg a
+szabály normál fájlegyezési feltételek plusz **Manuálisan engedélyezve**,
+majd kapcsolja be az Előnézet menüből (vagy egy trigger parancsikonból)
+ha készen áll a nyomtatási elrendezés ellenőrzésére.
+
+#### Indító parancsikon
+
+Ha egy kiválasztott szabályban szerepel a **Kézi engedélyezés** lehetőség, a
+Az **Indítási parancsikon** mező jelenik meg a **Kézi hozzáadása mellett
+Engedélyezve**. Kattintson a felvevőre, majd nyomja meg a gombot
+kívánt kombinációt. Ez a parancsikon átkapcsolja a szabályt a
+legelső Megjelölt előnézet (engedélyezés, ha ki, tiltás, ha be). A
+parancsikont a szabállyal együtt tárolja, és az indítások során is megmarad.
+Törölje a mezőt a parancsikon eltávolításához.
+
+![Trigger parancsikon-rögzítő a karmesterben][kézi parancsikon]
+
+[manualshortcut]: images/conductor-manual-rule-shortcut.jpg @2x width=800
+
+#### Előnézetenkénti felülbírálások az Előnézet menüben
+
+Két Előnézet menü almenü vezérlése felülírja az aktív
+csak előnézet. A beállítások mentése [view](#multiview) szerint történik, amikor
+több ablak ugyanazt a fájlt mutatja.
+
+**Egyéni szabály engedélyezése**
+: Felsorol minden engedélyezett szabályt, amely tartalmaz egy **Manuálisan
+  engedélyezett** feltétel. Ellenőrizzen egy szabályt, amellyel bekapcsolhatja ezt
+  előnézet; törölje a jelölést a kikapcsoláshoz. Az előnézet frissül
+  azonnal.
+
+**Egyéni szabály felülírása**
+: Felsorolja a folyamatfázis-szabályokat. Válasszon egyet a *rögzítéshez*: közben
+  a Folyamat fázisban csak az a szabály kerül kiértékelésre (egyéb
+  A folyamatszabályok kimaradnak). Válassza a **Nincs (automatikus)** lehetőséget
+  visszatér a normál szabályillesztéshez. Ez akkor hasznos, ha
+  egy adott processzorfolyamatot szeretne rákényszeríteni az egyikre
+  előnézetet a globális egyéni szabályok megváltoztatása nélkül.
+
+#### Felülírás gomb az előnézeti eszköztáron
+
+Ha egy előnézethez legalább egy manuálisan engedélyezett szabály tartozik, vagy a
+rögzítve Folyamat felülbírálása, egy ág ikon jelenik meg alul
+eszköztár (az exportálás és a fiókvezérlőktől balra).
+A kitöltött, hangsúlyos színű ikon azt jelenti, hogy a felülírások aktívak;
+a körvonal ikon azt jelenti, hogy a felülírások felfüggesztve vannak.
+
+![Egyéni szabály felülírása gomb az előnézeti eszköztáron][conductoroverride]
+
+[conductoroverride]: images/conductor-override-toolbar.jpg @2x width=800
+
+Kattintson a gombra a felülbírálások felfüggesztéséhez vagy újbóli engedélyezéséhez
+előnézetet anélkül, hogy törölné a kézi szabály pipáját, vagy
+rögzített Folyamatszabály. A felfüggesztett felülírások visszaállnak, amikor
+ismét kattintasz. Ez gyorsabb, mint a szabályok bejelölésének törlése a
+menüt, ha össze szeretné hasonlítani a normál előnézetet a sajátjával
+csővezeték felülírása.
 
 ### Műveletek
 
@@ -153,7 +234,7 @@ H1 cím beszúrása
 : H1-et szúr be a dokumentumba. Ez lekérhető a metaadatokból vagy a fájlnévből.
 
 Shift fejlécek
-: Fejlécszintek beállítása -5--+5 között. Például, ha ezt -1-re állítja, akkor minden H1-ből H2, H2-ből H3 lesz stb. Állítsa be pozitív számra, hogy ezzel az összeggel megemelje a fejlécszinteket.
+: Állítsa be a fejlécszinteket -5--+5 között. Például, ha ezt -1-re állítja, akkor minden H1-ből H2, H2-ből H3 lesz stb. Állítsa be pozitív számra, hogy ezzel az összeggel megemelje a fejlécszinteket.
 
 Fejlécek normalizálása
 : Ez a művelet biztosítja, ha lehetséges, hogy csak egy H1 legyen a dokumentumban, és beállítja az összes fejlécszintet úgy, hogy azok szemantikai sorrendben legyenek, és ne ugorjanak ki szinteket, pl. H2-ről H4-re. Ha az eredeti dokumentum egyáltalán szemantikailag kezdetben rendezett, ez jól finomítja a hierarchiát.
@@ -178,7 +259,7 @@ JavaScript fájl beszúrása
 : Beszúr egy kiválasztott JavaScript fájlt a dokumentum végére. Vegye figyelembe, hogy egy *Insert JavaScript* műveletet kell használnia egy [frissítési horog](#updatehook) mellett, ha azt szeretné, hogy a szkript minden frissítéssel újratöltődjön.
 
 JavaScript beillesztése az URL-ből
-: Használja ezt egy `<script>` címke beszúrására, amely egy CDN-hez vagy más távoli URL-hez kapcsolódik a dokumentum végére. Vegye figyelembe, hogy egy *Insert JavaScript* műveletet kell használnia egy [frissítési horog](#updatehook) mellett, ha azt szeretné, hogy a szkript minden frissítéssel újratöltődjön.
+: Használja ezt egy `<script>` címke beszúrásához, amely egy CDN-hez vagy más távoli URL-hez kapcsolódik a dokumentum végére. Vegye figyelembe, hogy egy *Insert JavaScript* műveletet kell használnia egy [frissítési horog](#updatehook) mellett, ha azt szeretné, hogy a szkript minden frissítéssel újratöltődjön.
 
 JavaScript beillesztése
 : Előugró JavaScript-szerkesztőt biztosít, amellyel egyéni JavaScript-kódot közvetlenül beágyazhat a műveletbe. Ez a dokumentum végén lesz beszúrva, és a szabály által futtatott JavaScript sorrendjét a műveletek sorrendje határozza meg, az utolsó művelettel pedig utoljára.
@@ -196,13 +277,40 @@ Futtassa a Rendszerszolgáltatást
 Futtassa az Automator munkafolyamatot
 : Futtassa bármelyik Automator `.workflow` fájlt. A bemenetet a rendszer STDIN-en adja át, a kimenetet pedig az STDOUT-on.
 
+Szabály futtatása
+: Egy másik egyéni szabály műveleteinek futtatása az aktuális szabályból.
+  Válassza ki a célszabályt a felugró ablakból. A hivatkozott szabály
+  ugyanabban a fázisban fut (Preprocessor vagy Process) anélkül
+  predikátumának újraértékelése, ami hasznossá teszi a számára
+  újrafelhasználható "összetevő" szabályok.
+
+  **Példa a használati esetre:** Határozzon meg egy kis szabályt, melynek neve „Strip
+  HTML megjegyzések" egy Keresés és csere művelettel, és adja meg
+  ez egy **Manuálisan engedélyezett** feltétel, így soha nem fut le
+  automatikusan. A fő könyvfeldolgozási szabályhoz adja hozzá
+  **Futtassa a szabály** műveleteket egymás után: először „A fejlécek normalizálása”,
+  majd a "HTML megjegyzések kivágása", majd a Futtatás parancs, amely meghívja
+  Pandoc. Minden lépést karbantarthat duplikáció nélkül
+  szabályokon átívelő cselekvések.
+
+  **Beágyazás:** A **Run Rule** által meghívott szabály nem hívható meg
+  másik szabály. Ha a célszabály tartalmaz egy **Futtatási szabályt**
+  művelet, a művelet kimarad; minden egyéb művelet a
+  a célszabály továbbra is fut. Több **Futtatási szabályt** is hozzáadhat
+  műveleteket egyetlen szabály szerint hajtják végre, és sorrendben hajtják végre.
+
+  A szabály nem tudja meghívni magát, és a Marked érzékeli a ciklusokat
+  (például az A szabály meghívja a B szabályt, amely meghívja az A szabályt)
+  és kihagyja a beágyazott hívást. Lásd az [Egyéni szabályokat
+  Napló](#customprocessorlog) az üzenetek kihagyásához.
+
 Folytatás
 : Alapértelmezés szerint a szabály egyeztetése után a feldolgozás leáll (külön az előfeldolgozókhoz és a processzorokhoz, így egy előfeldolgozó és egy processzor egyezhet). Ez a művelet kényszeríti a szabályegyeztetés folytatását, miután a szabály végrehajtja a műveleteit.
 
 ### Hook frissítése
 
 A Marked nem végez teljes frissítést minden frissítésnél, így ha
-olyan szkriptjei vannak, amelyek a DOM egyes részeit jelenítik meg, ezekre szükségük van
+olyan szkriptjei vannak, amelyek a DOM egyes részeit jelenítik meg, amire szükségük van
 hogy a Marked's Hook API használatával futtassák renderelési funkciójukat.
 
 Az alábbi példa a Mermaidet használja, amit valójában soha
@@ -260,9 +368,9 @@ megfelelő fedvényüzeneteket jelenít meg:
 - **Ismeretlen kiterjesztések**: Alapértelmezés szerint "szöveg" típusú, és megjelenik
   osztott fedvény
 
-## Egyéni processzornapló
+## Egyéni processzornapló [customprocessorlog]
 
-Ha furcsa eredményeket kap, és meg szeretné tekinteni, mi történik, az egyéni szabályok naplója megmutatja, hogy milyen szabályok és milyen sorrendben futnak. A **Súgó->Egyéni szabályok naplójának megjelenítése** segítségével nyissa meg.
+Ha furcsa eredményeket kap, és meg szeretné tekinteni, mi történik, az egyéni szabályok naplója megmutatja, hogy milyen szabályok és milyen sorrendben futnak. A **Súgó->Egyéni szabályok naplójának megjelenítése** segítségével nyissa meg. A meghívott **Run Rule** műveletek és a kihagyott beágyazott hívások is itt kerülnek naplózásra.
 
 ![Egyéni szabályok naplója][crlog]
 
@@ -308,7 +416,7 @@ egyéni változókat, a Marked tartalmaz néhány saját változót is.
 
 A Marked saját héjában futtatja az egyéni processzort, azaz
 a szabványos környezeti változók nem kerülnek átadásra automatikusan.
-A Marked környezeti változói segítségével bővítheti saját magát
+A Marked környezeti változóival bővítheti saját magát
 a saját forgatókönyveiben. A Marked a következő változókat hozza létre
 használható a shell szkriptekben:
 
@@ -363,7 +471,7 @@ parancsot.
 
 #### Példa
 
-Adott egy dokumentum ezekkel a metaadatokkal:
+Adott egy dokumentum a következő metaadatokkal:
 
 ```markdown
 title: My Document
@@ -548,7 +656,7 @@ legyen az Ön egyéni feldolgozója a következők bármelyikéhez:
 - `vimwiki`
 
 És még egy csomó más. Lásd a [Pandoc
-dokumentáció](https://pandoc.org/MANUAL.html) további információkért
+dokumentáció](https://pandoc.org/MANUAL.html) további információért
 info. Ha ezek közül valamelyiket beviteli formátumként szeretné használni, egyszerűen adja hozzá a
 a következőt a Futtatási parancs mezőben:
 
@@ -590,10 +698,10 @@ A Now Marked egy textil-előzetes az Ön számára!
 ## Az AsciiDoc használata
 
 1. Telepítse az [AsciiDoctor]-t (http://asciidoctor.org/).
-2. Engedélyezzen egy egyéni szabályt a {% prefspane Processor %} részben, hogy megfeleljen az AsciiDoc fájloknak.
+2. Engedélyezzen egy egyéni szabályt az {% prefspane Processor %}-ben, hogy illeszkedjen az AsciiDoc fájlokhoz.
 3. Állítsa be a szabályt Processzor értékre, és adjon hozzá egy Futtatási parancsot
     1. Határozza meg a `asciidoc` elérési útját, amely lesz
-       olyasmi, mint a `/usr/bin/asciidoc` vagy
+       valami ilyesmi: `/usr/bin/asciidoc` vagy
        `/opt/local/bin/asciidoc`. Ha bizonytalan, használja
        `which asciidoc` megtalálásához
     2. Írja be: `[PATH To asciidoc] --backend html5 -o - -` as

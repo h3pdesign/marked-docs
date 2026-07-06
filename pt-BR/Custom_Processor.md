@@ -64,24 +64,31 @@ determinado arquivo. Use o menu suspenso do lado esquerdo para selecionar um
 critério e, em seguida, use os campos comparador e valor para construir
 o predicado.
 
-- _filename_ corresponde apenas ao nome do arquivo
-- _extensão_ corresponde apenas à extensão do arquivo
-- _path_ corresponde ao caminho POSIX (Unix) completo do arquivo
-- _tree_ procura correspondências de nome de arquivo em qualquer lugar do
+- _Filename_ corresponde apenas ao nome do arquivo
+- _Extension_ corresponde apenas à extensão do arquivo
+- _Path_ corresponde ao caminho POSIX (Unix) completo do arquivo
+- _Tree_ procura correspondências de nome de arquivo em qualquer lugar do
   árvore de diretórios do arquivo
-- _text_ corresponde ao conteúdo do texto no arquivo. Usar para frente
+- _Text_ corresponde ao conteúdo do texto no arquivo. Usar para frente
   barras ao redor do valor do texto para torná-lo regular
   pesquisa de expressão.
-- _fileIncludes_ testa se o arquivo contém itens incluídos
+- _Arquivo inclui_ testa se o arquivo contém itens incluídos
   arquivos (usando qualquer um dos [marcados incluem
   sintaxes](Multi-File_Documents.html)).
-- _metaType_ testa se o arquivo inclui YAML,
+- _Tipo de metadados_ testa se o arquivo inclui YAML,
   Metadados MultiMarkdown ou Pandoc
-- _metadata.X_ testa chaves de metadados específicas, como autor,
-  data, título, etc.
+- _Metadados:_ campos (por exemplo _Metadados: Autor_,
+  _Metadados: Data_, _Metadados: Título_) teste para específico
+  chaves de metadados. Qualquer chave de metadados aparece no menu suspenso como
+  _Metadados:_ seguido do nome do campo.
+- _Ativado manualmente_ corresponde quando essa regra foi alterada
+  ativado para a janela de visualização atual (consulte [Ativado manualmente
+  regras](#manuallyenabled) abaixo). Combine-o com outros
+  critérios em um grupo Todos (AND), para que a regra seja executada apenas quando
+  você aceita e o arquivo corresponde às suas outras condições.
 
 Para corresponder todos os arquivos (ou seja, um processador personalizado que sempre
-execuções), defina `filename` para `contains` `*`. O asterisco irá
+é executado), defina _Nome do arquivo_ como `contains` `*`. O asterisco irá
 atue como um curinga e corresponda a todos os arquivos.
 
 [Adicionar um predicado][addpredicate]
@@ -89,6 +96,80 @@ atue como um curinga e corresponda a todos os arquivos.
 [addpredicate]: images/custom-rules-add-predicate-800.jpg @2x width=800
 
 Clique no sinal de mais (+) na linha do predicado para adicionar outro predicado. Mantenha pressionada Option enquanto clica em + para adicionar um grupo booleano que pode ser definido como Todos (AND) ou Qualquer (OR).
+
+### Regras habilitadas manualmente [habilitadas manualmente]
+
+Algumas regras não devem ser executadas em todos os arquivos que correspondam às suas
+critérios. Adicione um critério **ativado manualmente** quando desejar
+uma regra a ser executada somente depois de ativá-la para o atual
+visualização.
+
+Use o botão **Adicionar ativado manualmente** abaixo do predicado
+editor para inserir este critério. Cada regra pode incluí-lo
+apenas uma vez. Quando presente, a regra aparece no submenu {% appmenu
+Preview, Enable Custom Rule %} dessa visualização
+janela.
+
+**Exemplo de caso de uso:** você mantém uma regra que injeta
+imprime CSS, remove comentários e muda os níveis de cabeçalho para
+Exportação de PDF. Você não quer essa transformação em todos
+economize durante o rascunho, mas você deseja isso sob demanda. Dê o
+regra de critérios normais de correspondência de arquivo mais **Ativado manualmente**,
+em seguida, alterne-o no menu Visualização (ou em um atalho de gatilho)
+quando estiver pronto para revisar o layout de impressão.
+
+#### Atalho de gatilho
+
+Quando uma regra selecionada inclui **Ativado manualmente**, um
+O campo **Atalho do acionador** aparece ao lado de **Adicionar manualmente
+Ativado**. Clique no gravador e pressione a tecla
+combinação que você deseja. Esse atalho alterna a regra para o
+visualização marcada mais à frente (ativar se estiver desativado, desativar se estiver ativado). O
+o atalho é armazenado com a regra e persiste durante as inicializações.
+Limpe o campo para remover o atalho.
+
+![Aciona o gravador de atalho no Conductor][atalho manual]
+
+[manualshortcut]: images/conductor-manual-rule-shortcut.jpg @2x width=800
+
+#### Substituições por visualização no menu Visualização
+
+Dois submenus do menu Visualização controlam substituições para o ativo
+apenas visualização. As configurações são salvas por [visualização](#multiview) quando
+várias janelas mostram o mesmo arquivo.
+
+**Ativar regra personalizada**
+: lista todas as regras habilitadas que incluem **Manualmente
+  critério habilitado**. Verifique uma regra para ativá-lo para isso
+  visualização; desmarque para desligá-lo. A visualização é atualizada
+  imediatamente.
+
+**Substituição de regra personalizada**
+: lista as regras da fase do processo. Escolha um para *fixar*: durante
+  fase Processo, apenas essa regra é avaliada (outras
+  As regras do processo são ignoradas). Escolha **Nenhum (automático)** para
+  retornar à correspondência normal de regras. Isto é útil quando você
+  deseja forçar um pipeline de processador específico para um
+  visualizar sem alterar as regras personalizadas globais.
+
+#### Botão Substituir na barra de ferramentas de visualização
+
+Quando uma visualização tem pelo menos uma regra habilitada manualmente ou um
+substituição de processo fixada, um ícone de ramificação aparece na parte inferior
+barra de ferramentas (à esquerda dos controles de exportação e gaveta).
+O ícone preenchido com cor de destaque significa que as substituições estão ativas;
+o ícone de contorno significa que as substituições estão suspensas.
+
+![Botão de substituição de regra personalizada na barra de ferramentas de visualização][conductoroverride]
+
+[conductoroverride]: images/conductor-override-toolbar.jpg @2x width=800
+
+Clique no botão para suspender ou reativar substituições para este
+visualizar sem limpar as marcas de seleção das regras manuais ou
+regra de processo fixada. As substituições suspensas são restauradas quando
+você clica novamente. Isso é mais rápido do que desmarcar regras no
+menu quando quiser comparar a visualização normal com o seu
+substituir o pipeline.
 
 ### Ações
 
@@ -196,6 +277,33 @@ Execute o serviço do sistema
 Execute o fluxo de trabalho do Automator
 : Execute qualquer arquivo do Automator `.workflow`. A entrada será passada em STDIN e a saída será esperada em STDOUT.
 
+Executar regra
+: execute as ações de outra regra personalizada a partir da regra atual.
+  Escolha a regra de destino no pop-up. A regra invocada
+  é executado na mesma fase (Pré-processador ou Processo) sem
+  reavaliando seu predicado, o que o torna útil para
+  regras de "ingredientes" reutilizáveis.
+
+  **Exemplo de caso de uso:** Defina uma pequena regra chamada "Strip
+  Comentários HTML" com uma ação Pesquisar e Substituir e fornecer
+  é um critério **ativado manualmente** para que nunca seja executado
+  automaticamente. Na sua regra principal de processamento de livros, adicione
+  **Executar ações de regra** em sequência: primeiro "Normalizar cabeçalhos",
+  em seguida, "Remover comentários HTML" e, em seguida, um comando Executar que chama
+  Pandoc. Você mantém cada etapa passível de manutenção sem duplicação
+  ações através das regras.
+
+  **Aninhamento:** uma regra invocada por **Run Rule** não pode ser invocada
+  outra regra. Se a regra de destino contiver uma **Regra de Execução**
+  ação, essa ação será ignorada; todas as outras ações do
+  a regra de destino ainda está em execução. Você pode adicionar várias **Regras de execução**
+  ações a uma única regra e elas são executadas em ordem.
+
+  Uma regra não pode invocar a si mesma e Marcada detecta ciclos
+  (por exemplo, Regra A invocando Regra B que invoca Regra A)
+  e ignora a chamada aninhada. Consulte as [Regras Personalizadas
+  Log](#customprocessorlog) para ignorar mensagens.
+
 Continuar
 : por padrão, quando uma regra é correspondida, o processamento será interrompido (separadamente para pré-processadores e processadores, para que um pré-processador e um processador possam corresponder). Esta ação forçará a continuação da correspondência de regras depois que a regra executar suas ações.
 
@@ -260,9 +368,9 @@ mostra mensagens de sobreposição apropriadas:
 - **Extensões desconhecidas**: o padrão é o tipo "texto" e mostra
   sobreposição dividida
 
-## Log do processador personalizado
+## Log do processador personalizado [customprocessorlog]
 
-Se você estiver obtendo resultados estranhos e quiser dar uma olhada no que está acontecendo, o Registro de regras personalizadas mostrará quais regras estão sendo executadas e em que ordem. Use **Ajuda->Mostrar registro de regras personalizadas** para abri-lo.
+Se você estiver obtendo resultados estranhos e quiser dar uma olhada no que está acontecendo, o Registro de regras personalizadas mostrará quais regras estão sendo executadas e em que ordem. Use **Ajuda->Mostrar registro de regras personalizadas** para abri-lo. As ações de **Executar regra** invocadas e as chamadas aninhadas ignoradas também são registradas aqui.
 
 ![Registro de regras personalizadas][crlog]
 
@@ -419,7 +527,7 @@ else
 fi
 ```
 
-#### Ações Suportadas
+#### Ações suportadas
 
 Esta funcionalidade variável de metadados para ambiente é
 disponível em:

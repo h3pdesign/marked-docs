@@ -64,24 +64,31 @@ archivo dado. Utilice el menú desplegable del lado izquierdo para seleccionar u
 criterio, luego use los campos comparador y valor para construir
 el predicado.
 
-- _filename_ coincide solo con el nombre del archivo
-- _extension_ coincide solo con la extensión del archivo
-- _path_ coincide con la ruta POSIX (Unix) completa del archivo
-- _tree_ busca coincidencias de nombres de archivos en cualquier parte del
+- _Filename_ coincide solo con el nombre del archivo
+- _Extension_ coincide solo con la extensión del archivo
+- _Path_ coincide con la ruta POSIX (Unix) completa del archivo
+- _Tree_ busca coincidencias de nombres de archivos en cualquier parte del
   árbol de directorios del archivo
-- _text_ coincide con el contenido de texto del archivo. Usar hacia adelante
+- _Text_ coincide con el contenido de texto del archivo. Usar hacia adelante
   barra diagonal alrededor del valor del texto para convertirlo en un valor normal
   búsqueda de expresiones.
-- _fileIncludes_ prueba si el archivo contiene datos incluidos.
+- _El archivo incluye_ prueba si el archivo contiene datos incluidos.
   archivos (usando cualquiera de [Marked's include
   sintaxis](Multi-File_Documents.html)).
-- _metaType_ prueba si el archivo incluye YAML,
+- _Tipo de metadatos_ prueba si el archivo incluye YAML,
   Metadatos de MultiMarkdown o Pandoc
-- _metadata.X_ prueba claves de metadatos específicas como autor,
-  fecha, título, etc.
+- _Metadatos:_ campos (por ejemplo _Metadatos: Autor_,
+  _Metadatos: Fecha_, _Metadatos: Título_) prueba para datos específicos
+  claves de metadatos. Cualquier clave de metadatos aparece en el menú desplegable como
+  _Metadatos:_ seguido del nombre del campo.
+- Coincidencias _habilitadas manualmente_ cuando se ha activado esa regla
+  activado para la ventana de vista previa actual (consulte [Activado manualmente
+  reglas](#manuallyenabled) a continuación). Combínalo con otros
+  criterios en un grupo Todos (Y), por lo que la regla solo se ejecuta cuando
+  Usted acepta y el archivo coincide con sus otras condiciones.
 
 Para hacer coincidir todos los archivos (es decir, un procesador personalizado que siempre
-se ejecuta), establezca `filename` en `contains` `*`. El asterisco
+se ejecuta), establezca _Filename_ en `contains` `*`. El asterisco
 actúa como comodín y coincide con todos los archivos.
 
 [Agregar un predicado][agregarpredicado]
@@ -89,6 +96,80 @@ actúa como comodín y coincide con todos los archivos.
 [addpredicate]: images/custom-rules-add-predicate-800.jpg @2x width=800
 
 Haga clic en el signo más (+) en la fila de predicados para agregar otro predicado. Mantenga presionada la opción mientras hace clic en + para agregar un grupo booleano que se puede configurar en Todos (Y) o Cualquiera (O).
+
+### Reglas habilitadas manualmente [habilitadas manualmente]
+
+Algunas reglas no deberían ejecutarse en todos los archivos que coincidan con su
+criterios. Agregue un criterio **Habilitado manualmente** cuando lo desee
+una regla que se ejecutará solo después de activarla para el período actual
+vista previa.
+
+Utilice el botón **Agregar habilitado manualmente** debajo del predicado
+editor para insertar este criterio. Cada regla puede incluirla.
+sólo una vez. Cuando está presente, la regla aparece en el submenú {% appmenu
+Preview, Enable Custom Rule %} para esa vista previa
+ventana.
+
+**Caso de uso de ejemplo:** Mantienes una regla que inyecta
+imprime CSS, elimina comentarios y cambia los niveles de encabezado para
+Exportación de PDF. No quieres esa transformación en cada
+guarde mientras redacta, pero lo desea a pedido. Dale el
+reglar los criterios normales de coincidencia de archivos más **Habilitado manualmente**,
+luego cámbielo desde el menú Vista previa (o un atajo de activación)
+cuando esté listo para probar el diseño de impresión.
+
+#### Activar acceso directo
+
+Cuando una regla seleccionada incluye **Habilitado manualmente**, se
+El campo **Atajo de activación** aparece junto a **Agregar manualmente
+Habilitado**. Haga clic en la grabadora, luego presione la tecla
+combinación que quieras. Ese atajo alterna la regla para el
+Vista previa marcada en primer plano (activar si está desactivado, desactivar si está activado). el
+El acceso directo se almacena con la regla y persiste durante los lanzamientos.
+Borre el campo para eliminar el acceso directo.
+
+![Activar grabadora de atajos en el Conductor][atajo manual]
+
+[manualshortcut]: images/conductor-manual-rule-shortcut.jpg @2x width=800
+
+#### Anulaciones por vista previa en el menú Vista previa
+
+Dos submenús del menú Vista previa controlan las anulaciones de los activos
+vista previa solamente. La configuración se guarda por [vista](#multivista) cuando
+Varias ventanas muestran el mismo archivo.
+
+**Habilitar regla personalizada**
+: enumera todas las reglas habilitadas que incluyen **Manualmente
+  criterio habilitado**. Marque una regla para activarla para esto
+  vista previa; desmarque para apagarlo. La vista previa se actualiza
+  inmediatamente.
+
+**Anulación de regla personalizada**
+: enumera las reglas de la fase del proceso. Elige uno para *fijarlo*: durante
+  En la fase de Proceso, sólo se evalúa esa regla (otras
+  Se omiten las reglas del proceso). Elija **Ninguno (automático)** para
+  volver a la coincidencia de reglas normal. Esto es útil cuando
+  desea forzar una canalización de procesador específica para uno
+  vista previa sin cambiar las reglas personalizadas globales.
+
+#### Botón Anular en la barra de herramientas de vista previa
+
+Cuando una vista previa tiene al menos una regla habilitada manualmente o una
+anulación de proceso anclado, aparece un icono de rama en la parte inferior
+barra de herramientas (a la izquierda de los controles de exportación y cajón).
+El ícono relleno con color resaltado significa que las anulaciones están activas;
+el icono de contorno significa que las anulaciones están suspendidas.
+
+![Botón de anulación de regla personalizada en la barra de herramientas de vista previa][anulación de conductor]
+
+[conductoroverride]: images/conductor-override-toolbar.jpg @2x width=800
+
+Haga clic en el botón para suspender o volver a habilitar las anulaciones para esto
+vista previa sin borrar las marcas de verificación de reglas manuales o
+regla de proceso fijada. Las anulaciones suspendidas se restablecen cuando
+vuelves a hacer clic. Esto es más rápido que desmarcar reglas en el
+menú cuando desee comparar la vista previa normal con su
+anular la tubería.
 
 ### Acciones
 
@@ -196,6 +277,33 @@ Ejecutar servicio del sistema
 Ejecutar el flujo de trabajo de Automator
 : Ejecute cualquier archivo de Automator `.workflow`. La entrada se pasará por STDIN y se espera la salida por STDOUT.
 
+Ejecutar regla
+: ejecuta las acciones de otra regla personalizada a partir de la regla actual.
+  Elija la regla de destino en la ventana emergente. La regla invocada
+  se ejecuta en la misma fase (Preprocesador o Proceso) sin
+  reevaluar su predicado, lo que lo hace útil para
+  reglas de "ingredientes" reutilizables.
+
+  **Caso de uso de ejemplo:** Defina una pequeña regla llamada "Strip
+  Comentarios HTML" con una acción Buscar y Reemplazar y dar
+  es un criterio **habilitado manualmente** por lo que nunca se ejecuta
+  automáticamente. En su regla principal de procesamiento de libros, agregue
+  **Ejecutar reglas** acciones en secuencia: primero "Normalizar encabezados"
+  luego "Eliminar comentarios HTML", luego un comando Ejecutar que llama
+  Pandoc. Mantienes cada paso mantenible sin duplicar
+  acciones a través de reglas.
+
+  **Anidamiento:** Una regla invocada por **Ejecutar regla** no puede invocar
+  otra regla. Si la regla de destino contiene una **Regla de ejecución**
+  acción, esa acción se omite; todas las demás acciones en el
+  La regla de destino aún se ejecuta. Puede agregar varias **Regla de ejecución**
+  acciones a una sola regla y se ejecutan en orden.
+
+  Una regla no puede invocarse a sí misma y Marked detecta ciclos
+  (por ejemplo, la Regla A invoca la Regla B que invoca la Regla A)
+  y omite la llamada anidada. Consulte las [Reglas personalizadas
+  Log](#customprocessorlog) para omitir mensajes.
+
 Continuar
 : De forma predeterminada, una vez que una regla coincide, el procesamiento se detendrá (por separado para preprocesadores y procesadores, de modo que un preprocesador y un procesador puedan coincidir). Esta acción forzará que la coincidencia de reglas continúe después de que la regla realice sus acciones.
 
@@ -260,9 +368,9 @@ muestra mensajes superpuestos apropiados:
 - **Extensiones desconocidas**: El valor predeterminado es el tipo "texto" y se muestra
   superposición dividida
 
-## Registro de procesador personalizado
+## Registro de procesador personalizado [customprocessorlog]
 
-Si obtiene resultados extraños y desea ver lo que está sucediendo, el Registro de reglas personalizadas le mostrará qué reglas se están ejecutando y en qué orden. Utilice **Ayuda->Mostrar registro de reglas personalizadas** para abrirlo.
+Si obtiene resultados extraños y desea ver lo que está sucediendo, el Registro de reglas personalizadas le mostrará qué reglas se están ejecutando y en qué orden. Utilice **Ayuda->Mostrar registro de reglas personalizadas** para abrirlo. Las acciones de **Ejecutar regla** invocadas y las llamadas anidadas omitidas también se registran aquí.
 
 ![Registro de reglas personalizadas][crlog]
 

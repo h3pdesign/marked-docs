@@ -24,9 +24,9 @@ A Már szerkesztett fájlon a Marked funkció használatának legegyszerűbb mó
 
 Természetesen a Markdown fájlokat közvetlenül is megnyithatja az {% appmenu File, Open... ({{cmd}}O) %} menüopció használatával. A Marked jól működik _szövegszerkesztő nélkül_ is. A Markdown előnézetét és konvertálását egyetlen kattintással megtekintheti.
 
-A Megjelölt közvetlenül is megnyithatja a **`.rtf` és `.rtfd`** fájlokat (például a Pagesből vagy a TextEditből történő exportálást). A rendszer Markdown formátumba konvertálja az előnézethez és frissítéshez, amikor elmenti az eredeti alkalmazásban. A részletekért, beleértve a képeket és a korlátozásokat, lásd az [RTF- és RTFD-támogatás](RTF_Support.html)-t.
+A Megjelölt közvetlenül is megnyithat **`.rtf` és `.rtfd`** fájlokat (például a Pagesből vagy a TextEditből történő exportálást). A rendszer Markdown formátumba konvertálja az előnézethez és frissítéshez, amikor elmenti az eredeti alkalmazásban. Lásd az [RTF és RTFD támogatás](RTF_Support.html) részt a részletekért, beleértve a képeket és a korlátozásokat.
 
-A megjelölt **`.pdf`** fájlt ugyanúgy meg tud nyitni: a konverzió a háttérben fut, majd az előnézet frissül, ha kész. Ez rövidebb, szöveges PDF-ekhez működik a legjobban; a nagy kézikönyvek és a beolvasott dokumentumok lassabbak és kevésbé pontosak. A részletekért és korlátozásokért lásd a [PDF támogatás](PDF_Support.html)-t.
+A megjelölt **`.pdf`** fájlt ugyanúgy meg tud nyitni: a konverzió a háttérben fut, majd az előnézet frissül, ha kész. Ez rövidebb, szöveges PDF-ekhez működik a legjobban; a nagy kézikönyvek és a beolvasott dokumentumok lassabbak és kevésbé pontosak. A részletekért és a korlátozásokért lásd: [PDF támogatás](PDF_Support.html).
 
 ## A vágólapról
 
@@ -42,7 +42,33 @@ A Marked lehetővé teszi egy új, üres szövegfájl létrehozását a {% appme
 
    [3]: images/open_recent.jpg @2x width=300px height=174px class=center
 
-A Marked nyomon követi a legutóbbi dokumentumokat is. A {% appmenu File, Open Recent %} menüopció megmutatja a megnyitott fájlokat, és visszaugorhat hozzájuk. Gyorsan újra megnyithatja az utoljára megtekintett fájlt a {% kbd shift cmd R %} gombbal. Használja a {% kbd shift cmd P %} vagy a [Gyors műveletek](Quick_Actions.html) gombokat a menü- és előnézeti parancsok futtatásához a billentyűzetről. Ha még sok mást is megtudhat, akkor még sok mást is megtalálhat. egy diagramot a [Billentyűparancsok](Keyboard_Shortcuts.html) alatt.
+A Marked nyomon követi a legutóbbi dokumentumokat is. A {% appmenu File, Open Recent %} menüopció megmutatja a megnyitott fájlokat, és visszaugorhat hozzájuk. Gyorsan újra megnyithatja az utoljára megtekintett fájlt a {% kbd shift cmd R %} gombbal. Használja a {% kbd shift cmd P %} vagy a [Gyorsműveletek](Quick_Actions.html) gombokat a menü- és előnézeti parancsok futtatásához a billentyűzetről. Ha még sok mást is megtudhat, akkor még sok rövidítést találhat. egy diagramot a [Billentyűparancsok](Keyboard_Shortcuts.html) alatt.
+
+## Új nézet az aktuális fájlban [multiview]
+
+A {% appmenu File, New View into Current File %} ({% kbd
+shift cmd N %}, az előnézet helyi menüjében is) segítségével nyissa meg a
+második előnézeti ablak ugyanazon a mentett fájlon. Mindkét ablak
+nézze meg a fájlt a lemezen, és frissítse, amikor menti a saját mappájába
+szerkesztő, de minden nézet megtartja a saját görgetési pozícióját,
+könyvjelzőket, előnézeti stílust és [Custom Rule
+felülír](Custom_Processor.html#manuallyenabled).
+
+**Példa felhasználási eset:** Ön egy hosszú kéziratot szerkeszt
+MultiMarkdown a megszokott stílussal és processzorral. Nyissa meg a
+második nézet, állítsa át próbastílusra, rögzítse a folyamatot
+szabály, amely egy másik beépített processzort futtat, és engedélyezze a
+kézi szabály, amely kiemeli a revíziójelölést. Te összehasonlítod
+vázlat és próba elrendezések egymás mellett, kettő fenntartása nélkül
+a fájl másolatai.
+
+Ha egy fájl több nézete van nyitva, az ablak címe
+tartalmazza a **View 2**, **View 3**, és így tovább, hogy tudja
+ablakokat az Ablak menüben és a Mission Controlban.
+
+A nem mentett dokumentumokhoz nem állnak rendelkezésre alternatív nézetek,
+vágólap előnézetek, streaming előnézetek vagy mappaalapú
+olyan projektek, amelyek nem képezik le egyetlen fájlt a lemezen.
 
 ## Gyors nyitás ##
 

@@ -64,24 +64,31 @@ dato file. Utilizzare il menu a discesa sul lato sinistro per selezionare a
 criterio, quindi utilizzare i campi comparatore e valore per creare
 il predicato.
 
-- _filename_ corrisponde solo al nome del file
-- _extension_ corrisponde solo all'estensione del file
-- _path_ corrisponde al percorso POSIX (Unix) completo del file
-- _tree_ cerca corrispondenze di nomi di file ovunque nel file
+- _Filename_ corrisponde solo al nome del file
+- _Extension_ corrisponde solo all'estensione del file
+- _Path_ corrisponde al percorso POSIX (Unix) completo del file
+- _Tree_ cerca corrispondenze di nomi di file ovunque nel file
   albero delle directory del file
-- _text_ corrisponde al contenuto testuale nel file. Usa avanti
+- _Text_ corrisponde al contenuto testuale nel file. Usa avanti
   barra attorno al valore del testo per renderlo normale
   ricerca di espressioni.
-- _fileIncludes_ verifica se il file contiene inclusi
+- _Il file include_ verifica se il file contiene inclusi
   file (utilizzando uno qualsiasi dei file [Marked's include
   sintassi](Multi-File_Documents.html)).
-- _metaType_ verifica se il file include YAML,
+- _Tipo di metadati_ verifica se il file include YAML,
   Metadati MultiMarkdown o Pandoc
-- _metadata.X_ verifica chiavi di metadati specifiche come autore,
-  data, titolo, ecc.
+- Campi _Metadati:_ (ad esempio _Metadati: Autore_,
+  _Metadati: Data_, _Metadati: Titolo_) test specifico
+  chiavi di metadati. Qualsiasi chiave di metadati viene visualizzata nel menu a discesa come
+  _Metadati:_ seguito dal nome del campo.
+- _Abilitato manualmente_ corrisponde quando la regola è stata modificata
+  attivato per la finestra di anteprima corrente (vedere [Abilitato manualmente
+  regole](#manuallyenabled) di seguito). Combinalo con altro
+  criteri in un gruppo Tutti (AND) in modo che la regola venga eseguita solo quando
+  accetti e il file corrisponde alle altre condizioni.
 
 Per abbinare tutti i file (ovvero un processore personalizzato che sempre
-funziona), impostare da `filename` a `contains` `*`. L'asterisco lo farà
+viene eseguito), imposta _Filename_ su `contains` `*`. L'asterisco lo farà
 agire come un carattere jolly e abbinare tutti i file.
 
 [Aggiungi un predicato] [aggiungi predicato]
@@ -89,6 +96,80 @@ agire come un carattere jolly e abbinare tutti i file.
 [addpredicate]: images/custom-rules-add-predicate-800.jpg @2x width=800
 
 Fare clic sul segno più (+) sulla riga del predicato per aggiungere un altro predicato. Tieni premuto Opzione mentre fai clic su + per aggiungere un gruppo booleano che può essere impostato su Tutti (AND) o Qualsiasi (OR).
+
+### Regole abilitate manualmente [manuallyenabled]
+
+Alcune regole non dovrebbero essere eseguite su tutti i file che corrispondono alle loro
+criteri. Aggiungi un criterio **Abilitato manualmente** quando vuoi
+una regola da eseguire solo dopo averlo acceso per la corrente
+anteprima.
+
+Utilizza il pulsante **Aggiungi abilitato manualmente** sotto il predicato
+editor per inserire questo criterio. Ogni regola può includerlo
+solo una volta. Se presente, la regola appare nel sottomenu {% appmenu
+Preview, Enable Custom Rule %} per quell'anteprima
+finestra.
+
+**Caso d'uso di esempio:** mantieni una regola che esegue l'iniezione
+stampa CSS, rimuove i commenti e sposta i livelli di intestazione per
+Esportazione PDF. Non vuoi quella trasformazione su ogni
+risparmia durante la stesura, ma lo vuoi su richiesta. Dai il
+regola i normali criteri di corrispondenza dei file più **Abilitato manualmente**,
+quindi attivalo dal menu Anteprima (o da una scorciatoia di attivazione)
+quando sei pronto per provare il layout di stampa.
+
+#### Attiva la scorciatoia
+
+Quando una regola selezionata include **Abilitato manualmente**, a
+Il campo **Scorciatoia trigger** viene visualizzato accanto a **Aggiungi manualmente
+Abilitato**. Fare clic sul registratore, quindi premere il tasto
+combinazione che desideri. Questa scorciatoia attiva/disattiva la regola per il file
+Anteprima contrassegnata in primo piano (abilita se disattivata, disattiva se attivata). Il
+il collegamento viene memorizzato con la regola e persiste tra i lanci.
+Cancella il campo per rimuovere il collegamento.
+
+![Attiva il registratore di scorciatoie in Conductor][manualshortcut]
+
+[manualshortcut]: images/conductor-manual-rule-shortcut.jpg @2x width=800
+
+#### Sostituisce l'anteprima nel menu Anteprima
+
+Due sottomenu del menu Anteprima controllano le sostituzioni per l'attivo
+solo anteprima. Le impostazioni vengono salvate per [visualizzazione](#multiview) quando
+più finestre mostrano lo stesso file.
+
+**Abilita regola personalizzata**
+: Elenca tutte le regole abilitate che includono un **Manualmente
+  criterio abilitato**. Controlla una regola per attivarla
+  anteprima; deseleziona per disattivarlo. L'anteprima si aggiorna
+  immediatamente.
+
+**Sostituzione regola personalizzata**
+: Elenca le regole della fase di processo. Scegline uno per *appuntarlo*: durante
+  nella fase Processo, viene valutata solo quella regola (other
+  Le regole del processo vengono saltate). Scegli **Nessuno (automatico)** per
+  tornare alla normale corrispondenza delle regole. Questo è utile quando tu
+  si desidera forzare una pipeline del processore specifica per uno
+  anteprima senza modificare le regole personalizzate globali.
+
+#### Pulsante Sostituisci nella barra degli strumenti di anteprima
+
+Quando un'anteprima ha almeno una regola abilitata manualmente o a
+override del processo bloccato, in basso viene visualizzata l'icona di un ramo
+barra degli strumenti (a sinistra dei controlli di esportazione e cassetto).
+L'icona piena e colorata indica che le sostituzioni sono attive;
+l'icona del contorno indica che le sostituzioni sono sospese.
+
+![Pulsante di sostituzione della regola personalizzata nella barra degli strumenti di anteprima][conductoroverride]
+
+[conductoroverride]: images/conductor-override-toolbar.jpg @2x width=800
+
+Fare clic sul pulsante per sospendere o riattivare le sostituzioni per questo
+visualizzare l'anteprima senza rimuovere i segni di spunta delle regole manuali o
+regola di processo bloccata. Le sostituzioni sospese vengono ripristinate quando
+fai di nuovo clic. Questo è più veloce che deselezionare le regole nel file
+menu quando vuoi confrontare l'anteprima normale con la tua
+sovrascrivere la pipeline.
 
 ### Azioni
 
@@ -106,7 +187,7 @@ Imposta stile
 Esegui comando
 : accetta un comando da riga di comando, inclusi eventuali argomenti, e passerà il contenuto del file su STDIN. Il comando dovrebbe restituire l'output risultante su STDOUT.
 
-> **Sandboxing per Mac App Store**: la versione di Marked per Mac App Store (MAS) viene eseguita in un ambiente sandbox che limita l'esecuzione di file binari esterni. Se devi utilizzare processori esterni come Pandoc nella versione MAS, devi copiare il file binario nell'app bundle. Per fare ciò:
+> **Sandboxing per Mac App Store**: la versione di Marked per Mac App Store (MAS) viene eseguita in un ambiente sandbox che limita l'esecuzione di file binari esterni. Se devi utilizzare processori esterni come Pandoc nella versione MAS, devi copiare il file binario nell'app bundle. Per fare questo:
 >
 > 1. Fare clic con il pulsante destro del mouse su Marked.app → Mostra contenuto pacchetto
 > 2. Vai a Contenuti/Risorse/
@@ -172,7 +253,7 @@ Inserisci il file CSS
 : inserisce un file CSS selezionato nel documento. Questo verrà caricato dopo qualsiasi selezione di stile e può essere utilizzato per sovrascrivere gli stili esistenti o aggiungerne di nuovi.
 
 Inserisci CSS
-: offre un editor CSS popup in cui puoi aggiungere il tuo CSS direttamente all'azione. Questo CSS verrà inserito nella parte superiore del documento, dopo eventuali stili esistenti. L'ordine degli stili inseriti corrisponderà all'ordine delle azioni nella regola.
+: offre un editor CSS pop-up in cui puoi aggiungere il tuo CSS direttamente all'azione. Questo CSS verrà inserito nella parte superiore del documento, dopo eventuali stili esistenti. L'ordine degli stili inseriti corrisponderà all'ordine delle azioni nella regola.
 
 Inserisci il file JavaScript
 : inserisce un file JavaScript selezionato alla fine del documento. Tieni presente che devi utilizzare un'azione *Inserisci JavaScript* con un [hook di aggiornamento](#updatehook) se desideri che lo script si ricarichi ad ogni aggiornamento.
@@ -195,6 +276,33 @@ Esegui il servizio di sistema
 
 Esegui il flusso di lavoro di Automator
 : esegui qualsiasi file Automator `.workflow`. L'input verrà passato su STDIN e l'output è previsto su STDOUT.
+
+Esegui regola
+: esegue le azioni di un'altra regola personalizzata dalla regola corrente.
+  Scegli la regola di destinazione dal popup. La regola invocata
+  viene eseguito nella stessa fase (preprocessore o processo) senza
+  rivalutando il suo predicato, che lo rende utile per
+  regole sugli "ingredienti" riutilizzabili.
+
+  **Caso d'uso di esempio:** definire una piccola regola denominata "Strip
+  Commenti HTML" con un'azione Cerca e sostituisci e fornisci
+  è un criterio **Abilitato manualmente** quindi non viene mai eseguito
+  automaticamente. Nella regola principale di elaborazione dei libri, aggiungi
+  **Esegui regola** azioni in sequenza: prima "Normalizza intestazioni",
+  quindi "Rimuovi commenti HTML", quindi un comando Esegui che richiama
+  Pandoc. Mantieni ogni passaggio mantenibile senza duplicazioni
+  azioni attraverso le regole.
+
+  **Nidificazione:** una regola richiamata da **Run Rule** non può essere richiamata
+  un'altra regola. Se la regola di destinazione contiene una **Regola di esecuzione**
+  azione, quell'azione viene saltata; tutte le altre azioni nel
+  la regola di destinazione è ancora in esecuzione. È possibile aggiungere più **Regole di esecuzione**
+  azioni a una singola regola e vengono eseguite in ordine.
+
+  Una regola non può invocare se stessa e Marked rileva i cicli
+  (ad esempio, la regola A che invoca la regola B che a sua volta invoca la regola A)
+  e salta la chiamata nidificata. Consulta le [Regole personalizzate
+  Log](#customprocessorlog) per i messaggi di salto.
 
 Continua
 : Per impostazione predefinita, una volta che una regola viene soddisfatta, l'elaborazione verrà interrotta (separatamente per preprocessori e processori, in modo che un preprocessore e un processore possano corrispondere). Questa azione imporrà la continuazione della corrispondenza delle regole dopo che la regola ha eseguito le sue azioni.
@@ -260,9 +368,9 @@ mostra i messaggi in sovrapposizione appropriati:
 - **Estensioni sconosciute**: per impostazione predefinita viene visualizzato il tipo "testo" e viene visualizzato
   sovrapposizione divisa
 
-## Registro processore personalizzato
+## Registro del processore personalizzato [customprocessorlog]
 
-Se ottieni risultati strani e vuoi dare un'occhiata a cosa sta succedendo, il registro delle regole personalizzate ti mostrerà quali regole vengono eseguite e in quale ordine. Utilizza **Aiuto->Mostra registro regole personalizzate** per aprirlo.
+Se ottieni risultati strani e vuoi dare un'occhiata a cosa sta succedendo, il registro delle regole personalizzate ti mostrerà quali regole vengono eseguite e in quale ordine. Utilizza **Aiuto->Mostra registro regole personalizzate** per aprirlo. Anche le azioni **Esegui regola** richiamate e le chiamate annidate saltate vengono registrate qui.
 
 ![Registro regole personalizzate][crlog]
 

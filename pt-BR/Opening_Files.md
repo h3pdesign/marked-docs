@@ -44,6 +44,32 @@ Marcado permite que você crie um novo arquivo de texto vazio com o comando {% a
 
 Marcado também mantém registro de documentos recentes. A opção de menu {% appmenu File, Open Recent %} mostrará os arquivos que você abriu e permitirá que você volte para eles. Você pode reabrir rapidamente o último arquivo que estava visualizando com {% kbd shift cmd R %}. Use {% kbd shift cmd P %} ou [Ações rápidas] (Quick_Actions.html) para executar o menu e visualizar comandos do teclado. Atalhos](Keyboard_Shortcuts.html).
 
+## Nova visualização no arquivo atual [multiview]
+
+Use {% appmenu File, New View into Current File %} ({% kbd
+shift cmd N %}, também no menu de contexto de visualização) para abrir um
+segunda janela de visualização no mesmo arquivo salvo. Ambas as janelas
+observe o arquivo no disco e atualize quando salvar em seu
+editor, mas cada visualização mantém sua própria posição de rolagem,
+marcadores, estilo de visualização e [regra personalizada
+substituições](Custom_Processor.html#manuallyenabled).
+
+**Exemplo de caso de uso:** Você está editando um manuscrito longo em
+MultiMarkdown com seu estilo e processador habituais. Abra um
+segunda visualização, mude para um estilo de revisão, fixe um Processo
+regra que executa um processador integrado diferente e permite um
+regra manual que destaca a marcação de revisão. Você compara
+layouts de rascunho e prova lado a lado sem manter dois
+cópias do arquivo.
+
+Quando mais de uma visualização de um arquivo estiver aberta, o título da janela
+inclui **Visualização 2**, **Visualização 3** e assim por diante para que você possa saber
+janelas separadas no menu Janela e no Controle da Missão.
+
+Visualizações alternativas não estão disponíveis para documentos não salvos,
+visualizações da área de transferência, visualizações de streaming ou baseadas em pastas
+projetos que não são mapeados para um único arquivo no disco.
+
 ## Abertura rápida ##
 
 Você pode alternar rapidamente entre documentos abertos, abrir documentos recentes ou abrir a caixa de diálogo Arquivo->Abrir com o [Painel de abertura rápida](Quick_Open.html) ({% kbd cmd shift o %}).
