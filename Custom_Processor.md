@@ -62,24 +62,31 @@ given file. Use the left side dropdown to select a
 criterion, then use the comparator and value fields to build
 the predicate.
 
-- _filename_ matches just the filename of the file
-- _extension_ matches just the extension of the file
-- _path_ matches the full POSIX (Unix) path of the file
-- _tree_ searches for filename matches anywhere in the
+- _Filename_ matches just the filename of the file
+- _Extension_ matches just the extension of the file
+- _Path_ matches the full POSIX (Unix) path of the file
+- _Tree_ searches for filename matches anywhere in the
   directory tree of the file
-- _text_ matches text content in the file. Use forward
+- _Text_ matches text content in the file. Use forward
   slashes around the text value to make it a regular
   expression search.
-- _fileIncludes_ tests whether the file contains included
+- _File includes_ tests whether the file contains included
   files (using any of [Marked's include
   syntaxes](Multi-File_Documents.html)).
-- _metaType_ tests whether the file includes YAML,
+- _Metadata type_ tests whether the file includes YAML,
   MultiMarkdown, or Pandoc metadata
-- _metadata.X_ tests for specific metadata keys like author,
-  date, title, etc.
+- _Metadata:_ fields (for example _Metadata: Author_,
+  _Metadata: Date_, _Metadata: Title_) test for specific
+  metadata keys. Any metadata key appears in the dropdown as
+  _Metadata:_ followed by the field name.
+- _Manually enabled_ matches when that rule has been turned
+  on for the current preview window (see [Manually enabled
+  rules](#manuallyenabled) below). Combine it with other
+  criteria in an All (AND) group so the rule only runs when
+  you opt in and the file matches your other conditions.
 
 To match all files (i.e. a Custom Processor that always
-runs), set `filename` to `contains` `*`. The asterisk will
+runs), set _Filename_ to `contains` `*`. The asterisk will
 act as a wildcard and match all files.
 
 [Add a predicate][addpredicate]
@@ -87,6 +94,80 @@ act as a wildcard and match all files.
 [addpredicate]: images/custom-rules-add-predicate-800.jpg @2x width=800
 
 Click the plus sign (+) on the predicate row to add another predicate. Hold down Option while clicking the + to add a boolean group that can be set to All (AND) or Any (OR).
+
+### Manually enabled rules [manuallyenabled]
+
+Some rules should not run on every file that matches their
+criteria. Add a **Manually enabled** criterion when you want
+a rule to run only after you turn it on for the current
+preview.
+
+Use the **Add Manually Enabled** button below the predicate
+editor to insert this criterion. Each rule can include it
+only once. When present, the rule appears in the {% appmenu
+Preview, Enable Custom Rule %} submenu for that preview
+window.
+
+**Example use case:** You maintain a rule that injects
+print CSS, strips comments, and shifts header levels for
+PDF export. You do not want that transformation on every
+save while drafting, but you do want it on demand. Give the
+rule normal file-matching criteria plus **Manually enabled**,
+then toggle it from the Preview menu (or a trigger shortcut)
+when you are ready to proof the print layout.
+
+#### Trigger shortcut
+
+When a selected rule includes **Manually enabled**, a
+**Trigger shortcut** field appears beside **Add Manually
+Enabled**. Click the recorder, then press the key
+combination you want. That shortcut toggles the rule for the
+frontmost Marked preview (enable if off, disable if on). The
+shortcut is stored with the rule and persists across launches.
+Clear the field to remove the shortcut.
+
+![Trigger shortcut recorder in the Conductor][manualshortcut]
+
+[manualshortcut]: images/conductor-manual-rule-shortcut.jpg @2x width=800
+
+#### Per-preview overrides in the Preview menu
+
+Two Preview menu submenus control overrides for the active
+preview only. Settings are saved per [view](#multiview) when
+multiple windows show the same file.
+
+**Enable Custom Rule**
+: Lists every enabled rule that includes a **Manually
+  enabled** criterion. Check a rule to turn it on for this
+  preview; uncheck to turn it off. The preview refreshes
+  immediately.
+
+**Custom Rule Override**
+: Lists Process-phase rules. Choose one to *pin* it: during
+  the Process phase, only that rule is evaluated (other
+  Process rules are skipped). Choose **None (automatic)** to
+  return to normal rule matching. This is useful when you
+  want to force a specific processor pipeline for one
+  preview without changing global Custom Rules.
+
+#### Override button in the preview toolbar
+
+When a preview has at least one manually enabled rule or a
+pinned Process override, a branch icon appears in the bottom
+toolbar (to the left of the export and drawer controls).
+The filled, accent-colored icon means overrides are active;
+the outline icon means overrides are suspended.
+
+![Custom rule override button in the preview toolbar][conductoroverride]
+
+[conductoroverride]: images/conductor-override-toolbar.jpg @2x width=800
+
+Click the button to suspend or re-enable overrides for this
+preview without clearing your manual-rule checkmarks or
+pinned Process rule. Suspended overrides are restored when
+you click again. This is faster than unchecking rules in the
+menu when you want to compare the normal preview with your
+override pipeline.
 
 ### Actions
 
@@ -194,6 +275,33 @@ Run System Service
 Run Automator Workflow
 : Run any Automator `.workflow` file. Input will be passed on STDIN and output is expected on STDOUT.
 
+Run Rule
+: Run another Custom Rule's actions from the current rule.
+  Choose the target rule from the popup. The invoked rule
+  runs in the same phase (Preprocessor or Process) without
+  re-evaluating its predicate, which makes it useful for
+  reusable "ingredient" rules.
+
+  **Example use case:** Define a small rule named "Strip
+  HTML comments" with a Search and Replace action, and give
+  it a **Manually enabled** criterion so it never runs
+  automatically. In your main book-processing rule, add
+  **Run Rule** actions in sequence: first "Normalize headers,"
+  then "Strip HTML comments," then a Run Command that calls
+  Pandoc. You keep each step maintainable without duplicating
+  actions across rules.
+
+  **Nesting:** A rule invoked by **Run Rule** cannot invoke
+  another rule. If the target rule contains a **Run Rule**
+  action, that action is skipped; all other actions in the
+  target rule still run. You can add multiple **Run Rule**
+  actions to a single rule and they execute in order.
+
+  A rule cannot invoke itself, and Marked detects cycles
+  (for example, Rule A invoking Rule B which invokes Rule A)
+  and skips the nested call. See the [Custom Rules
+  Log](#customprocessorlog) for skip messages.
+
 Continue
 : By default, once a rule is matched, processing will stop (separately for Preprocessors and Processors, so one Preprocessor and one Processor can match). This action will force rule matching to continue after the rule performs its actions.
 
@@ -258,9 +366,9 @@ shows appropriate overlay messages:
 - **Unknown extensions**: Defaults to "text" type and shows
   split overlay
 
-## Custom Processor Log
+## Custom Processor Log [customprocessorlog]
 
-If you're getting odd results and want a look at what's going on, the Custom Rules Log will show you what rules are running in what order. Use **Help->Show Custom Rules Log** to open it.
+If you're getting odd results and want a look at what's going on, the Custom Rules Log will show you what rules are running in what order. Use **Help->Show Custom Rules Log** to open it. Invoked **Run Rule** actions and skipped nested calls are logged here as well.
 
 ![Custom Rules Log][crlog]
 

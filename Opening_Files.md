@@ -42,6 +42,32 @@ Marked allows you to create a new, empty text file with the {% appmenu File, New
 
 Marked keeps track of recent documents, too. The {% appmenu File, Open Recent %} menu option will show you the files you"ve had open and let you jump back to them. You can quickly re-open the last file you were viewing with {% kbd shift cmd R %}. Use {% kbd shift cmd P %} or [Quick Actions](Quick_Actions.html) to run menu and preview commands from the keyboard. There are a lot of other keyboard shortcuts, too. If you care to learn them, you can find a chart under [Keyboard Shortcuts](Keyboard_Shortcuts.html).
 
+## New View into Current File [multiview]
+
+Use {% appmenu File, New View into Current File %} ({% kbd
+shift cmd N %}, also in the preview context menu) to open a
+second preview window on the same saved file. Both windows
+watch the file on disk and update when you save in your
+editor, but each view keeps its own scroll position,
+bookmarks, preview style, and [Custom Rule
+overrides](Custom_Processor.html#manuallyenabled).
+
+**Example use case:** You are editing a long manuscript in
+MultiMarkdown with your usual style and processor. Open a
+second view, switch it to a proofing style, pin a Process
+rule that runs a different built-in processor, and enable a
+manual rule that highlights revision markup. You compare
+draft and proof layouts side by side without maintaining two
+copies of the file.
+
+When more than one view of a file is open, the window title
+includes **View 2**, **View 3**, and so on so you can tell
+windows apart in the Window menu and Mission Control.
+
+Alternate views are not available for unsaved documents,
+clipboard previews, streaming previews, or folder-based
+projects that do not map to a single file on disk.
+
 ## Quick Open ##
 
 You can quickly switch between open documents, open recent documents, or open the File->Open dialog with the [Quick Open panel](Quick_Open.html) ({% kbd cmd shift o %}).
