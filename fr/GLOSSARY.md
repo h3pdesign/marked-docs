@@ -56,6 +56,12 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | tidy-tree layout | disposition en arbre ordonné | Describes Mermaid mind map layout |
 | Folders (preference section) | Dossiers | Settings_Apps.md section heading |
 | Border (header/footer rule) | Bordure | Confirmed while reviewing Settings_Export.md MT draft; corrects a "Frontière" mistranslation (false friend), consistent with "les bordures" already used in the section's intro paragraph |
+| Full Disk Access | Accès complet au disque | Confirmed: official Apple French term for the macOS permission |
+| Reading Speed (wpm) | Vitesse de lecture (mpm) | Settings_Proofing.md; "mpm" = mots par minute, French equivalent of "wpm" |
+| Avoid (keyword list) | Éviter | Settings_Proofing.md keyword tab label |
+| Use Alternate (keyword list) | Utiliser une alternative | Settings_Proofing.md keyword tab label |
+| Highlight (keyword list) | Mettre en évidence | Settings_Proofing.md keyword tab label |
+| Ignore Repeats (keyword list) | Ignorer les répétitions | Settings_Proofing.md keyword tab label |
 
 ## Do not translate (keep English)
 
