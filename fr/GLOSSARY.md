@@ -2,7 +2,7 @@
 
 Agreed translations for recurring terms. The lead translator maintains this file; contributors should follow it consistently.
 
-**Status:** Filled in from the official app localization (`fr-ui-review.marked-l10n`) where a match exists. Updated with terms confirmed while reviewing AI_Ask_About_Document.md.
+**Status:** Filled in from the official app localization (`fr-ui-review.marked-l10n`) where a match exists. Updated with terms confirmed while reviewing AI_Ask_About_Document.md, Scroll_to_Edit.md, Settings_Advanced.md, and Settings_Apps.md.
 
 | English | Translation | Notes |
 |---------|-------------|-------|
@@ -42,6 +42,19 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | System Settings (macOS app, not Marked's own Settings) | Réglages Système | Apple's current French name for the macOS System Settings app, distinct from the "Settings"/"Paramètres" entry above, which refers to Marked's own preferences window |
 | Mermaid | Mermaid | Diagramming library (mermaid.js.org). Never translate; confirmed mistranslation seen twice as "Sirène" (the mythical creature). Also used as a Marked setting name: "Intégrer les cartes en tant que diagrammes Mermaid". |
 | Hooks | Hooks | Marked's JavaScript API for re-running scripts on preview update (`Marked.hooks.register()`). Keep in English, singular "hook" or plural "hooks" as in source; do not translate to "crochets". |
+| Scroll to Edit | défilement vers la modification | Confirmed while translating Scroll_to_Edit.md; used descriptively in prose, not as a fixed UI label |
+| preferences pane / prefspane | panneau de préférences | Descriptive phrase used in prose around the `{% prefspane %}` tag (tag itself stays unchanged, see "Do not translate") |
+| Find (system-wide search) | recherche | Used for the macOS-wide Find pasteboard feature, not the app's own search UI |
+| Find pasteboard | presse-papiers de recherche du système | Confirmed while translating Settings_Advanced.md |
+| Debug mode | Mode débogage | Confirmed while translating Settings_Advanced.md |
+| Settings Backup | Sauvegarde des paramètres | Aligned with "Settings" = "Paramètres" entry above |
+| Text Editor (preference label) | Éditeur de texte | Confirmed while translating Settings_Apps.md |
+| Image Editor (preference label) | Éditeur d'images | Confirmed while translating Settings_Apps.md |
+| Image annotation/markup editor | Éditeur d'annotation/de balisage d'images | Confirmed while translating Settings_Apps.md |
+| Change tracking | suivi des modifications | Word-related feature; standard French term |
+| Mind Maps/Outlines | Cartes mentales/Plans | Section heading in Settings_Apps.md |
+| tidy-tree layout | disposition en arbre ordonné | Describes Mermaid mind map layout |
+| Folders (preference section) | Dossiers | Settings_Apps.md section heading |
 
 ## Do not translate (keep English)
 
@@ -56,6 +69,6 @@ Document choices that affect multiple pages:
 
 | English | Chosen translation | Avoid (reason) |
 |---------|-------------------|----------------|
-| Settings | Paramètres | Avoid "Réglages" in new content: the app's newer strings use "Paramètres" (window.title), but many legacy menu strings still say "Réglages…" (e.g. "129.title"). The app itself is inconsistent; docs should standardize on "Paramètres" and not carry the older term forward. |
+| Settings | Paramètres | Avoid "Réglages" in new content: the app's newer strings use "Paramètres" (window.title), but many legacy menu strings still say "Réglages…" (e.g. "129.title"). The app itself is inconsistent; docs should standardize on "Paramètres" and not carry the older term forward. Caught and corrected in Settings_Advanced.md and Settings_Apps.md, which had initially used "Réglages". |
 | tag | balise | Avoid "tag": confirmed app terminology is "balise" (see main table). Caught during Bear.md review where both a heading and body text used "tags" inconsistently with the app. |
 | export (verb vs noun) | exporter (verb) / export (noun, when natural) | Avoid forcing "exportation" everywhere; the app itself mixes "Exporter sous" (verb form) with more technical noun uses like "Profil d'exportation." Match the app's pattern per context rather than picking one form globally. |
