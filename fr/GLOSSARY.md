@@ -55,6 +55,7 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | Mind Maps/Outlines | Cartes mentales/Plans | Section heading in Settings_Apps.md |
 | tidy-tree layout | disposition en arbre ordonné | Describes Mermaid mind map layout |
 | Folders (preference section) | Dossiers | Settings_Apps.md section heading |
+| Border (header/footer rule) | Bordure | Confirmed while reviewing Settings_Export.md MT draft; corrects a "Frontière" mistranslation (false friend), consistent with "les bordures" already used in the section's intro paragraph |
 
 ## Do not translate (keep English)
 
