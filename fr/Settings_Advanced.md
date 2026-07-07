@@ -2,7 +2,7 @@
 
 Options du panneau {% prefspane Advanced %} :
 
-![Réglages : Avancé][1]
+![Paramètres : Avancé][1]
 
 [1]: images/screenshots/preferences-Advanced.jpg @2x width=689px height=1031px class=preferencepane-scroll
 
@@ -31,5 +31,5 @@ Mode débogage
 : Active la journalisation de débogage. Utilisez cette option pour vos propres dépannages, ainsi que lors du signalement d'un problème. Sélectionnez __Aide -> Ouvrir le journal de débogage__ pour consulter l'activité.
 : Le réglage sur _Tout_ affichera les messages d'information, les avertissements et les messages d'erreur. Vous pouvez également le régler pour n'afficher que les erreurs, ou les erreurs et les avertissements.
 
-Sauvegarde des réglages
+Sauvegarde des paramètres
 : Vous pouvez sauvegarder vos réglages dans un fichier JSON pouvant être utilisé pour les restaurer ou les transférer vers une nouvelle machine.
