@@ -62,6 +62,9 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | Use Alternate (keyword list) | Utiliser une alternative | Settings_Proofing.md keyword tab label |
 | Highlight (keyword list) | Mettre en évidence | Settings_Proofing.md keyword tab label |
 | Ignore Repeats (keyword list) | Ignorer les répétitions | Settings_Proofing.md keyword tab label |
+| widow (typography) | veuve | Settings_Style.md; standard French typographic term ("veuves et orphelins") |
+| Style Manager | Gestionnaire de styles | Settings_Style.md |
+| Outline mode | mode Plan | Settings_Style.md; "Outline" here refers to the outline/heading numbering mode, capitalized as a feature name |
 
 ## Do not translate (keep English)
 
