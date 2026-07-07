@@ -75,6 +75,9 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | callout | callout | Special_Syntax.md; kept as English loanword per Obsidian/Bear French community convention, unlike "tag" which has an established French term (balise) |
 | Autoscroll | Défilement automatique | Confirmed |
 | Teleprompter (style name) | Teleprompter | Special_Syntax.md; proper noun of a named preview style, kept unchanged like other named styles (e.g. Amblin, Grump) |
+| Text (Ulysses export format dropdown) | Texte | Confirmed by user, Ulysses.md |
+| Open In (Ulysses/macOS share sheet action) | Ouvrir dans | Confirmed by user as a generic macOS share-sheet term; note that this specific button no longer appears in current Ulysses UI (superseded by "Open With Marked", see below) |
+| Open With Marked (Ulysses export menu) | Ouvrir avec Marked | Confirmed by user, Ulysses.md; current Ulysses UI action (accessed via the ··· button next to Export), replaces the older "Open In" flow described in the original English doc |
 
 ## Do not translate (keep English)
 
