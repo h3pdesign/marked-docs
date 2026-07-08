@@ -42,6 +42,16 @@ Mit Marked können Sie über den Befehl {% appmenu Ablage, Neu ({{cmd}}N) %} ein
 
 Marked merkt sich auch die zuletzt geöffneten Dokumente. Die Menüoption {% appmenu Ablage, Zuletzt geöffnet %} zeigt Ihnen die Dateien, die Sie geöffnet hatten, und lässt Sie dorthin zurückkehren. Mit {% kbd shift cmd R %} öffnen Sie schnell die zuletzt angezeigte Datei wieder. Verwenden Sie {% kbd shift cmd P %} oder [Schnellaktionen](Quick_Actions.html), um Menü- und Vorschaubefehle über die Tastatur auszuführen. Es gibt noch viele weitere Tastaturkurzbefehle. Wenn Sie sie lernen möchten, finden Sie eine Übersicht unter [Tastaturkurzbefehle](Keyboard_Shortcuts.html).
 
+## Neue Ansicht der aktuellen Datei [multiview]
+
+Mit {% appmenu Ablage, Neue Ansicht der aktuellen Datei %} ({% kbd shift cmd N %}, auch im Kontextmenü der Vorschau) öffnen Sie ein zweites Vorschaufenster für dieselbe gespeicherte Datei. Beide Fenster überwachen die Datei auf der Festplatte und aktualisieren sich, sobald Sie im Editor speichern. Jede Ansicht behält aber ihre eigene Scroll-Position, ihre Lesezeichen, ihren Vorschaustil und ihre [über Eigene Regeln gesetzten Überschreibungen](Custom_Processor.html#manuallyenabled).
+
+**Beispiel:** Sie bearbeiten ein langes Manuskript in MultiMarkdown mit Ihrem gewohnten Stil und Prozessor. Öffnen Sie eine zweite Ansicht, wechseln Sie dort zu einem Korrekturstil, heften Sie eine Prozessregel an, die einen anderen integrierten Prozessor ausführt, und aktivieren Sie eine manuelle Regel, die Revisionsmarkierungen hervorhebt. So vergleichen Sie Entwurf und Korrekturfassung nebeneinander, ohne zwei Kopien der Datei pflegen zu müssen.
+
+Sind mehrere Ansichten einer Datei geöffnet, enthält der Fenstertitel **Ansicht 2**, **Ansicht 3** und so weiter, damit Sie die Fenster im Menü „Fenster“ und in Mission Control auseinanderhalten können.
+
+Alternative Ansichten sind nicht verfügbar für ungespeicherte Dokumente, Vorschauen aus der Zwischenablage, Streaming-Vorschauen oder ordnerbasierte Projekte, die keiner einzelnen Datei auf der Festplatte entsprechen.
+
 ## Schnell öffnen ##
 
 Mit dem [Schnell-öffnen-Panel](Quick_Open.html) ({% kbd cmd shift o %}) wechseln Sie schnell zwischen offenen Dokumenten, rufen zuletzt geöffnete Dokumente auf oder öffnen den Öffnen-Dialog.
