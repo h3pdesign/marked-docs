@@ -49,7 +49,7 @@ Luego puede guardar este estilo personalizado en su carpeta CSS personalizado pa
 
 ![][img3]
 
-  [img3]: imágenes/ladrón de estilos-robados-800.jpg @2x width=800px height=637px clase=centro
+  [img3]: imágenes/ladrón de estilos-robados-800.jpg @2x width=800px height=637px class=center
 
 ## Qué se extrae
 

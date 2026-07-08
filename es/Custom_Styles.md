@@ -8,7 +8,7 @@ Vea sus documentos *a su* manera.
 
 ![][img1]
 
-  [img1]: imágenes/estilos_personalizados.jpg @2x width=544px height=196px clase=centro
+  [img1]: imágenes/estilos_personalizados.jpg @2x width=544px height=196px class=center
 
 La forma más sencilla de explorar estilos personalizados es a través del
 [Galería de estilos personalizados][2]. Desde allí puedes navegar por

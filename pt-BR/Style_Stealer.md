@@ -49,7 +49,7 @@ Você pode então salvar esse estilo personalizado em sua pasta CSS personalizad
 
 ![][img3]
 
-  [img3]: images/style-stealer-stolen-800.jpg @2x width=800px height=637px classe=centro
+  [img3]: images/style-stealer-stolen-800.jpg @2x width=800px height=637px class=center
 
 ## O que é extraído
 
