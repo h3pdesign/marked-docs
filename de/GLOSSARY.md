@@ -12,6 +12,7 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | custom … (generisch, ohne eigenen Menüpunkt) | benutzerdefiniert … | z. B. custom scripts → benutzerdefinierte Skripte; custom processor → benutzerdefinierter Prozessor |
 | dark mode | Dunkelmodus | App: „Dunkelmodus“ |
 | export | Export / exportieren | App-Menü: „Exportieren…“, „Exportieren als“ |
+| fenced code block | abgegrenzter Codeblock | NICHT „eingezäunt/umzäunt/abgeschirmt“ (häufiger MT-Wildwuchs, ~10 Dateien uneinheitlich). Der ```-Marker selbst (engl. „code fence“) → „Code-Block“ bzw. „Element“ je nach Kontext |
 | footnote | Fußnote | |
 | gear menu | Zahnradmenü | Token `{{gear}}` bleibt unverändert |
 | header / footer (print) | Kopfzeile / Fußzeile | |
