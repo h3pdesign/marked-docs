@@ -5,9 +5,9 @@ Who is working on which section, so contributors don't translate the same files 
 | Section (config.yaml `folder`) | Assigned to | Status |
 |---|---|---|
 | Getting_Started | Thomas (@fucx, lead) | done |
-| Settings | Thomas (@fucx, lead) | in progress |
+| Settings | Thomas (@fucx, lead) | done |
 | Supported_Apps | Hilthart (@h3pdesign) | done |
-| Reading_Features | Andreas Lattka | offered |
+| Reading_Features | — | open |
 | Just_for_Writers | Hilthart (@h3pdesign) | assigned |
 | Special_Features | — | open |
 | Comparisons_FAQ | — | open |
