@@ -5,6 +5,7 @@ Agreed translations for recurring terms. The lead translator maintains this file
 | English | Translation | Notes |
 |---------|-------------|-------|
 | bookmark | Lesezeichen | |
+| callout | Callout | Feature-Name (Obsidian/Bear/Xcode Playground) → „das Callout“, engl. belassen. NICHT „Hinweistext/Beschriftung“. Die Callout-Typ-Keywords (`NOTE`, `WARNING`, `TIP` …) und Xcode-Typen (`Attention`, `See Also` …) sind literale Syntax → nie übersetzen |
 | clipboard | Zwischenablage | |
 | CriticMarkup, MultiMarkdown, CommonMark, MathJax, KaTeX | (unverändert) | Technische Namen, engl. belassen |
 | Custom Rules | Eigene Regeln | Benanntes Marked-Feature → App-Menü „Eigene Regeln bearbeiten“. **App ist inkonsistent:** `MainMenu.strings` = „Eigene Regeln bearbeiten“, aber `Settings.strings` (`setting.customRules`, `.button`, `conductorNote`) = „Benutzerdefinierte Regeln“ + `setting.customRules.tooltip` noch englisch. **Kanonisch = „Eigene Regeln“** (Lead-Entscheid 06.07); Settings.strings von Brett anzugleichen |
