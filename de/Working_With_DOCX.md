@@ -14,7 +14,7 @@ Marked kann eine DOCX-Datei lesen und in sauberes Markdown umwandeln. Gültige S
 
 ### Kopf- und Fußzeilen
 
-Wenn Sie Kopf- und Fußzeilen in {% prefspane Export %} konfigurieren, sind diese im exportierten DOCX enthalten. Standardplatzhalter wie `%title`, `%date`, `%page` und `%total` werden beim Export ersetzt. `%logo` und `%image` betten das Logo aus den Kopf-/Fußzeileneinstellungen ein. `%md_*`-Metadatenvariablen werden aus den MultiMarkdown-Metadaten des Dokuments aufgelöst. `%h1`–`%h6` werden zu Word-**STYLEREF**-Feldern, die an die exportierten Überschriftenstile gebunden sind; Word füllt sie aus, wenn Sie das Dokument öffnen. Die vollständige Variablenliste sowie die Unterschiede zwischen dem Verhalten bei DOCX und bei Druck/PDF finden Sie unter [Exporting](Exporting.html#headers-and-footers).
+Wenn Sie Kopf- und Fußzeilen in {% prefspane Export %} konfigurieren, sind diese im exportierten DOCX enthalten. Standardplatzhalter wie `%title`, `%date`, `%page` und `%total` werden beim Export ersetzt. `%logo` und `%image` betten das Logo aus den Kopf-/Fußzeileneinstellungen ein. `%md_*`-Metadatenvariablen werden aus den MultiMarkdown-Metadaten des Dokuments aufgelöst. `%h1`–`%h6` werden zu Word-**STYLEREF**-Feldern, die an die exportierten Überschriftenstile gebunden sind; Word füllt sie aus, wenn Sie das Dokument öffnen. Die vollständige Variablenliste sowie die Unterschiede zwischen dem Verhalten bei DOCX und bei Druck/PDF finden Sie unter [Export](Exporting.html#headers-and-footers).
 
 ## Änderungsverfolgung
 
