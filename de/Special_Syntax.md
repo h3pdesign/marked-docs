@@ -94,7 +94,7 @@ Diese Callouts werden automatisch in Markeds Callout-Format umgewandelt und pass
 > Diese Funktion greift nur bei der Vorschau von Xcode-Playground-Dateien (`.playground`). Normale Markdown-Dateien verarbeiten diese Syntax nicht.
 
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis [tableofcontents]
 
 Mit `<!--TOC-->` legen Sie fest, wo im Dokument das Inhaltsverzeichnis erscheinen soll. Ist das gesetzt, überschreibt es die Option in den Einstellungen und wird immer im Vorschaufenster sowie beim Speichern und Drucken angezeigt. Das Inhaltsverzeichnis erscheint nur einmal, auch wenn der Inhalt mehrere `<!--TOC-->`-Bezeichner enthält.
 
