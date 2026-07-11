@@ -5539,3 +5539,16 @@ Schreibe alle Antworten auf %@.";
 
 
 === END Settings.strings (gaps) ===
+
+=== BEGIN Settings.strings (gaps) ===
+# Strings in this section: 2
+# PRIORITY — Preview style menu (toolbar popup): None and Manage Styles…
+# Seeded from MainMenu / outline None translations (2026-07-10).
+
+"setting.previewStyle.none" = "Keine";
+# EN: None
+
+"setting.manageStyles.menu" = "Stile verwalten…";
+# EN: Manage Styles…
+
+=== END Settings.strings (gaps) ===

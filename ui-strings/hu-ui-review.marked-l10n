@@ -9010,3 +9010,14 @@ Write all responses in %@." = "";
 
 
 === END InfoPlist.strings ===
+
+=== BEGIN Settings.strings (gaps) ===
+# Strings in this section: 2
+# PRIORITY — Preview style menu (toolbar popup): None and Manage Styles…
+# Reported untranslated in German build (2026-07-10). Translate both values below.
+
+"setting.previewStyle.none" = "None";
+
+"setting.manageStyles.menu" = "Manage Styles…";
+
+=== END Settings.strings (gaps) ===

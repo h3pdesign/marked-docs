@@ -5206,3 +5206,16 @@ Write all responses in %@." = "你帮助用户审阅在 Marked 这个 Markdown �
 
 
 === END Settings.strings (gaps) ===
+
+=== BEGIN Settings.strings (gaps) ===
+# Strings in this section: 2
+# PRIORITY — Preview style menu (toolbar popup): None and Manage Styles…
+# Seeded from MainMenu / outline None translations (2026-07-10).
+
+"setting.previewStyle.none" = "无";
+# EN: None
+
+"setting.manageStyles.menu" = "管理样式…";
+# EN: Manage Styles…
+
+=== END Settings.strings (gaps) ===
