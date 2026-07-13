@@ -25,7 +25,7 @@ Im Stil-Manager finden Sie eine sortierbare Tabelle, die integrierte und eigene 
 - Ein Kontrollkästchen **Aktiviert**, das den Stil sofort zum Stil-Menü, zum Standardstil-Popup und zu den Tastaturkurzbefehlen hinzufügt bzw. daraus entfernt. Deaktivieren Sie den gerade aktiven Stil, wird automatisch zum nächsten verfügbaren Eintrag gewechselt.
 - Eine Spalte **Name**, die Sie inline bearbeiten können; Änderungen bleiben erhalten und wirken sich auf jedes Menü aus. Klicken Sie auf den Namen des Stils, um ihn direkt zu bearbeiten.
 - Eine Spalte **Quelle**, die „Integriert“, „Eigen“ oder „Dupliziert“ ausweist.
-- Einen **Aktionen**-Block mit Schaltflächen für **Bearbeiten** (öffnet die CSS-Datei in Ihrem Editor), **Duplizieren** (erstellt eine Kopie und eine neue CSS-Datei auf der Festplatte), **Im Finder zeigen** (zeigt die Datei im Finder) und **Löschen** (mit Optionen, die Referenz zu entfernen oder die CSS-Datei in den Papierkorb zu legen).
+- Einen **Aktionen**-Block mit Schaltflächen für **Bearbeiten** (öffnet die CSS-Datei in Ihrem Editor), **Duplizieren** (erstellt eine Kopie und eine neue CSS-Datei auf der Festplatte), **Im Finder anzeigen** (zeigt die Datei im Finder) und **Löschen** (mit Optionen, die Referenz zu entfernen oder die CSS-Datei in den Papierkorb zu legen).
 
 Zeilen ordnen Sie per Drag-and-drop um, und die Reihenfolge steuert sowohl das Stil-Menü als auch die `⌘/#`-Kurzbefehl-Zuweisungen – Sie ziehen Stile also buchstäblich in die gewünschten Plätze. Sie können auch externe CSS-Dateien an bestimmte Positionen ziehen; die Ablage-Markierung bestimmt, wo der neue Stil eingefügt wird.
 
