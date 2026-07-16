@@ -307,7 +307,7 @@
 "BXl-6w-6Wq.title" = "Statistik";
 # EN: Statistics
 
-"CIg-C0-cyi.title" = "Schnellvorschau speichern";
+"CIg-C0-cyi.title" = "Zwischenablage-Vorschau speichern";
 # EN: Save Transient Preview
 
 "CN7-Sb-D7R.title" = "Verlauf";
@@ -4112,7 +4112,7 @@ Schreibe alle Antworten auf %@.";
 "kbs.action.revealInFinder" = "Im Finder anzeigen";
 # EN: Reveal in Finder
 
-"kbs.action.saveClipboardPreview" = "Zwischenablagevorschau speichern";
+"kbs.action.saveClipboardPreview" = "Zwischenablage-Vorschau speichern";
 # EN: Save Clipboard Preview
 
 "kbs.action.saveDOCX" = "DOCX speichern";
@@ -4661,7 +4661,7 @@ Schreibe alle Antworten auf %@.";
 
 "CIg-C0-cyi.ibShadowedToolTip" = "Save a clipboard or content extractor preview as a Markdown file";
 
-"CIg-C0-cyi.title" = "Schnellvorschau speichern";
+"CIg-C0-cyi.title" = "Zwischenablage-Vorschau speichern";
 # EN: Save Transient Preview
 
 "DJl-cP-TQ7.title" = "IDs bei Überschriften";
@@ -5148,7 +5148,7 @@ Schreibe alle Antworten auf %@.";
 "AqK-WG-cNa.title" = "Exportieren…";
 # EN: Export…
 
-"CIg-C0-cyi.title" = "Schnellvorschau speichern";
+"CIg-C0-cyi.title" = "Zwischenablage-Vorschau speichern";
 # EN: Save Transient Preview
 
 "Cn0-Bw-QJL.title" = "Schnell öffnen";
