@@ -256,7 +256,7 @@ Opens the specified document in Marked.
 
 ##### Parameters:
 
-**file** *(required)*: The full POSIX path to the document to be opened, or comma-separated list of paths
+**file** *(required)*: The full POSIX path to the document to be opened, or a comma-separated list of paths. Commas inside a filename are allowed; Marked only treats a comma as a multi-file separator when it follows a file extension (for example `.md,`) or when the next path starts with `/` or `~`.
 
 **speedread** *(optional)*: Set to `1` to start Speed Read automatically after opening.
 
