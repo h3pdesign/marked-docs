@@ -74,7 +74,7 @@ Enthält eine ausgewählte Regel **Manuell aktiviert**, erscheint neben **Manuel
 
 #### Überschreibungen pro Vorschau im Vorschau-Menü [per-preview-overrides-in-the-preview-menu]
 
-Zwei Untermenüs des Vorschau-Menüs steuern Überschreibungen nur für die aktive Vorschau. Zeigen mehrere Fenster dieselbe Datei, werden die Einstellungen pro [Ansicht](Opening_Files.html#multiview) gespeichert.
+Zwei Untermenüs des Vorschau-Menüs steuern Überschreibungen nur für die aktive Vorschau. Zeigen mehrere Fenster dieselbe Datei, werden die Einstellungen pro [Ansicht](#multiview) gespeichert.
 
 **Eigene Regel aktivieren**
 : Listet jede aktivierte Regel auf, die ein Kriterium **Manuell aktiviert** enthält. Setzen Sie bei einer Regel das Häkchen, um sie für diese Vorschau einzuschalten; entfernen Sie es, um sie auszuschalten. Die Vorschau aktualisiert sich sofort.
@@ -355,22 +355,22 @@ MD_priority="High"
 Sie können diese Umgebungsvariablen dann in Ihren **Befehl ausführen**-Aktionen verwenden:
 
 ```bash
-# Print the document title [print-the-document-title]
+# Dokumenttitel ausgeben [print-the-document-title]
 echo "Processing: $MD_title"
 
-# Use metadata in conditional logic [use-metadata-in-conditional-logic]
+# Metadaten in einer Bedingung verwenden [use-metadata-in-conditional-logic]
 if [ "$MD_status" = "Draft" ]; then
     echo "Document is still in draft status"
 fi
 
-# Pass metadata to other tools [pass-metadata-to-other-tools]
+# Metadaten an andere Tools übergeben [pass-metadata-to-other-tools]
 pandoc "$MARKED_PATH" \
   --metadata title="$MD_title" \
   --metadata author="$MD_author" \
   --metadata date="$MD_date" \
   -o output.pdf
 
-# Use metadata for file naming [use-metadata-for-file-naming]
+# Metadaten für die Dateibenennung verwenden [use-metadata-for-file-naming]
 if [ -n "$MD_title" ]; then
     output_file="${MD_title// /_}.html"
 else
