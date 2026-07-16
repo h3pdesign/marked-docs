@@ -13,7 +13,7 @@ brew install ttscoff/thelab/mk
 
 Wenn Sie Homebrew nicht verwenden, laden Sie das signierte Paket herunter und installieren Sie es:
 
-{% download "https://github.com/ttscoff/mk/releases/latest/download/mk.pkg" "Signed PKG installer for mk. Double-click to launch Installer and follow the prompts." %}
+{% download "https://github.com/ttscoff/mk/releases/latest/download/mk.pkg" "Signiertes PKG-Installationsprogramm für mk. Zum Starten doppelklicken und den Anweisungen folgen." %}
 
 Nachdem Sie `mk.pkg` heruntergeladen haben, doppelklicken Sie darauf und befolgen Sie die Anweisungen des Installationsprogramms.
 
@@ -26,7 +26,7 @@ Nachdem Sie `mk.pkg` heruntergeladen haben, doppelklicken Sie darauf und befolge
 ```bash
 mk file.md
 mk ~/Documents/notes.md
-mk --raise document.md  # Open and raise window above all others
+mk --raise document.md  # Öffnen und Fenster über alle anderen heben
 ```
 
 ### Inhalte von STDIN streamen [streaming-content-from-stdin]
@@ -34,9 +34,9 @@ mk --raise document.md  # Open and raise window above all others
 Streamen Sie Inhalte direkt in die Streaming-Vorschau von Marked:
 
 ```bash
-echo "# Hello World" | mk
+echo "# Hallo Welt" | mk
 cat notes.md | mk
-mk -  # Explicitly use STDIN
+mk -  # STDIN explizit verwenden
 ```
 
 Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echtzeit an, während er von anderen Befehlen weitergeleitet wird.
@@ -45,7 +45,7 @@ Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echt
 
 ### Dateioperationen [file-operations]
 
-**`mk [file]`** – Öffnen Sie eine Markdown-Datei in Marked
+**`mk [file]`** – Markdown-Datei in Marked öffnen
 
 **`mk [file] --raise`** – Datei öffnen und das Fenster über alle anderen heben
 
@@ -57,13 +57,13 @@ Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echt
 
 ### Vorschauverwaltung [preview-management]
 
-**`mk --refresh`** – Aktualisieren Sie das vorderste Vorschaufenster
+**`mk --refresh`** – Vorderstes Vorschaufenster aktualisieren
 
 **`mk --refresh all`** – Alle geöffneten Vorschaufenster aktualisieren
 
 **`mk --refresh file.md`** – Vorschau für eine bestimmte Datei aktualisieren (falls geöffnet)
 
-### Präferenzen [preferences]
+### Einstellungen [preferences]
 
 **`mk --pref`** – Marked-Einstellungen öffnen (Seite „Allgemein“)
 
@@ -75,11 +75,11 @@ Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echt
 mk --defaults syntaxHighlight=1 includeMathJax=0 processor=multimarkdown
 ```
 
-### Stilmanagement [style-management]
+### Stilverwaltung [style-management]
 
 **`mk --style NAME`** – Vorschaustil für geöffnete Fenster festlegen
 
-**`mk --add-style FILE`** – Fügen Sie eine CSS-Datei als benutzerdefinierten Stil zu Marked hinzu.
+**`mk --add-style FILE`** – CSS-Datei als eigenen Stil zu Marked hinzufügen
 
 ```bash
 mk --add-style ~/Styles/custom.css
@@ -87,11 +87,11 @@ mk --add-style ~/Styles/custom.css
 
 ### JavaScript-Ausführung [javascript-execution]
 
-**`mk --dojs "JAVASCRIPT_COMMAND"`** – Führen Sie JavaScript im vordersten Fenster aus
+**`mk --dojs "JAVASCRIPT_COMMAND"`** – JavaScript im vordersten Fenster ausführen
 
-**`mk --dojs "SCRIPT" all`** – Führen Sie JavaScript in allen Fenstern aus
+**`mk --dojs "SCRIPT" all`** – JavaScript in allen Fenstern ausführen
 
-**`mk --dojs "SCRIPT" file.md`** – Führen Sie JavaScript in bestimmten Dateien aus.
+**`mk --dojs "SCRIPT" file.md`** – JavaScript in bestimmten Dateien ausführen
 
 ```bash
 mk --dojs "window.scrollTo(0,0)"
@@ -108,15 +108,15 @@ mk --extract https://example.com/article
 
 **`mk --importurl [URL]`** – Fenster „URL importieren“ öffnen (optional mit URL)
 
-**`mk --stylestealer [URL]`** – Open Style Stealer HUD (optional mit URL)
+**`mk --stylestealer [URL]`** – Style-Stealer-HUD öffnen (optional mit URL)
 
-### Dienstprogrammbefehle [utility-commands]
+### Hilfsbefehle [utility-commands]
 
 **`mk --paste`** – Neues Dokument aus der Zwischenablage erstellen
 
-**`mk --preview TEXT`** – Sehen Sie sich den Text direkt in einem neuen Dokument in der Vorschau an
+**`mk --preview TEXT`** – Text direkt in einem neuen Dokument in der Vorschau anzeigen
 
-**`mk --dingus`** – Öffnen Sie Markdown Dingus zum Testen von Prozessoren
+**`mk --dingus`** – Markdown-Dingus zum Testen von Prozessoren öffnen
 
 **`mk --help`** oder **`mk -h`** – Nutzungsinformationen anzeigen
 
@@ -124,34 +124,34 @@ mk --extract https://example.com/article
 
 ## Beispiele [examples]
 
-„Bash
-# Öffnen Sie eine Datei [open-a-file]
+```bash
+# Datei öffnen [open-a-file]
 mk document.md
 
 # Markdown aus einer Datei streamen [stream-markdown-from-a-file]
-Katzennotizen.md | mk
+cat notes.md | mk
 
-# Prozess und Vorschau [process-and-preview]
-grep -i "important" NOTES.md | mk
+# Verarbeiten und Vorschau anzeigen [process-and-preview]
+grep -i "important" notes.md | mk
 
 # Alle Vorschauen aktualisieren [refresh-all-previews]
 mk --refresh all
 
-# Fügen Sie einen benutzerdefinierten Stil hinzu [add-a-custom-style]
+# Eigenen Stil hinzufügen [add-a-custom-style]
 mk --add-style ~/Documents/MyTheme.css
 
 # Einstellungen festlegen [set-preferences]
-mk --defaults syntaxHighlight=1 Prozessor=Multimarkdown
+mk --defaults syntaxHighlight=1 processor=multimarkdown
 
-# Führen Sie JavaScript in allen Fenstern aus [run-javascript-in-all-windows]
-mk --dojs "window.scrollTo(0,0)" alle
+# JavaScript in allen Fenstern ausführen [run-javascript-in-all-windows]
+mk --dojs "window.scrollTo(0,0)" all
 
 # Inhalte von einer Webseite extrahieren [extract-content-from-a-webpage]
 mk --extract https://blog.example.com/article
 
-# Direkte Textvorschau [preview-text-directly]
+# Text direkt in der Vorschau anzeigen [preview-text-directly]
 mk --preview "## Hallo\n\nDies ist **Markdown**-Text!"
-„
+```
 
 ## Integration [integration]
 
@@ -160,8 +160,8 @@ mk --preview "## Hallo\n\nDies ist **Markdown**-Text!"
 Fügen Sie zu Ihrem `~/.zshrc` oder `~/.bash_profile` hinzu:
 
 ```bash
-alias mko='mk --raise'      # Open with raise
-alias mkr='mk --refresh all' # Refresh all
+alias mko='mk --raise'      # Öffnen und nach vorn holen
+alias mkr='mk --refresh all' # Alle aktualisieren
 ```
 
 ### Skripte [scripts]
@@ -170,7 +170,7 @@ Verwenden Sie `mk` in Shell-Skripten zur Automatisierung:
 
 ```bash
 #!/bin/bash
-# Watch a file and stream changes to Marked [watch-a-file-and-stream-changes-to-marked]
+# Datei überwachen und Änderungen an Marked streamen [watch-a-file-and-stream-changes-to-marked]
 fswatch -o document.md | while read; do
   cat document.md | mk
 done
@@ -180,31 +180,31 @@ done
 
 Kombinieren Sie es mit anderen Tools:
 
-„Bash
+```bash
 # Zwischenablage in Markdown umwandeln und Vorschau anzeigen [convert-clipboard-to-markdown-and-preview]
-pbpaste | Abschlag | mk
+pbpaste | markdown | mk
 
-# Suchen und Vorschau [search-and-preview]
-grep -r "TODO" . | Kopf -20 | mk
-„
+# Suchen und Vorschau anzeigen [search-and-preview]
+grep -r "TODO" . | head -20 | mk
+```
 
 ## Open Source [open-source]
 
-Das Befehlszeilentool `mk` ist Open Source und unter GitHub verfügbar:
+Das Befehlszeilentool `mk` ist Open Source und auf GitHub verfügbar:
 
 **https://github.com/ttscoff/mk**
 
 Sie können:
-- Sehen Sie sich den Quellcode an
-- Tragen Sie zu Verbesserungen bei
+- den Quellcode ansehen
+- Verbesserungen beitragen
 - Probleme melden
-- Bei Bedarf aus dem Quellcode erstellen
+- bei Bedarf aus dem Quellcode bauen
 
-Das Tool ist in Swift geschrieben und kann mit Xcode kompiliert werden. Anweisungen zum Erstellen finden Sie unter [README](https://github.com/ttscoff/mk).
+Das Tool ist in Swift geschrieben und lässt sich mit Xcode kompilieren. Build-Anweisungen finden Sie in der [README](https://github.com/ttscoff/mk).
 
 ## Version [version]
 
-Überprüfen Sie Ihre installierte `mk` Version mit:
+Überprüfen Sie Ihre installierte `mk`-Version mit:
 
 ```bash
 mk --version
@@ -212,6 +212,6 @@ mk --version
 
 ## Verwandte Funktionen [related-features]
 
-– Weitere Informationen zum URL-Schema von Marked finden Sie unter [URL Handler](URL_Handler)
-– Weitere Informationen zur Streaming-Vorschaufunktion finden Sie unter [Streaming Preview](Streaming_Preview)
-- Siehe [Workflow Integration](Workflow_Integration) für Automatisierungsbeispiele
+- Weitere Informationen zum URL-Schema von Marked finden Sie unter [URL-Handler](URL_Handler.html)
+- Weitere Informationen zur Streaming-Vorschau finden Sie unter [Streaming-Vorschau](Streaming_Preview.html)
+- Automatisierungsbeispiele finden Sie unter [Workflow-Integration](Workflow_Integration.html)
