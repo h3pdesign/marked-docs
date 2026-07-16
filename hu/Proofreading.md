@@ -8,11 +8,11 @@ A korrektúra mód leállítja a dokumentumfrissítéseket, így megakadályozza
 
 Billentyűzet navigáció, könyvjelzők és kulcsszavak kiemelése minden funkció a korrektúra során.
 
-## Annotációk
+## Annotációk [annotations]
 
 Lektorálási módban a szöveg kijelölése a dokumentumban egy felugró ablakot generál, amely lehetővé teszi, hogy több különböző kiemelési típus közül válasszon. Kattintson a szöveghez hozzáadni kívánt kiemelés típusára, vagy törölje a "Mégse" gombra kattintva, vagy egyszerűen kattintson a felugró ablakon kívülre.
 
-## Megjegyzések
+## Megjegyzések [notes]
 
 ![Annotations][1]
 
@@ -22,7 +22,7 @@ Miután hozzáadott egy kiemelést, rövid jegyzeteket adhat hozzá a kiemelésr
 
 A megjegyzések **csak** exportálásra kerülnek HTML formátumba történő mentéskor. A kiemelések a legtöbb exportformátumban megmaradnak, beleértve az RTF-et és a PDF-t is.
 
-## Helyesírás-ellenőrzés
+## Helyesírás-ellenőrzés [spellcheck]
 
 Lektorálási módban a rendszerszintű helyesírás-ellenőrzőt a fogaskerék menüből érheti el: {% appmenu {{gear}}, Proofing, Show Spelling Errors %}. Ez lassú lesz nagy dokumentumok esetén, és figyelmeztetés jelenik meg, amely értesíti Önt, ha a folyamat körülbelül 30 másodpercig tart. Mivel a helyesírás-ellenőrző nem működik a Marked webes előnézetében, egy „hack” kerül végrehajtásra, hogy ez működjön, és ez nem gyors.
 

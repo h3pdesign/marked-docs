@@ -2,11 +2,11 @@
 
 Schauen Sie sich [Markdown Dingus](x-marked-3://dingus?processor=multimarkdown) an, um mit dem MultiMarkdown-Prozessor zu experimentieren.
 
-## Was ist MultiMarkdown?
+## Was ist MultiMarkdown? [what-is-multimarkdown]
 
 MultiMarkdown ist ein erweiterter Markdown-Prozessor, der für die Arbeit mit vollständigen Dokumenten und nicht nur mit Webseitenfragmenten entwickelt wurde. Es erweitert die ursprüngliche Markdown-Syntax um Funktionen, die die Konvertierung in mehrere Ausgabeformate ermöglichen, darunter HTML, LaTeX, PDF, ODF und Microsoft Word-Dokumente.
 
-## Hauptmerkmale
+## Hauptmerkmale [key-characteristics]
 
 - **Dokumentorientiert**: Entwickelt für vollständige Dokumente, nicht nur für Webausschnitte
 - **Multiformat-Ausgabe**: Konvertiert in HTML, LaTeX, PDF, ODF, RTF und Word
@@ -15,15 +15,15 @@ MultiMarkdown ist ein erweiterter Markdown-Prozessor, der für die Arbeit mit vo
 - **Erweiterbar**: Umfangreicher Funktionsumfang für komplexe Dokumentanforderungen
 - **Version 5**: Vollständige Neufassung mit verbesserter Leistung und Zuverlässigkeit
 
-## Philosophie und Designziele
+## Philosophie und Designziele [philosophy-and-design-goals]
 
 MultiMarkdown folgt dem Prinzip, dass **Inhalt wichtiger ist als Präsentation**. Der Schwerpunkt liegt auf der Darstellung der Bedeutung von Dokumenten (das ist eine Liste, das ist eine Tabelle usw.) und nicht auf der Vorgabe von Schriftarten, Farben oder Stilen.
 
 Ziel ist es, für 80 % der Dokumente verwendbar zu sein, die 80 % der Menschen schreiben, sodass es für Romane, Abschlussarbeiten, technische Dokumentationen und die meisten anderen schriftlichen Inhalte geeignet ist.
 
-## Hauptfunktionen und Erweiterungen
+## Hauptfunktionen und Erweiterungen [major-features-and-extensions]
 
-### 1. **Metadaten-Unterstützung**
+### 1. **Metadaten-Unterstützung** [1-metadata-support]
 
 - Dokumentmetadaten oben in den Dateien
 - Titel, Autor, Datum und benutzerdefinierte Variablen
@@ -39,7 +39,7 @@ Benutzerdefiniert: Wert
 Inhalt
 ---
 
-# Dokumentinhalt
+# Dokumentinhalt [document-content]
 „
 
 **Metadatenvariablen**
@@ -54,7 +54,7 @@ Author: [%author]
 Date: [%date]
 ```
 
-### 2. **Erweiterte Tabellen**
+### 2. **Erweiterte Tabellen** [2-advanced-tables]
 
 **Vollständige Tabellenunterstützung**
 
@@ -78,7 +78,7 @@ Tabelle: Beispieltabelle mit Ausrichtung
 - Querverweise mit `[Table 1]`
 - Unterstützung komplexer Tabellenstrukturen
 
-### 3. **Fußnoten und Zitate**
+### 3. **Fußnoten und Zitate** [3-footnotes-and-citations]
 
 **Fußnoten**
 
@@ -121,7 +121,7 @@ source[][#Doe:2006].
 
 Es gibt keine Regeln für das von Ihnen verwendete Zitierschlüsselformat (z. B. Doe:2006), ihm muss jedoch ein `#` vorangestellt werden, genau wie Fußnoten `^` verwenden.
 
-### 4. **Querverweise**
+### 4. **Querverweise** [4-cross-references]
 
 **Automatische Querverweise**
 
@@ -133,7 +133,7 @@ Es gibt keine Regeln für das von Ihnen verwendete Zitierschlüsselformat (z. B.
 Einzelheiten finden Sie in [Tabelle 1].
 Weitere Informationen finden Sie in [Abschnitt 2.1].
 
-## Abschnitt 2.1 [Abschnitt-2-1]
+## Abschnitt 2.1 [section-2-1]
 „
 
 **Referenztypen**
@@ -143,7 +143,7 @@ Weitere Informationen finden Sie in [Abschnitt 2.1].
 - Zahlen: `[Figure 1]`, `[Figure: Caption]`
 - Gleichungen: `[Equation 1]`
 
-### 5. **Definitionslisten**
+### 5. **Definitionslisten** [5-definition-lists]
 
 **Begriffsdefinitionspaare**
 
@@ -160,7 +160,7 @@ Begriff 2
 : Definition 2b
 „
 
-### 6. **Eingezäunte Codeblöcke**
+### 6. **Eingezäunte Codeblöcke** [6-fenced-code-blocks]
 
 **Sprachspezifische Codeblöcke**
 
@@ -181,7 +181,7 @@ def hello():
 - Unterstützung für viele Programmiersprachen
 – Korrekte HTML `<pre><code>` Ausgabe
 
-### 7. **Mathe-Unterstützung**
+### 7. **Mathe-Unterstützung** [7-math-support]
 
 **Mathematische Ausdrücke**
 
@@ -199,7 +199,7 @@ $$
 $$
 „
 
-### 8. **Bild- und Linkattribute**
+### 8. **Bild- und Linkattribute** [8-image-and-link-attributes]
 
 **Erweiterte Links und Bilder**
 
@@ -211,7 +211,7 @@ $$
 [Link text]: url.html title="Link title" class="external"
 ```
 
-### 9. **Transklusion**
+### 9. **Transklusion** [9-transclusion]
 
 **Dateieinbindung**
 
@@ -231,7 +231,7 @@ $$
 - Unterstützung für verschachtelte Transklusion
 - Manifestgenerierung für enthaltene Dateien
 
-### 10. **CriticMarkup Integration**
+### 10. **CriticMarkup Integration** [10-criticmarkup-integration]
 
 **Änderungsverfolgung**
 
@@ -245,7 +245,7 @@ Dies ist {>>gelöschter Text<<} und dies ist {++hinzugefügter Text++}.
 Dies ist ein {~~Löschung~>Ersatz~~}.
 „
 
-### 11. **Inhaltsverzeichnis**
+### 11. **Inhaltsverzeichnis** [11-table-of-contents]
 
 **Automatische TOC-Generierung**
 
@@ -254,18 +254,18 @@ Dies ist ein {~~Löschung~>Ersatz~~}.
 - Customisierbare TOC-Generierung
 
 „Abschlag
-# Dokumenttitel
+# Dokumenttitel [document-title]
 
 {{TOC}}
 
-## Abschnitt 1
+## Abschnitt 1 [section-1]
 Inhalt hier...
 
-## Abschnitt 2
+## Abschnitt 2 [section-2]
 Mehr Inhalt...
 „
 
-### 12. **Abkürzungen**
+### 12. **Abkürzungen** [12-abbreviations]
 
 **HTML-Stil-Abkürzungen**
 
@@ -280,7 +280,7 @@ Mehr Inhalt...
 Dies verwendet HTML und CSS.
 „
 
-## MultiMarkdown v5 im Vergleich zu anderen Markdown-Varianten
+## MultiMarkdown v5 im Vergleich zu anderen Markdown-Varianten [multimarkdown-v5-vs-other-markdown-flavors]
 
 | Funktion | MultiMarkdown v5 | CommonMark (GFM) | Rabatt | Kramdown | Standard |
 | ---------------- | ---------------- | ---------- | ------------ | -------- | -------- |
@@ -301,7 +301,7 @@ Dies verwendet HTML und CSS.
 | Transklusion | Ja | Nein | Nein | Nein | Nein |
 | Metadaten | Ja | Nein | Nein | Nein | Nein |
 
-## Hauptvorteile von MultiMarkdown v5
+## Hauptvorteile von MultiMarkdown v5 [key-advantages-of-multimarkdown-v5]
 
 1. **Dokumentorientiert**: Entwickelt für vollständige Dokumente, nicht nur für Webausschnitte
 2. **Multiformat-Ausgabe**: Konvertieren in HTML, LaTeX, PDF, ODF, RTF und Word
@@ -311,7 +311,7 @@ Dies verwendet HTML und CSS.
 6. **Zukunftssicher**: Das reine Textformat gewährleistet langfristige Kompatibilität
 7. **Erweiterbar**: Umfangreicher Funktionsumfang für komplexe Dokumentanforderungen
 
-## Häufige Anwendungsfälle
+## Häufige Anwendungsfälle [common-use-cases]
 
 **Akademisches Schreiben**
 
@@ -337,7 +337,7 @@ Dies verwendet HTML und CSS.
 - Wissensdatenbanken und Wikis
 - Gemeinsame Schreibprojekte
 
-## Best Practices
+## Best Practices [best-practices]
 
 1. **Metadaten verwenden**: Nutzen Sie die Titelseite von YAML für Dokumentinformationen
 2. **Struktur mit Überschriften**: Verwenden Sie die richtige Überschriftenhierarchie für die Inhaltsverzeichnisgenerierung
@@ -346,7 +346,7 @@ Dies verwendet HTML und CSS.
 5. **Testausgabe**: Überprüfen Sie die Formatierung in verschiedenen Ausgabeformaten
 6. **Zitate verwenden**: Implementieren Sie ordnungsgemäße akademische Zitierpraktiken
 
-## Migration von anderen Markdown-Varianten
+## Migration von anderen Markdown-Varianten [migration-from-other-markdown-flavors]
 
 Die meisten Standard-Markdown funktionieren ohne Änderungen mit MultiMarkdown. So nutzen Sie die Funktionen von MMD:
 
@@ -356,7 +356,7 @@ Die meisten Standard-Markdown funktionieren ohne Änderungen mit MultiMarkdown. 
 4. **Struktur mit Transklusion**: Teilen Sie große Dokumente in kleinere Dateien auf
 5. **Nutzung von Tabellen**: Nutzen Sie erweiterte Tabellenfunktionen für die Datenpräsentation
 
-## Ressourcen
+## Ressourcen [resources]
 
 - [MultiMarkdown User's Guide](https://fletcher.github.io/MultiMarkdown-5/MMD_Users_Guide.html)
 - [MultiMarkdown Syntax Guide](https://fletcher.github.io/MultiMarkdown-5/MMD_Users_Guide.html#syntax)

@@ -2,7 +2,7 @@
 
 Obsidian enthält eine integrierte Markdown-Vorschau. Marked 3 ist eine spezielle Vorschau- und Veröffentlichungs-App, die mit Obsidian und vielen anderen Editoren funktioniert. Diese Seite hilft Ihnen bei der Entscheidung, wann jedes Werkzeug das Richtige ist.
 
-## Wenn die integrierte Vorschau von Obsidian ausreicht
+## Wenn die integrierte Vorschau von Obsidian ausreicht [when-obsidians-built-in-preview-is-enough]
 
 * Sie schreiben nur in Obsidian
 * Einfache Vorschau und Plugins erfüllen Ihre Anforderungen
@@ -11,7 +11,7 @@ Obsidian enthält eine integrierte Markdown-Vorschau. Marked 3 ist eine speziell
 
 Obsidian (und Apps wie **Typora**) eignen sich hervorragend, wenn Sie nur eine einfache Einzel-App-Lösung benötigen.
 
-## Wenn Marked die bessere Wahl ist
+## Wenn Marked die bessere Wahl ist [when-marked-is-the-better-choice]
 
 * Sie möchten eine Live-Vorschau von **jedem** Editor, nicht nur von Obsidian
 * Sie benötigen einen professionellen Export (PDF, DOCX, EPUB) mit benutzerdefiniertem CSS
@@ -21,7 +21,7 @@ Obsidian (und Apps wie **Typora**) eignen sich hervorragend, wenn Sie nur eine e
 
 Die Vorschau von Marked enthält viele Funktionen, die integrierte Vorschauen in Obsidian, Typora und ähnlichen Apps allein nicht bieten – oder für deren Annäherung Plugins und Problemumgehungen erforderlich sind.
 
-## Direkter Vergleich
+## Direkter Vergleich [side-by-side-comparison]
 
 | Funktion | Marked 3 | Obsidian-Vorschau |
 | :-- | :-- | :-- |
@@ -34,7 +34,7 @@ Die Vorschau von Marked enthält viele Funktionen, die integrierte Vorschauen in
 
 Einen umfassenderen Vergleich einschließlich Typora und Marked 2 finden Sie im [marketing comparison page](https://markedapp.com/markdown-preview/).
 
-## Verwenden Sie beide: Obsidian + Marked Workflow
+## Verwenden Sie beide: Obsidian + Marked Workflow [use-both-obsidian-marked-workflow]
 
 Sie müssen nicht die Vorschau von Obsidian ersetzen – oder auf die Einzelfensterbearbeitung von Typora verzichten –, um von Marked zu profitieren. Viele Autoren behalten ihren bevorzugten Editor und fügen Marked für Vorschaufunktionen und Exportoptionen hinzu, die die andere App nicht bietet.
 
@@ -43,7 +43,7 @@ Sie müssen nicht die Vorschau von Obsidian ersetzen – oder auf die Einzelfens
 3. Marked überwacht den Tresor und zeigt eine Vorschau der zuletzt bearbeiteten Notiz an.
 4. Verwenden Sie Marked für Korrekturlesen, Dokumentstatistiken, benutzerdefinierte Designs und den Export, wenn der Entwurf fertig ist. Siehe [Exporting](Exporting.html).
 
-## Verwandt
+## Verwandt [related]
 
 * [Obsidian integration guide](Obsidian.html)
 * [Live Markdown Preview on Mac](Live_Markdown_Preview_on_Mac.html)

@@ -4,7 +4,7 @@
 
 Lo strumento da riga di comando `mk` fornisce un facile accesso alle funzionalità di Marked dal terminale, consentendo l'automazione del flusso di lavoro e l'integrazione con script di shell e altri strumenti da riga di comando.
 
-## Installazione
+## Installazione [installation]
 
 Il modo consigliato per installare `mk` è con Homebrew:
 
@@ -19,9 +19,9 @@ Se non usi Homebrew, scarica e installa il pacchetto firmato:
 
 Dopo aver scaricato `mk.pkg`, fai doppio clic su di esso e segui le istruzioni del programma di installazione.
 
-## Utilizzo di base
+## Utilizzo di base [basic-usage]
 
-### Apertura dei file
+### Apertura dei file [opening-files]
 
 Apri un file di markdown in Contrassegnato dalla riga di comando:
 
@@ -31,7 +31,7 @@ mk ~/Documents/notes.md
 mk --raise document.md  # Open and raise window above all others
 ```
 
-### Streaming di contenuti da STDIN
+### Streaming di contenuti da STDIN [streaming-content-from-stdin]
 
 Trasmetti i contenuti direttamente all'anteprima di streaming di Marked:
 
@@ -43,21 +43,21 @@ mk -  # Explicitly use STDIN
 
 La finestra Anteprima streaming si aprirà e visualizzerà il contenuto in tempo reale mentre viene trasmesso da altri comandi.
 
-## Riferimento ai comandi
+## Riferimento ai comandi [command-reference]
 
-### Operazioni sui file
+### Operazioni sui file [file-operations]
 
 **`mk [file]`** — Apri un file markdown in Marked
 
 **`mk [file] --raise`** — Apri il file e alza la finestra sopra tutte le altre
 
-### STDIN e streaming
+### STDIN e streaming [stdin-and-streaming]
 
 **`mk`** o **`mk -`**: leggi da STDIN e apri l'anteprima dello streaming
 
 **`mk --stream`**: apre la finestra di anteprima dello streaming senza leggere STDIN
 
-### Gestione dell'anteprima
+### Gestione dell'anteprima [preview-management]
 
 **`mk --refresh`** — Aggiorna la finestra di anteprima in primo piano
 
@@ -65,7 +65,7 @@ La finestra Anteprima streaming si aprirà e visualizzerà il contenuto in tempo
 
 **`mk --refresh file.md`** — Aggiorna l'anteprima per un file specifico (se aperto)
 
-### Preferenze
+### Preferenze [preferences]
 
 **`mk --pref`** — Apri le preferenze selezionate (pagina Generale)
 
@@ -77,7 +77,7 @@ La finestra Anteprima streaming si aprirà e visualizzerà il contenuto in tempo
 mk --defaults syntaxHighlight=1 includeMathJax=0 processor=multimarkdown
 ```
 
-### Gestione dello stile
+### Gestione dello stile [style-management]
 
 **`mk --style NAME`** — Imposta lo stile di anteprima per le finestre aperte
 
@@ -87,7 +87,7 @@ mk --defaults syntaxHighlight=1 includeMathJax=0 processor=multimarkdown
 mk --add-style ~/Styles/custom.css
 ```
 
-### Esecuzione JavaScript
+### Esecuzione JavaScript [javascript-execution]
 
 **`mk --dojs "JAVASCRIPT_COMMAND"`**: esegui JavaScript nella finestra in primo piano
 
@@ -100,7 +100,7 @@ mk --dojs "window.scrollTo(0,0)"
 mk --dojs "alert('Hello')" all
 ```
 
-### Estrazione e importazione di contenuti
+### Estrazione e importazione di contenuti [content-extraction-and-import]
 
 **`mk --extract URL`** — Estrai il contenuto dall'URL e aprilo in Marked
 
@@ -112,7 +112,7 @@ mk --extract https://example.com/article
 
 **`mk --stylestealer [URL]`** — HUD Open Style Stealer (facoltativo con URL)
 
-### Comandi di utilità
+### Comandi di utilità [utility-commands]
 
 **`mk --paste`** — Crea un nuovo documento dagli appunti
 
@@ -124,40 +124,40 @@ mk --extract https://example.com/article
 
 **`mk --version`** o **`mk -v`**: mostra le informazioni sulla versione
 
-## Esempi
+## Esempi [examples]
 
 ```bash
-# Open a file
+# Open a file [open-a-file]
 mk document.md
 
-# Stream markdown from a file
+# Stream markdown from a file [stream-markdown-from-a-file]
 cat notes.md | mk
 
-# Process and preview
+# Process and preview [process-and-preview]
 grep -i "important" notes.md | mk
 
-# Refresh all previews
+# Refresh all previews [refresh-all-previews]
 mk --refresh all
 
-# Add a custom style
+# Add a custom style [add-a-custom-style]
 mk --add-style ~/Documents/MyTheme.css
 
-# Set preferences
+# Set preferences [set-preferences]
 mk --defaults syntaxHighlight=1 processor=multimarkdown
 
-# Run JavaScript in all windows
+# Run JavaScript in all windows [run-javascript-in-all-windows]
 mk --dojs "window.scrollTo(0,0)" all
 
-# Extract content from a webpage
+# Extract content from a webpage [extract-content-from-a-webpage]
 mk --extract https://blog.example.com/article
 
-# Preview text directly
+# Preview text directly [preview-text-directly]
 mk --preview "## Hello\n\nThis is **markdown** text!"
 ```
 
-## Integrazione
+## Integrazione [integration]
 
-### Alias della shell
+### Alias della shell [shell-aliases]
 
 Aggiungi al tuo `~/.zshrc` o `~/.bash_profile`:
 
@@ -166,27 +166,27 @@ alias mko='mk --raise'      # Open with raise
 alias mkr='mk --refresh all' # Refresh all
 ```
 
-### Script
+### Script [scripts]
 
 Usa `mk` negli script di shell per l'automazione:
 
 ```bash
 #!/bin/bash
-# Watch a file and stream changes to Marked
+# Watch a file and stream changes to Marked [watch-a-file-and-stream-changes-to-marked]
 fswatch -o document.md | while read; do
   cat document.md | mk
 done
 ```
 
-### Flussi di lavoro
+### Flussi di lavoro [workflows]
 
 Combina con altri strumenti:
 
 ```bash
-# Convert clipboard to markdown and preview
+# Convert clipboard to markdown and preview [convert-clipboard-to-markdown-and-preview]
 pbpaste | markdown | mk
 
-# Search and preview
+# Search and preview [search-and-preview]
 grep -r "TODO" . | head -20 | mk
 ```
 
@@ -212,7 +212,7 @@ Controlla la versione `mk` installata con:
 mk --version
 ```
 
-## Funzionalità correlate
+## Funzionalità correlate [open-source]
 
 - Consulta [Gestore URL](URL_Handler) per ulteriori informazioni sullo schema URL di Marked
 - Vedi [Anteprima in streaming](Streaming_Preview) per i dettagli sulla funzione di anteprima in streaming

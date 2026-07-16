@@ -2,7 +2,7 @@
 
 A floating panel with a shortcut cheat sheet is available from the Help menu, or by pressing {{opt}}{{cmd}}K.
 
-### Shortcuts
+### Shortcuts [shortcuts]
 
 |                     Shortcut | Function                           |
 | ---------------------------: | :--------------------------------- |
@@ -55,7 +55,7 @@ A floating panel with a shortcut cheat sheet is available from the Help menu, or
 
 
 
-### Quick Toggles
+### Quick Toggles [quick-toggles]
 
 Extra keyboard shortcuts for toggling common global settings.
 
@@ -71,7 +71,7 @@ Extra keyboard shortcuts for toggling common global settings.
 | **{{ctrl}}{{opt}}{{shift}}H** | Process Inside HTML  |
 [Quick Toggles]
 
-### Preview Navigation
+### Preview Navigation [previewnavigation]
 
 Press "?" at any time to view the following shortcuts in the Preview window.
 
@@ -104,7 +104,7 @@ Press "?" at any time to view the following shortcuts in the Preview window.
 |        **{{shift}}{{cmd}}F** | Focus view                        |
 [Preview Navigation]
 
-### Table of Contents Navigation
+### Table of Contents Navigation [TableofContentsNavigation]
 
 When the Table of Contents is open, you can navigate via keyboard.
 

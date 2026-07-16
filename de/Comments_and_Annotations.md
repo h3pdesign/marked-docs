@@ -2,7 +2,7 @@
 
 Marked verfügt über eine spezielle Behandlung für Kommentare und Anmerkungen.
 
-## Anmerkungsquellen
+## Anmerkungsquellen [annotation-sources]
 
 Marked erkennt Kommentare von:
 
@@ -10,7 +10,7 @@ Marked erkennt Kommentare von:
 - CriticMarkup Kommentare
 - Kommentare und Änderungen zu Microsoft Word
 
-## Die Kommentar-Seitenleiste
+## Die Kommentar-Seitenleiste [the-comments-sidebar]
 
 Alle Anmerkungen werden in einer Seitenleiste angezeigt und in der Dokumentvorschau ausgeblendet. Um die Anmerkungsseitenleiste anzuzeigen, verwenden Sie das **Zahnradmenü -> Prüfung -> Kommentare anzeigen** oder drücken Sie {% kbd ctrl cmd C %}.
 

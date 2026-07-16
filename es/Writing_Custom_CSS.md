@@ -6,7 +6,7 @@ Marked tiene un editor de estilo incorporado y puede aplicar archivos CSS person
 
 Puedes usar el editor para crear hermosos estilos, o si conoces suficiente CSS como para ser peligroso, puedes hacer que Marked se vea como quieras.
 
-## Empezando
+## Empezando [getting-started]
 
 Hay una galería de estilos personalizados creada por el desarrollador y por los usuarios en [markedapp.com/styles](https://markedapp.com/styles/). La galería le permite obtener una vista previa e instalar estilos directamente en Marked. Cualquier estilo instalado se puede revelar en el Finder para examinarlo y modificarlo. La galería se puede abrir usando un visor interno con {% appmenu Style, Generate a Custom Style %}, o hacer clic en el ícono de lápiz (editar) al lado de cualquier estilo editable en el Administrador de estilos. Si desea editar un estilo incorporado, deberá Primero hay que duplicarlo en el administrador.
 
@@ -20,11 +20,11 @@ Si estás diseñando para uso personal, no hay reglas. Active el seguimiento de 
 
 Si planeas compartir tu creación de CSS, hay algunos puntos que debes cubrir. Primero, hay algunas clases de cuerpo a las que se les debe aplicar estilos:
 
-## Clases de cuerpo
+## Clases de cuerpo [body-classes]
 
 Los siguientes estilos deben incluirse en cualquier CSS marcado que se vaya a compartir. Las clases de cuerpo le permiten apuntar y modificar cualquier selector bajo diferentes opciones de preferencia.
 
-### Invertido
+### Invertido [inverted]
 
  Cuando el usuario selecciona {% appmenu Preview, Dark Mode %}, se agrega una clase de "invertido" a la etiqueta del cuerpo. Puede utilizar esto para apuntar a estilos claros sobre oscuros de alto contraste.
 
@@ -46,7 +46,7 @@ Solo desea que los estilos invertidos se apliquen a la vista previa, no a la imp
 }
 ```
 
-### Poesía
+### Poesía [poetry]
 
 El usuario puede elegir si el texto con tabulación es poesía o código. La única diferencia es que los bloques pre/código tienen un estilo más poético si se elige el modo poesía. La clase "poesía" se aplica a la etiqueta del cuerpo.
 
@@ -63,7 +63,7 @@ Sea tan creativo como quiera con el formato, pero aquí tiene un fragmento bási
 }
 ```
 
-## Casos especiales
+## Casos especiales [special-cases]
 
 También se deben considerar las tablas, la figura/pie de figura y el caso especial de `a.footnote` y `div.footnotes>a`. No hay reglas establecidas sobre cómo manejarlos, pero eche un vistazo a los estilos predeterminados para tener una idea de qué reglas CSS necesita Marked.
 
@@ -95,7 +95,7 @@ También es una buena idea incluir una regla general para que todas las imágene
 
 Si su tema tiene relleno adicional o un ancho fijo, modifique el ancho máximo para que se ajuste.
 
-## Estilos de impresión
+## Estilos de impresión [printstyles]
 
 Asegúrese de incluir estilos de impresión que eliminen los colores de fondo, desplazamiento fijo, etc. Utilice "@media print" para definirlos dentro de su tema.
 
@@ -103,17 +103,17 @@ La ocultación de enlaces en la impresión se maneja fuera del tema principal, l
 
 Entonces, hazlo. Convierta el tema de su blog, cree un excelente estilo de impresión para documentos PDF o cree la vista previa perfecta para su estilo de escritura. Si haces algo fantástico, házmelo saber y lo publicaré para toda la comunidad de Marked.
 
-## Configuraciones CSS adicionales
+## Configuraciones CSS adicionales [additional-css-settings]
 
 En {% prefspane Style %}, puedes editar CSS adicional. Estos estilos se agregarán a cualquier tema cargado y se pueden usar para realizar cambios universales en todos los temas.
 
 Usando [alta especificidad](#overridingspecificity) y consultas @media para impresión y pantalla, puedes controlar casi todos los aspectos de estilo con un poco de conocimiento de CSS.
 
-## Inspector de WebKit
+## Inspector de WebKit [webkitinspector]
 
 El inspector web de Safari es la forma más sencilla de ver exactamente qué HTML y CSS marcado se generan y de experimentar con estilos personalizados en vivo.
 
-### Habilitar el menú Desarrollar en Safari
+### Habilitar el menú Desarrollar en Safari [enabling-the-develop-menu-in-safari]
 
 1. Abra Safari y elija {% appmenu Safari, Settings… %}.
 2. Seleccione la pestaña **Avanzado**.
@@ -123,7 +123,7 @@ Una vez habilitado, aparecerá un menú **Desarrollar** en la barra de menú de 
 
 ![Menú Desarrollo de Safari que muestra documentos marcados][menú desarrollo]
 
-### Inspeccionar un documento marcado
+### Inspeccionar un documento marcado [inspecting-a-marked-document]
 
 1. Con una ventana de vista previa abierta en Marcado, cambie a Safari.
 2. En la barra de menú, elija **Desarrollar → _\<nombre de su Mac\>_ → Marcado → _\<título del documento\>_**.
@@ -142,21 +142,21 @@ Desde aquí puedes:
 
 ![Inspeccionar una vista previa marcada con Safari Web Inspector][inspeccionar]
 
-## Compartir CSS personalizado
+## Compartir CSS personalizado [sharing-custom-css]
 
 Utilice {% appmenu Style, Share a Custom Style %} para abrir la aplicación para compartir en su navegador web. Arrastre su CSS a la zona de colocación (o haga clic para seleccionar desde el disco) y cargue el CSS para su estilo personalizado.
 
 Los estilos compartidos deben ser aprobados por el desarrollador antes de que aparezcan en la galería, por lo que no verás resultados inmediatos.
 
-## Otros consejos
+## Otros consejos [other-tips]
 
-### Especificidad primordial
+### Especificidad primordial [overridingspecificity]
 
 Dentro de la vista previa marcada, se agrega una clase de cuerpo basada en el nombre de archivo del estilo actual. Si la vista previa está configurada en "Suizo", habrá una clase en la etiqueta `<body>` llamada `mkstyle--swiss`. Si su CSS personalizado se llama MyCustom.css, entonces la clase del cuerpo será `mkstyle--mycustom`. Puede usar esto antes de las reglas definidas en los estilos base para anularlas. Para obtener especificidad absoluta en una regla, use también el ID #wrapper del div contenedor:
 
 	.mkstyle--mycustom #wrapper p+p {...}
 
-### Estilo del índice
+### Estilo del índice [table-of-contents-styling]
 
 Si usa el token `<!--toc-->` para [insertar una tabla de contenido](Special_Syntax.html#tableofcontents), puede anular la configuración de los indicadores de nivel de la tabla de contenido en un estilo personalizado usando el "#wrapper" para aumentar la especificidad:
 

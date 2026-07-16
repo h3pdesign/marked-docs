@@ -4,7 +4,7 @@
 
 CDN から、または生のコードを貼り付けることで、独自の JavaScript を含めることができます。
 
-## マークされた導体に関する注意
+## マークされた導体に関する注意 [a-note-about-marked-conductor]
 
 ドキュメントの種類や場所によって異なるカスタム JavaScript を実装する最も簡単な方法は、[Marked Conductor][conductor] を使用することです。 YAML 構成を使用して、「フィルター」を使用してスクリプトを追加できるようになります。詳細については [Conductor ページ][conductor] を、例については [sample config][sample config] を参照してください。
 

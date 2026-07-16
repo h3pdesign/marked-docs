@@ -2,7 +2,7 @@
 
 Die Linkvalidierung pingt das Ziel einer URL an und prüft auf Fehler. Dies trägt dazu bei, defekte und ungültige Links in Ihrem veröffentlichten Dokument zu vermeiden und ist besonders nützlich für Blogger.
 
-## Validierung einzelner Links
+## Validierung einzelner Links [validating-single-links]
 
 ![][1]
 
@@ -10,7 +10,7 @@ Die Linkvalidierung pingt das Ziel einer URL an und prüft auf Fehler. Dies trä
 
 Klicken Sie in der Vorschau auf einen Link und halten Sie ihn gedrückt, bis er blinkt. Lassen Sie ihn dann los, um das Link-Aktionsmenü zu öffnen. Wählen Sie „Link validieren“, um den Test auszuführen. Die Ergebnisse werden im Popup angezeigt.
 
-## Validierung aller Links
+## Validierung aller Links [validating-all-links]
 
 ![][2]
 
@@ -22,7 +22,7 @@ Gültige URLs können im Popup mit der Schaltfläche „Gültige ausblenden“ o
 
 Durch Drücken von Escape werden die Validierungsergebnisse ausgeblendet. Sie können mit {% kbd ctrl cmd L %} oder dem Ausrüstungsmenü wieder angezeigt werden.
 
-## Automatische Validierung
+## Automatische Validierung [validating-automatically]
 
 Aktivieren Sie „URLs bei Aktualisierung automatisch validieren“ in den Vorschaueinstellungen (oder unten im Popup zur Linkvalidierung). Beim Laden des Dokuments werden die darin enthaltenen Links im Hintergrund getestet. Ein Dialog wird nur angezeigt, wenn Fehler vorliegen.
 

@@ -4,7 +4,7 @@ Marked bevat native **Shortcuts**-acties (App-intenties) voor het openen van bes
 
 Voor scriptgebaseerde automatisering met een volledig objectmodel, zie [AppleScript Support](AppleScript_Support.html). Voor URL-gebaseerde workflows vanuit de shell, zie de [URL Handler](URL_Handler.html).
 
-## Acties zoeken
+## Acties zoeken [finding-actions]
 
 1. Open de app **Snelkoppelingen**.
 2. Maak een nieuwe snelkoppeling of bewerk een bestaande.
@@ -12,7 +12,7 @@ Voor scriptgebaseerde automatisering met een volledig objectmodel, zie [AppleScr
 
 Acties zijn gegroepeerd onder **Documenten** en **Exporteren**. Marked registreert ook Siri-zinnen zoals "Exporteer bestand met Marked" en "Openen in Marked" voor snelle snelkoppelingen.
 
-## Actiesoverzicht
+## Actiesoverzicht [actions-overview]
 
 | Actie | Doel |
 | --- | --- |
@@ -24,13 +24,13 @@ Acties zijn gegroepeerd onder **Documenten** en **Exporteren**. Marked registree
 
 Alle exportacties retourneren het geëxporteerde bestand (of bestanden) als uitvoer van snelkoppelingen **Bestand**, zodat u ze kunt doorgeven aan de volgende stap (Mail, Finder, een andere app).
 
-## Bestand openen over Marked
+## Bestand openen over Marked [open-file-in-marked]
 
 **Parameter:** **Bestand** -- het document dat u wilt openen (vanuit Finder, Deelblad of een eerdere stap Snelkoppelingen).
 
 Marked opent het bestand in een voorbeeldvenster. Gebruik dit als u een voorbeeld wilt bekijken of bewerken in Marked voordat u iets anders doet.
 
-## Voorbeeldstijl instellen
+## Voorbeeldstijl instellen [set-preview-style]
 
 **Parameters:**
 
@@ -39,7 +39,7 @@ Marked opent het bestand in een voorbeeldvenster. Gebruik dit als u een voorbeel
 
 Als u een stijl instelt, wordt het voorbeeld opnieuw geladen met dat thema (hetzelfde als wanneer u een stijl kiest in het voorbeeldstijlmenu).
 
-## Exportacties
+## Exportacties [export-actions]
 
 Exportacties delen dezelfde kernopties:
 
@@ -60,7 +60,7 @@ Exportacties delen dezelfde kernopties:
 - **Continu PDF** legt de huidige preview-WebView-indeling vast.
 - **Lettergrootte** maakt dezelfde optie voor aangepaste export/afdruklettergrootte mogelijk vanaf {% prefspane Export %}. Het heeft geen invloed op Fountain-documenten.
 
-### Bestand openen en exporteren
+### Bestand openen en exporteren [open-and-export-file]
 
 Beste voor Finder-workflows: kies een Markdown-bestand, open het in Marked en exporteer het in één stap.
 
@@ -68,7 +68,7 @@ Beste voor Finder-workflows: kies een Markdown-bestand, open het in Marked en ex
 
 Voorbeeldgebruik: een snelle actie die bestanden uit Finder haalt en **gepagineerd PDF** exporteert met een gekozen profiel en stijl.
 
-### Document exporteren
+### Document exporteren [export-document]
 
 Exporteer een document dat **al geopend** is over Marked.
 
@@ -79,7 +79,7 @@ Exporteer een document dat **al geopend** is over Marked.
 
 Gebruik dit wanneer Marked al actief is en u het huidige voorbeeld wilt exporteren zonder het bestand opnieuw te openen.
 
-### Geopende documenten exporteren
+### Geopende documenten exporteren [export-open-documents]
 
 Exporteer **elk** voorbeelddocument dat momenteel geopend is in Marked.
 
@@ -90,7 +90,7 @@ Exporteer **elk** voorbeelddocument dat momenteel geopend is in Marked.
 
 Handig voor batchexport na het bekijken van meerdere hoofdstukken of notities in Marked.
 
-## Marge afkorting
+## Marge afkorting [margin-shorthand]
 
 Wanneer **Marges** is ingesteld voor een exportactie, gebruikt u een tekenreeks met één tot vier metingen. Eenheden: `in`, `cm`, `mm`, `pt`, of `"` voor inches. Een getal zonder eenheid wordt behandeld als punten.
 
@@ -103,9 +103,9 @@ Wanneer **Marges** is ingesteld voor een exportactie, gebruikt u een tekenreeks 
 
 Dit komt overeen met de `margins` sleutel in [AppleScript](AppleScript_Support.html#with-options-properties-record) exportrecords.
 
-## Voorbeeldworkflows
+## Voorbeeldworkflows [example-workflows]
 
-### Finder-bestand naar PDF
+### Finder-bestand naar PDF [finder-file-to-pdf]
 
 1. **Bestand openen en exporteren**
 2. **Bestand** - invoer van Share Sheet of Finder Quick Action.
@@ -114,26 +114,26 @@ Dit komt overeen met de `margins` sleutel in [AppleScript](AppleScript_Support.h
 5. **Profiel** -- optioneel opgeslagen exportprofiel.
 6. **Uitvoerbestand** -- optioneel; laat dit leeg om `filename.pdf` naast de bron te schrijven.
 
-### Exporteer wat open is over Marked
+### Exporteer wat open is over Marked [export-what-is-open-in-marked]
 
 1. **Exportdocument**
 2. Laat **Bestand** leeg om het voorvenster te gebruiken.
 3. Kies **Formaat** en optioneel profiel of stijl.
 
-### Geopende documenten batchgewijs exporteren
+### Geopende documenten batchgewijs exporteren [batch-export-open-documents]
 
 1. **Open documenten exporteren**
 2. Kies **Formaat** (bijvoorbeeld EPUB).
 3. Stel eventueel **Uitvoermap** in om alle exports in één map te verzamelen.
 
-### Stijl en vervolgens exporteren (twee stappen)
+### Stijl en vervolgens exporteren (twee stappen) [style-then-export-two-steps]
 
 1. **Voorbeeldstijl instellen** - kies een stijl (richt eventueel een specifiek **Bestand**).
 2. **Exportdocument** - hetzelfde bestand of voordocument, met het gewenste **Formaat**.
 
 U kunt **Stijl** ook rechtstreeks doorgeven aan een exportactie; Marked past het thema toe en wacht op het opnieuw laden van het voorbeeld voordat het exporteert.
 
-## Paden exporteren en sandboxen
+## Paden exporteren en sandboxen [export-paths-and-sandboxing]
 
 - Als **Uitvoerbestand** of **Uitvoermap** wordt weggelaten, wordt Marked naast het brondocument geschreven.
 - Marked kan tussenmappen maken als het exportpad **in de map van het geopende document** ligt.
@@ -141,13 +141,13 @@ U kunt **Stijl** ook rechtstreeks doorgeven aan een exportactie; Marked past het
 
 Zie [AppleScript Support](AppleScript_Support.html#export-paths-and-sandboxing) voor dezelfde sandboxregels.
 
-## Legacy `convert_to` actie
+## Legacy `convert_to` actie [convert_to]
 
 Het AppleScript-woordenboek geeft nog steeds **`convert_to`** weer voor het converteren van Markdown tekst of bestanden zonder een open voorbeeld. De bovenstaande Native Shortcuts-acties hebben de voorkeur: ze openen documenten correct, wachten tot het voorbeeld is geladen en ondersteunen gepagineerde PDF asynchroon export.
 
-Zie [Shortcuts and <!--MKPH0--> in AppleScript Support](AppleScript_Support.html#shortcuts-and-convert_to) voor details over de oudere opdracht.
+Zie [Shortcuts and <!--MKPH0--> in AppleScript Support](AppleScript_Support.html#convert_to) voor details over de oudere opdracht.
 
-## Probleemoplossing: acties verschijnen niet in snelkoppelingen
+## Probleemoplossing: acties verschijnen niet in snelkoppelingen [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Snelkoppelingenindexen **één** Marked installatie per bundel-ID (`com.brettterpstra.marked`). Het geeft de voorkeur aan de kopie met het **hoogste buildnummer** (`CFBundleVersion`), niet noodzakelijkerwijs de app die u zojuist in Xcode hebt gebouwd.
 
@@ -169,11 +169,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 Bij het opstarten registreert Marked `[MKShortcuts] Registering App Intents` in Console.app wanneer de registratie wordt uitgevoerd (macOS 13+).
 
-## Foutopsporing
+## Foutopsporing [debugging]
 
 Schakel **Debug-modus** in {% prefspane Advanced %} in. Marked registreert exportstappen op Info-niveau met het voorvoegsel `[AppleScript]` in Console.app en de logviewer van Marked (de exportpijplijn wordt gedeeld met AppleScript).
 
-## Fouten
+## Fouten [errors]
 
 Veel voorkomende berichten wanneer een actie mislukt:
 

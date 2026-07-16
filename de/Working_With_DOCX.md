@@ -2,31 +2,31 @@
 
 Marked bietet umfangreiche Unterstützung für die Arbeit mit Microsoft-Word-Dateien. Der typische Ablauf ist **zuerst Vorschau, dann DOCX-Export**: Öffnen oder überwachen Sie Ihr Markdown in Marked, feilen Sie in der Live-Vorschau an Stil und Korrektur, und exportieren Sie erst nach Word, wenn das Dokument fertig ist.
 
-## DOCX-Dateien öffnen
+## DOCX-Dateien öffnen [opening-docx-files]
 
 Marked kann eine DOCX-Datei lesen und in sauberes Markdown umwandeln. Gültige Stilelemente wie Überschriften und Listen werden in ihr Markdown-Äquivalent überführt.
 
 Änderungsverfolgung und Kommentare werden in CriticMarkup umgewandelt. Hervorhebungen werden zu `<mark>`-Tags, gegebenenfalls mit Farben.
 
-## DOCX-Dateien exportieren
+## DOCX-Dateien exportieren [exporting-docx-files]
 
 Über das Export-Panel erzeugen Sie aus Ihrem Markdown eine DOCX-Datei. Im Speicherdialog können Sie einen integrierten Stil angeben – dieser Stil lässt sich in Word ganz einfach ändern, indem Sie die Designauswahl öffnen und ein neues Design wählen.
 
-### Kopf- und Fußzeilen
+### Kopf- und Fußzeilen [headers-and-footers]
 
 Wenn Sie Kopf- und Fußzeilen in {% prefspane Export %} konfigurieren, sind diese im exportierten DOCX enthalten. Standardplatzhalter wie `%title`, `%date`, `%page` und `%total` werden beim Export ersetzt. `%logo` und `%image` betten das Logo aus den Kopf-/Fußzeileneinstellungen ein. `%md_*`-Metadatenvariablen werden aus den MultiMarkdown-Metadaten des Dokuments aufgelöst. `%h1`–`%h6` werden zu Word-**STYLEREF**-Feldern, die an die exportierten Überschriftenstile gebunden sind; Word füllt sie aus, wenn Sie das Dokument öffnen. Die vollständige Variablenliste sowie die Unterschiede zwischen dem Verhalten bei DOCX und bei Druck/PDF finden Sie unter [Export](Exporting.html#headers-and-footers).
 
-## Änderungsverfolgung
+## Änderungsverfolgung [change-tracking]
 
 CriticMarkup-Syntax in einem Markdown-Dokument wird beim Export nach DOCX in die Word-Änderungsverfolgung umgewandelt. Kommentare zu Einfügungen, Löschungen und Ersetzungen erscheinen in Word in der rechten Spalte, sobald die Änderungsverfolgung aktiviert ist.
 
 Beim Importieren einer DOCX-Datei in Marked wird die Änderungsverfolgung passend in CriticMarkup und `<mark>`-Tags umgewandelt.
 
-## Mathematik
+## Mathematik [math]
 
 Im Dokument angezeigte MathJax- und KaTeX-Gleichungen werden für die Darstellung in Word in MathML umgewandelt. Diese Umwandlung ist nicht perfekt, ergibt aber in den meisten Fällen einen gültigen Formelblock im Word-Dokument. Das gilt nur für den Export – Formelblöcke in Word-Dokumenten werden beim Import nicht umgewandelt.
 
-## Eigene Exportstile hinzufügen
+## Eigene Exportstile hinzufügen [adding-custom-export-styles]
 
 Sie können eigene Exportstile hinzufügen, indem Sie eine Vorlage und eine `styles.xml`-Datei in `~/Library/Application Support/Marked/Custom Word Styles/` ablegen. So erstellen Sie diese:
 

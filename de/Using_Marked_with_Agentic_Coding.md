@@ -3,7 +3,7 @@
 
 Marked ist ein großartiger Begleiter für moderne „agentische Codierungs“-Workflows, bei denen KI-Tools Pläne generieren, Code umgestalten und die Dokumentation während der Arbeit ständig aktualisieren. Indem Sie Marked Ihre Projekt- oder Planungsordner überwachen lassen, erhalten Sie eine Live-, lesbare Ansicht dessen, was Ihre Coding-Agenten als Nächstes anfassen, ohne Ihren Editor oder Dateibaum durchsuchen zu müssen.
 
-## Beobachten Sie Ihren Projekt- oder Planordner
+## Beobachten Sie Ihren Projekt- oder Planordner [watching-your-project-or-plan-folder]
 
 Anstatt eine einzelne Datei zu öffnen, können Sie Marked auf einen gesamten Ordner verweisen, den Sie für Pläne, Notizen oder KI-generierte Dokumentation verwenden:
 
@@ -15,7 +15,7 @@ Sobald Marked einen Ordner überwacht, wird automatisch die **zuletzt geänderte
 
 Dies funktioniert besonders gut mit Agententools wie Cursor, Claude und Copilot, die kontinuierlich Spezifikationen, Aufgabenlisten oder Architekturnotizen neu generieren, während Sie eine Funktion iterieren.
 
-## Scrollen zur ersten Änderung
+## Scrollen zur ersten Änderung [scrolling-to-the-first-change]
 
 Wenn *Zum Bearbeiten scrollen* in den Einstellungen von Marked aktiviert ist, wird die Vorschau nicht einfach neu geladen, sondern **scrollt direkt zum ersten geänderten Bereich** der Datei, wenn sie aktualisiert wird.
 
@@ -27,7 +27,7 @@ Das bedeutet, dass Sie:
 
 In Kombination mit der Ordnerüberwachung ist es so einfach, genau zu sehen, was Ihre Agenten mit Ihren Dokumenten machen, selbst wenn sie häufige, inkrementelle Änderungen vornehmen.
 
-## Diagramme mit Mermaid.js
+## Diagramme mit Mermaid.js [diagrams-with-mermaidjs]
 
 In Marked ist außerdem die **Mermaid.js-Unterstützung standardmäßig aktiviert**, sodass Sequenzdiagramme, Flussdiagramme und Architekturdiagramme, die Ihre Agenten mithilfe von Mermaid-Codeblöcken generieren, in der Vorschau sauber gerendert werden. Wenn Ihr KI-Assistent abgeschirmten Code ausgibt wie:
 
@@ -42,7 +42,7 @@ flowchart TD
 
 Marked wandelt es automatisch in ein gestaltetes, interaktives Diagramm um und bietet Ihnen eine visuelle Ansicht komplexer Arbeitsabläufe, Datenflüsse oder Systemdesigns, die von Tools wie Cursor, Claude, Copilot und anderen Agenten-Codierungsassistenten erstellt wurden.
 
-## Beispiel-Workflows für die Agentencodierung
+## Beispiel-Workflows für die Agentencodierung [example-agentic-coding-workflows]
 
 - **Cursor + Marked**: Behalten Sie einen Ordner `plans/` oder `notes/` in Ihrem Repository, in dem Cursor Schritt-für-Schritt-Implementierungspläne schreibt. Zeigen Sie mit Marked auf diesen Ordner, um immer den neuesten, sauber gerenderten Plan anzuzeigen, während Sie Änderungen im Editor akzeptieren und anwenden.
 

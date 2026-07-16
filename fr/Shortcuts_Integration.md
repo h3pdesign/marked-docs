@@ -4,7 +4,7 @@ Marked inclut des actions natives **Raccourcis** (App Intents) pour ouvrir des f
 
 Pour de l'automatisation par script avec un modèle d'objets complet, voir [Prise en charge d'AppleScript](AppleScript_Support.html). Pour des flux de travail basés sur des URL depuis le shell, voir le [Gestionnaire d'URL](URL_Handler.html).
 
-## Rechercher des actions
+## Rechercher des actions [finding-actions]
 
 1. Ouvrez l'application **Raccourcis**.
 2. Créez un nouveau raccourci ou modifiez-en un existant.
@@ -12,7 +12,7 @@ Pour de l'automatisation par script avec un modèle d'objets complet, voir [Pris
 
 Les actions sont regroupées sous **Documents** et **Export**. Marked enregistre également des phrases Siri telles que « Exporter un fichier avec Marked » et « Ouvrir dans Marked » pour des raccourcis rapides.
 
-## Aperçu des actions
+## Aperçu des actions [actions-overview]
 
 | Action | Objectif |
 | --- | --- |
@@ -24,13 +24,13 @@ Les actions sont regroupées sous **Documents** et **Export**. Marked enregistre
 
 Toutes les actions d'export renvoient le ou les fichiers exportés en sortie **Fichier** de Raccourcis, afin que vous puissiez les transmettre à l'étape suivante (Mail, Finder, une autre application).
 
-## Ouvrir un fichier dans Marked
+## Ouvrir un fichier dans Marked [open-file-in-marked]
 
 **Paramètre :** **Fichier** -- le document à ouvrir (depuis le Finder, la feuille de partage ou une étape précédente de Raccourcis).
 
 Marked ouvre le fichier dans une fenêtre d'aperçu. Utilisez cette action lorsque vous souhaitez prévisualiser ou éditer dans Marked avant toute autre étape.
 
-## Définir le style d'aperçu
+## Définir le style d'aperçu [set-preview-style]
 
 **Paramètres :**
 
@@ -39,7 +39,7 @@ Marked ouvre le fichier dans une fenêtre d'aperçu. Utilisez cette action lorsq
 
 Définir un style recharge l'aperçu avec ce thème (comme si vous choisissiez un style depuis le menu de style d'aperçu).
 
-## Actions d'export
+## Actions d'export [export-actions]
 
 Les actions d'export partagent les mêmes options de base :
 
@@ -60,7 +60,7 @@ Les actions d'export partagent les mêmes options de base :
 - **PDF continu** capture la mise en page actuelle de la WebView d'aperçu.
 - **Taille de police** active la même option de taille de police personnalisée pour l'export/impression que dans {% prefspane Export %}. N'affecte pas les documents Fountain.
 
-### Ouvrir et exporter un fichier
+### Ouvrir et exporter un fichier [open-and-export-file]
 
 Idéal pour les flux de travail depuis le Finder : sélectionnez un fichier Markdown, ouvrez-le dans Marked et exportez-le en une seule étape.
 
@@ -68,7 +68,7 @@ Idéal pour les flux de travail depuis le Finder : sélectionnez un fichier Mark
 
 Exemple d'utilisation : une Action rapide qui prend des fichiers depuis le Finder et les exporte en **PDF paginé** avec un profil et un style choisis.
 
-### Exporter le document
+### Exporter le document [export-document]
 
 Exporte un document **déjà ouvert** dans Marked.
 
@@ -79,7 +79,7 @@ Exporte un document **déjà ouvert** dans Marked.
 
 Utilisez cette action lorsque Marked est déjà lancé et que vous souhaitez exporter l'aperçu actuel sans rouvrir le fichier.
 
-### Exporter les documents ouverts
+### Exporter les documents ouverts [export-open-documents]
 
 Exporte **tous** les documents d'aperçu actuellement ouverts dans Marked.
 
@@ -90,7 +90,7 @@ Exporte **tous** les documents d'aperçu actuellement ouverts dans Marked.
 
 Utile pour un export par lots après avoir consulté plusieurs chapitres ou notes dans Marked.
 
-## Notation abrégée des marges
+## Notation abrégée des marges [margin-shorthand]
 
 Lorsque **Marges** est défini sur une action d'export, utilisez une chaîne comportant une à quatre mesures. Unités : `in`, `cm`, `mm`, `pt`, ou `"` pour les pouces. Un nombre sans unité est traité comme des points.
 
@@ -103,9 +103,9 @@ Lorsque **Marges** est défini sur une action d'export, utilisez une chaîne com
 
 Cela correspond à la clé `margins` des enregistrements d'export [AppleScript](AppleScript_Support.html#with-options-properties-record).
 
-## Exemples de flux de travail
+## Exemples de flux de travail [example-workflows]
 
-### Fichier du Finder vers PDF
+### Fichier du Finder vers PDF [finder-file-to-pdf]
 
 1. **Ouvrir et exporter un fichier**
 2. **Fichier** -- entrée depuis la feuille de partage ou une Action rapide du Finder.
@@ -114,26 +114,26 @@ Cela correspond à la clé `margins` des enregistrements d'export [AppleScript](
 5. **Profil** -- profil d'export enregistré facultatif.
 6. **Fichier de sortie** -- facultatif ; laissez vide pour écrire `nomfichier.pdf` à côté du fichier source.
 
-### Exporter ce qui est ouvert dans Marked
+### Exporter ce qui est ouvert dans Marked [export-what-is-open-in-marked]
 
 1. **Exporter le document**
 2. Laissez **Fichier** vide pour utiliser la fenêtre au premier plan.
 3. Choisissez le **Format** et éventuellement un profil ou un style.
 
-### Export par lots des documents ouverts
+### Export par lots des documents ouverts [batch-export-open-documents]
 
 1. **Exporter les documents ouverts**
 2. Choisissez le **Format** (par exemple EPUB).
 3. Définissez éventuellement un **Dossier de sortie** pour rassembler tous les exports dans un même répertoire.
 
-### Style puis export (deux étapes)
+### Style puis export (deux étapes) [style-then-export-two-steps]
 
 1. **Définir le style d'aperçu** -- choisissez un style (en ciblant éventuellement un **Fichier** spécifique).
 2. **Exporter le document** -- même fichier ou document au premier plan, avec le **Format** souhaité.
 
 Vous pouvez également transmettre le **Style** directement sur une action d'export ; Marked applique le thème et attend le rechargement de l'aperçu avant d'exporter.
 
-## Chemins d'export et bac à sable
+## Chemins d'export et bac à sable [export-paths-and-sandboxing]
 
 - Si **Fichier de sortie** ou **Dossier de sortie** est omis, Marked écrit à côté du document source.
 - Marked peut créer des dossiers intermédiaires lorsque le chemin d'export se trouve **à l'intérieur du dossier du document ouvert**.
@@ -141,13 +141,13 @@ Vous pouvez également transmettre le **Style** directement sur une action d'exp
 
 Voir [Prise en charge d'AppleScript](AppleScript_Support.html#export-paths-and-sandboxing) pour les mêmes règles de bac à sable.
 
-## Action historique `convert_to`
+## Action historique `convert_to` [convert_to]
 
 Le dictionnaire AppleScript expose toujours **`convert_to`** pour convertir du texte ou des fichiers Markdown sans aperçu ouvert. Les actions natives Raccourcis ci-dessus sont à privilégier : elles ouvrent correctement les documents, attendent le chargement de l'aperçu et prennent en charge l'export PDF paginé de manière asynchrone.
 
-Voir [Raccourcis et `convert_to` dans Prise en charge d'AppleScript](AppleScript_Support.html#shortcuts-and-convert_to) pour plus de détails sur cette commande historique.
+Voir [Raccourcis et `convert_to` dans Prise en charge d'AppleScript](AppleScript_Support.html#convert_to) pour plus de détails sur cette commande historique.
 
-## Dépannage : les actions n'apparaissent pas dans Raccourcis
+## Dépannage : les actions n'apparaissent pas dans Raccourcis [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Raccourcis indexe **une seule** installation de Marked par identifiant de bundle (`com.brettterpstra.marked`). Il privilégie la copie avec le **numéro de build le plus élevé** (`CFBundleVersion`), pas nécessairement l'application que vous venez de compiler dans Xcode.
 
@@ -169,11 +169,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 Au lancement, Marked consigne `[MKShortcuts] Registering App Intents` dans Console.app lorsque l'enregistrement s'effectue (macOS 13+).
 
-## Débogage
+## Débogage [debugging]
 
 Activez le **Mode débogage** dans {% prefspane Advanced %}. Marked consigne les étapes d'export au niveau Info avec le préfixe `[AppleScript]` dans Console.app et dans le visualiseur de journaux de Marked (le pipeline d'export est partagé avec AppleScript).
 
-## Erreurs
+## Erreurs [errors]
 
 Messages courants en cas d'échec d'une action :
 

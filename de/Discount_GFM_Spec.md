@@ -2,11 +2,11 @@
 
 Schauen Sie sich [Markdown Dingus](x-marked-3://dingus?processor=discount) an, um mit dem Discount-Prozessor zu experimentieren.
 
-## Was ist Discount-GFM?
+## Was ist Discount-GFM? [what-is-discount-gfm]
 
 Discount GFM (GitHub Flavored Markdown) ist ein C-basierter Markdown-Prozessor, der die erweiterte Markdown-Syntax von GitHub implementiert. Es basiert auf der ursprünglichen Discount-Bibliothek, wurde jedoch um GitHub-spezifische Funktionen wie Tabellen, Aufgabenlisten, durchgestrichenen Text und automatische URL-Verknüpfung erweitert.
 
-## Hauptmerkmale
+## Hauptmerkmale [key-characteristics]
 
 - **C-basierte Leistung**: Schnelle, native C-Implementierung für optimale Leistung
 - **GitHub-Kompatibilität**: Implementiert die Markdown-Erweiterungen von GitHub für maximale Kompatibilität
@@ -14,9 +14,9 @@ Discount GFM (GitHub Flavored Markdown) ist ein C-basierter Markdown-Prozessor, 
 - **Erweiterbar**: Unterstützt verschiedene Markdown-Erweiterungen und benutzerdefinierte Optionen
 - **HTML5-Unterstützung**: Erzeugt eine moderne HTML5-Ausgabe mit korrektem semantischem Markup
 
-## Wesentliche Unterschiede zum Standard Markdown
+## Wesentliche Unterschiede zum Standard Markdown [major-differences-from-standard-markdown]
 
-### 1. **GitHub Aromatisierte Markdown Erweiterungen**
+### 1. **GitHub Aromatisierte Markdown Erweiterungen** [1-github-flavored-markdown-extensions]
 
 **Tabellen**
 
@@ -54,7 +54,7 @@ Discount GFM (GitHub Flavored Markdown) ist ein C-basierter Markdown-Prozessor, 
 ~~Mistaken text that should be removed~~
 ```
 
-### 2. **Erweiterte Codeblock-Unterstützung**
+### 2. **Erweiterte Codeblock-Unterstützung** [2-enhanced-code-block-support]
 
 **Eingezäunte Codeblöcke**
 
@@ -76,7 +76,7 @@ function hello() {
 - Korrekte Syntaxhervorhebung, sofern unterstützt
 - Fallback auf Klartext für nicht unterstützte Sprachen
 
-### 3. **Automatische URL-Verknüpfung**
+### 3. **Automatische URL-Verknüpfung** [3-automatic-url-linking]
 
 **URL-Autolinking**
 
@@ -95,7 +95,7 @@ Contact us at user@example.com
 - Verarbeitet verschiedene URL-Formate und Protokolle
 - Konfigurierbare Link-Sicherheitsoptionen
 
-### 4. **Erweiterte Listenfunktionen**
+### 4. **Erweiterte Listenfunktionen** [4-advanced-list-features]
 
 **Alphabetische Listen**
 
@@ -115,7 +115,7 @@ c. Third item
 - Verbesserte Abstände und Einrückungen
 - Unterstützung für gemischte Listentypen
 
-### 5. **Unterstützung für Fußnoten**
+### 5. **Unterstützung für Fußnoten** [5-footnotes-support]
 
 **Fußnoten im Referenzstil**
 
@@ -135,7 +135,7 @@ Dies ist ein Satz mit einer Fußnote[^1].
 - Verknüpfungen zwischen Referenzen und Definitionen
 - Fortlaufende Nummerierung im gesamten Dokument
 
-### 6. **HTML Integration**
+### 6. **HTML Integration** [6-html-integration]
 
 **HTML5 Support**
 
@@ -149,7 +149,7 @@ Dies ist ein Satz mit einer Fußnote[^1].
 - Ordnungsgemäße Flucht und Desinfektion
 - Integration mit der Markdown-Syntax
 
-### 7. **Erweiterte Hervorhebungsregeln**
+### 7. **Erweiterte Hervorhebungsregeln** [7-enhanced-emphasis-rules]
 
 **Entspannter Schwerpunkt**
 
@@ -168,7 +168,7 @@ This is _emphasized text_ that will be styled.
 - Entspricht den standardmäßigen Markdown-Hervorhebungsregeln
 – Korrekte HTML-Ausgabe mit den Tags `<strong>` und `<em>`
 
-### 8. **Erstellung eines Inhaltsverzeichnisses**
+### 8. **Erstellung eines Inhaltsverzeichnisses** [8-table-of-contents-generation]
 
 **Automatisches Inhaltsverzeichnis**
 
@@ -182,7 +182,7 @@ This is _emphasized text_ that will be styled.
 - Ankerlinks für eine einfache Navigation
 - Konsistente ID-Formatierung
 
-## Rabatt auf GFM im Vergleich zu anderen Markdown Geschmacksrichtungen
+## Rabatt auf GFM im Vergleich zu anderen Markdown Geschmacksrichtungen [discount-gfm-vs-other-markdown-flavors]
 
 | Funktion | Rabatt | CommonMark (GFM) | Kramdown | MultiMarkdown | Standard |
 | ---------------- | ------------ | ---------- | -------- | ------------- | -------- |
@@ -200,7 +200,7 @@ This is _emphasized text_ that will be styled.
 | Autolinks | Ja | Nein | Nein | Nein | Nein |
 | Alphabetische Listen | Ja | Nein | Nein | Nein | Nein |
 
-## Hauptvorteile von Discount GFM
+## Hauptvorteile von Discount GFM [key-advantages-of-discount-gfm]
 
 1. **GitHub-Kompatibilität**: Perfekt für Inhalte, die unter GitHub funktionieren müssen
 2. **Leistung**: Schnelle C-basierte Implementierung
@@ -209,7 +209,7 @@ This is _emphasized text_ that will be styled.
 5. **Standardkonformität**: Entspricht der Markdown-Spezifikation von GitHub
 6. **Leichtgewicht**: Minimaler Ressourcenverbrauch und minimale Abhängigkeiten
 
-## Häufige Anwendungsfälle
+## Häufige Anwendungsfälle [common-use-cases]
 
 **GitHub Dokumentation**
 
@@ -235,7 +235,7 @@ This is _emphasized text_ that will be styled.
 - Projektplanungsunterlagen
 - Besprechungsnotizen und Protokolle
 
-## Konfigurationsoptionen
+## Konfigurationsoptionen [configuration-options]
 
 Discount GFM unterstützt verschiedene Konfigurationsmöglichkeiten:
 
@@ -246,7 +246,7 @@ Discount GFM unterstützt verschiedene Konfigurationsmöglichkeiten:
 - **Strenger Modus**: Erweiterte Parsing-Regeln
 - **Smart Quotes**: Automatische Angebotsumwandlung
 
-## Implementierungsdetails
+## Implementierungsdetails [implementation-details]
 
 **Parser-Optionen**
 
@@ -263,7 +263,7 @@ Discount GFM unterstützt verschiedene Konfigurationsmöglichkeiten:
 - Barrierefreie Tabellenstrukturen
 - Saubere, gültige HTML-Ausgabe
 
-## Best Practices
+## Best Practices [best-practices]
 
 1. **Verwenden Sie Tabellen sparsam**: Tabellen sind leistungsstark, können aber komplex in der Pflege sein
 2. **Aufgabenlisten nutzen**: Ideal für Projektmanagement und Dokumentation
@@ -271,7 +271,7 @@ Discount GFM unterstützt verschiedene Konfigurationsmöglichkeiten:
 4. **Struktur mit Überschriften**: Verwenden Sie die richtige Überschriftenhierarchie für eine bessere Inhaltsverzeichnisgenerierung
 5. **Test auf GitHub**: Überprüfen Sie die Kompatibilität mit dem Rendering von GitHub
 
-## Migration vom Standard Markdown
+## Migration vom Standard Markdown [migration-from-standard-markdown]
 
 Die meisten Standard-Markdown funktionieren ohne Änderungen mit Discount GFM. So nutzen Sie die GFM-Funktionen:
 
@@ -281,7 +281,7 @@ Die meisten Standard-Markdown funktionieren ohne Änderungen mit Discount GFM. S
 4. **Autolinks nutzen**: Entfernen Sie das manuelle Link-Markup für einfache URLs
 5. **Strukturüberschriften**: Stellen Sie die richtige Überschriftenhierarchie für die Inhaltsverzeichnisgenerierung sicher
 
-## Ressourcen
+## Ressourcen [resources]
 
 - [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 - [Discount Library Documentation](https://www.pell.portland.or.us/~orc/Code/discount/)

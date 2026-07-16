@@ -1,6 +1,6 @@
 <!-- MT-DRAFT: machine translation; human review required -->
 
-# Egyéni processzorengedélyek a MAS verzióban
+# Egyéni processzorengedélyek a MAS verzióban [custom-processor-permissions-in-mas-version]
 
 A sandbox korlátozások miatt a Marked Mac App Store verziója nem tud bizonyos típusú bináris eszközöket egyéni processzorként végrehajtani. Ha ebbe a korlátozásba ütközik, néhány lépést kipróbálhat.
 

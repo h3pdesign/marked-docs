@@ -80,7 +80,7 @@ If you've lost a license you've purchased for Marked 2 through Paddle, you can r
 
 [Table of contents](#toc)
 
-## In-app purchase issues (Error Domain=Paddle Code=0 "(null)")  [in-app_purchase_issues_error_domainpaddle_code0_null]
+## In-app purchase issues (Error Domain=Paddle Code=0 "(null)") [in-app_purchase_issues_error_domainpaddle_code0_null]
 
 Paddle recently informed me that IAPs are broken, and that they don't plan to fix it because not enough developers have implemented them. (Which is as frustrating to me as it is to you.) The truly frustrating part is that they haven't stopped allowing payments, so I need to manually refund purchases until something is done about the way the licenses are handled. A new system is supposedly going to roll out in the next couple of weeks, so if you're willing to wait, I'll do everything I can to ensure that all current purchases of the Spelling/Grammar IAP are honored through whatever system is provided next
 

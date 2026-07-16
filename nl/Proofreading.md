@@ -6,11 +6,11 @@ De proefleesmodus bevriest documentupdates, waardoor wordt voorkomen dat annotat
 
 Toetsenbordnavigatie, bladwijzers en trefwoordmarkering zijn allemaal mogelijk tijdens het proeflezen.
 
-## Annotaties
+## Annotaties [annotations]
 
 Als u in de proefleesmodus tekst in het document selecteert, wordt er een pop-up gegenereerd waarin u uit verschillende typen markering kunt kiezen. Klik op het type markering dat u aan de tekst wilt toevoegen, of annuleer door op de knop 'Annuleren' te klikken of door buiten de pop-up te klikken.
 
-## Opmerkingen
+## Opmerkingen [notes]
 
 ![Annotations][1]
 
@@ -20,7 +20,7 @@ Zodra een hoogtepunt is toegevoegd, kunt u er korte notities aan toevoegen door 
 
 Notities worden **alleen** geëxporteerd bij het opslaan in HTML. Hoogtepunten blijven in de meeste exportformaten behouden, inclusief RTF en PDF.
 
-## Spellingcontrole
+## Spellingcontrole [spellcheck]
 
 In de proefleesmodus heeft u toegang tot de systeembrede spellingcontrole via het tandwielmenu: {% appmenu {{gear}}, Proofing, Highlight All Spelling Errors %}. Bij grote documenten zal dit langzaam zijn en er zal een waarschuwing worden weergegeven die u waarschuwt als het proces meer dan 30 seconden duurt. Omdat de spellingcontrole niet werkt in de webvoorbeeld van Marked, is er een "hack" geïmplementeerd om dit te laten werken, en deze is niet snel.
 

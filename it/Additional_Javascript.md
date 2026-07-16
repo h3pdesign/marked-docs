@@ -4,7 +4,7 @@
 
 Puoi includere il tuo JavaScript dai CDN o incollando il codice non elaborato.
 
-## Una nota sul conduttore contrassegnato
+## Una nota sul conduttore contrassegnato [a-note-about-marked-conductor]
 
 Il modo più semplice per implementare JavaScript personalizzato che varia a seconda dei tipi di documenti e delle posizioni è con [Marked Conductor][conductor]. Ti consente di utilizzare una configurazione YAML per aggiungere script utilizzando "filtri". Controlla la [pagina del conduttore] [conduttore] per i dettagli e consulta la [configurazione di esempio] [configurazione di esempio] per gli esempi.
 

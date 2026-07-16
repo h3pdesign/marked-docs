@@ -1,4 +1,4 @@
-# Custom Prozessorberechtigungen in der MAS-Version
+# Custom Prozessorberechtigungen in der MAS-Version [custom-processor-permissions-in-mas-version]
 
 Aufgrund von Sandboxing-Einschränkungen ist die Mac App Store-Version von Marked nicht in der Lage, bestimmte Arten von Binärtools als benutzerdefinierte Prozessoren auszuführen. Wenn Sie auf diese Einschränkung stoßen, können Sie einige Schritte ausprobieren.
 

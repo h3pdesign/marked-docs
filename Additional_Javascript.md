@@ -2,7 +2,7 @@
 
 You can include your own JavaScript from CDNs or by pasting raw code.
 
-## A Note About Marked Conductor
+## A Note About Marked Conductor [a-note-about-marked-conductor]
 
 The easiest way to implement custom JavaScript that varies between document types and locations is with the [Marked Conductor][conductor]. It allows you to use a YAML configuration to append scripts using "filters." Check out the [Conductor page][conductor] for details, and see the [sample config][sample config] for examples.
 

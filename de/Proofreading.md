@@ -6,11 +6,11 @@ Der Korrekturlesemodus friert Dokumentaktualisierungen ein und verhindert so, da
 
 Tastaturnavigation, Lesezeichen und Schlüsselworthervorhebung sind beim Korrekturlesen alle Funktionen.
 
-## Anmerkungen
+## Anmerkungen [annotations]
 
 Wenn Sie im Korrekturlesemodus Text im Dokument auswählen, wird ein Popup generiert, in dem Sie aus mehreren verschiedenen Hervorhebungstypen auswählen können. Klicken Sie auf die Art der Hervorhebung, die Sie dem Text hinzufügen möchten, oder brechen Sie den Vorgang ab, indem Sie auf die Schaltfläche „Abbrechen“ klicken oder einfach außerhalb des Popups klicken.
 
-## Notizen
+## Notizen [notes]
 
 ![Annotations][1]
 
@@ -20,7 +20,7 @@ Sobald eine Hervorhebung hinzugefügt wurde, können Sie kurze Notizen hinzufüg
 
 Notizen werden **nur** exportiert, wenn sie in HTML gespeichert werden. Die Markierungen bleiben in den meisten Exportformaten erhalten, einschließlich RTF und PDF.
 
-## Rechtschreibprüfung
+## Rechtschreibprüfung [spellcheck]
 
 Im Korrekturlesemodus können Sie über das Zahnradmenü auf die systemweite Rechtschreibprüfung zugreifen: {% appmenu {{gear}}, Korrekturlesen, Alle Rechtschreibfehler hervorheben %}. Dies ist bei großen Dokumenten langsam und es wird eine Warnung angezeigt, die Sie darauf hinweist, wenn der Vorgang etwa 30 Sekunden dauert. Da die Rechtschreibprüfung in der Webvorschau von Marked nicht funktioniert, ist ein „Hack“ implementiert, damit dies funktioniert, und dieser geht nicht schnell.
 

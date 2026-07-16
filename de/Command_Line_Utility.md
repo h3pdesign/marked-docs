@@ -2,7 +2,7 @@
 
 Das Befehlszeilentool `mk` bietet einfachen Zugriff auf die Funktionen von Marked vom Terminal aus und ermöglicht so die Automatisierung von Arbeitsabläufen und die Integration mit Shell-Skripten und anderen Befehlszeilentools.
 
-## Installation
+## Installation [installation]
 
 Die empfohlene Methode zur Installation von `mk` ist mit Homebrew:
 
@@ -17,9 +17,9 @@ Wenn Sie Homebrew nicht verwenden, laden Sie das signierte Paket herunter und in
 
 Nachdem Sie `mk.pkg` heruntergeladen haben, doppelklicken Sie darauf und befolgen Sie die Anweisungen des Installationsprogramms.
 
-## Grundlegende Verwendung
+## Grundlegende Verwendung [basic-usage]
 
-### Dateien öffnen
+### Dateien öffnen [opening-files]
 
 Öffnen Sie eine Markdown-Datei in Marked über die Befehlszeile:
 
@@ -29,7 +29,7 @@ mk ~/Documents/notes.md
 mk --raise document.md  # Open and raise window above all others
 ```
 
-### Inhalte von STDIN streamen
+### Inhalte von STDIN streamen [streaming-content-from-stdin]
 
 Streamen Sie Inhalte direkt in die Streaming-Vorschau von Marked:
 
@@ -41,21 +41,21 @@ mk -  # Explicitly use STDIN
 
 Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echtzeit an, während er von anderen Befehlen weitergeleitet wird.
 
-## Befehlsreferenz
+## Befehlsreferenz [command-reference]
 
-### Dateioperationen
+### Dateioperationen [file-operations]
 
 **`mk [file]`** – Öffnen Sie eine Markdown-Datei in Marked
 
 **`mk [file] --raise`** – Datei öffnen und das Fenster über alle anderen heben
 
-### STDIN und Streaming
+### STDIN und Streaming [stdin-and-streaming]
 
 **`mk`** oder **`mk -`** – Von STDIN lesen und Streaming-Vorschau öffnen
 
 **`mk --stream`** – Streaming-Vorschaufenster öffnen, ohne STDIN zu lesen
 
-### Vorschauverwaltung
+### Vorschauverwaltung [preview-management]
 
 **`mk --refresh`** – Aktualisieren Sie das vorderste Vorschaufenster
 
@@ -63,7 +63,7 @@ Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echt
 
 **`mk --refresh file.md`** – Vorschau für eine bestimmte Datei aktualisieren (falls geöffnet)
 
-### Präferenzen
+### Präferenzen [preferences]
 
 **`mk --pref`** – Marked-Einstellungen öffnen (Seite „Allgemein“)
 
@@ -75,7 +75,7 @@ Das Fenster „Streaming-Vorschau“ wird geöffnet und zeigt den Inhalt in Echt
 mk --defaults syntaxHighlight=1 includeMathJax=0 processor=multimarkdown
 ```
 
-### Stilmanagement
+### Stilmanagement [style-management]
 
 **`mk --style NAME`** – Vorschaustil für geöffnete Fenster festlegen
 
@@ -85,7 +85,7 @@ mk --defaults syntaxHighlight=1 includeMathJax=0 processor=multimarkdown
 mk --add-style ~/Styles/custom.css
 ```
 
-### JavaScript-Ausführung
+### JavaScript-Ausführung [javascript-execution]
 
 **`mk --dojs "JAVASCRIPT_COMMAND"`** – Führen Sie JavaScript im vordersten Fenster aus
 
@@ -98,7 +98,7 @@ mk --dojs "window.scrollTo(0,0)"
 mk --dojs "alert('Hello')" all
 ```
 
-### Inhaltsextraktion und -import
+### Inhaltsextraktion und -import [content-extraction-and-import]
 
 **`mk --extract URL`** – Inhalte aus der URL extrahieren und in Marked öffnen
 
@@ -110,7 +110,7 @@ mk --extract https://example.com/article
 
 **`mk --stylestealer [URL]`** – Open Style Stealer HUD (optional mit URL)
 
-### Dienstprogrammbefehle
+### Dienstprogrammbefehle [utility-commands]
 
 **`mk --paste`** – Neues Dokument aus der Zwischenablage erstellen
 
@@ -122,40 +122,40 @@ mk --extract https://example.com/article
 
 **`mk --version`** oder **`mk -v`** – Versionsinformationen anzeigen
 
-## Beispiele
+## Beispiele [examples]
 
 „Bash
-# Öffnen Sie eine Datei
+# Öffnen Sie eine Datei [open-a-file]
 mk document.md
 
-# Markdown aus einer Datei streamen
+# Markdown aus einer Datei streamen [stream-markdown-from-a-file]
 Katzennotizen.md | mk
 
-# Prozess und Vorschau
+# Prozess und Vorschau [process-and-preview]
 grep -i "important" NOTES.md | mk
 
-# Alle Vorschauen aktualisieren
+# Alle Vorschauen aktualisieren [refresh-all-previews]
 mk --refresh all
 
-# Fügen Sie einen benutzerdefinierten Stil hinzu
+# Fügen Sie einen benutzerdefinierten Stil hinzu [add-a-custom-style]
 mk --add-style ~/Documents/MyTheme.css
 
-# Einstellungen festlegen
+# Einstellungen festlegen [set-preferences]
 mk --defaults syntaxHighlight=1 Prozessor=Multimarkdown
 
-# Führen Sie JavaScript in allen Fenstern aus
+# Führen Sie JavaScript in allen Fenstern aus [run-javascript-in-all-windows]
 mk --dojs "window.scrollTo(0,0)" alle
 
-# Inhalte von einer Webseite extrahieren
+# Inhalte von einer Webseite extrahieren [extract-content-from-a-webpage]
 mk --extract https://blog.example.com/article
 
-# Direkte Textvorschau
+# Direkte Textvorschau [preview-text-directly]
 mk --preview "## Hallo\n\nDies ist **Markdown**-Text!"
 „
 
-## Integration
+## Integration [integration]
 
-### Shell-Aliase
+### Shell-Aliase [shell-aliases]
 
 Fügen Sie zu Ihrem `~/.zshrc` oder `~/.bash_profile` hinzu:
 
@@ -164,31 +164,31 @@ alias mko='mk --raise'      # Open with raise
 alias mkr='mk --refresh all' # Refresh all
 ```
 
-### Skripte
+### Skripte [scripts]
 
 Verwenden Sie `mk` in Shell-Skripten zur Automatisierung:
 
 ```bash
 #!/bin/bash
-# Watch a file and stream changes to Marked
+# Watch a file and stream changes to Marked [watch-a-file-and-stream-changes-to-marked]
 fswatch -o document.md | while read; do
   cat document.md | mk
 done
 ```
 
-### Arbeitsabläufe
+### Arbeitsabläufe [workflows]
 
 Kombinieren Sie es mit anderen Tools:
 
 „Bash
-# Zwischenablage in Markdown umwandeln und Vorschau anzeigen
+# Zwischenablage in Markdown umwandeln und Vorschau anzeigen [convert-clipboard-to-markdown-and-preview]
 pbpaste | Abschlag | mk
 
-# Suchen und Vorschau
+# Suchen und Vorschau [search-and-preview]
 grep -r "TODO" . | Kopf -20 | mk
 „
 
-## Open Source
+## Open Source [open-source]
 
 Das Befehlszeilentool `mk` ist Open Source und unter GitHub verfügbar:
 
@@ -202,7 +202,7 @@ Sie können:
 
 Das Tool ist in Swift geschrieben und kann mit Xcode kompiliert werden. Anweisungen zum Erstellen finden Sie unter [README](https://github.com/ttscoff/mk).
 
-## Version
+## Version [version]
 
 Überprüfen Sie Ihre installierte `mk` Version mit:
 
@@ -210,7 +210,7 @@ Das Tool ist in Swift geschrieben und kann mit Xcode kompiliert werden. Anweisun
 mk --version
 ```
 
-## Verwandte Funktionen
+## Verwandte Funktionen [related-features]
 
 – Weitere Informationen zum URL-Schema von Marked finden Sie unter [URL Handler](URL_Handler)
 – Weitere Informationen zur Streaming-Vorschaufunktion finden Sie unter [Streaming Preview](Streaming_Preview)

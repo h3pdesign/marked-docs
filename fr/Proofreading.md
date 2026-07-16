@@ -6,11 +6,11 @@ Le mode de relecture fige les mises à jour du document, ce qui évite que les a
 
 La navigation au clavier, la mise en favoris et la mise en évidence des mots clés fonctionnent toutes pendant la relecture.
 
-## Annotations
+## Annotations [annotations]
 
 En mode de relecture, sélectionner du texte dans le document fait apparaître une fenêtre contextuelle qui vous permet de choisir parmi plusieurs types de surbrillance. Cliquez sur le type de surbrillance que vous souhaitez ajouter au texte, ou annulez en cliquant sur le bouton « Annuler » ou simplement en cliquant en dehors de la fenêtre contextuelle.
 
-## Notes
+## Notes [notes]
 
 ![Annotations][1]
 
@@ -20,7 +20,7 @@ Une fois une surbrillance ajoutée, vous pouvez y ajouter de courtes notes en cl
 
 Les notes ne sont exportées **que** lors de l'enregistrement au format HTML. Les surbrillances restent présentes dans la plupart des formats d'exportation, y compris RTF et PDF.
 
-## Vérification orthographique
+## Vérification orthographique [spellcheck]
 
 En mode de relecture, vous pouvez accéder au correcteur orthographique du système depuis le menu Action : {% appmenu {{gear}}, Proofing, Show Spelling Errors %}. Cela sera lent sur les documents volumineux, et un avertissement s'affichera pour vous prévenir si le traitement doit prendre plus de 30 secondes environ. Comme le correcteur orthographique ne fonctionne pas dans l'aperçu web de Marked, une « astuce » a été mise en place pour que cela fonctionne, et ce n'est pas la plus rapide.
 

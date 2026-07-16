@@ -7,7 +7,7 @@ Opties in de {% prefspane Processor %}:
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### Verwerk Markdown met
+### Verwerk Markdown met [process-markdown-with]
 
 Standaard Markdown-processor. De Kortingsprocessor heeft de voorkeur voor GitHub gebruikers, MultiMarkdown is ideaal voor schrijvers. Marked compenseert enkele verschillen tussen de syntaxis. Zie __Help->Markdown Referentie__ voor aanvullende informatie.
 
@@ -17,7 +17,7 @@ Custom Regels
 Nieuwe documenten gebruiken custom
 : Selecteer preprocessor en/of processor om regelverwerking voor nieuwe documenten automatisch in te schakelen. Als u Custom regels gebruikt, wilt u deze waarschijnlijk allebei ingeschakeld hebben.
 
-### HTML
+### HTML [html]
 
 Genereer ID's voor koppen
 : Genereer header-ID's op basis van de inhoud van de h1-h6-tag.
@@ -29,7 +29,7 @@ Verwerk Markdown binnen HTML
 : Standaard wordt Markdown binnen de HTML tags meestal genegeerd. Deze optie dwingt Marked om door te gaan met de verwerking binnen blokelementen. Houd er rekening mee dat sommige markeringen problemen kunnen veroorzaken.
 
 
-### Weergave
+### Weergave [rendering]
 
 Bewaar regeleinden in alinea's
 : Respecteer regeleinden in alineatekst en vervang deze door harde onderbrekingen in plaats van aaneenschakeling met de vorige regel.

@@ -9,7 +9,7 @@ Opzioni in {% prefspane Processor %}:
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### Processa il markdown con
+### Processa il markdown con [process-markdown-with]
 
 Processore Markdown predefinito. Il processore Discount è preferito per gli utenti GitHub, MultiMarkdown è l'ideale per gli scrittori. Marked compensa alcune differenze tra la sintassi. Vedi __Aiuto->Riferimento Markdown__ per ulteriori informazioni.
 
@@ -31,7 +31,7 @@ Processo Markdown all'interno dell'HTML
 : per impostazione predefinita, il Markdown all'interno dei tag HTML viene solitamente ignorato. Questa opzione forza Marked a continuare l'elaborazione all'interno degli elementi del blocco. Tieni presente che alcuni markup potrebbero causare problemi.
 
 
-### Rappresentazione
+### Rappresentazione [html]
 
 Conservare le interruzioni di riga nei paragrafi
 : Rispetta le interruzioni di riga nel testo del paragrafo, sostituendole con interruzioni rigide invece di concatenarle con la riga precedente.

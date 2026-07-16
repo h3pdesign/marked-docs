@@ -6,7 +6,7 @@ A Megjelölt natív **Parancsikonokat** tartalmaz (App Intents) a fájlok megnyi
 
 A teljes objektummodellel rendelkező szkript alapú automatizáláshoz lásd: [AppleScript támogatás](AppleScript_Support.html). A héjból származó URL-alapú munkafolyamatokhoz lásd: [URL-kezelő](URL_Handler.html).
 
-## Műveletek keresése
+## Műveletek keresése [finding-actions]
 
 1. Nyissa meg a **Parancsikonok** alkalmazást.
 2. Hozzon létre egy új parancsikont, vagy szerkesszen egy meglévőt.
@@ -14,7 +14,7 @@ A teljes objektummodellel rendelkező szkript alapú automatizáláshoz lásd: [
 
 A műveletek a **Dokumentumok** és **Exportálás** csoportokba sorolhatók. A Marked olyan Siri-kifejezéseket is regisztrál, mint a „Fájl exportálása megjelölve” és „Megnyitás megjelölve” funkcióval a gyors parancsikonokhoz.
 
-## A műveletek áttekintése
+## A műveletek áttekintése [actions-overview]
 
 | Akció | Cél |
 | --- | --- |
@@ -26,13 +26,13 @@ A műveletek a **Dokumentumok** és **Exportálás** csoportokba sorolhatók. A 
 
 Minden exportálási művelet visszaadja az exportált fájlt (vagy fájlokat) Parancsikonok **Fájl** kimenetként, így átadhatja őket a következő lépésnek (Mail, Finder, másik alkalmazás).
 
-## Nyissa meg a fájlt a Megjelölt helyen
+## Nyissa meg a fájlt a Megjelölt helyen [open-file-in-marked]
 
 **Paraméter:** **Fájl** – a megnyitandó dokumentum (a Finderből, a Share Sheet-ből vagy egy korábbi Parancsikon-lépésből).
 
 Megjelölve megnyitja a fájlt egy előnézeti ablakban. Használja ezt, ha meg szeretné tekinteni az előnézetet vagy szerkeszteni szeretné a Marked alkalmazásban, mielőtt bármi mást tenne.
 
-## Állítsa be az előnézeti stílust
+## Állítsa be az előnézeti stílust [set-preview-style]
 
 **Paraméterek:**
 
@@ -41,7 +41,7 @@ Megjelölve megnyitja a fájlt egy előnézeti ablakban. Használja ezt, ha meg 
 
 A stílus beállítása újratölti az előnézetet az adott témával (ugyanúgy, mint a stílus kiválasztása az előnézeti stílus menüből).
 
-## Műveletek exportálása
+## Műveletek exportálása [export-actions]
 
 Az exportálási műveletek ugyanazokkal az alapvető beállításokkal rendelkeznek:
 
@@ -62,7 +62,7 @@ Az exportálási műveletek ugyanazokkal az alapvető beállításokkal rendelke
 - A **folyamatos PDF** rögzíti az aktuális előnézeti WebView elrendezést.
 - A **Betűméret** lehetővé teszi ugyanazt az egyéni exportálási/nyomtatási betűméret beállítást a {% prefspane Export %}-től. Nem érinti a Fountain dokumentumokat.
 
-### Nyissa meg és exportálja a fájlt
+### Nyissa meg és exportálja a fájlt [open-and-export-file]
 
 A legjobb a Finder munkafolyamatokhoz: válasszon ki egy Markdown fájlt, nyissa meg a Marked alkalmazásban, és exportálja egy lépésben.
 
@@ -70,7 +70,7 @@ A legjobb a Finder munkafolyamatokhoz: válasszon ki egy Markdown fájlt, nyissa
 
 Példa a felhasználásra: egy gyors művelet, amely fájlokat vesz a Finderből, és exportál **lapszámozott PDF-et** a kiválasztott profillal és stílussal.
 
-### Dokumentum exportálása
+### Dokumentum exportálása [export-document]
 
 Exportáljon egy dokumentumot, amely **már meg van nyitva** a Megjelölt helyen.
 
@@ -81,7 +81,7 @@ Exportáljon egy dokumentumot, amely **már meg van nyitva** a Megjelölt helyen
 
 Ezt akkor használja, ha a Megjelölt már fut, és a fájl újbóli megnyitása nélkül szeretné exportálni az aktuális előnézetet.
 
-### Nyitott dokumentumok exportálása
+### Nyitott dokumentumok exportálása [export-open-documents]
 
 **Minden** jelenleg megjelölt előnézeti dokumentum exportálása.
 
@@ -92,7 +92,7 @@ Ezt akkor használja, ha a Megjelölt már fut, és a fájl újbóli megnyitása
 
 Hasznos kötegelt exportáláshoz több fejezet vagy megjegyzés áttekintése után a Marked alkalmazásban.
 
-## Margó gyorsírás
+## Margó gyorsírás [margin-shorthand]
 
 Ha a **Margins** be van állítva egy exportálási műveletnél, használjon 1-4 méretű karakterláncot. Mértékegységek: `in`, `cm`, `mm`, `pt` vagy `"` hüvelyk esetén. Az egység nélküli számot pontként kell kezelni.
 
@@ -105,9 +105,9 @@ Ha a **Margins** be van állítva egy exportálási műveletnél, használjon 1-
 
 Ez megegyezik az [AppleScript](AppleScript_Support.html#with-options-properties-record) exportrekordok `margins` kulcsával.
 
-## Példa munkafolyamatokra
+## Példa munkafolyamatokra [example-workflows]
 
-### Finder fájl PDF-be
+### Finder fájl PDF-be [finder-file-to-pdf]
 
 1. **Fájl megnyitása és exportálása**
 2. **Fájl** – bemenet a Share Sheet vagy a Finder gyorsműveletből.
@@ -116,26 +116,26 @@ Ez megegyezik az [AppleScript](AppleScript_Support.html#with-options-properties-
 5. **Profil** -- opcionális mentett exportprofil.
 6. **Kimeneti fájl** -- opcionális; hagyja üresen, hogy `filename.pdf`-t írjon a forrás mellé.
 
-### Exportálja azt, ami a Megjelöltben nyitva van
+### Exportálja azt, ami a Megjelöltben nyitva van [export-what-is-open-in-marked]
 
 1. **Export dokumentum**
 2. Hagyja üresen a **Fájl** mezőt az elülső ablak használatához.
 3. Válassza a **Formátum** lehetőséget és az opcionális profilt vagy stílust.
 
-### Nyitott dokumentumok kötegelt exportálása
+### Nyitott dokumentumok kötegelt exportálása [batch-export-open-documents]
 
 1. **Nyitott dokumentumok exportálása**
 2. Válassza a **Formátum** lehetőséget (például EPUB).
 3. Opcionálisan állítsa be a **Output Folder** beállítást, hogy az összes exportált anyagot egy könyvtárba gyűjtse.
 
-### Stílus, majd exportálás (két lépés)
+### Stílus, majd exportálás (két lépés) [style-then-export-two-steps]
 
 1. **Előnézeti stílus beállítása** -- válasszon stílust (opcionálisan célozzon meg egy adott **fájlt**).
 2. **Dokumentum exportálása** -- ugyanaz a fájl vagy elülső dokumentum, a kívánt **formátummal**.
 
 A **Stílust** közvetlenül is átadhatja egy exportálási műveletnél; A megjelölve alkalmazza a témát, és az exportálás előtt megvárja az előnézet újratöltését.
 
-## Exportálási útvonalak és homokozó
+## Exportálási útvonalak és homokozó [export-paths-and-sandboxing]
 
 - Ha a **Kimeneti fájl** vagy a **Kimeneti mappa** ki van hagyva, a Marked a forrásdokumentum mellé ír.
 - A Megjelölt köztes mappákat hozhat létre, ha az exportálási útvonal **a megnyitott dokumentum mappájában** belül van.
@@ -143,13 +143,13 @@ A **Stílust** közvetlenül is átadhatja egy exportálási műveletnél; A meg
 
 Ugyanezen sandbox-szabályokért lásd: [AppleScript támogatás](AppleScript_Support.html#export-paths-and-sandboxing).
 
-## Legacy `convert_to` akció
+## Legacy `convert_to` akció [convert_to]
 
 Az AppleScript szótár továbbra is megjeleníti a **`convert_to`**-t a Markdown szöveg vagy fájlok konvertálásához nyitott előnézet nélkül. A natív parancsikonok fenti műveletei előnyösek: megfelelően megnyitják a dokumentumokat, megvárják az előnézeti betöltést, és támogatják a lapszámozott PDF-exportálást aszinkron módon.
 
-Lásd: [Parancsikonok és `convert_to` az AppleScript támogatásban](AppleScript_Support.html#shortcuts-and-convert_to) a régebbi parancs részleteiért.
+Lásd: [Parancsikonok és `convert_to` az AppleScript támogatásban](AppleScript_Support.html#convert_to) a régebbi parancs részleteiért.
 
-## Hibaelhárítás: A műveletek nem jelennek meg a parancsikonokban
+## Hibaelhárítás: A műveletek nem jelennek meg a parancsikonokban [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Parancsikon indexek **egy** Megjelölt telepítési csomagonkénti azonosító (`com.brettterpstra.marked`). A **legmagasabb build számmal** (`CFBundleVersion`) rendelkező példányt részesíti előnyben, nem feltétlenül az Xcode-ban beépített alkalmazást.
 
@@ -171,11 +171,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 Indításkor a Marked naplózza a `[MKShortcuts] Registering App Intents`-t a Console.appban, amikor a regisztráció fut (macOS 13+).
 
-## Hibakeresés
+## Hibakeresés [debugging]
 
 Engedélyezze a **Hibakeresési módot** a {% prefspane Advanced %}-ben. A megjelölt naplók exportálási lépései Info szinten a `[AppleScript]` előtaggal a Console.app alkalmazásban és a Marked naplónézőjében (az exportálási folyamat meg van osztva az AppleScripttel).
 
-## Hibák
+## Hibák [errors]
 
 Gyakori üzenetek, amikor egy művelet sikertelen:
 

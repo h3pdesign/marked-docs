@@ -7,7 +7,7 @@ Options du {% prefspane Processor %} :
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### Traiter le Markdown avec
+### Traiter le Markdown avec [process-markdown-with]
 
 Processeur Markdown par défaut. Le processeur Discount est préféré par les utilisateurs de GitHub, MultiMarkdown est idéal pour les rédacteurs. Marked compense certaines différences de syntaxe. Voir __Aide → Référence Markdown__ pour plus d'informations.
 
@@ -17,7 +17,7 @@ Règles personnalisées
 Les nouveaux documents utilisent la personnalisation
 : Sélectionnez préprocesseur et/ou processeur pour activer automatiquement le traitement des règles sur les nouveaux documents. Si vous utilisez les Règles personnalisées, vous voudrez probablement activer les deux.
 
-### HTML
+### HTML [html]
 
 Générer des ID sur les titres
 : Génère des ID d'en-tête basés sur le contenu des balises h1 à h6.
@@ -29,7 +29,7 @@ Traiter le Markdown à l'intérieur du HTML
 : Par défaut, le Markdown à l'intérieur des balises HTML est généralement ignoré. Cette option force Marked à poursuivre le traitement à l'intérieur des éléments de bloc. Notez que certains balisages peuvent causer des problèmes.
 
 
-### Rendu
+### Rendu [rendering]
 
 Conserver les sauts de ligne dans les paragraphes
 : Respecte les sauts de ligne dans le texte des paragraphes, en les remplaçant par des sauts forcés plutôt que de les fusionner avec la ligne précédente.

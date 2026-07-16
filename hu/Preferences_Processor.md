@@ -9,7 +9,7 @@ A {% prefspane Processor %} opciói:
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### A leértékelés folyamata ezzel
+### A leértékelés folyamata ezzel [process-markdown-with]
 
 Alapértelmezett Markdown processzor. A Discount processzort a GitHub felhasználók részesítik előnyben, a MultiMarkdown ideális az íróknak. A Marked kompenzálja a szintaxis közötti különbségeket. További információkért lásd a __Súgó->Megjelölési hivatkozás__ részt.
 
@@ -19,7 +19,7 @@ Egyéni szabályok
 Az új dokumentumok egyéni használatot használnak
 : Az előfeldolgozó és/vagy processzor kiválasztása az új dokumentumok szabályfeldolgozásának automatikus engedélyezéséhez. Ha egyéni szabályokat használ, valószínűleg mindkettőt engedélyezni szeretné.
 
-### HTML
+### HTML [html]
 
 Hozzon létre azonosítókat a címsorokon
 : Fejlécazonosítókat generál a h1-h6 címke tartalma alapján.
@@ -31,7 +31,7 @@ Folyamat leértékelés a HTML-ben
 : Alapértelmezés szerint a HTML-címkéken belüli Markdown általában figyelmen kívül marad. Ez az opció arra kényszeríti a Marked-et, hogy folytassa a feldolgozást a blokkelemeken belül. Vegye figyelembe, hogy bizonyos jelölések problémákat okozhatnak.
 
 
-### Renderelés
+### Renderelés [rendering]
 
 Megőrzi a sortöréseket a bekezdésekben
 : Tartsa tiszteletben a bekezdésszöveg sortöréseit, és az előző sorral való összefűzés helyett kemény törésekre cserélje.

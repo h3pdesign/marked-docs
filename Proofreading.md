@@ -6,11 +6,11 @@ Proofreading mode freezes document updates, preventing annotations and notes fro
 
 Keyboard navigation, bookmarking and keyword highlighting all function when proofing.
 
-## Annotations
+## Annotations [annotations]
 
 While in proofreading mode, selecting text in the document will generate a popup that allows you to select from several different highlight types. Click the type of highlight you want to add to the text, or cancel by clicking the "Cancel" button or just clicking outside of the popup.
 
-## Notes
+## Notes [notes]
 
 ![Annotations][1]
 
@@ -20,7 +20,7 @@ Once a highlight is added, you can add short notes to it by clicking the highlig
 
 Notes are **only** exported when saving to HTML. Highlights remain in most export formats, including RTF and PDF.
 
-## Spellcheck
+## Spellcheck [spellcheck]
 
 While in proofreading mode, you can access the system-wide spell checker from the gear menu: {% appmenu {{gear}}, Proofing, Show Spelling Errors %}. This will be slow on large documents, and a warning will be displayed notifying you if the process will take over 30 seconds or so. Because the spell checker doesn't function in Marked's web preview, a "hack" is implemented to make this work, and it's not a speedy one.
 

@@ -7,7 +7,7 @@ Optionen im {% prefspane Processor %}:
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### Verarbeiten Sie Markdown mit
+### Verarbeiten Sie Markdown mit [process-markdown-with]
 
 Standardprozessor Markdown. Der Discount-Prozessor wird für GitHub-Benutzer bevorzugt, MultiMarkdown ist ideal für Autoren. Marked gleicht einige Unterschiede in der Syntax aus. Weitere Informationen finden Sie unter __Help->Markdown Reference__.
 
@@ -17,7 +17,7 @@ Custom Regeln
 Neue Dokumente verwenden benutzerdefinierte
 : Wählen Sie Präprozessor und/oder Prozessor aus, um die Regelverarbeitung für neue Dokumente automatisch zu aktivieren. Wenn Sie Custom-Regeln verwenden, möchten Sie wahrscheinlich, dass beide aktiviert sind.
 
-### HTML
+### HTML [html]
 
 Generieren Sie IDs für Schlagzeilen
 : Header-IDs basierend auf dem Inhalt des h1-h6-Tags generieren.
@@ -29,7 +29,7 @@ Verarbeiten Sie Markdown innerhalb von HTML
 : Standardmäßig wird Markdown innerhalb von HTML-Tags normalerweise ignoriert. Diese Option zwingt Marked, die Verarbeitung innerhalb von Blockelementen fortzusetzen. Beachten Sie, dass einige Markups Probleme verursachen können.
 
 
-### Rendern
+### Rendern [rendering]
 
 Behalten Sie Zeilenumbrüche in Absätzen bei
 : Zeilenumbrüche im Absatztext berücksichtigen und durch harte Umbrüche ersetzen, anstatt sie mit der vorherigen Zeile zu verketten.

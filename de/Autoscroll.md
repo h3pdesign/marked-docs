@@ -2,7 +2,7 @@
 
 Autoscroll bewegt die Vorschau langsam weiter, sodass Sie freihändig lesen oder Korrektur lesen können. Die Funktion ist unabhängig vom [Inhaltsverzeichnis](Document_Navigation.html) und der [Mini-Übersicht](Document_Navigation.html#minimap); sie scrollt die aktuelle Ansicht automatisch.
 
-## Starten und Stoppen
+## Starten und Stoppen [starting-and-stopping]
 
 Starten Sie Autoscroll, indem Sie {% kbd s %} drücken. Die Vorschau scrollt mit der aktuellen Geschwindigkeit vorwärts.
 

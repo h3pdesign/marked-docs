@@ -2,7 +2,7 @@
 
 „Ask About Document“ verwendet **Apple Intelligence** und das in neueren Versionen von macOS integrierte geräteinterne Sprachmodell, um Ihre Markdown-Vorschau zusammenzufassen und Fragen zu ihrem Inhalt zu beantworten. Die gesamte Verarbeitung erfolgt auf Ihrem Mac; Für diese Funktion wird der Dokumenttext nicht an die Server von Marked oder an KI-Dienste von Drittanbietern gesendet.
 
-## Was Apple Intelligence bietet
+## Was Apple Intelligence bietet [what-apple-intelligence-provides]
 
 Apple Intelligence ist Apples System für generative Funktionen auf dem Gerät. Marked nutzt das **Foundation Models**-Framework von Apple, um auf dasselbe Modell auf dem Gerät zuzugreifen, das die Systemschreibtools antreibt und direkt in Marked für dokumentenbezogene Aufgaben verfügbar gemacht wird.
 
@@ -10,7 +10,7 @@ Marked sendet den Klartext Ihres Dokuments (aus Gründen der Übersichtlichkeit 
 
 Apple Intelligence eignet sich am besten für Sprachaufgaben wie Zusammenfassungen, Gliederungen, das Extrahieren wichtiger Punkte und das Beantworten von Fragen zu bereitgestelltem Text. Es handelt sich nicht um einen allgemeinen Codierungsassistenten oder Rechner, und sehr lange Dokumente werden in Abschnitten behandelt, sodass die Ergebnisse innerhalb der Kontextgrenzen des Modells bleiben.
 
-## Systemkompatibilität
+## Systemkompatibilität [system-compatibility]
 
 „Nach Dokument fragen“ wird nur angezeigt, wenn Ihr Mac die Funktion ausführen kann.
 
@@ -28,7 +28,7 @@ Apple Intelligence eignet sich am besten für Sprachaufgaben wie Zusammenfassung
 
 Wenn Ihr Mac die Voraussetzungen erfüllt, das Menüelement jedoch fehlt, bestätigen Sie, dass Apple Intelligence aktiviert ist und dass Sie einen aktuellen Build von Marked ausführen, der diese Funktion enthält. Das Menü wird auf nicht unterstützten Systemen vollständig ausgeblendet und nicht im deaktivierten Zustand angezeigt.
 
-## Aktivieren von Apple Intelligence
+## Aktivieren von Apple Intelligence [enabling-apple-intelligence]
 
 1. Öffnen Sie **Systemeinstellungen**.
 2. Gehen Sie zu **Apple Intelligence & Siri** (oder **Apple Intelligence**, abhängig von Ihrer macOS-Version).
@@ -37,7 +37,7 @@ Wenn Ihr Mac die Voraussetzungen erfüllt, das Menüelement jedoch fehlt, bestä
 
 Marked enthält keine separate Einstellung für diese Funktion. Die Verfügbarkeit richtet sich nach dem von macOS gemeldeten Systemmodellstatus.
 
-## Öffnung „Nach Dokument fragen“.
+## Öffnung „Nach Dokument fragen“. [opening-ask-about-document]
 
 Öffnen Sie das Panel mit einer der folgenden Methoden:
 
@@ -46,7 +46,7 @@ Marked enthält keine separate Einstellung für diese Funktion. Die Verfügbarke
 
 Das Bedienfeld wird an der linken Seite des Dokumentfensters angedockt. Sie benötigen ein offenes Dokument mit lesbarem Text; Ein leeres Dokument oder eine Nur-HTML-Vorschau bietet den Befehl nicht an.
 
-## Das Fenster „Nach Dokument fragen“.
+## Das Fenster „Nach Dokument fragen“. [the-ask-about-document-panel]
 
 Das Panel ist wie eine einfache Chat-Ansicht organisiert:
 
@@ -56,7 +56,7 @@ Das Panel ist wie eine einfache Chat-Ansicht organisiert:
 
 Nachdem eine Antwort abgeschlossen ist, kehrt der Fokus zum Fragefeld zurück, sodass Sie ohne Klicken eine weitere Frage stellen können.
 
-### Voreingestellte Aktionen
+### Voreingestellte Aktionen [preset-actions]
 
 | Aktion | Was es tut |
 | :-- | :-- |
@@ -67,7 +67,7 @@ Nachdem eine Antwort abgeschlossen ist, kehrt der Fokus zum Fragefeld zurück, s
 
 Voreingestellte Aktionen erfordern keinen Text im Fragefeld. Klicken Sie auf eine Schaltfläche und warten Sie auf die Antwort im Panel oben.
 
-### Stellen Sie Ihre eigenen Fragen
+### Stellen Sie Ihre eigenen Fragen [asking-your-own-questions]
 
 1. Geben Sie eine Frage in das Feld unten im Panel ein, zum Beispiel „Welches Problem löst dieses Dokument?“ oder „Wer ist die Zielgruppe?“
 2. Drücken Sie **Return** oder klicken Sie auf **Ask**.
@@ -77,21 +77,21 @@ Bei Fragen zu einer bestimmten Passage **wählen Sie diesen Text in der Vorschau
 
 Klicken Sie auf **Abbrechen**, um eine laufende Anfrage zu stoppen.
 
-## Beispiele
+## Beispiele [examples]
 
-### Kurzer Überblick über einen langen Artikel
+### Kurzer Überblick über einen langen Artikel [quick-overview-of-a-long-article]
 
 Öffnen Sie einen längeren Blogbeitrag oder Bericht in Marked, wählen Sie **Vorschau > Nach Dokument fragen…** und klicken Sie auf **Dokument zusammenfassen**. Nutzen Sie die Zusammenfassung, um zu entscheiden, ob Sie den gesamten Artikel lesen oder Ihr Gedächtnis auffrischen möchten, nachdem Sie sich eine Weile vom Entwurf getrennt haben.
 
-### Notizen zu einem ausgewählten Absatz
+### Notizen zu einem ausgewählten Absatz [notes-on-a-selected-paragraph]
 
 Markieren Sie in der Vorschau einen dichten Absatz, öffnen Sie „Nach Dokument fragen“ und klicken Sie auf **Auswahl zusammenfassen**. Nützlich, wenn Sie nur eine kürzere Version eines Abschnitts benötigen.
 
-### Strukturüberprüfung
+### Strukturüberprüfung [structural-review]
 
 Klicken Sie bei einem Entwurf mit vielen Überschriften auf **Gliederung**, um zu sehen, ob die Argumentation logisch verläuft, oder verwenden Sie **Hauptpunkte**, bevor Sie ein Dokument an jemand anderen senden, um zu überprüfen, ob die Hauptgedanken klar sind.
 
-### Gezielte Fragen
+### Gezielte Fragen [targeted-questions]
 
 Wenn keine Auswahl aktiv ist, geben Sie Fragen ein wie:
 
@@ -101,7 +101,7 @@ Wenn keine Auswahl aktiv ist, geben Sie Fragen ein wie:
 
 Stellen Sie bei aktiver Auswahl enger gefasste Fragen wie „Was sagt dieser Absatz über den Leser aus?“ oder „Formulieren Sie diese Idee in einem Satz um“ (das Modell antwortet zur Auswahl; Ihre Quelldatei wird nicht bearbeitet).
 
-## Tipps und Einschränkungen
+## Tipps und Einschränkungen [tips-and-limitations]
 
 - **Datenschutz:** Die Verarbeitung erfolgt über das On-Device-Modell von Apple. Marked liest Ihren Dokumenttext weiterhin lokal, um diesem Modell Inhalte bereitzustellen; Behandeln Sie empfindliches Material entsprechend.
 - **Genauigkeit:** Überprüfen Sie wichtige Fakten anhand Ihrer Quelle. KI-Zusammenfassungen können Details auslassen oder mehrdeutige Passagen falsch interpretieren.

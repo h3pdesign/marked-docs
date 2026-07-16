@@ -1,4 +1,4 @@
-# Custom processorrechten in MAS-versie
+# Custom processorrechten in MAS-versie [custom-processor-permissions-in-mas-version]
 
 Vanwege sandbox-beperkingen kan de Mac App Store-versie van Marked bepaalde soorten binaire tools niet als aangepaste processors uitvoeren. Als u deze beperking tegenkomt, zijn er een paar stappen die u kunt proberen.
 

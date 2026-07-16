@@ -2,7 +2,7 @@
 
 Es gibt mehrere Möglichkeiten, zusätzliche JavaScripts in Marked einzubetten.
 
-## Einschließlich JavaScript pro Dokument
+## Einschließlich JavaScript pro Dokument [including-javascript-per-document]
 
 Sie können Skripte in ein einzelnes Dokument einfügen, indem Sie `<script>`-Tags im Inhalt selbst verwenden. Dies kann für Bibliotheken wie [D3](https://d3js.org/) für Datenvisualisierungen nützlich sein, die Sie nur in bestimmten Dokumenten benötigen:
 
@@ -16,7 +16,7 @@ CSS-Header: <script src="file.js"></script>
 
 Informationen dazu, wie die enthaltenen Skripte aktualisiert werden, wenn sich der Inhalt ändert, finden Sie unter [Hooks](#hooks).
 
-## Einschließlich JavaScript
+## Einschließlich JavaScript [including-javascript]
 
 Sie können Ihr eigenes JavaScript aus lokalen Dateien, CDNs oder durch Einfügen von Rohcode einbinden. Um darauf zuzugreifen, öffnen Sie {% prefspane Style %} und klicken Sie auf die Schaltfläche *Custom Regeln*.
 
@@ -33,9 +33,9 @@ Fügen Sie JavaScript von der URL ein
 Fügen Sie JavaScript ein
 : Öffnet einen Code-Editor, in dem Sie Ihren eigenen JavaScript-Code schreiben/einfügen können
 
-Diese Skripte werden am Ende der Vorschau vor dem Dokument-Tag eingefügt. Wenn Sie bei jeder Aktualisierung der Vorschau eine Init-Funktion aufrufen oder aktualisieren müssen, lesen Sie [Including Raw JavaScript](#rawjs) und machen Sie sich mit [hooks](#hooks) von Marked vertraut.
+Diese Skripte werden am Ende der Vorschau vor dem Dokument-Tag eingefügt. Wenn Sie bei jeder Aktualisierung der Vorschau eine Init-Funktion aufrufen oder aktualisieren müssen, lesen Sie [Including Raw JavaScript](Additional_Javascript.html#rawjs) und machen Sie sich mit [hooks](#hooks) von Marked vertraut.
 
-## Meerjungfrau und andere Skripte {#mermaid}
+## Meerjungfrau und andere Skripte [mermaid]
 
 jQuery ist standardmäßig enthalten und Sie können es in allen Skripten verwenden, die Sie mit einer der folgenden Methoden zu Marked hinzufügen.
 
@@ -45,7 +45,7 @@ Unten im {% prefspane Style %} ist ein Kontrollkästchen für „Schwenk- und Zo
 
 Wenn Sie eine bestimmte Bibliothek standardmäßig enthalten sehen möchten, teilen Sie mir dies bitte unter [BrettTerpstra.com forum](https://forum.brettterpstra.com/) oder über [the support site](https://support.markedapp.com/questions/add) mit.
 
-## Haken [Haken]
+## Haken [hooks]
 
 Ab neueren Versionen führt Marked beim Aktualisieren von Inhalten keine vollständige Seitenaktualisierung mehr durch, sondern fügt den neuen Inhalt stattdessen in das DOM ein, ohne dass ein Seitenladen erforderlich ist. Dies bedeutet, dass eingebundene Skripts, die beim Laden der Seite ausgelöst werden, nicht erneut ausgelöst werden, wenn der Inhalt aktualisiert wird. Marked bietet eine „Hooks“-Funktion, um dies zu berücksichtigen. Um einen Hook zu registrieren, müssen Sie einen zweiten Skriptblock einschließen, der [<!--MKPH0--> function](https://markedapp.com/jsapi/Marked.hooks.html#.register__anchor) aufruft und einen Auslöser, in diesem Fall „Update“, und eine auszuführende Funktion akzeptiert.
 

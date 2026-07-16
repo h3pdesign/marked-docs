@@ -8,7 +8,7 @@ Sie können die Verarbeitung jedes Dokuments als Fountain erzwingen, indem Sie d
 
 Abschnitts- und Szenenüberschriften werden im Inhaltsverzeichnis angezeigt, um eine schnelle Navigation durch Ihr Drehbuch zu ermöglichen.
 
-## Scrippets
+## Scrippets [scrippets]
 
 Sie können auch „Scrippets“ in einem regulären Dokument verwenden, um einzelne Abschnitte mit Fountain bearbeiten und formatieren zu lassen. Umgeben Sie einfach Ihr Fountain-Markup im Hauptdokument mit `[scrippet]`-Tags:
 

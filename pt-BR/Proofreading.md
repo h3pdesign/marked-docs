@@ -8,11 +8,11 @@ O modo de revisão congela as atualizações do documento, evitando que anotaç�
 
 Navegação pelo teclado, marcação de favoritos e destaque de palavras-chave, todas as funções durante a revisão.
 
-## Anotações
+## Anotações [annotations]
 
 No modo de revisão, a seleção do texto no documento gerará um pop-up que permite selecionar vários tipos de realce diferentes. Clique no tipo de destaque que deseja adicionar ao texto ou cancele clicando no botão “Cancelar” ou apenas clicando fora do pop-up.
 
-## Notas
+## Notas [notes]
 
 ![Anotações][1]
 
@@ -22,7 +22,7 @@ Depois que um destaque for adicionado, você poderá adicionar notas curtas clic
 
 As notas são exportadas **apenas** ao salvar em HTML. Os destaques permanecem na maioria dos formatos de exportação, incluindo RTF e PDF.
 
-## Verificação ortográfica
+## Verificação ortográfica [spellcheck]
 
 No modo de revisão, você pode acessar o corretor ortográfico de todo o sistema no menu de engrenagem: {% appmenu {{gear}}, Proofing, Show Spelling Errors %}. Isso será lento em documentos grandes e um aviso será exibido notificando se o processo demorar mais de 30 segundos ou mais. Como o corretor ortográfico não funciona na visualização da web do Marked, um “hack” é implementado para fazer isso funcionar, e não é rápido.
 

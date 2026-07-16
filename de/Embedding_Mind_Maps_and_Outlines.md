@@ -5,29 +5,29 @@ Mindmaps und Gliederungen können mit [Marked's include syntax][include] oder [I
 [include]: Multi-File_Documents.html
 [ia]: Multi-File_Documents.html#ia-writer-block-syntax
 
-## Unterstützte Formate
+## Unterstützte Formate [supported-formats]
 
-### iThoughts X (.itmz)
+### iThoughts X (.itmz) [ithoughts-x-itmz]
 
 iThoughts-Mindmap-Dateien sind ZIP-Archive, die Kartendaten und ein optionales Vorschaubild enthalten.
 
-### MindManager (.mmap)
+### MindManager (.mmap) [mindmanager-mmap]
 
 MindManager-Dateien sind ZIP-Archive mit `Document.xml`. Entpackte MindManager-Pakete (ein Ordner mit `Document.xml`) und direkte Pfade zu `Document.xml` werden ebenfalls unterstützt.
 
-### FreeMind (.mm)
+### FreeMind (.mm) [freemind-mm]
 
 FreeMind-Mindmap-Dateien verwenden die Erweiterung `.mm` und speichern Daten als XML. Marked erkennt das FreeMind-Format, indem es prüft, ob der Dateiinhalt mit `<map` beginnt; Wenn nicht (z. B. ein Code-Snippet), wird die Datei als einfacher Text eingefügt. FreeMind-Dateien werden für die Einbettung von Mermaid-Mindmaps unterstützt.
 
-### OPML (.opml)
+### OPML (.opml) [opml-opml]
 
 OPML (Outline Processor Markup Language) ist ein XML-Format für hierarchische Gliederungen, das häufig von Outline-Erstellern und Feed-Readern verwendet wird. iThoughts und andere Apps können nach OPML exportiert werden. Marked konvertiert enthaltene OPML-Dateien in Mermaid-Mindmap-Diagramme.
 
-### Fahrrad (.bike)
+### Fahrrad (.bike) [bike-bike]
 
 Bike.app-Umrisse werden als proprietäre HTML-Dateien (`.bike`) gespeichert. Sie können eine `.bike`-Datei direkt in Marked öffnen: Das Dokument wird als Markdown mit dem Dateinamen (ohne Erweiterung) als Hauptüberschrift (H1), Überschriftenelementen der obersten Ebene als H2, verschachtelten Überschriften als fett gedruckten Listenelementen und Aufgaben als Kontrollkästchen im GitHub-Stil gerendert. Wenn eine `.bike`-Datei über die Include-Syntax eingebunden wird, steuert die Einstellung „Als Mermaid-Diagramm einbetten“ für Bike (in Apps → Mind Maps/Outlines), ob es sich um eine Mermaid-Mindmap (mit dem Dateinamen als Stammknoten) oder eine verschachtelte Markdown-Liste (kein H1) handelt.
 
-## Karten als Meerjungfrauendiagramme einbetten
+## Karten als Meerjungfrauendiagramme einbetten [embed-maps-as-mermaid-diagrams]
 
 Wenn **aktiviert** (Standardeinstellung), konvertiert Marked enthaltene Mindmaps und Gliederungen in [Mermaid](https://mermaid.js.org/) Diagramme:
 
@@ -43,7 +43,7 @@ Wenn **deaktiviert**:
 - **OPML** – Die Gliederung ist als verschachtelte Markdown-Liste eingebettet (keine Mindmap).
 - **Fahrrad** – Die Gliederung ist als verschachtelte Markdown-Liste eingebettet (kein H1); Überschriftenelemente der obersten Ebene werden zu H2, verschachtelte Überschriften werden fett dargestellt und Aufgaben werden zu GitHub-Kontrollkästchen.
 
-## Syntax einschließen
+## Syntax einschließen [include-syntax]
 
 Verwenden Sie die gleiche Syntax wie für andere Datei-Includes:
 
@@ -59,7 +59,7 @@ Oder mit iA Writer-Blocksyntax:
 
 Pfade können relativ zum Hauptdokument oder absolut sein (beginnend mit `/` oder `~`). Weitere Informationen finden Sie unter [Multi-File Documents](Multi-File_Documents.html).
 
-## OPML Konvertierung
+## OPML Konvertierung [opml-conversion]
 
 OPML-Dateien verwenden verschachtelte `<outline>`-Elemente mit einem `text`-Attribut. Wenn „Als Meerjungfrau-Diagramm einbetten“ aktiviert ist (siehe [Settings: Apps](Settings_Apps.html)), erzeugt die Konvertierung eine Meerjungfrau-Mindmap im gleichen Format wie iThoughts und MindManager:
 
@@ -68,6 +68,6 @@ OPML-Dateien verwenden verschachtelte `<outline>`-Elemente mit einem `text`-Attr
 - Fehlendes oder leeres `text` wird als `(unnamed)` angezeigt
 - Text wird bereinigt; Sonderzeichen werden für Mermaid maskiert
 
-## Fahrradumbau
+## Fahrradumbau [bike-conversion]
 
 Bike-`.bike`-Dateien sind HTML mit einem Stammelement `<ul>` und `<li>`. Elemente können `data-type="heading"` (oberste Ebene → H2 beim Öffnen oder im Listenmodus; verschachtelt → fett) oder `data-type="task"` (GitHub Kontrollkästchen; abgeschlossen, wenn `data-done` einen Zeitstempel hat oder `data-checked` / `data-completed` wahr ist). Inline-Formatierungen und Links im Knotentext werden in Markdown konvertiert. Beim Einbetten als Mermaid-Mindmap wird der Dateiname (ohne Erweiterung) als einzelner Stammknoten verwendet und die Beschriftungen sind als einfacher Text für die Mermaid-Mindmap-Syntax formatiert.

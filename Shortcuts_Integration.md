@@ -4,7 +4,7 @@ Marked includes native **Shortcuts** actions (App Intents) for opening files, ch
 
 For script-based automation with a full object model, see [AppleScript Support](AppleScript_Support.html). For URL-based workflows from the shell, see the [URL Handler](URL_Handler.html).
 
-## Finding actions
+## Finding actions [finding-actions]
 
 1. Open the **Shortcuts** app.
 2. Create a new shortcut or edit an existing one.
@@ -12,7 +12,7 @@ For script-based automation with a full object model, see [AppleScript Support](
 
 Actions are grouped under **Documents** and **Export**. Marked also registers Siri phrases such as "Export file with Marked" and "Open in Marked" for quick shortcuts.
 
-## Actions overview
+## Actions overview [actions-overview]
 
 | Action | Purpose |
 | --- | --- |
@@ -24,13 +24,13 @@ Actions are grouped under **Documents** and **Export**. Marked also registers Si
 
 All export actions return the exported file (or files) as Shortcuts **File** output so you can pass them to the next step (Mail, Finder, another app).
 
-## Open File in Marked
+## Open File in Marked [open-file-in-marked]
 
 **Parameter:** **File** -- the document to open (from Finder, Share Sheet, or a previous Shortcuts step).
 
 Marked opens the file in a preview window. Use this when you want to preview or edit in Marked before doing anything else.
 
-## Set Preview Style
+## Set Preview Style [set-preview-style]
 
 **Parameters:**
 
@@ -39,7 +39,7 @@ Marked opens the file in a preview window. Use this when you want to preview or 
 
 Setting a style reloads the preview with that theme (same as choosing a style from the preview style menu).
 
-## Export actions
+## Export actions [export-actions]
 
 Export actions share the same core options:
 
@@ -60,7 +60,7 @@ Export actions share the same core options:
 - **Continuous PDF** captures the current preview WebView layout.
 - **Font Size** enables the same custom export/print font size option from {% prefspane Export %}. It does not affect Fountain documents.
 
-### Open and Export File
+### Open and Export File [open-and-export-file]
 
 Best for Finder workflows: pick a Markdown file, open it in Marked, and export in one step.
 
@@ -68,7 +68,7 @@ Best for Finder workflows: pick a Markdown file, open it in Marked, and export i
 
 Example use: a Quick Action that takes files from Finder and exports **Paginated PDF** with a chosen profile and style.
 
-### Export Document
+### Export Document [export-document]
 
 Export a document that is **already open** in Marked.
 
@@ -79,7 +79,7 @@ Export a document that is **already open** in Marked.
 
 Use this when Marked is already running and you want to export the current preview without reopening the file.
 
-### Export Open Documents
+### Export Open Documents [export-open-documents]
 
 Export **every** preview document currently open in Marked.
 
@@ -90,7 +90,7 @@ Export **every** preview document currently open in Marked.
 
 Useful for batch export after reviewing multiple chapters or notes in Marked.
 
-## Margin shorthand
+## Margin shorthand [margin-shorthand]
 
 When **Margins** is set on an export action, use a string with one to four measurements. Units: `in`, `cm`, `mm`, `pt`, or `"` for inches. A number without a unit is treated as points.
 
@@ -103,9 +103,9 @@ When **Margins** is set on an export action, use a string with one to four measu
 
 This matches the `margins` key in [AppleScript](AppleScript_Support.html#with-options-properties-record) export records.
 
-## Example workflows
+## Example workflows [example-workflows]
 
-### Finder file to PDF
+### Finder file to PDF [finder-file-to-pdf]
 
 1. **Open and Export File**
 2. **File** -- input from Share Sheet or Finder Quick Action.
@@ -114,26 +114,26 @@ This matches the `margins` key in [AppleScript](AppleScript_Support.html#with-op
 5. **Profile** -- optional saved export profile.
 6. **Output File** -- optional; leave empty to write `filename.pdf` next to the source.
 
-### Export what is open in Marked
+### Export what is open in Marked [export-what-is-open-in-marked]
 
 1. **Export Document**
 2. Leave **File** empty to use the front window.
 3. Choose **Format** and optional profile or style.
 
-### Batch export open documents
+### Batch export open documents [batch-export-open-documents]
 
 1. **Export Open Documents**
 2. Choose **Format** (for example EPUB).
 3. Optionally set **Output Folder** to collect all exports in one directory.
 
-### Style then export (two steps)
+### Style then export (two steps) [style-then-export-two-steps]
 
 1. **Set Preview Style** -- pick a style (optionally target a specific **File**).
 2. **Export Document** -- same file or front document, with desired **Format**.
 
 You can also pass **Style** directly on an export action; Marked applies the theme and waits for the preview reload before exporting.
 
-## Export paths and sandboxing
+## Export paths and sandboxing [export-paths-and-sandboxing]
 
 - If **Output File** or **Output Folder** is omitted, Marked writes beside the source document.
 - Marked can create intermediate folders when the export path is **inside the folder of the open document**.
@@ -141,13 +141,13 @@ You can also pass **Style** directly on an export action; Marked applies the the
 
 See [AppleScript Support](AppleScript_Support.html#export-paths-and-sandboxing) for the same sandbox rules.
 
-## Legacy `convert_to` action
+## Legacy `convert_to` action [convert_to]
 
 The AppleScript dictionary still exposes **`convert_to`** for converting Markdown text or files without an open preview. Native Shortcuts actions above are preferred: they open documents properly, wait for preview load, and support paginated PDF export asynchronously.
 
-See [Shortcuts and `convert_to` in AppleScript Support](AppleScript_Support.html#shortcuts-and-convert_to) for details on the legacy command.
+See [Shortcuts and `convert_to` in AppleScript Support](AppleScript_Support.html#convert_to) for details on the legacy command.
 
-## Troubleshooting: actions not appearing in Shortcuts
+## Troubleshooting: actions not appearing in Shortcuts [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Shortcuts indexes **one** Marked install per bundle identifier (`com.brettterpstra.marked`). It prefers the copy with the **highest build number** (`CFBundleVersion`), not necessarily the app you just built in Xcode.
 
@@ -169,11 +169,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 On launch, Marked logs `[MKShortcuts] Registering App Intents` in Console.app when registration runs (macOS 13+).
 
-## Debugging
+## Debugging [debugging]
 
 Enable **Debug mode** in {% prefspane Advanced %}. Marked logs export steps at Info level with the prefix `[AppleScript]` in Console.app and Marked's log viewer (the export pipeline is shared with AppleScript).
 
-## Errors
+## Errors [errors]
 
 Common messages when an action fails:
 

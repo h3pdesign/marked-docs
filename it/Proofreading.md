@@ -8,11 +8,11 @@ La modalità di correzione di bozze congela gli aggiornamenti del documento, imp
 
 Navigazione tramite tastiera, aggiunta di segnalibri ed evidenziazione di parole chiave sono tutte funzioni durante la correzione.
 
-## Annotazioni
+## Annotazioni [annotations]
 
 Durante la modalità di correzione di bozze, la selezione del testo nel documento genererà un popup che ti consentirà di selezionare tra diversi tipi di evidenziazione. Fai clic sul tipo di evidenziazione che desideri aggiungere al testo oppure annulla facendo clic sul pulsante "Annulla" o semplicemente facendo clic all'esterno del popup.
 
-## Note
+## Note [notes]
 
 ![Annotazioni][1]
 
@@ -22,7 +22,7 @@ Una volta aggiunta un'evidenziazione, puoi aggiungervi brevi note facendo clic s
 
 Le note vengono esportate **solo** durante il salvataggio in HTML. Le evidenziazioni rimangono nella maggior parte dei formati di esportazione, inclusi RTF e PDF.
 
-## Controllo ortografico
+## Controllo ortografico [spellcheck]
 
 In modalità correzione di bozze, puoi accedere al controllo ortografico a livello di sistema dal menu a forma di ingranaggio: {% appmenu {{gear}}, Proofing, Highlight All Spelling Errors %}. Questo sarà lento su documenti di grandi dimensioni e verrà visualizzato un avviso che ti avvisa se il processo richiederà più di 30 secondi circa. Poiché il controllo ortografico non funziona nell'anteprima web di Marked, è stato implementato un "hack" per farlo funzionare, e non è rapido.
 

@@ -2,7 +2,7 @@
 
 Über das Hilfemenü oder mit {{opt}}{{cmd}}K öffnen Sie ein schwebendes Bedienfeld mit einer Kurzbefehl-Übersicht.
 
-### Kurzbefehle
+### Kurzbefehle [shortcuts]
 
 | Tastenkürzel | Funktion |
 | ---: | :--- |
@@ -55,7 +55,7 @@
 
 
 
-### Schnellschalter
+### Schnellschalter [quick-toggles]
 
 Zusätzliche Tastenkürzel zum Umschalten gängiger globaler Einstellungen.
 
@@ -104,7 +104,7 @@ Drücken Sie jederzeit „?“, um die folgenden Kurzbefehle im Vorschaufenster 
 | **{{shift}}{{cmd}}F** | Sichtbaren Bereich fokussieren |
 [Vorschau-Navigation]
 
-### Inhaltsverzeichnis-Navigation
+### Inhaltsverzeichnis-Navigation [TableofContentsNavigation]
 
 Wenn das Inhaltsverzeichnis geöffnet ist, können Sie per Tastatur navigieren.
 

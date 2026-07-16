@@ -6,7 +6,7 @@ Marked incluye acciones nativas de **Atajos** (App Intents) para abrir archivos,
 
 Para la automatización basada en scripts con un modelo de objetos completo, consulte [Soporte de AppleScript](AppleScript_Support.html). Para flujos de trabajo basados ​​en URL desde el shell, consulte [Manejador de URL](URL_Handler.html).
 
-## Encontrar acciones
+## Encontrar acciones [finding-actions]
 
 1. Abra la aplicación **Atajos**.
 2. Cree un nuevo acceso directo o edite uno existente.
@@ -14,7 +14,7 @@ Para la automatización basada en scripts con un modelo de objetos completo, con
 
 Las acciones se agrupan en **Documentos** y **Exportar**. Marked también registra frases de Siri como "Exportar archivo con Marked" y "Abrir en Marked" para atajos rápidos.
 
-## Resumen de acciones
+## Resumen de acciones [actions-overview]
 
 | Acción | Propósito |
 | --- | --- |
@@ -26,13 +26,13 @@ Las acciones se agrupan en **Documentos** y **Exportar**. Marked también regist
 
 Todas las acciones de exportación devuelven el archivo (o archivos) exportados como accesos directos **Archivo** para que pueda pasarlos al siguiente paso (Correo, Finder, otra aplicación).
 
-## Abrir archivo en marcado
+## Abrir archivo en marcado [open-file-in-marked]
 
 **Parámetro:** **Archivo**: el documento que se va a abrir (desde Finder, Hoja para compartir o un paso de Accesos directos anterior).
 
 Marcado abre el archivo en una ventana de vista previa. Utilízalo cuando quieras obtener una vista previa o editar en Marcado antes de hacer cualquier otra cosa.
 
-## Establecer estilo de vista previa
+## Establecer estilo de vista previa [set-preview-style]
 
 **Parámetros:**
 
@@ -41,7 +41,7 @@ Marcado abre el archivo en una ventana de vista previa. Utilízalo cuando quiera
 
 Al establecer un estilo, se recarga la vista previa con ese tema (igual que elegir un estilo en el menú de estilos de vista previa).
 
-## Exportar acciones
+## Exportar acciones [export-actions]
 
 Las acciones de exportación comparten las mismas opciones principales:
 
@@ -62,7 +62,7 @@ Las acciones de exportación comparten las mismas opciones principales:
 - **PDF continuo** captura el diseño de vista previa actual de WebView.
 - **Tamaño de fuente** habilita la misma opción personalizada de tamaño de fuente para exportar/imprimir desde {% prefspane Export %}. No afecta a los documentos de Fountain.
 
-### Abrir y exportar archivo
+### Abrir y exportar archivo [open-and-export-file]
 
 Lo mejor para los flujos de trabajo de Finder: elija un archivo Markdown, ábralo en Marked y expórtelo en un solo paso.
 
@@ -70,7 +70,7 @@ Lo mejor para los flujos de trabajo de Finder: elija un archivo Markdown, ábral
 
 Uso de ejemplo: una acción rápida que toma archivos del Finder y exporta **PDF paginado** con un perfil y estilo elegidos.
 
-### Exportar documento
+### Exportar documento [export-document]
 
 Exporte un documento que **ya esté abierto** en Marcado.
 
@@ -81,7 +81,7 @@ Exporte un documento que **ya esté abierto** en Marcado.
 
 Úselo cuando Marked ya se esté ejecutando y desee exportar la vista previa actual sin volver a abrir el archivo.
 
-### Exportar documentos abiertos
+### Exportar documentos abiertos [export-open-documents]
 
 Exporte **todos** los documentos de vista previa abiertos actualmente en Marked.
 
@@ -92,7 +92,7 @@ Exporte **todos** los documentos de vista previa abiertos actualmente en Marked.
 
 Útil para la exportación por lotes después de revisar varios capítulos o notas en Marcado.
 
-## Taquigrafía de margen
+## Taquigrafía de margen [margin-shorthand]
 
 Cuando se configura **Márgenes** en una acción de exportación, utilice una cadena con una a cuatro medidas. Unidades: `in`, `cm`, `mm`, `pt` o `"` para pulgadas. Un número sin unidad se trata como puntos.
 
@@ -105,9 +105,9 @@ Cuando se configura **Márgenes** en una acción de exportación, utilice una ca
 
 Esto coincide con la clave `margins` en [AppleScript](AppleScript_Support.html#with-options-properties-record) registros de exportación.
 
-## Flujos de trabajo de ejemplo
+## Flujos de trabajo de ejemplo [example-workflows]
 
-### Archivo del buscador a PDF
+### Archivo del buscador a PDF [finder-file-to-pdf]
 
 1. **Abrir y exportar archivo**
 2. **Archivo**: entrada desde Hoja para compartir o Acción rápida del Finder.
@@ -116,26 +116,26 @@ Esto coincide con la clave `margins` en [AppleScript](AppleScript_Support.html#w
 5. **Perfil**: perfil de exportación guardado opcional.
 6. **Archivo de salida** -- opcional; déjelo vacío para escribir `filename.pdf` junto a la fuente.
 
-### Exportar lo que está abierto en Marcado
+### Exportar lo que está abierto en Marcado [export-what-is-open-in-marked]
 
 1. **Documento de exportación**
 2. Deje **Archivo** vacío para usar la ventana frontal.
 3. Elija **Formato** y perfil o estilo opcional.
 
-### Exportar por lotes documentos abiertos
+### Exportar por lotes documentos abiertos [batch-export-open-documents]
 
 1. **Exportar documentos abiertos**
 2. Elija **Formato** (por ejemplo EPUB).
 3. Opcionalmente, configure **Carpeta de salida** para recopilar todas las exportaciones en un directorio.
 
-### Estilo y luego exportar (dos pasos)
+### Estilo y luego exportar (dos pasos) [style-then-export-two-steps]
 
 1. **Establecer estilo de vista previa**: elija un estilo (opcionalmente, seleccione un **Archivo** específico).
 2. **Exportar documento**: el mismo archivo o documento frontal, con el **Formato** deseado.
 
 También puedes pasar **Estilo** directamente en una acción de exportación; Marked aplica el tema y espera a que se vuelva a cargar la vista previa antes de exportar.
 
-## Exportar rutas y sandboxing
+## Exportar rutas y sandboxing [export-paths-and-sandboxing]
 
 - Si se omite **Archivo de salida** o **Carpeta de salida**, Marcado escribe junto al documento de origen.
 - Marked puede crear carpetas intermedias cuando la ruta de exportación está **dentro de la carpeta del documento abierto**.
@@ -143,13 +143,13 @@ También puedes pasar **Estilo** directamente en una acción de exportación; Ma
 
 Consulte [Soporte de AppleScript](AppleScript_Support.html#export-paths-and-sandboxing) para conocer las mismas reglas de la zona de pruebas.
 
-## Legado `convert_to` acción
+## Legado `convert_to` acción [convert_to]
 
 El diccionario AppleScript todavía expone **`convert_to`** para convertir texto o archivos Markdown sin una vista previa abierta. Se prefieren las acciones de accesos directos nativos anteriores: abren documentos correctamente, esperan la carga de la vista previa y admiten la exportación de PDF paginados de forma asincrónica.
 
-Consulte [Atajos y `convert_to` en compatibilidad con AppleScript](AppleScript_Support.html#shortcuts-and-convert_to) para obtener detalles sobre el comando heredado.
+Consulte [Atajos y `convert_to` en compatibilidad con AppleScript](AppleScript_Support.html#convert_to) para obtener detalles sobre el comando heredado.
 
-## Solución de problemas: acciones que no aparecen en los accesos directos
+## Solución de problemas: acciones que no aparecen en los accesos directos [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Índices de accesos directos **uno** Instalación marcada por identificador de paquete (`com.brettterpstra.marked`). Prefiere la copia con el **número de compilación más alto** (`CFBundleVersion`), no necesariamente la aplicación que acabas de crear en Xcode.
 
@@ -171,11 +171,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 Al iniciarse, Marked registra `[MKShortcuts] Registering App Intents` en Console.app cuando se ejecuta el registro (macOS 13+).
 
-## Depuración
+## Depuración [debugging]
 
 Habilite el **modo de depuración** en {% prefspane Advanced %}. Los registros marcados exportan pasos a nivel de información con el prefijo `[AppleScript]` en Console.app y el visor de registros de Marked (la canalización de exportación se comparte con AppleScript).
 
-## Errores
+## Errores [errors]
 
 Mensajes comunes cuando una acción falla:
 

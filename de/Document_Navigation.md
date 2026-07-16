@@ -2,7 +2,7 @@
 
 Auf dieser Seite wird beschrieben, wie Sie sich in langen Vorschauen bewegen: über das [Inhaltsverzeichnis](#table-of-contents), die [schnelle Suche](#fast-search), [Lesezeichen](#bookmarks-and-mini-map) und die [Mini-Übersicht](#minimap). Informationen zu Tastaturkurzbefehlen für den Bildlauf, die überall gelten (z. B. {% kbd j %}/{% kbd k %}), finden Sie unter [Tastaturnavigation](Interface_Features.html#keyboardnavigation) auf der Seite [Oberflächenfunktionen](Interface_Features.html).
 
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis [table-of-contents]
 
 ![][8]
 
@@ -27,19 +27,19 @@ Eine kompakte Übersicht der Tasten finden Sie unter [Tastaturkurzbefehle](Keybo
 
 Siehe auch das [Video zur Dokumentnavigation auf YouTube](https://www.youtube.com/watch?v=Z2p5BvBpbmA&list=PLNoOPRHOBV0ptk_ka386xltm3VyVw6QgZ&index=2).
 
-### Vollbildmodus für das Inhaltsverzeichnis
+### Vollbildmodus für das Inhaltsverzeichnis [full-screen-mode-for-the-table-of-contents]
 
 Wenn ein Marked-Vorschaufenster im Vollbildmodus angezeigt wird, kann das Inhaltsverzeichnis zur ständigen Navigation links fixiert bleiben. Es lässt sich weiterhin mit {% kbd cmd T %} ein- und ausblenden; wenn Sie in diesem Layout außerhalb des Inhaltsverzeichnisses klicken, wird es oft nicht geschlossen.
 
 Klicken Sie in einem normalen Fenster auf das Symbol unten im Inhaltsverzeichnisfenster, um es als Seitenleiste anzudocken. Klicken Sie auf das Symbol oben in der Seitenleiste, um zum Popup-Modus zurückzukehren.
 
-### Anpassen, wo das Inhaltsverzeichnis erscheint
+### Anpassen, wo das Inhaltsverzeichnis erscheint [customizing-where-the-toc-appears]
 
-Das Inhaltsverzeichnis kann mit der [speziellen Syntax](Special_Syntax.html#tocplacement) `<!--TOC-->` in das exportierte Dokument eingefügt werden.
+Das Inhaltsverzeichnis kann mit der [speziellen Syntax](Special_Syntax.html#tableofcontents) `<!--TOC-->` in das exportierte Dokument eingefügt werden.
 
 Fügen Sie `max#` hinzu (zum Beispiel `<!--TOC max2-->`), um die Anzahl der angezeigten Überschriftenebenen zu begrenzen.
 
-## Schnelle Suche
+## Schnelle Suche [fast-search]
 
 **Schnelle Navigation** kombiniert das Inhaltsverzeichnis mit fokussiertem Filter, sodass Sie mit minimalem Tippaufwand springen können:
 
@@ -53,11 +53,11 @@ Fügen Sie `max#` hinzu (zum Beispiel `<!--TOC max2-->`), um die Anzahl der ange
 
 (In früherer Dokumentation wurde dies als „Fast Switcher“ bezeichnet; es handelt sich um dieselbe Funktion.)
 
-## Lesezeichen und Mini-Übersicht {#bookmarks-and-mini-map}
+## Lesezeichen und Mini-Übersicht [bookmarks-and-mini-map]
 
 Verwenden Sie das Vorschaumenü {% appmenu {{gear}} %} und {% kbd Tab %} ({% kbd ⇥ %}) zum Fokussieren des Dokuments neben der [Suche](Interface_Features.html#search), um beim Überfliegen Lesezeichen zu setzen und erneut aufzurufen.
 
-### Lesezeichen setzen
+### Lesezeichen setzen [setting-bookmarks]
 
 Setzen Sie Lesezeichen an der Scrollposition mit {% kbd shift 1 %}–{% kbd shift 9 %} und springen Sie mit {% kbd 1 %}–{% kbd 9 %} zurück. Verwenden Sie {% kbd n %} und {% kbd p %} für das nächste/vorherige Lesezeichen in **Dokumentreihenfolge**; {% kbd shift n %} und {% kbd shift p %} für das nächste/vorherige in **numerischer** Reihenfolge.
 
@@ -73,7 +73,7 @@ Drücken Sie zweimal {% kbd x %} ({% kbd xx %}), um alle Lesezeichen zu löschen
 
 Es gibt [weitere Tastaturkurzbefehle für die Vorschau](Keyboard_Shortcuts.html); drücken Sie {% kbd h %} in der Vorschau für eine Schnellübersicht oder {% kbd opt cmd K %} für die vollständige Referenz.
 
-### Mini-Übersicht {#minimap}
+### Mini-Übersicht [minimap]
 
 Wenn die Mini-Übersicht unter {% prefspane Preview %} aktiviert ist, öffnet {% kbd 0 %} eine skalierte Miniaturansicht des gesamten Dokuments entlang der Lesezeichenleiste. Klicken Sie auf eine beliebige Stelle der Übersicht, um die vollständige Vorschau dorthin zu scrollen. Gespeicherte Lesezeichen erscheinen als horizontale Linien mit Nummern (und ggf. Überschriften).
 
@@ -85,6 +85,6 @@ Drücken Sie {% kbd 0 %} oder Escape, um die Mini-Übersicht zu schließen.
 
 **Leistungshinweis:** Das Generieren der Übersicht kann die Vorschau bei sehr großen Dokumenten kurz anhalten; dies geschieht nur, wenn die Übersicht sichtbar ist, oder nach einer Größenänderung.
 
-### Zoom-Übersicht (verwandt)
+### Zoom-Übersicht (verwandt) [zoom-overview-related]
 
 Eine Übersicht im Textmaßstab ohne die Mini-Übersicht finden Sie unter [Zoom-Übersicht](Zoom_Overview.html) ({% kbd z %}).

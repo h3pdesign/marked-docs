@@ -2,7 +2,7 @@
 
 Speed Read ist ein Lesemodus im RSVP-Stil, der jeweils ein Wort in einem fokussierten Overlay anzeigt.
 
-## So funktioniert Speed Read
+## So funktioniert Speed Read [how-speed-read-works]
 
 Speed Read verwendet eine Methode namens **Rapid Serial Visual Presentation** (RSVP). Anstatt Ihren Blick über Textzeilen zu bewegen, erscheinen die Wörter an einer festen Position. Dadurch werden die Augenbewegungen, Zeilenwechsel und Rücksprünge reduziert, die normalerweise beim Lesen auftreten – das eignet sich zum Überfliegen, zum Wiederholen von vertrautem Material oder zum schnellen Durchgehen von Texten, ohne den Überblick zu verlieren.
 
@@ -10,7 +10,7 @@ Die Methode ist keine Zauberei und garantiert kein besseres Verständnis bei seh
 
 Der rote Buchstabe markiert den visuellen Ankerpunkt des Wortes, der manchmal auch **optimaler Erkennungspunkt** genannt wird. Bei vielen Wörtern erkennen Leser das Wort am effizientesten, wenn ihr Blick leicht links von der Mitte landet und nicht auf dem ersten Buchstaben. Indem dieser Ankerpunkt an der gleichen Stelle bleibt und hervorgehoben wird, gibt Speed Read Ihrem Auge ein konsistentes Ziel. Das Ergebnis ist weniger Neufokussierung zwischen den Wörtern und ein gleichmäßigerer Rhythmus, während der Text fortschreitet.
 
-## Speed Read öffnen
+## Speed Read öffnen [opening-speed-read]
 
 Verwenden Sie **Vorschau > Speed Read**, den Eintrag **Speed Read** im Zahnradmenü des Vorschaufensters, oder drücken Sie {% kbd ctrl opt S %}. Der Menüpunkt ist verfügbar, wenn ein Markdown-Vorschaufenster aktiv ist (er ist für Rohvorschauen von HTML deaktiviert und wenn kein Dokument geöffnet ist).
 
@@ -23,7 +23,7 @@ Wenn Speed Read geöffnet wird, startet es im angehaltenen Zustand, sodass Sie s
 </video>
 <p><em>Speed-Read-Overlay mit Wiedergabesteuerung, Synchronisierungsoption und Hilfezugriff.</em></p>
 
-## Overlay-Steuerelemente
+## Overlay-Steuerelemente [overlay-controls]
 
 Sobald das Overlay sichtbar ist, sind diese Tasten verfügbar:
 
@@ -42,11 +42,11 @@ Andere normale Tastenkombinationen für die Vorschau-Navigation funktionieren we
 
 Das Inhaltsverzeichnis kann auch verwendet werden, während Speed Read aktiv ist. Drücken Sie {% kbd cmd t %}, um es zu öffnen und darin zu navigieren, oder drücken Sie {% kbd f %}, um sofort die Schnellsuche zu fokussieren und in den Überschriften des Dokuments zu navigieren.
 
-## Mit einer Auswahl starten
+## Mit einer Auswahl starten [starting-from-a-selection]
 
 Wenn beim Starten von Speed Read in der Vorschau Text ausgewählt ist, verwendet die Wiedergabe den ausgewählten Text. Wenn keine Auswahl aktiv ist, verwendet Speed Read den vollständigen Dokumenttext.
 
-## Synchronisierung mit der Scroll-Position
+## Synchronisierung mit der Scroll-Position [syncing-with-scroll-position]
 
 Aktivieren Sie **Speed Reading mit Scroll-Position synchronisieren** unter {% prefspane Preview %} oder verwenden Sie das Kontrollkästchen im Speed-Read-Overlay, um die Vorschau und die Speed-Read-Position zusammenzuhalten.
 
@@ -54,6 +54,6 @@ Wenn diese Option aktiviert ist, beginnt Speed Read mit dem aktuell oben in der 
 
 Wenn Sie Speed Read schließen, durch die Vorschau scrollen und das Overlay erneut öffnen, beginnt die Wiedergabe an der neuen sichtbaren Position. Wenn Sie das Kontrollkästchen im Overlay aktivieren, nachdem Speed Read bereits geöffnet ist, wird die Wiedergabe auf die aktuelle Scroll-Position zurückgesetzt und von dort aus fortgesetzt.
 
-## Gespeicherte Geschwindigkeit
+## Gespeicherte Geschwindigkeit [remembered-speed]
 
 Der WPM-Wert wird automatisch gespeichert, wenn Sie ihn mit {% kbd ← %} und {% kbd → %} ändern. Ihre gewählte Geschwindigkeit wird bei der nächsten Verwendung von Speed Read wiederhergestellt.

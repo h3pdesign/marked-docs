@@ -1,6 +1,6 @@
 <!-- MT-DRAFT: machine translation; human review required -->
 
-# MAS バージョンのカスタムプロセッサ権限
+# MAS バージョンのカスタムプロセッサ権限 [custom-processor-permissions-in-mas-version]
 
 サンドボックスの制限により、Mac App Store バージョンの Marked は、特定の種類のバイナリ ツールをカスタム プロセッサとして実行できません。この制限に遭遇した場合は、いくつかの手順を試すことができます。
 

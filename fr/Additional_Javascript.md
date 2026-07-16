@@ -2,7 +2,7 @@
 
 Vous pouvez inclure votre propre JavaScript à partir de CDN ou en collant du code brut.
 
-## Remarque sur Marked Conductor
+## Remarque sur Marked Conductor [a-note-about-marked-conductor]
 
 La façon la plus simple d'implémenter du JavaScript personnalisé qui varie selon le type de document et son emplacement est d'utiliser [Marked Conductor][conductor]. Cela vous permet d'utiliser une configuration YAML pour ajouter des scripts à l'aide de « filtres ». Consultez la [page Conductor][conductor] pour plus de détails, et l'[exemple de configuration][sample config] pour des exemples.
 

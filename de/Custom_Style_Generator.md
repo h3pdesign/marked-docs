@@ -2,7 +2,7 @@
 
 Der Custom Style Generator ist ein webbasiertes Tool, mit dem Sie benutzerdefinierte Stile für Marked erstellen können, ohne CSS von Hand schreiben zu müssen. Es bietet eine visuelle Benutzeroberfläche mit Steuerelementen für Typografie, Farben, Abstände und mehr sowie eine Live-Vorschau, die aktualisiert wird, wenn Sie Änderungen vornehmen.
 
-## Zugriff auf den Generator
+## Zugriff auf den Generator [accessing-the-generator]
 
 Der Style Generator ist unter [https://markedapp.com/style-generator/](https://markedapp.com/style-generator/) verfügbar. Sie können es direkt in Ihrem Webbrowser verwenden – keine Installation erforderlich.
 
@@ -10,7 +10,7 @@ Der Style Generator ist unter [https://markedapp.com/style-generator/](https://m
 
   [img-style-generator]: images/style-generator-800.jpg @2x width=800 class=center
 
-## Erste Schritte
+## Erste Schritte [getting-started]
 
 Wenn Sie den Generator zum ersten Mal öffnen, sehen Sie Folgendes:
 
@@ -18,19 +18,19 @@ Wenn Sie den Generator zum ersten Mal öffnen, sehen Sie Folgendes:
 - **Steuerelementbereich** (rechts): Alle Stilsteuerelemente in Abschnitten organisiert
 - **Symbolleiste** (oben): Stiltitel, Basisthemenauswahl und CSS-Importoption
 
-### Auswählen eines Basisthemas
+### Auswählen eines Basisthemas [choosing-a-base-theme]
 
 Wählen Sie zunächst ein **Basisthema** aus der Dropdown-Liste aus. Dies bildet die Grundlage für Ihren Stil – Sie können ihn dann in jedem Aspekt individuell anpassen. Zu den beliebten Optionen gehören „Leer“ (für den Neuanfang), „Standard“ und verschiedene integrierte Designs.
 
-### Vorhandenes CSS importieren
+### Vorhandenes CSS importieren [importing-existing-css]
 
 Wenn Sie eine bestehende CSS-Datei haben, die Sie als Ausgangspunkt verwenden möchten, klicken Sie auf **CSS importieren** und wählen Sie Ihre Datei aus. Der Generator lädt diese Stile und Sie können sie dann mithilfe der Steuerelemente ändern.
 
-## Stil-Steuerelemente
+## Stil-Steuerelemente [style-controls]
 
 Der Generator organisiert Steuerelemente in logische Abschnitte:
 
-### Basistypografie
+### Basistypografie [base-typography]
 
 Steuern Sie die grundlegenden Typografieeinstellungen:
 
@@ -39,7 +39,7 @@ Steuern Sie die grundlegenden Typografieeinstellungen:
 - **Zeilenhöhe**: Der Abstand zwischen Textzeilen
 - **Skalierungsverhältnis**: Das für die typografische Skalierung verwendete Verhältnis (beeinflusst die Überschriftengrößen)
 
-### Layout
+### Layout [layout]
 
 Abstand und Einzug anpassen:
 
@@ -48,7 +48,7 @@ Abstand und Einzug anpassen:
 - **List Indent**: Einrückung für Listen
 - **Blockquote Indent**: Linker Rand für Blockzitate
 
-### Schriftarten
+### Schriftarten [fonts]
 
 Konfigurieren Sie Schriftfamilien und -stärken:
 
@@ -59,7 +59,7 @@ Konfigurieren Sie Schriftfamilien und -stärken:
 - **Fettstärke**: Schriftstärke für fetten Text
 - **Buchstabenabstand**: Zeichenabstand für Kopfzeilen und Textkörper
 
-### Google-Schriftarten
+### Google-Schriftarten [google-fonts]
 
 Fügen Sie Google Fonts zu Ihrem Stil hinzu:
 
@@ -70,7 +70,7 @@ Fügen Sie Google Fonts zu Ihrem Stil hinzu:
 
 Hinzugefügte Schriftarten werden in einer Liste unter den Steuerelementen angezeigt. Klicken Sie auf das ×, um sie zu entfernen.
 
-### Farben
+### Farben [colors]
 
 Farben für verschiedene Elemente festlegen:
 
@@ -85,13 +85,13 @@ Farben für verschiedene Elemente festlegen:
 
 Einzelne Überschriftenfarben (H1–H6) können separat eingestellt werden – verwenden Sie **Zurücksetzen**, um eine Überschreibung zu löschen und zur Kopfzeilenfarbe zurückzukehren.
 
-### Dunkler Modus
+### Dunkler Modus [dark-mode]
 
 Schalten Sie **Dunkelmodus** um, um eine Vorschau der Farben im Dunkelmodus anzuzeigen und diese zu konfigurieren. Wenn diese Option aktiviert ist, werden separate Farbsteuerelemente für Dunkelmodusvarianten angezeigt. Dunkle Modusstile gelten, wenn `.inverted` für das Body-Element in Marked festgelegt ist.
 
 Verwenden Sie **Farben generieren**, um automatisch eine Dunkelmodus-Palette basierend auf Ihren Hellmodus-Farben zu erstellen.
 
-### Bilder
+### Bilder [images]
 
 Bilddarstellung steuern:
 
@@ -99,7 +99,7 @@ Bilddarstellung steuern:
 - **Randradius**: Abgerundete Ecken (z. B. „8px“, „0“)
 - **Ausrichtung**: Dokumentstandard, links, zentriert oder rechts
 
-### Blockzitate
+### Blockzitate [blockquotes]
 
 Blockzitate im Stil:
 
@@ -112,7 +112,7 @@ Blockzitate im Stil:
 
 Für Blockzitate im Dunkelmodus stehen separate Steuerelemente zur Verfügung.
 
-### Listen
+### Listen [lists]
 
 Konfigurieren Sie das Erscheinungsbild der Liste:
 
@@ -120,7 +120,7 @@ Konfigurieren Sie das Erscheinungsbild der Liste:
 - **Linker Rand**: Abstand vom linken Rand
 - **Nested Left Margin**: Abstand für verschachtelte Listen (kann „erben“ sein)
 
-### Definitionslisten
+### Definitionslisten [definition-lists]
 
 Stildefinitionslisten (`<dl>`, `<dt>`, `<dd>`):
 
@@ -128,7 +128,7 @@ Stildefinitionslisten (`<dl>`, `<dt>`, `<dd>`):
 - **DT** (Begriff)-Einstellungen: Schriftgröße, -stärke und -stil
 - **DD** (Definition)-Einstellungen: Schriftgröße, -stärke, -stil und -einzug
 
-### Tabellen
+### Tabellen [tables]
 
 Umfassendes Tisch-Styling:
 
@@ -147,7 +147,7 @@ Umfassendes Tisch-Styling:
 
 Für Dunkelmodustabellen stehen separate Steuerelemente zur Verfügung.
 
-### Codeblöcke
+### Codeblöcke [code-blocks]
 
 Stilcodeblöcke und Inline-Code:
 
@@ -160,7 +160,7 @@ Stilcodeblöcke und Inline-Code:
 
 Für Codeblöcke im Dunkelmodus stehen separate Steuerelemente zur Verfügung.
 
-### Fußnoten
+### Fußnoten [footnotes]
 
 Stil-Fußnoten:
 
@@ -170,7 +170,7 @@ Stil-Fußnoten:
 
 Für Fußnoten im Dunkelmodus stehen separate Steuerelemente zur Verfügung.
 
-### Schlagschatten
+### Schlagschatten [drop-shadow]
 
 Schlagschatten zu Elementen hinzufügen:
 
@@ -181,13 +181,13 @@ Schlagschatten zu Elementen hinzufügen:
    - Blockzitate
    - Tische
 
-## Custom CSS
+## Custom CSS [custom-css]
 
 Für erweiterte Anpassungen, die über die verfügbaren Steuerelemente hinausgehen, verwenden Sie die Schaltfläche **Custom CSS**, um einen Code-Editor zu öffnen. Jegliches CSS, das Sie hier hinzufügen, wird an den generierten Stil angehängt und automatisch so angepasst, dass es innerhalb der Dokumentstruktur von Marked funktioniert.
 
 Der Editor umfasst Syntaxhervorhebung und -validierung – ungültiges CSS wird mit Fehlermeldungen gekennzeichnet.
 
-## Live-Vorschau
+## Live-Vorschau [live-preview]
 
 Im Vorschaubereich wird Ihr Stil angezeigt, der auf Beispiel-Markdown-Inhalte angewendet wird, einschließlich:
 
@@ -204,23 +204,23 @@ Im Vorschaubereich wird Ihr Stil angezeigt, der auf Beispiel-Markdown-Inhalte an
 
 Änderungen werden in Echtzeit aktualisiert, wenn Sie die Steuerelemente anpassen.
 
-## Speichern und Teilen
+## Speichern und Teilen [saving-and-sharing]
 
 Sobald Sie mit Ihrem Stil zufrieden sind, haben Sie mehrere Möglichkeiten:
 
-### CSS anzeigen
+### CSS anzeigen [view-css]
 
 Klicken Sie auf **CSS anzeigen**, um das vollständig generierte CSS in einem Popover anzuzeigen. Sie können es in Ihre Zwischenablage kopieren oder vor dem Speichern überprüfen.
 
-### CSS speichern
+### CSS speichern [save-css]
 
 Klicken Sie auf **CSS speichern**, um Ihren Stil als CSS-Datei herunterzuladen. Vor dem Herunterladen werden Sie aufgefordert, Metadaten (Titel, Autor, Beschreibung) einzugeben.
 
-### Zu Marked hinzufügen
+### Zu Marked hinzufügen [add-to-marked]
 
 Klicken Sie auf **Zu Marked hinzufügen**, um den Stil direkt zu Ihrer Marked-Installation hinzuzufügen. Dazu muss Marked ausgeführt werden und ein Dialogfeld zur Bestätigung des Stilnamens und der Autoreninformationen wird geöffnet.
 
-### Stil teilen
+### Stil teilen [share-style]
 
 Klicken Sie auf **Stil teilen**, um Ihren Stil im [Marked Style Gallery](https://markedapp.com/styles) zu veröffentlichen, damit andere ihn verwenden können. Sie müssen Folgendes bereitstellen:
 
@@ -232,7 +232,7 @@ Klicken Sie auf **Stil teilen**, um Ihren Stil im [Marked Style Gallery](https:/
 
 Vor der Veröffentlichung wird im Freigabedialog eine Vorschau Ihres Stils angezeigt.
 
-## Metadaten
+## Metadaten [metadata]
 
 Verwenden Sie den Metadatenbereich (erweiterbar über die Pfeilschaltfläche neben dem Stiltitel), um Folgendes festzulegen:
 
@@ -243,7 +243,7 @@ Verwenden Sie den Metadatenbereich (erweiterbar über die Pfeilschaltfläche neb
 
 Diese Metadaten sind im Header der CSS-Datei enthalten und werden beim Teilen von Stilen verwendet.
 
-## Tipps
+## Tipps [tips]
 
 - Beginnen Sie mit einem Basisthema, das Ihren Wünschen entspricht, und passen Sie es dann an
 - Verwenden Sie das Design **Blank**, wenn Sie die vollständige Kontrolle von Grund auf wünschen
@@ -252,6 +252,6 @@ Diese Metadaten sind im Header der CSS-Datei enthalten und werden beim Teilen vo
 - Verwenden Sie **Custom CSS** sparsam – die meisten Anforderungen können mit den integrierten Steuerelementen erfüllt werden
 - Zeigen Sie eine Vorschau Ihres Stils mit verschiedenen Inhaltstypen an, bevor Sie ihn teilen
 
-## Browserkompatibilität
+## Browserkompatibilität [browser-compatibility]
 
 Der Style Generator funktioniert am besten in modernen Browsern (Chrome, Firefox, Safari, Edge). Es erfordert die Aktivierung von JavaScript.

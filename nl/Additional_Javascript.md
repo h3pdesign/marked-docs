@@ -2,7 +2,7 @@
 
 U kunt uw eigen JavaScript van CDN's toevoegen of door onbewerkte code te plakken.
 
-## Een opmerking over Marked Dirigent
+## Een opmerking over Marked Dirigent [a-note-about-marked-conductor]
 
 De eenvoudigste manier om aangepast JavaScript te implementeren dat varieert tussen documenttypen en locaties is met [Marked Conductor][conductor]. Hiermee kunt u een YAML-configuratie gebruiken om scripts toe te voegen met behulp van 'filters'. Bekijk de [Conductor page][conductor] voor details, en zie de [sample config][sample config] voor voorbeelden.
 

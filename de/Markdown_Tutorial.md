@@ -1,25 +1,25 @@
 # <%= @title %>
 
-## Was ist Markdown?
+## Was ist Markdown? [what-is-markdown]
 
 Markdown ist eine leichte Auszeichnungssprache, die es Ihnen ermöglicht, in einem leicht lesbaren, einfach zu schreibenden Klartextformat zu schreiben und es dann in strukturell gültiges HTML zu konvertieren. Das übergeordnete Designziel für die Formatierungssyntax von Markdown besteht darin, sie so lesbar wie möglich zu machen.
 
-## Grundlegende Syntax
+## Grundlegende Syntax [basic-syntax]
 
-### Kopfzeilen
+### Kopfzeilen [headers]
 
 Erstellen Sie Header mit Hash-Symbolen (`#`). Die Anzahl der Hashes bestimmt die Header-Ebene:
 
 ```markdown
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
+# Header 1 [header-1]
+## Header 2 [header-2]
+### Header 3 [header-3]
+#### Header 4 [header-4]
+##### Header 5 [header-5]
+###### Header 6 [header-6]
 ```
 
-### Schwerpunkt
+### Schwerpunkt [emphasis]
 
 **Fettgedruckter Text** mit doppelten Sternchen oder doppelten Unterstrichen:
 
@@ -35,7 +35,7 @@ __Bold text__
 _Italic text_
 ```
 
-### Listen
+### Listen [lists]
 
 **Ungeordnete Listen** mit Sternchen, Pluszeichen oder Bindestrichen:
 
@@ -61,7 +61,7 @@ _Italic text_
 3. Third item
 ```
 
-### Links
+### Links [links]
 
 **Inline-Links** mit dem Text in eckigen Klammern und der URL in Klammern:
 
@@ -84,7 +84,7 @@ _Italic text_
 <user@example.com>
 ```
 
-### Bilder
+### Bilder [images]
 
 Bilder verwenden eine ähnliche Syntax wie Links, jedoch mit einem Ausrufezeichen am Anfang:
 
@@ -95,7 +95,7 @@ Bilder verwenden eine ähnliche Syntax wie Links, jedoch mit einem Ausrufezeiche
 [image-reference]: http://example.com/image.jpg "Optional title"
 „
 
-### Blockzitate
+### Blockzitate [blockquotes]
 
 Erstellen Sie Blockzitate mit dem Größer-als-Symbol (`>`) am Anfang jeder Zeile:
 
@@ -106,7 +106,7 @@ Erstellen Sie Blockzitate mit dem Größer-als-Symbol (`>`) am Anfang jeder Zeil
 > You can have multiple paragraphs in a blockquote.
 ```
 
-### Code
+### Code [code]
 
 **Inline-Code** mit Backticks:
 
@@ -122,7 +122,7 @@ Use `code` in your text.
     Multiple lines are supported.
 ```
 
-### Horizontale Regeln
+### Horizontale Regeln [horizontal-rules]
 
 Erstellen Sie horizontale Regeln mit drei oder mehr Bindestrichen, Sternchen oder Unterstrichen:
 
@@ -134,7 +134,7 @@ Erstellen Sie horizontale Regeln mit drei oder mehr Bindestrichen, Sternchen ode
 ___
 „
 
-### Zeilenumbrüche
+### Zeilenumbrüche [line-breaks]
 
 **Harte Zeilenumbrüche**, indem eine Zeile mit zwei oder mehr Leerzeichen endet:
 
@@ -150,7 +150,7 @@ This line
 continues on the next line with a space.
 ```
 
-### Escape-Zeichen
+### Escape-Zeichen [escaping-characters]
 
 Sonderzeichen mit Backslashes maskieren:
 
@@ -173,7 +173,7 @@ Häufige Zeichen, die maskiert werden können:
 - `.` Punkt
 - `!` Ausrufezeichen
 
-## Best Practices
+## Best Practices [best-practices]
 
 1. **Verwenden Sie Leerzeilen**, um verschiedene Elemente zur besseren Lesbarkeit zu trennen
 2. **Seien Sie konsistent** bei Ihren Formatierungsoptionen (verwenden Sie z. B. entweder `*` oder `_` zur Hervorhebung).
@@ -181,9 +181,9 @@ Häufige Zeichen, die maskiert werden können:
 4. **Testen Sie Ihre Ausgabe**, um sicherzustellen, dass sie wie erwartet gerendert wird
 5. **Verwenden Sie aussagekräftigen Linktext** anstelle allgemeiner Phrasen wie „hier klicken“
 
-## Gemeinsame Muster
+## Gemeinsame Muster [common-patterns]
 
-### Verschachtelte Listen
+### Verschachtelte Listen [nested-lists]
 
 ```markdown
 1. First item
@@ -193,7 +193,7 @@ Häufige Zeichen, die maskiert werden können:
    - More nested content
 ```
 
-### Listen mit Absätzen
+### Listen mit Absätzen [lists-with-paragraphs]
 
 „Abschlag
 1. Erster Punkt
@@ -205,7 +205,7 @@ Dies ist ein Absatz unter dem ersten Punkt.
 Dies ist ein Absatz unter dem zweiten Punkt.
 „
 
-### Blockzitate mit anderen Elementen
+### Blockzitate mit anderen Elementen [blockquotes-with-other-elements]
 
 ```markdown
 > This is a blockquote with **bold text** and *italic text*.
@@ -216,7 +216,7 @@ Dies ist ein Absatz unter dem zweiten Punkt.
 > > Nested blockquotes are also possible.
 ```
 
-## Zusammenfassung
+## Zusammenfassung [summary]
 
 Markdown bietet eine einfache, lesbare Möglichkeit, Text zu formatieren, der problemlos in HTML konvertiert werden kann. Der Schlüssel liegt darin, es einfach und lesbar zu halten und gleichzeitig die grundlegenden Syntaxelemente konsequent zu verwenden. Mit etwas Übung werden Sie feststellen, dass Markdown zur zweiten Natur wird und das Schreiben strukturierter Inhalte viel einfacher macht.
 

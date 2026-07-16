@@ -6,7 +6,7 @@ Marked ha un editor di stile integrato e può applicare file CSS personalizzati.
 
 Puoi utilizzare l'editor per creare bellissimi stili o, se conosci abbastanza CSS per essere pericoloso, puoi far sembrare Marked come preferisci.
 
-## Per iniziare
+## Per iniziare [getting-started]
 
 C'è una galleria di stili personalizzati creati dallo sviluppatore e dagli utenti su [markedapp.com/styles](https://markedapp.com/styles/). La galleria ti consente di visualizzare in anteprima e installare gli stili direttamente in Marked. Qualsiasi stile installato può essere visualizzato nel Finder per esame e modifica. La galleria può essere aperta utilizzando un visualizzatore interno con {% appmenu Style, Generate a Custom Style %} o facendo clic sull'icona della matita (modifica) accanto a qualsiasi stile modificabile in Gestione stili. Se desideri modificare uno stile integrato, dovrai prima duplicarlo nel gestore.
 
@@ -20,11 +20,11 @@ Se stai progettando per uso personale, non ci sono regole. Attiva il monitoraggi
 
 Se hai intenzione di condividere la tua creazione CSS, ci sono alcuni punti che devi trattare. Innanzitutto, ci sono alcune classi del corpo a cui è necessario applicare degli stili:
 
-## Classi corporee
+## Classi corporee [body-classes]
 
 I seguenti stili devono essere inclusi in qualsiasi CSS contrassegnato per essere condiviso. Le classi del corpo consentono di individuare e modificare qualsiasi selettore in diverse opzioni di preferenza.
 
-### Invertito
+### Invertito [inverted]
 
  Quando l'utente seleziona {% appmenu Preview, Dark Mode %}, al tag body viene aggiunta la classe "invertito". Puoi usarlo per indirizzare gli stili ad alto contrasto, chiaro su scuro.
 
@@ -46,7 +46,7 @@ Desideri che gli stili invertiti vengano applicati solo all'anteprima, non alla 
 }
 ```
 
-### Poesia
+### Poesia [poetry]
 
 L'utente può scegliere se il testo con rientro di tabulazione è poesia o codice. L'unica differenza è che i blocchi pre/codice hanno uno stile più, ehm, poetico se viene scelta la modalità poesia. La classe "poesia" viene applicata al tag body.
 
@@ -63,7 +63,7 @@ Diventa creativo quanto vuoi con la formattazione, ma ecco uno snippet di base:
 }
 ```
 
-## Casi particolari
+## Casi particolari [special-cases]
 
 È necessario considerare anche le tabelle, le figure/didascalie e il caso speciale di `a.footnote` e `div.footnotes>a`. Non ci sono regole fisse su come gestirli, ma dai un'occhiata agli stili predefiniti per avere un'idea di quali regole CSS ha bisogno Marked.
 
@@ -95,7 +95,7 @@ Per mantenere la freccia di ritorno sulla stessa riga, includere:
 
 Se il tuo tema ha un'imbottitura aggiuntiva o una larghezza fissa, modifica la larghezza massima per adattarla.
 
-## Stili di stampa
+## Stili di stampa [printstyles]
 
 Assicurati di includere stili di stampa che rimuovano eventuali colori di sfondo, scorrimento fisso, ecc. Utilizza "@media print" per definirli all'interno del tuo tema.
 
@@ -103,17 +103,17 @@ L'occultamento dei collegamenti nella stampa viene gestito al di fuori del tema 
 
 Quindi, datevi da fare. Converti il ​​tema del tuo blog, crea uno stile di stampa eccezionale per i documenti PDF o crea l'anteprima perfetta per il tuo stile di scrittura. Se crei qualcosa di fantastico, faccelo sapere e lo pubblicherò per tutta la community di Marked.
 
-## Impostazioni CSS aggiuntive
+## Impostazioni CSS aggiuntive [additional-css-settings]
 
 In {% prefspane Style %} puoi modificare CSS aggiuntivi. Questi stili verranno aggiunti a qualsiasi tema caricato e potranno essere utilizzati per apportare modifiche universali a tutti i temi.
 
 Utilizzando [alta specificità](#overridingspecificity) e le query @media per la stampa e lo schermo, puoi controllare praticamente ogni aspetto dello stile con un po' di conoscenza dei CSS.
 
-## Ispettore WebKit
+## Ispettore WebKit [webkitinspector]
 
 L'Ispettore Web di Safari è il modo più semplice per vedere esattamente cosa sta generando HTML e CSS Marked e per sperimentare dal vivo gli stili personalizzati.
 
-### Abilitazione del menu Sviluppo in Safari
+### Abilitazione del menu Sviluppo in Safari [enabling-the-develop-menu-in-safari]
 
 1. Apri Safari e scegli {% appmenu Safari, Settings… %}.
 2. Seleziona la scheda **Avanzate**.
@@ -123,7 +123,7 @@ Una volta abilitato, nella barra dei menu di Safari verrà visualizzato il menu 
 
 ![Menu Sviluppo Safari che mostra i documenti contrassegnati][menu sviluppo]
 
-### Ispezione di un documento contrassegnato
+### Ispezione di un documento contrassegnato [inspecting-a-marked-document]
 
 1. Con una finestra di anteprima aperta in Contrassegnato, passa a Safari.
 2. Dalla barra dei menu, scegli **Sviluppo → _\<nome del tuo Mac\>_ → Contrassegnato → _\<titolo documento\>_**.
@@ -142,21 +142,21 @@ Da qui puoi:
 
 ![Ispezione di un'anteprima contrassegnata con Safari Web Inspector][ispezione]
 
-## Condivisione di CSS personalizzati
+## Condivisione di CSS personalizzati [sharing-custom-css]
 
 Utilizza {% appmenu Style, Share a Custom Style %} per aprire l'app di condivisione nel tuo browser web. Trascina il tuo CSS nella zona di rilascio (o fai clic per selezionarlo dal disco) e carica il CSS per il tuo stile personalizzato.
 
 Gli stili condivisi devono essere approvati dallo sviluppatore prima di essere visualizzati nella galleria, quindi non vedrai risultati immediati.
 
-## Altri suggerimenti
+## Altri suggerimenti [other-tips]
 
-### Specificità prioritaria
+### Specificità prioritaria [overridingspecificity]
 
 All'interno dell'anteprima Contrassegnato, viene aggiunta una classe del corpo basata sul nome file dello stile corrente. Se l'anteprima è impostata su "Svizzero", ci sarà una classe sul tag `<body>` chiamata `mkstyle--swiss`. Se il tuo CSS personalizzato si chiama MyCustom.css, la classe del corpo sarà `mkstyle--mycustom`. Puoi usarlo prima delle regole definite negli stili di base per sovrascriverle. Per ottenere la specificità assoluta in una regola, utilizza anche l'ID #wrapper dal div del contenitore:
 
 	.mkstyle--mycustom #wrapper p+p { ... }
 
-### Stile del sommario
+### Stile del sommario [table-of-contents-styling]
 
 Se utilizzi il token `<!--toc-->` per [inserire un sommario](Special_Syntax.html#tableofcontents), puoi sovrascrivere le impostazioni per gli indicatori di livello del sommario in uno stile personalizzato utilizzando il "#wrapper" per aumentare la specificità:
 

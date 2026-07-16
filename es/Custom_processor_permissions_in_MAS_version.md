@@ -1,6 +1,6 @@
 <!-- MT-DRAFT: machine translation; human review required -->
 
-# Permisos de procesador personalizados en la versión MAS
+# Permisos de procesador personalizados en la versión MAS [custom-processor-permissions-in-mas-version]
 
 Debido a restricciones de espacio aislado, la versión de Marked para Mac App Store no puede ejecutar ciertos tipos de herramientas binarias como procesadores personalizados. Si se encuentra con esta limitación, hay algunos pasos que puede probar.
 

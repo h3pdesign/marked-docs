@@ -5,29 +5,29 @@ Mind maps and outlines can be embedded in your Markdown preview using [Marked's 
 [include]: Multi-File_Documents.html
 [ia]: Multi-File_Documents.html#ia-writer-block-syntax
 
-## Supported Formats
+## Supported Formats [supported-formats]
 
-### iThoughts X (.itmz)
+### iThoughts X (.itmz) [ithoughts-x-itmz]
 
 iThoughts mind map files are zip archives containing map data and an optional preview image.
 
-### MindManager (.mmap)
+### MindManager (.mmap) [mindmanager-mmap]
 
 MindManager files are zip archives containing `Document.xml`. Unzipped MindManager packages (a folder containing `Document.xml`) and direct paths to `Document.xml` are also supported.
 
-### FreeMind (.mm)
+### FreeMind (.mm) [freemind-mm]
 
 FreeMind mind map files use the `.mm` extension and store data as XML. Marked detects FreeMind format by checking that the file content starts with `<map`; if not (e.g., a code snippet), the file is included as plain text. FreeMind files are supported for Mermaid mind map embedding.
 
-### OPML (.opml)
+### OPML (.opml) [opml-opml]
 
 OPML (Outline Processor Markup Language) is an XML format for hierarchical outlines, widely used by outliners and feed readers. iThoughts and other apps can export to OPML. Marked converts included OPML files to Mermaid mind map diagrams.
 
-### Bike (.bike)
+### Bike (.bike) [bike-bike]
 
 Bike.app outlines are stored as proprietary HTML files (`.bike`). You can open a `.bike` file directly in Marked: the document is rendered as Markdown with the filename (minus extension) as the main heading (H1), top-level heading items as H2, nested headings as bold list items, and tasks as GitHub-style checkboxes. When a `.bike` file is included via include syntax, the "Embed as Mermaid diagram" setting for Bike (in Apps → Mind Maps/Outlines) controls whether it becomes a Mermaid mind map (with the filename as the root node) or a nested Markdown list (no H1).
 
-## Embed maps as Mermaid diagrams
+## Embed maps as Mermaid diagrams [embed-maps-as-mermaid-diagrams]
 
 When **enabled** (the default), Marked converts included mind maps and outlines to [Mermaid](https://mermaid.js.org/) diagrams:
 
@@ -43,7 +43,7 @@ When **disabled**:
 - **OPML** — The outline is embedded as a nested Markdown list (no mind map).
 - **Bike** — The outline is embedded as a nested Markdown list (no H1); top-level heading items become H2, nested headings are bold, and tasks become GitHub checkboxes.
 
-## Include Syntax
+## Include Syntax [include-syntax]
 
 Use the same syntax as for other file includes:
 
@@ -59,7 +59,7 @@ Or with iA Writer block syntax:
 
 Paths can be relative to the main document or absolute (starting with `/` or `~`). See [Multi-File Documents](Multi-File_Documents.html) for details.
 
-## OPML Conversion
+## OPML Conversion [opml-conversion]
 
 OPML files use nested `<outline>` elements with a `text` attribute. When "Embed as Mermaid diagram" is enabled (see [Settings: Apps](Settings_Apps.html)), conversion produces a Mermaid mind map using the same format as iThoughts and MindManager:
 
@@ -68,6 +68,6 @@ OPML files use nested `<outline>` elements with a `text` attribute. When "Embed 
 - Missing or empty `text` is shown as `(unnamed)`
 - Text is sanitized; special characters are escaped for Mermaid
 
-## Bike Conversion
+## Bike Conversion [bike-conversion]
 
 Bike `.bike` files are HTML with a root `<ul>` and `<li>` items. Items can have `data-type="heading"` (top level → H2 when opened or in list mode; nested → bold) or `data-type="task"` (GitHub checkboxes; completed when `data-done` has a timestamp, or `data-checked` / `data-completed` is true). Inline formatting and links in node text are converted to Markdown. When embedding as a Mermaid mind map, the file name (minus extension) is used as the single root node and labels are plain text formatted for Mermaid mindmap syntax.

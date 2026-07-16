@@ -4,7 +4,7 @@ Marked enthält native **Verknüpfungen**-Aktionen (App Intents) zum Öffnen von
 
 Informationen zur skriptbasierten Automatisierung mit einem vollständigen Objektmodell finden Sie unter [AppleScript Support](AppleScript_Support.html). Informationen zu URL-basierten Workflows aus der Shell finden Sie unter [URL Handler](URL_Handler.html).
 
-## Aktionen finden
+## Aktionen finden [finding-actions]
 
 1. Öffnen Sie die **Shortcuts**-App.
 2. Erstellen Sie eine neue Verknüpfung oder bearbeiten Sie eine vorhandene.
@@ -12,7 +12,7 @@ Informationen zur skriptbasierten Automatisierung mit einem vollständigen Objek
 
 Aktionen sind unter **Dokumente** und **Exportieren** gruppiert. Marked registriert auch Siri-Sätze wie „Datei mit Marked exportieren“ und „In Marked öffnen“ für schnelle Verknüpfungen.
 
-## Aktionsübersicht
+## Aktionsübersicht [actions-overview]
 
 | Aktion | Zweck |
 | --- | --- |
@@ -24,13 +24,13 @@ Aktionen sind unter **Dokumente** und **Exportieren** gruppiert. Marked registri
 
 Alle Exportaktionen geben die exportierte Datei (oder Dateien) als Shortcuts **Datei**-Ausgabe zurück, sodass Sie sie an den nächsten Schritt (Mail, Finder, eine andere App) übergeben können.
 
-## Datei in Marked öffnen
+## Datei in Marked öffnen [open-file-in-marked]
 
 **Parameter:** **Datei** – das zu öffnende Dokument (aus dem Finder, dem Freigabeblatt oder einem vorherigen Verknüpfungsschritt).
 
 Marked öffnet die Datei in einem Vorschaufenster. Verwenden Sie diese Option, wenn Sie in Marked eine Vorschau anzeigen oder bearbeiten möchten, bevor Sie etwas anderes tun.
 
-## Vorschaustil festlegen
+## Vorschaustil festlegen [set-preview-style]
 
 **Parameter:**
 
@@ -39,7 +39,7 @@ Marked öffnet die Datei in einem Vorschaufenster. Verwenden Sie diese Option, w
 
 Durch das Festlegen eines Stils wird die Vorschau mit diesem Thema neu geladen (dasselbe gilt für die Auswahl eines Stils aus dem Vorschau-Stilmenü).
 
-## Aktionen exportieren
+## Aktionen exportieren [export-actions]
 
 Exportaktionen haben dieselben Kernoptionen:
 
@@ -60,7 +60,7 @@ Exportaktionen haben dieselben Kernoptionen:
 - **Kontinuierlich PDF** erfasst das aktuelle Vorschau-WebView-Layout.
 - **Schriftgröße** aktiviert die gleiche benutzerdefinierte Export-/Druck-Schriftgrößenoption von {% prefspane Export %}. Fountain-Dokumente sind davon nicht betroffen.
 
-### Datei öffnen und exportieren
+### Datei öffnen und exportieren [open-and-export-file]
 
 Am besten für Finder-Workflows: Wählen Sie eine Markdown-Datei aus, öffnen Sie sie in Marked und exportieren Sie sie in einem Schritt.
 
@@ -68,7 +68,7 @@ Am besten für Finder-Workflows: Wählen Sie eine Markdown-Datei aus, öffnen Si
 
 Beispielverwendung: eine Schnellaktion, die Dateien aus dem Finder übernimmt und **Paginiertes PDF** mit einem ausgewählten Profil und Stil exportiert.
 
-### Dokument exportieren
+### Dokument exportieren [export-document]
 
 Exportieren Sie ein Dokument, das in Marked **bereits geöffnet** ist.
 
@@ -79,7 +79,7 @@ Exportieren Sie ein Dokument, das in Marked **bereits geöffnet** ist.
 
 Verwenden Sie dies, wenn Marked bereits ausgeführt wird und Sie die aktuelle Vorschau exportieren möchten, ohne die Datei erneut zu öffnen.
 
-### Geöffnete Dokumente exportieren
+### Geöffnete Dokumente exportieren [export-open-documents]
 
 Exportieren Sie **jedes** Vorschaudokument, das derzeit in Marked geöffnet ist.
 
@@ -90,7 +90,7 @@ Exportieren Sie **jedes** Vorschaudokument, das derzeit in Marked geöffnet ist.
 
 Nützlich für den Batch-Export nach Durchsicht mehrerer Kapitel oder Notizen in Marked.
 
-## Margin-Kurzschrift
+## Margin-Kurzschrift [margin-shorthand]
 
 Wenn **Ränder** für eine Exportaktion festgelegt ist, verwenden Sie eine Zeichenfolge mit ein bis vier Maßen. Einheiten: `in`, `cm`, `mm`, `pt` oder `"` für Zoll. Eine Zahl ohne Einheit wird als Punkt behandelt.
 
@@ -103,9 +103,9 @@ Wenn **Ränder** für eine Exportaktion festgelegt ist, verwenden Sie eine Zeich
 
 Dies entspricht dem Schlüssel `margins` in den Exportdatensätzen [AppleScript](AppleScript_Support.html#with-options-properties-record).
 
-## Beispiel-Workflows
+## Beispiel-Workflows [example-workflows]
 
-### Finder-Datei zu PDF
+### Finder-Datei zu PDF [finder-file-to-pdf]
 
 1. **Datei öffnen und exportieren**
 2. **Datei** – Eingabe aus Share Sheet oder Finder Quick Action.
@@ -114,26 +114,26 @@ Dies entspricht dem Schlüssel `margins` in den Exportdatensätzen [AppleScript]
 5. **Profil** – optionales gespeichertes Exportprofil.
 6. **Ausgabedatei** – optional; Lassen Sie das Feld leer, um `filename.pdf` neben die Quelle zu schreiben.
 
-### Exportieren Sie, was in Marked geöffnet ist
+### Exportieren Sie, was in Marked geöffnet ist [export-what-is-open-in-marked]
 
 1. **Dokument exportieren**
 2. Lassen Sie **Datei** leer, um das vordere Fenster zu verwenden.
 3. Wählen Sie **Format** und optional ein Profil oder einen Stil.
 
-### Batch-Export geöffneter Dokumente
+### Batch-Export geöffneter Dokumente [batch-export-open-documents]
 
 1. **Offene Dokumente exportieren**
 2. Wählen Sie **Format** (zum Beispiel EPUB).
 3. Legen Sie optional **Ausgabeordner** fest, um alle Exporte in einem Verzeichnis zu sammeln.
 
-### Stylen und dann exportieren (zwei Schritte)
+### Stylen und dann exportieren (zwei Schritte) [style-then-export-two-steps]
 
 1. **Vorschaustil festlegen** – Wählen Sie einen Stil aus (optional als Ziel für eine bestimmte **Datei**).
 2. **Dokument exportieren** – dieselbe Datei oder dasselbe Frontdokument mit dem gewünschten **Format**.
 
 Sie können **Style** auch direkt an eine Exportaktion übergeben; Marked wendet das Design an und wartet vor dem Exportieren auf das erneute Laden der Vorschau.
 
-## Exportpfade und Sandboxing
+## Exportpfade und Sandboxing [export-paths-and-sandboxing]
 
 - Wenn **Ausgabedatei** oder **Ausgabeordner** weggelassen wird, schreibt Marked neben das Quelldokument.
 - Marked kann Zwischenordner erstellen, wenn der Exportpfad **im Ordner des geöffneten Dokuments** liegt.
@@ -141,13 +141,13 @@ Sie können **Style** auch direkt an eine Exportaktion übergeben; Marked wendet
 
 Siehe [AppleScript Support](AppleScript_Support.html#export-paths-and-sandboxing) für die gleichen Sandbox-Regeln.
 
-## Legacy `convert_to` Aktion
+## Legacy `convert_to` Aktion [convert_to]
 
 Das AppleScript-Wörterbuch stellt weiterhin **`convert_to`** für die Konvertierung von Markdown-Texten oder -Dateien ohne geöffnete Vorschau bereit. Die oben genannten nativen Shortcuts-Aktionen werden bevorzugt: Sie öffnen Dokumente ordnungsgemäß, warten auf das Laden der Vorschau und unterstützen den paginierten PDF-Export asynchron.
 
-Weitere Informationen zum Legacy-Befehl finden Sie unter [Shortcuts and <!--MKPH0--> in AppleScript Support](AppleScript_Support.html#shortcuts-and-convert_to).
+Weitere Informationen zum Legacy-Befehl finden Sie unter [Shortcuts and <!--MKPH0--> in AppleScript Support](AppleScript_Support.html#convert_to).
 
-## Fehlerbehebung: Aktionen werden nicht in den Verknüpfungen angezeigt
+## Fehlerbehebung: Aktionen werden nicht in den Verknüpfungen angezeigt [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Verknüpfungen indizieren **eine** Marked-Installation pro Bundle-ID (`com.brettterpstra.marked`). Es bevorzugt die Kopie mit der **höchsten Build-Nummer** (`CFBundleVersion`), nicht unbedingt die App, die Sie gerade in Xcode erstellt haben.
 
@@ -169,11 +169,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 Beim Start protokolliert Marked `[MKShortcuts] Registering App Intents` in Console.app, wenn die Registrierung ausgeführt wird (macOS 13+).
 
-## Debuggen
+## Debuggen [debugging]
 
 Aktivieren Sie den **Debug-Modus** in {% prefspane Advanced %}. Marked protokolliert Exportschritte auf Infoebene mit dem Präfix `[AppleScript]` in Console.app und im Protokollviewer von Marked (die Exportpipeline wird mit AppleScript geteilt).
 
-## Fehler
+## Fehler [errors]
 
 Häufige Meldungen, wenn eine Aktion fehlschlägt:
 

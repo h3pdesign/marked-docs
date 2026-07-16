@@ -1,4 +1,4 @@
-# Markdownifier
+# Markdownifier [markdownifier]
 
 Der Markdownifier ist ein Tool, das automatisch Inhalte aus Webseiten extrahiert und in das saubere Markdown-Format konvertiert. Er verarbeitet Webinhalte intelligent, liefert Ihnen genau den aussagekräftigen Text samt Struktur und filtert Werbung, Navigationselemente und anderen Ballast heraus.
 
@@ -6,7 +6,7 @@ Der Markdownifier ist ein Tool, das automatisch Inhalte aus Webseiten extrahiert
 
   [importurl]: import-url@2x.jpg width=800 class=center
 
-## Wie es funktioniert
+## Wie es funktioniert [how-it-works]
 
 Der Markdownifier verwendet erweiterte Algorithmen zur Inhaltsextraktion und kann:
 
@@ -16,20 +16,20 @@ Der Markdownifier verwendet erweiterte Algorithmen zur Inhaltsextraktion und kan
 4. Werbung, Navigation und andere Nicht-Inhalts-Elemente **herausfiltern**
 5. Wichtige Formatierungen wie Überschriften, Listen und Links **erhalten**
 
-## Den Markdownifier öffnen
+## Den Markdownifier öffnen [opening-the-markdownifier]
 
 Um auf den Markdownifier zuzugreifen, öffnen Sie {% appmenu Ablage, Neu, URL in Markdown umwandeln (@~k) %}. Geben Sie die URL ein, die Sie umwandeln möchten, und drücken Sie die Eingabetaste ({% kbd return %}).
 
-## Den Markdownifier verwenden
+## Den Markdownifier verwenden [using-the-markdownifier]
 
-### Grundlegende Verwendung
+### Grundlegende Verwendung [basic-usage]
 
 1. **Öffnen Sie den Markdownifier** mit einer der oben genannten Methoden
 2. **Geben Sie eine URL ein** in das angezeigte Textfeld
 3. **Klicken Sie auf „Automatisch“** oder drücken Sie `Return`, um Inhalte zu extrahieren
 4. Der extrahierte Inhalt wird **automatisch** in einem neuen Marked-Dokument geöffnet
 
-### Manuelle Inhaltsauswahl
+### Manuelle Inhaltsauswahl [manual-content-selection]
 
 Wenn die automatische Extraktion nicht den gewünschten Inhalt erfasst:
 
@@ -38,7 +38,7 @@ Wenn die automatische Extraktion nicht den gewünschten Inhalt erfasst:
 3. **Klicken Sie auf die Schaltfläche „Inhalt extrahieren“**, die über der Webseite angezeigt wird
 4. Der ausgewählte Inhalt wird in Markdown konvertiert und in Marked geöffnet.
 
-### Zwischenablage-Integration
+### Zwischenablage-Integration [clipboard-integration]
 
 Der Markdownifier erkennt beim Öffnen automatisch URLs in Ihrer Zwischenablage:
 
@@ -46,9 +46,9 @@ Der Markdownifier erkennt beim Öffnen automatisch URLs in Ihrer Zwischenablage:
 - Sie müssen noch auf **„Automatisch“** klicken oder `Return` drücken, um die Verarbeitung zu starten
 - Dies verhindert die versehentliche Verarbeitung von Zwischenablage-URLs
 
-## Inhaltsverarbeitung
+## Inhaltsverarbeitung [content-processing]
 
-### Automatische Inhaltsvalidierung
+### Automatische Inhaltsvalidierung [automatic-content-validation]
 
 Der Markdownifier validiert extrahierte Inhalte intelligent, um sicherzustellen, dass sie aussagekräftigen Text enthalten:
 
@@ -60,7 +60,7 @@ Der Markdownifier validiert extrahierte Inhalte intelligent, um sicherzustellen,
 
 Wenn der extrahierte Inhalt zu kurz ist oder hauptsächlich aus Navigation/Werbung zu bestehen scheint, greift der Markdownifier automatisch auf den manuellen Auswahlmodus zurück.
 
-### Inhaltsformatierung
+### Inhaltsformatierung [content-formatting]
 
 Der extrahierte Inhalt wird als sauberes Markdown formatiert mit:
 
@@ -70,9 +70,9 @@ Der extrahierte Inhalt wird als sauberes Markdown formatiert mit:
 - **Beibehaltene Links** und Hervorhebungsformatierung
 - **Saubere Absätze** mit richtigem Abstand
 
-## Sicherheitsfunktionen
+## Sicherheitsfunktionen [safety-features]
 
-### Absturzsicherung
+### Absturzsicherung [crash-prevention]
 
 Der Markdownifier enthält mehrere Sicherheitsmaßnahmen, um Abstürze zu verhindern:
 
@@ -81,16 +81,16 @@ Der Markdownifier enthält mehrere Sicherheitsmaßnahmen, um Abstürze zu verhin
 - **Deaktiviert erweiterte Webfunktionen**, die zu Instabilität führen können
 - **Automatische Wiederherstellung nach einem Absturz** mit Fallback im abgesicherten Modus
 
-### Datenschutz
+### Datenschutz [privacy-protection]
 
 - **Privater Browsermodus** verhindert Tracking und Cookies
 - **Keine Plugins oder Java**-Ausführung aus Sicherheitsgründen
 - **Eingeschränktes JavaScript** mit Krypto-API-Blockierung
 - **Ressourcenfilterung** blockiert Tracking und Anzeigeninhalte
 
-## Fehlerbehebung
+## Fehlerbehebung [troubleshooting]
 
-### Inhalt nicht extrahiert
+### Inhalt nicht extrahiert [content-not-extracted]
 
 Wenn die automatische Extraktion fehlschlägt:
 
@@ -99,7 +99,7 @@ Wenn die automatische Extraktion fehlschlägt:
 3. **Prüfen Sie die URL** – sie muss erreichbar sein und Artikelinhalt enthalten
 4. **Suchen Sie nach Paywalls oder Anmeldeanforderungen**, die den Zugriff blockieren könnten
 
-### WebView-Probleme
+### WebView-Probleme [webview-issues]
 
 Wenn die Webansicht instabil wird:
 
@@ -108,7 +108,7 @@ Wenn die Webansicht instabil wird:
 3. **Verwenden Sie die Schaltfläche „Konvertieren“** anstelle der manuellen Auswahl
 4. **Schließen und erneut öffnen** kann helfen, um den Markdownifier zurückzusetzen
 
-### Fehlender Inhalt
+### Fehlender Inhalt [missing-content]
 
 Wenn wichtige Inhalte in der Extraktion fehlen:
 
@@ -117,29 +117,29 @@ Wenn wichtige Inhalte in der Extraktion fehlen:
 3. **Prüfen Sie den HTML-Quelltext**, um zu sehen, ob der Inhalt dynamisch geladen wird
 4. **Versuchen Sie es mit einer anderen URL**, wenn die Site eine komplexe Struktur hat
 
-## Tipps für beste Ergebnisse
+## Tipps für beste Ergebnisse [tips-for-best-results]
 
-### URL-Auswahl
+### URL-Auswahl [url-selection]
 
 - **Verwenden Sie Artikel-URLs** anstelle von Startseiten oder Kategorieseiten
 - **Vermeiden Sie nach Möglichkeit URLs mit Tracking-Parametern**
 
-### Inhaltsqualität
+### Inhaltsqualität [content-quality]
 
 - **Längere Artikel** werden im Allgemeinen besser extrahiert als kurze Beiträge
 - **Gut strukturierter Inhalt** mit richtigen Überschriften funktioniert am besten
 - **Vermeiden Sie Websites mit hohem JavaScript-Anteil** für die automatische Extraktion
 
-### Manuelle Auswahl
+### Manuelle Auswahl [manual-selection]
 
 - **Warten Sie, bis die Seite vollständig geladen ist**, bevor Sie sie extrahieren
 - **Scrollen Sie durch den Inhalt**, um sicherzustellen, dass alles geladen ist
 - **Bewegen Sie den Mauszeiger über Bereiche**, um das kleinste blaue Feld auszuwählen, das den gesamten Inhalt enthält, den Sie extrahieren möchten
 - **Klicken**, wenn Sie den gewünschten Inhalt gefunden haben
 
-## Erweiterte Funktionen
+## Erweiterte Funktionen [advanced-features]
 
-### Stapelverarbeitung
+### Stapelverarbeitung [batch-processing]
 
 Während der Markdownifier jeweils eine URL verarbeitet, gibt es zusätzlich diese Möglichkeiten:
 
@@ -147,7 +147,7 @@ Während der Markdownifier jeweils eine URL verarbeitet, gibt es zusätzlich die
 - Die **Dienste-Integration** nutzen, um URLs aus anderen Anwendungen zu verarbeiten
 - **Kopieren Sie den extrahierten Inhalt** und fügen Sie ihn in vorhandene Marked-Dokumente ein
 
-### Integration mit Marked
+### Integration mit Marked [integration-with-marked]
 
 Extrahierter Inhalt wird in Marked geöffnet, mit:
 
@@ -155,16 +155,16 @@ Extrahierter Inhalt wird in Marked geöffnet, mit:
 - **Beibehaltung der Quell-URL** in den Dokumentmetadaten
 - **Vollständige Marked-Funktionen** zum Lesen und Exportieren
 
-## Technische Details
+## Technische Details [technical-details]
 
-### Unterstützte Inhaltstypen
+### Unterstützte Inhaltstypen [supported-content-types]
 
 - **HTML-Artikel** mit Standard-Markup
 - **Blogbeiträge** und Nachrichtenartikel
 - **Dokumentation** und Hilfeseiten
 - **Forumbeiträge** und Diskussionsinhalte
 
-### Einschränkungen
+### Einschränkungen [limitations]
 
 - **Paywall-Websites** erfordern möglicherweise eine Anmeldung und eine manuelle Extraktion
 - **JavaScript-lastige Websites** erfordern möglicherweise eine manuelle Auswahl

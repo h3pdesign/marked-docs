@@ -1,6 +1,6 @@
 # <%= @title %>
 
-## Eingezäunte Codeblöcke
+## Eingezäunte Codeblöcke [fenced-code-blocks]
 
 Abgeschirmte Codeblöcke sind in beiden enthaltenen Prozessoren standardmäßig aktiviert (MultiMarkdown und Discount). Umzäunte Codeblöcke werden durch drei oder mehr Tilden (~) oder Backticks (\`) begrenzt. Sie können mehr als drei verwenden, aber die Anfangs- und Endtrennzeichen müssen genau die gleiche Anzahl von Zeichen haben.
 
@@ -38,7 +38,7 @@ Die integrierte Syntaxhervorhebung erkennt **256** Sprachspezifizierer (siehe [S
 
 Im Abschnitt [Marked Special Syntax](Special_Syntax.html#includingcode) erfahren Sie, wie Sie externe Codedateien in Ihr Dokument einbinden.
 
-## Syntaxhervorhebung
+## Syntaxhervorhebung [syntax-highlighting]
 
 ![Automatic Syntax Highlighting][highlight]
 
@@ -58,7 +58,7 @@ Die Option „Nur wenn Sprache angegeben“ rechts neben der Syntaxstilauswahl g
 
 Die Syntaxhervorhebung wird in der Vorschau sowie beim Drucken und PDF-Export angezeigt. Wenn die Option in den Einstellungen aktiviert ist und das Design beim Exportieren von HTML enthalten ist, wird die von Marked verwendete Bibliothek „highlight.js“ in die Ausgabe von HTML eingebettet, sodass Ihr exportiertes HTML genauso angezeigt wird wie in Marked.
 
-### Unterstützte Sprachen
+### Unterstützte Sprachen [supported-languages]
 
 Marked wird mit **highlight.js 11.11.1** geliefert, einschließlich aller Kernsprachen sowie Grammatiken von Drittanbietern aus der [highlight.js supported languages](https://highlightjs.readthedocs.io/en/latest/supported-languages.html)-Liste. Geben Sie unten einen beliebigen primären Sprachnamen (oder einen dokumentierten Alias ​​wie `js` für JavaScript) nach dem Eröffnungszaun an.
 
@@ -88,7 +88,7 @@ Zwei auf der Seite „highlight.js“ aufgeführte Sprachen sind nicht im Bundle
     vbscript-html, verilog, vhdl, vim, wasm, wren, x86asm, x86asmatt, xl, xml, xquery, xsharp,
     Yaml, Yul, Zenscript, Zephir
 
-### Syntaxhervorhebungsthemen
+### Syntaxhervorhebungsthemen [syntax-highlighting-themes]
 
 **239** Syntaxhervorhebungsthemen sind im Dropdown-Menü {% prefspane Style %} verfügbar. Themes werden automatisch aus den gebündelten Stylesheets von Marked geladen; Namen stimmen mit dem CSS-Dateinamen ohne Erweiterung überein (z. B. `github-dark` lädt `github-dark.css`).
 
@@ -154,11 +154,11 @@ base16-3024, base16-athy, base16-apprentice, base16-ashes, base16-atelier-cave,
     base16-windows-nt, base16-windows-nt-light, base16-woodland, base16-xcode-dusk,
     base16-zenburn
 
-## GitHub Zeilenumbrüche
+## GitHub Zeilenumbrüche [github-line-breaks]
 
 Marked kann Zeilenumbrüche in Ihren Absätzen beibehalten. Wählen Sie einfach {% prefspane Processor %} aus und aktivieren Sie das Kontrollkästchen, um Zeilenumbrüche in Absätzen beizubehalten.
 
-## GitHub Kontrollkästchen
+## GitHub Kontrollkästchen [github-checkboxes]
 
 Listen Sie Elemente auf, die wie folgt formatiert sind:
 
@@ -167,6 +167,6 @@ Listen Sie Elemente auf, die wie folgt formatiert sind:
 
 werden in der Vorschau als gerenderte Kontrollkästchenelemente angezeigt. Mit ihnen kann nicht interagiert werden, aber ihr Status spiegelt alle Änderungen im Quelldokument wider.
 
-## Codeblockumbruch
+## Codeblockumbruch [code-block-wrapping]
 
 Im {% prefspane Style %} finden Sie unter „Layout und Typografie“ eine Option: „Themen erlauben, Text in Codeblöcke einzuschließen.“ Wenn Sie dies deaktivieren, werden alle Codeblöcke dazu gezwungen, den horizontalen Überlauf zu scrollen, anstatt ihn zu umbrechen, unabhängig vom aktuellen Vorschaustil.

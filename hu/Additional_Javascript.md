@@ -4,7 +4,7 @@
 
 Felveheti saját JavaScript-kódját CDN-ekből vagy nyers kód beillesztésével.
 
-## Megjegyzés a megjelölt karmesterről
+## Megjegyzés a megjelölt karmesterről [a-note-about-marked-conductor]
 
 A dokumentumtípusonként és helyenként változó egyéni JavaScript megvalósításának legegyszerűbb módja a [Marked Conductor][conductor]. Lehetővé teszi, hogy YAML konfigurációt használjon szkriptek hozzáfűzéséhez "szűrők" segítségével. Nézze meg a [Conductor page][conductor] oldalt a részletekért, és tekintse meg a [sample config][sample config] példákat.
 

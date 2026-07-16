@@ -2,7 +2,7 @@
 
 Vorschauen werden nicht wie erwartet aktualisiert?
 
-## Zeitmaschine
+## Zeitmaschine [time-machine]
 
 Es wurden einige Probleme mit langsamen (oder nicht vorhandenen) Updates während eines Time Machine-Laufs gemeldet. Die Aktualisierungsfunktionen von Marked können beeinträchtigt sein, wenn Time Machine den Teil des Laufwerks verwendet, auf dem die Datei zu diesem Zeitpunkt vorhanden ist. Dies wird normalerweise behoben, wenn Time Machine seinen Lauf beendet.
 

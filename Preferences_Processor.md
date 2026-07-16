@@ -7,7 +7,7 @@ Options in the {% prefspane Processor %}:
 [1]: images/screenshots/preferences-Processor.jpg @2x width=689px height=1031px class=preferencepane
 
 
-### Process Markdown with
+### Process Markdown with [process-markdown-with]
 
 Default Markdown processor. The Discount processor is preferred for GitHub users, MultiMarkdown is ideal for writers. Marked compensates for some differences between syntax. See __Help->Markdown Reference__ for additional information.
 
@@ -17,7 +17,7 @@ Custom Rules
 New documents use custom
 : Select preprocessor and/or processor to automatically enable rule processing on new documents. If you're using Custom Rules, you likely want both of these enabled.
 
-### HTML
+### HTML [html]
 
 Generate IDs on headlines
 : Generate header IDs based on contents of h1-h6 tag.
@@ -29,7 +29,7 @@ Process Markdown inside of HTML
 : By default, Markdown inside of HTML tags is usually ignored. This option forces Marked to continue processing within block elements. Note that some markup may cause issues.
 
 
-### Rendering
+### Rendering [rendering]
 
 Retain line breaks in paragraphs
 : Respect line breaks in paragraph text, replacing with hard breaks instead of concatenating with the previous line.

@@ -6,7 +6,7 @@ Marked include azioni **Scorciatoie** native (Intent app) per l'apertura di file
 
 Per l'automazione basata su script con un modello a oggetti completo, consulta [Supporto AppleScript](AppleScript_Support.html). Per i flussi di lavoro basati su URL dalla shell, vedere [Gestore URL](URL_Handler.html).
 
-## Trovare azioni
+## Trovare azioni [finding-actions]
 
 1. Apri l'app **Scorciatoie**.
 2. Crea un nuovo collegamento o modificane uno esistente.
@@ -14,7 +14,7 @@ Per l'automazione basata su script con un modello a oggetti completo, consulta [
 
 Le azioni sono raggruppate in **Documenti** e **Esporta**. Marked registra anche frasi Siri come "Esporta file con Marked" e "Apri in Marked" per scorciatoie rapide.
 
-## Panoramica delle azioni
+## Panoramica delle azioni [actions-overview]
 
 | Azione | Scopo |
 | --- | --- |
@@ -26,13 +26,13 @@ Le azioni sono raggruppate in **Documenti** e **Esporta**. Marked registra anche
 
 Tutte le azioni di esportazione restituiscono il file (o i file) esportati come output di scorciatoie **File** in modo da poterli passare al passaggio successivo (Mail, Finder, un'altra app).
 
-## Apri il file in Contrassegnato
+## Apri il file in Contrassegnato [open-file-in-marked]
 
 **Parametro:** **File** -- il documento da aprire (dal Finder, dal foglio di condivisione o da un passaggio precedente delle scorciatoie).
 
 Contrassegnato apre il file in una finestra di anteprima. Utilizzalo quando desideri visualizzare l'anteprima o modificare in Contrassegnato prima di fare qualsiasi altra cosa.
 
-## Imposta lo stile di anteprima
+## Imposta lo stile di anteprima [set-preview-style]
 
 **Parametri:**
 
@@ -41,7 +41,7 @@ Contrassegnato apre il file in una finestra di anteprima. Utilizzalo quando desi
 
 L'impostazione di uno stile ricarica l'anteprima con quel tema (come scegliere uno stile dal menu degli stili di anteprima).
 
-## Azioni di esportazione
+## Azioni di esportazione [export-actions]
 
 Le azioni di esportazione condividono le stesse opzioni principali:
 
@@ -62,7 +62,7 @@ Le azioni di esportazione condividono le stesse opzioni principali:
 - **PDF continuo** acquisisce il layout WebView di anteprima corrente.
 - **Dimensione carattere** abilita la stessa opzione di dimensione carattere di esportazione/stampa personalizzata da {% prefspane Export %}. Non influisce sui documenti Fountain.
 
-### Apri ed esporta il file
+### Apri ed esporta il file [open-and-export-file]
 
 Ideale per i flussi di lavoro del Finder: scegli un file Markdown, aprilo in Marked ed esporta in un solo passaggio.
 
@@ -70,7 +70,7 @@ Ideale per i flussi di lavoro del Finder: scegli un file Markdown, aprilo in Mar
 
 Esempio di utilizzo: un'azione rapida che prende i file dal Finder ed esporta **PDF impaginato** con il profilo e lo stile scelti.
 
-### Esporta documento
+### Esporta documento [export-document]
 
 Esporta un documento che è **già aperto** in Contrassegnato.
 
@@ -81,7 +81,7 @@ Esporta un documento che è **già aperto** in Contrassegnato.
 
 Utilizzalo quando Marked è già in esecuzione e desideri esportare l'anteprima corrente senza riaprire il file.
 
-### Esporta documenti aperti
+### Esporta documenti aperti [export-open-documents]
 
 Esporta **ogni** documento di anteprima attualmente aperto in Contrassegnato.
 
@@ -92,7 +92,7 @@ Esporta **ogni** documento di anteprima attualmente aperto in Contrassegnato.
 
 Utile per l'esportazione in batch dopo aver rivisto più capitoli o note in Contrassegnato.
 
-## Abbreviazione dei margini
+## Abbreviazione dei margini [margin-shorthand]
 
 Quando su un'azione di esportazione sono impostati **Margini**, utilizzare una stringa con da una a quattro misurazioni. Unità: `in`, `cm`, `mm`, `pt` o `"` per pollici. Un numero senza unità viene considerato come punti.
 
@@ -105,9 +105,9 @@ Quando su un'azione di esportazione sono impostati **Margini**, utilizzare una s
 
 Corrisponde alla chiave `margins` nei record di esportazione [AppleScript](AppleScript_Support.html#with-options-properties-record).
 
-## Esempi di flussi di lavoro
+## Esempi di flussi di lavoro [example-workflows]
 
-### File Finder in PDF
+### File Finder in PDF [finder-file-to-pdf]
 
 1. **Apri ed esporta file**
 2. **File**: input dal foglio di condivisione o dall'azione rapida del Finder.
@@ -116,26 +116,26 @@ Corrisponde alla chiave `margins` nei record di esportazione [AppleScript](Apple
 5. **Profilo** -- profilo di esportazione salvato opzionale.
 6. **File di output** -- opzionale; lasciare vuoto per scrivere `filename.pdf` accanto alla fonte.
 
-### Esporta ciò che è aperto in Contrassegnato
+### Esporta ciò che è aperto in Contrassegnato [export-what-is-open-in-marked]
 
 1. **Esporta documento**
 2. Lascia vuoto **File** per utilizzare la finestra anteriore.
 3. Scegli **Formato** e il profilo o lo stile facoltativo.
 
-### Esportazione batch di documenti aperti
+### Esportazione batch di documenti aperti [batch-export-open-documents]
 
 1. **Esporta documenti aperti**
 2. Scegli **Formato** (ad esempio EPUB).
 3. Facoltativamente, imposta **Cartella di output** per raccogliere tutte le esportazioni in un'unica directory.
 
-### Stile quindi esporta (due passaggi)
+### Stile quindi esporta (due passaggi) [style-then-export-two-steps]
 
 1. **Imposta stile anteprima**: scegli uno stile (facoltativamente scegli come target un **file** specifico).
 2. **Esporta documento**: stesso file o documento iniziale, con il **formato** desiderato.
 
 Puoi anche passare **Stile** direttamente su un'azione di esportazione; Marked applica il tema e attende il ricaricamento dell'anteprima prima di esportare.
 
-## Esporta percorsi e sandbox
+## Esporta percorsi e sandbox [export-paths-and-sandboxing]
 
 - Se **File di output** o **Cartella di output** viene omesso, Marked scrive accanto al documento di origine.
 - Contrassegnato può creare cartelle intermedie quando il percorso di esportazione è **all'interno della cartella del documento aperto**.
@@ -143,13 +143,13 @@ Puoi anche passare **Stile** direttamente su un'azione di esportazione; Marked a
 
 Vedi [Supporto AppleScript](AppleScript_Support.html#export-paths-and-sandboxing) per le stesse regole sandbox.
 
-## Azione Legacy `convert_to`
+## Azione Legacy `convert_to` [convert_to]
 
 Il dizionario AppleScript espone ancora **`convert_to`** per la conversione di testo o file Markdown senza un'anteprima aperta. Sono preferibili le azioni dei collegamenti nativi di cui sopra: aprono correttamente i documenti, attendono il caricamento dell'anteprima e supportano l'esportazione di PDF impaginati in modo asincrono.
 
-Vedi [Scorciatoie e `convert_to` nel supporto AppleScript](AppleScript_Support.html#shortcuts-and-convert_to) per i dettagli sul comando legacy.
+Vedi [Scorciatoie e `convert_to` nel supporto AppleScript](AppleScript_Support.html#convert_to) per i dettagli sul comando legacy.
 
-## Risoluzione dei problemi: le azioni non vengono visualizzate nelle scorciatoie
+## Risoluzione dei problemi: le azioni non vengono visualizzate nelle scorciatoie [troubleshooting-actions-not-appearing-in-shortcuts]
 
 Indici delle scorciatoie **uno** Identificatore di installazione contrassegnato per bundle (`com.brettterpstra.marked`). Preferisce la copia con il **numero di build più alto** (`CFBundleVersion`), non necessariamente l'app che hai appena creato in Xcode.
 
@@ -171,11 +171,11 @@ ls "/path/to/Marked.app/Contents/Resources/Metadata.appintents"
 
 All'avvio, Marked registra `[MKShortcuts] Registering App Intents` in Console.app quando viene eseguita la registrazione (macOS 13+).
 
-## Debug
+## Debug [debugging]
 
 Abilita la **modalità debug** in {% prefspane Advanced %}. Passaggi di esportazione dei log contrassegnati a livello di informazioni con il prefisso `[AppleScript]` in Console.app e nel visualizzatore log di Marked (la pipeline di esportazione è condivisa con AppleScript).
 
-## Errori
+## Errori [errors]
 
 Messaggi comuni quando un'azione fallisce:
 
