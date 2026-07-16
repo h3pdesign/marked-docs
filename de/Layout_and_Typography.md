@@ -35,7 +35,7 @@ Die Option _Style wörtliche Codeblöcke als Poesie_ in {% prefspane Style %} f�
 
 Zeilenumbrüche bleiben in diesen Blöcken standardmäßig erhalten, sodass Sie auf einfache Weise Gedichte und lyrische Abschnitte in ein Dokument integrieren können, für das keine anderen Codeblöcke erforderlich sind.
 
-> Diese Einstellung fügt eine „Poetry“-Körperklasse hinzu, die in benutzerdefinierten Designs verwendet werden kann, um Codeblöcke und andere Elemente zu formatieren, wenn der „Poetry-Modus“ aktiviert ist.
+> Diese Einstellung fügt eine `poetry`-Body-Klasse hinzu, die in benutzerdefinierten Designs verwendet werden kann, um Codeblöcke und andere Elemente zu formatieren, wenn der „Poetry-Modus“ aktiviert ist.
 
 ## Codeblockumbruch
 

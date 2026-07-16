@@ -44,7 +44,7 @@ Reguläre Ausdrücke funktionieren auch im temporären Schlüsselwortfeld. Umgeb
 
 Temporäre Schlüsselwörter sind für Situationen gedacht, in denen die Schlüsselwortdichte wichtig ist. Sie ermöglichen es Ihnen, schnell zu erkennen, wie oft Sie die Zielwörter verwendet haben, und ihre Positionen im Dokument hervorzuheben. Die Anzahl der Treffer für die temporären Schlüsselwörter wird gut sichtbar in der Schublade angezeigt.
 
-Sehen Sie sich auch den Befehl ["Visualize Word Repetition"][wordrep] an, um überstrapazierte Wörter in Ihrem Text zu finden.
+Sehen Sie sich auch den Befehl [„Wortwiederholungen visualisieren“][wordrep] an, um überstrapazierte Wörter in Ihrem Text zu finden.
 
 [wordrep]: Document_Statistics.html#visualizewordrepetition
 
