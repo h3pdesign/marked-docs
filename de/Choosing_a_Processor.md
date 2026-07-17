@@ -57,7 +57,7 @@ Marked nutzt eine **GFM**-orientierte Engine (cmark-gfm). Die formale Spezifikat
 
 ### Stärken [strengths-3]
 
-- **Höchste Übereinstimmung mit GitHub:** Tabellen, Durchstreichungen, Aufgabenlisten-Einträge, eingezäunte Codeblöcke mit Sprach-Tags und Autolinks verhalten sich wie das moderne GitHub-Rendering.
+- **Höchste Übereinstimmung mit GitHub:** Tabellen, Durchstreichungen, Aufgabenlisten-Einträge, abgegrenzte Codeblöcke mit Sprach-Tags und Autolinks verhalten sich wie das moderne GitHub-Rendering.
 - **Eindeutiges Parsen:** CommonMark definiert Block-/Inline-Vorrang und Listenregeln präzise – in manchen Randfällen strenger als das „klassische“ Verhalten von Markdown.pl, dafür **vorhersehbarer**, sobald man die Regeln kennt.
 - **Gut für umgebrochenen Text:** Absatz- und Listenregeln funktionieren gut mit hart umgebrochenem Text (siehe die Abschnitte der Spezifikation zu Lazy Continuations und Listen).
 
@@ -79,7 +79,7 @@ Projektseite: [Discount](https://www.pell.portland.or.us/~orc/Code/discount/).
 
 ### Stärken [strengths-4]
 
-- **Tabellen im Stil von PHP Markdown Extra** und viele Erweiterungen (Fußnoten, eingezäunter Code, wenn aktiviert, usw. – was Marked davon aktiviert, steht in Marks [Discount-GFM-Spezifikation](Discount_GFM_Spec.html)).
+- **Tabellen im Stil von PHP Markdown Extra** und viele Erweiterungen (Fußnoten, abgegrenzter Code, wenn aktiviert, usw. – was Marked davon aktiviert, steht in Marks [Discount-GFM-Spezifikation](Discount_GFM_Spec.html)).
 - **Optionale „GitHub“-Extras** im Upstream-Discount (z. B. Checkbox-Listen, wenn mit den richtigen Flags gebaut); die ausgelieferte Kombination dokumentiert Marked auf der Discount-Spezifikationsseite.
 - **Typografie im SmartyPants-Stil** und weitere Annehmlichkeiten von der Discount-Website (Typografiefunktionen bieten allerdings alle enthaltenen Prozessoren).
 - Philosophisch nah an **John Grubers Markdown** plus praktischer Erweiterungen, statt an der vollständigen CommonMark-Testsuite.

@@ -53,7 +53,7 @@ Der Editor für Eigene Regeln heißt bei Marked „Conductor“. Wir führen den
 
 | English | Translation | Notes |
 |---------|-------------|-------|
-| Conductor | Conductor | Feature-Name, engl. belassen; NICHT „Dirigent“ (zwei Altlasten in Additional_Javascript.md/Markdown_Dingus.md noch zu bereinigen) |
+| Conductor | Conductor | Feature-Name, engl. belassen; NICHT „Dirigent“ (Markdown_Dingus ist bereinigt; die letzte Altlast steht in Additional_Javascript.md — die Seite ist aber nicht in `config.yaml` und wird nicht gebaut, siehe unten) |
 | Rules Editor | Editor für Eigene Regeln | App-Menü „Eigene Regeln bearbeiten“ |
 | predicate / predicate editor | Prädikat / Prädikat-Editor | |
 | Manually enabled | Manuell aktiviert | Kriterium + Schaltfläche „Manuell aktiviert hinzufügen“ |
