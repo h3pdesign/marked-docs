@@ -9,10 +9,10 @@ Who is working on which section, so contributors don't translate the same files 
 | Supported_Apps | Hilthart (@h3pdesign) | done |
 | Reading_Features | Thomas Ungricht (@Thomas-U) | in progress (5/6 done; AI_Ask_About_Document open) |
 | Just_for_Writers | Hilthart (@h3pdesign) | done |
-| Special_Features | Thomas (@fucx, lead) | in progress |
+| Special_Features | Thomas (@fucx, lead) | done |
 | Comparisons_FAQ | — | open |
 | Troubleshooting | Thomas Ungricht (@Thomas-U) | offered |
-| About_Markdown | — | open (Markdown_Dingus already done) |
+| About_Markdown | Hilthart (@h3pdesign) | in progress (2/7; Processor_Selection and Markdown_Dingus done — skip those) |
 | Credits | Thomas Ungricht (@Thomas-U) | done (license pages stay English) |
 
 Status: *done* = translated and reviewed · *in progress* = being worked on · *offered* = proposed to a translator, awaiting their confirmation · *open* = unclaimed. Ping the lead to claim an open section.
