@@ -12,12 +12,12 @@ Abschnitts- und Szenenüberschriften werden im Inhaltsverzeichnis angezeigt, um 
 
 Sie können auch „Scrippets“ in einem regulären Dokument verwenden, um einzelne Abschnitte mit Fountain bearbeiten und formatieren zu lassen. Umgeben Sie einfach Ihr Fountain-Markup im Hauptdokument mit `[scrippet]`-Tags:
 
-[scrippet]
+    [scrippet]
     Ihr Drehbuchtext...
     [/scrippet]
 
 Sie können auch Standard-Tags im Marked-Stil verwenden:
 
-<!--SCRIPPET-->
+    <!--SCRIPPET-->
     Ihr Drehbuchtext...
     <!--/SCRIPPET-->

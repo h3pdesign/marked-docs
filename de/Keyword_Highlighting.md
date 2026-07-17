@@ -32,9 +32,9 @@ Standardmäßig verwendet Marked die Liste [Plain English Campaign's](http://www
 
 Reguläre Ausdrücke können verwendet werden, indem der Ausdruck mit Schrägstrichen umgeben wird:
 
-/\\Listig/
+    /\\S*?ly/
 
-Das Obige entspricht allen Wörtern, die auf „ly“ enden, um sie hervorzuheben. Die Syntax für reguläre Ausdrücke in der Schlüsselworthervorhebung von Marked ist [same as JavaScript](http://www.regular-expressions.info/javascript.html).
+Das Obige entspricht allen Wörtern, die auf „ly“ enden, um sie hervorzuheben. Die Syntax für reguläre Ausdrücke in der Schlüsselworthervorhebung von Marked ist [dieselbe wie in JavaScript](http://www.regular-expressions.info/javascript.html).
 
 ## Temporäre Schlüsselwörter [temporary-keywords]
 
