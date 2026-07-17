@@ -31,7 +31,7 @@ CommonMark erzwingt ein konsistenteres Parsing-Verhalten:
 
 ```markdown
 Text
-# Heading [heading]
+# Heading
 ```
 
 *CommonMark: Erfordert eine Leerzeile vor der Überschrift*

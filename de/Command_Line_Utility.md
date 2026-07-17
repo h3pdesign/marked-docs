@@ -125,31 +125,31 @@ mk --extract https://example.com/article
 ## Beispiele [examples]
 
 ```bash
-# Datei öffnen [open-a-file]
+# Datei öffnen
 mk document.md
 
-# Markdown aus einer Datei streamen [stream-markdown-from-a-file]
+# Markdown aus einer Datei streamen
 cat notes.md | mk
 
-# Verarbeiten und Vorschau anzeigen [process-and-preview]
+# Verarbeiten und Vorschau anzeigen
 grep -i "important" notes.md | mk
 
-# Alle Vorschauen aktualisieren [refresh-all-previews]
+# Alle Vorschauen aktualisieren
 mk --refresh all
 
-# Eigenen Stil hinzufügen [add-a-custom-style]
+# Eigenen Stil hinzufügen
 mk --add-style ~/Documents/MyTheme.css
 
-# Einstellungen festlegen [set-preferences]
+# Einstellungen festlegen
 mk --defaults syntaxHighlight=1 processor=multimarkdown
 
-# JavaScript in allen Fenstern ausführen [run-javascript-in-all-windows]
+# JavaScript in allen Fenstern ausführen
 mk --dojs "window.scrollTo(0,0)" all
 
-# Inhalte von einer Webseite extrahieren [extract-content-from-a-webpage]
+# Inhalte von einer Webseite extrahieren
 mk --extract https://blog.example.com/article
 
-# Text direkt in der Vorschau anzeigen [preview-text-directly]
+# Text direkt in der Vorschau anzeigen
 mk --preview "## Hallo\n\nDies ist **Markdown**-Text!"
 ```
 
@@ -170,7 +170,7 @@ Verwenden Sie `mk` in Shell-Skripten zur Automatisierung:
 
 ```bash
 #!/bin/bash
-# Datei überwachen und Änderungen an Marked streamen [watch-a-file-and-stream-changes-to-marked]
+# Datei überwachen und Änderungen an Marked streamen
 fswatch -o document.md | while read; do
   cat document.md | mk
 done
@@ -181,10 +181,10 @@ done
 Kombinieren Sie es mit anderen Tools:
 
 ```bash
-# Zwischenablage in Markdown umwandeln und Vorschau anzeigen [convert-clipboard-to-markdown-and-preview]
+# Zwischenablage in Markdown umwandeln und Vorschau anzeigen
 pbpaste | markdown | mk
 
-# Suchen und Vorschau anzeigen [search-and-preview]
+# Suchen und Vorschau anzeigen
 grep -r "TODO" . | head -20 | mk
 ```
 

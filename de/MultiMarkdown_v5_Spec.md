@@ -39,7 +39,7 @@ custom: value
 Content
 ---
 
-# Document Content [document-content]
+# Document Content
 ```
 
 **Metadatenvariablen**
@@ -132,7 +132,7 @@ Für das Format des Zitierschlüssels (z. B. Doe:2006) gelten keine Regeln. Ihm 
 See [Table 1] for details.
 Refer to [Section 2.1] for more information.
 
-## Section 2.1 [section-2-1]
+## Section 2.1
 ```
 
 **Referenztypen**
@@ -253,14 +253,14 @@ This is a {~~deletion~>replacement~~}.
 - Anpassbare Erzeugung des Inhaltsverzeichnisses
 
 ```markdown
-# Document Title [document-title]
+# Document Title
 
 {{TOC}}
 
-## Section 1 [section-1]
+## Section 1
 Content here...
 
-## Section 2 [section-2]
+## Section 2
 More content...
 ```
 

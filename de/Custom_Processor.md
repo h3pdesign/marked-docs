@@ -355,22 +355,22 @@ MD_priority="High"
 Sie können diese Umgebungsvariablen dann in Ihren **Befehl ausführen**-Aktionen verwenden:
 
 ```bash
-# Dokumenttitel ausgeben [print-the-document-title]
+# Dokumenttitel ausgeben
 echo "Processing: $MD_title"
 
-# Metadaten in einer Bedingung verwenden [use-metadata-in-conditional-logic]
+# Metadaten in einer Bedingung verwenden
 if [ "$MD_status" = "Draft" ]; then
     echo "Document is still in draft status"
 fi
 
-# Metadaten an andere Tools übergeben [pass-metadata-to-other-tools]
+# Metadaten an andere Tools übergeben
 pandoc "$MARKED_PATH" \
   --metadata title="$MD_title" \
   --metadata author="$MD_author" \
   --metadata date="$MD_date" \
   -o output.pdf
 
-# Metadaten für die Dateibenennung verwenden [use-metadata-for-file-naming]
+# Metadaten für die Dateibenennung verwenden
 if [ -n "$MD_title" ]; then
     output_file="${MD_title// /_}.html"
 else

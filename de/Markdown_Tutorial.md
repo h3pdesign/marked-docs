@@ -11,12 +11,12 @@ Markdown ist eine leichtgewichtige Auszeichnungssprache. Sie schreiben in einem 
 Erstellen Sie Überschriften mit Rautenzeichen (`#`). Die Anzahl der Rautenzeichen bestimmt die Überschriftenebene:
 
 ```markdown
-# Header 1 [header-1]
-## Header 2 [header-2]
-### Header 3 [header-3]
-#### Header 4 [header-4]
-##### Header 5 [header-5]
-###### Header 6 [header-6]
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
 ```
 
 ### Hervorhebung [emphasis]
