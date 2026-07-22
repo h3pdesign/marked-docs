@@ -1087,70 +1087,70 @@ Sections:
     - additional
     - resources
     wiki_keywords: [support resources, additional resources]
-- title: About Markdown
+- title: Über Markdown
   folder: About_Markdown
   pages:
-  - title: Processor Selection
+  - title: Prozessorauswahl
     file: Processor_Selection
-    description: There's a Markdown Syntax guide under the help menu, or you can refer to John Gruber's original documentation.
+    description: Im Hilfemenü finden Sie eine Anleitung zur Markdown-Syntax, oder Sie können die Originaldokumentation von John Gruber lesen.
     keywords:
     - multimarkdown
     - kramdown
     - commonmark
     - discount
-    - processor
-    - selection
-    - markdown syntax
-    wiki_keywords: [markdown syntax]
-  - title: Markdown Overview
+    - prozessor
+    - auswahl
+    - markdown-syntax
+    wiki_keywords: [markdown-syntax]
+  - title: Markdown-Überblick
     file: Markdown_Tutorial
-    description: Markdown is a lightweight markup language that allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally...
+    description: Markdown ist eine schlanke Auszeichnungssprache, mit der Sie in einem leicht lesbaren, einfach zu schreibenden Klartextformat schreiben und diesen anschließend in strukturiertes ...
     keywords:
     - markdown
     - syntax
-    - tutorial
+    - anleitung
     wiki_keywords: []
   - title: Markdown Dingus
     file: Markdown_Dingus
-    description: The Markdown Dingus is a specialized testing tool that helps you understand how different Markdown processors handle your content. It provides a three-pane...
+    description: Markdown Dingus ist ein spezielles Testwerkzeug, mit dem Sie verstehen, wie unterschiedliche Markdown-Prozessoren Ihre Inhalte verarbeiten. Es bietet eine Ansicht mit drei Bereichen ...
     keywords:
     - dingus
-    - testing
-    - processor
-    - comparison
-    - debug
+    - testen
+    - prozessor
+    - vergleich
+    - fehlersuche
     - syntax
     - html
-    - preview
+    - vorschau
     wiki_keywords: []
-  - title: MultiMarkdown v5 Specification
+  - title: MultiMarkdown-v5-Spezifikation
     file: MultiMarkdown_v5_Spec
-    description: Check out the Markdown Dingus to experiment with the MultiMarkdown processor. MultiMarkdown is an extended Markdown processor designed to work with complete ...
+    description: Probieren Sie den MultiMarkdown-Prozessor mit Markdown Dingus aus. MultiMarkdown ist ein erweiterter Markdown-Prozessor, der für vollständige ...
     keywords:
     - multimarkdown
-    - specification
-  - title: CommonMark Specification
+    - spezifikation
+  - title: CommonMark-Spezifikation
     file: CommonMark_Spec
-    description: Check out the Markdown Dingus to experiment with the CommonMark (GFM) processor.
+    description: Probieren Sie den CommonMark-(GFM-)Prozessor mit Markdown Dingus aus.
     keywords:
     - commonmark
-    - specification
-    wiki_keywords: [commonmark syntax]
-  - title: Kramdown Specification
+    - spezifikation
+    wiki_keywords: [commonmark-syntax]
+  - title: Kramdown-Spezifikation
     file: Kramdown_Spec
-    description: Check out the Markdown Dingus to experiment with the Kramdown processor. Kramdown is a fast, pure-Ruby Markdown-superset converter that extends the original ...
+    description: Probieren Sie den Kramdown-Prozessor mit Markdown Dingus aus. Kramdown ist ein schneller, reiner Ruby-Konverter für eine Markdown-Obermenge, der die ursprüngliche ...
     keywords:
     - kramdown
-    - specification
-    wiki_keywords: [kramdown syntax]
-  - title: Discount GFM Specification
+    - spezifikation
+    wiki_keywords: [kramdown-syntax]
+  - title: Discount-GFM-Spezifikation
     file: Discount_GFM_Spec
-    description: Check out the Markdown Dingus to experiment with the Discount processor. Discount GFM (GitHub Flavored Markdown) is a C-based Markdown processor that...
+    description: Probieren Sie den Discount-Prozessor mit Markdown Dingus aus. Discount GFM (GitHub Flavored Markdown) ist ein C-basierter Markdown-Prozessor, der ...
     keywords:
     - discount
     - gfm
-    - specification
-    wiki_keywords: [discount syntax, gfm syntax]
+    - spezifikation
+    wiki_keywords: [discount-syntax, gfm-syntax]
 - title: Credits
   folder: Credits
   pages:

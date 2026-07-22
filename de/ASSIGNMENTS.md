@@ -12,7 +12,7 @@ Who is working on which section, so contributors don't translate the same files 
 | Special_Features | Thomas (@fucx, lead) | done |
 | Comparisons_FAQ | Thomas (@fucx, lead) | in progress |
 | Troubleshooting | Thomas Ungricht (@Thomas-U) | offered |
-| About_Markdown | Hilthart (@h3pdesign) | in progress (2/7; Processor_Selection and Markdown_Dingus done — skip those) |
+| About_Markdown | Hilthart (@h3pdesign) | done |
 | Credits | Thomas Ungricht (@Thomas-U) | done (license pages stay English) |
 
 Status: *done* = translated and reviewed · *in progress* = being worked on · *offered* = proposed to a translator, awaiting their confirmation · *open* = unclaimed. Ping the lead to claim an open section.
